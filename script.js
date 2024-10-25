@@ -7,7 +7,7 @@ const images = [
   { src: './image/언더테일/sans0501.gif', tag: '~샌즈05' },
   { src: './image/언더테일/sans0601.gif', tag: '~샌즈06' },
   { src: './image/언더테일/sans0701.gif', tag: '~샌즈07' },
-  { src: './image/언더테일/sans0801.gif', tag: '~샌즈08' },
+  { src: './image/언더테일/sans0801.webp', tag: '~샌즈08' },
   { src: './image/언더테일/sans0901.gif', tag: '~샌즈09' },
   { src: './image/언더테일/sanesss.gif', tag: '~싸네스' },
   { src: './image/언더테일/리퍼샌즈.jpg', tag: '~리퍼샌즈' },
