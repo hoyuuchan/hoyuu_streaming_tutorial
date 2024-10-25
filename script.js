@@ -21,6 +21,7 @@ const images = [
   { src: './image/언더테일/alphys0301.gif', tag: '~알피스03', category: '언더테일' },
   { src: './image/언더테일/asgore0101.gif', tag: '~아스고어01', category: '언더테일' },
   { src: './image/언더테일/asgore0201.webp', tag: '~아스고어02', category: '언더테일' },
+  { src: './image/언더테일/asriel.gif', tag: '~아스리엘', category: '언더테일' },
   { src: './image/언더테일/flowey0101.gif', tag: '~플라위01', category: '언더테일' },
   { src: './image/언더테일/flowey0201.gif', tag: '~플라위02', category: '언더테일' },
   { src: './image/언더테일/flowey0301.gif', tag: '~플라위03', category: '언더테일' },
