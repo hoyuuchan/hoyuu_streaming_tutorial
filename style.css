@@ -30,6 +30,11 @@
       display: block;
     }
 
+.filter-container {
+  text-align: center;
+  margin: 20px;
+}
+
 /* 미디어 쿼리 추가 */
     @media (max-width: 1200px) {
       .image-box {
