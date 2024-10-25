@@ -35,10 +35,10 @@ const images = [
   { src: './image/산나비/애기행운.gif', tag: '~애기행운' },
   { src: './image/산나비/애기호출.gif', tag: '~애기호출' },
   { src: './image/산나비/애기흔들.gif', tag: '~애기흔들' },
-  { src: './image/산나비/야옹이지켜.gif', tag: '~야옹이지켜' },
-  { src: './image/산나비/야옹이절레.gif', tag: '~야옹이절레' },
-  { src: './image/산나비/야옹이짝짝.gif', tag: '~야옹이짝짝' },
-  { src: './image/산나비/지켜보고있음.gif', tag: '~지켜보고있음' },
+  { src: './image/산나비/야옹이대원이지켜보고있다.gif', tag: '~야옹이지켜' },
+  { src: './image/산나비/야옹이대원절레.gif', tag: '~야옹이절레' },
+  { src: './image/산나비/야옹이대원짝짝.gif', tag: '~야옹이짝짝' },
+  { src: './image/산나비/지켜보고있습니다.gif', tag: '~지켜보고있음' },
   // 추가 이미지 데이터...
 ];
 
