@@ -29,3 +29,29 @@
     .image-box:hover .tag {
       display: block;
     }
+
+/* 미디어 쿼리 추가 */
+    @media (max-width: 1200px) {
+      .image-box {
+        width: 80px;
+        height: 80px;
+      }
+    }
+    @media (max-width: 992px) {
+      .image-box {
+        width: 70px;
+        height: 70px;
+      }
+    }
+    @media (max-width: 768px) {
+      .image-box {
+        width: 60px;
+        height: 60px;
+      }
+    }
+    @media (max-width: 576px) {
+      .image-box {
+        width: 50px;
+        height: 50px;
+      }
+    }
