@@ -35,6 +35,21 @@
   margin: 20px;
 }
 
+/* 추가 CSS - 복사 확인 팝업 */
+.clipboard-popup {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0.9;
+  z-index: 1000;
+}
+
 /* 미디어 쿼리 추가 */
     @media (max-width: 1200px) {
       .image-box {
