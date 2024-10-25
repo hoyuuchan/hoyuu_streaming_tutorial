@@ -5,7 +5,7 @@ const images = [
   { src: './image/언더테일/sans0301.gif', tag: '~샌즈03', category: '언더테일' },
   { src: './image/언더테일/sans0401.gif', tag: '~샌즈04', category: '언더테일' },
   { src: './image/언더테일/sans0501.gif', tag: '~샌즈05', category: '언더테일' },
-  { src: './image/언더테일/sans0601.gif', tag: '~샌즈06, category: '언더테일'' },
+  { src: './image/언더테일/sans0601.gif', tag: '~샌즈06, category: '언더테일' },
   { src: './image/언더테일/sans0701.gif', tag: '~샌즈07', category: '언더테일' },
   { src: './image/언더테일/sans0801.webp', tag: '~샌즈08', category: '언더테일' },
   { src: './image/언더테일/sans0901.gif', tag: '~샌즈09', category: '언더테일' },
