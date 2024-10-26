@@ -35,6 +35,22 @@
   margin: 20px;
 }
 
+.notice h1 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1100px;
+    margin: 0 auto;
+    font-size: 3em;
+}
+
+.notice #text {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1100px;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
 /* 추가 CSS - 복사 확인 팝업 */
 .clipboard-popup {
   position: fixed;
