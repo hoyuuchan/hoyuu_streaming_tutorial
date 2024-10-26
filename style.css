@@ -36,15 +36,15 @@
 }
 
 .notice h1 {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     width: 1100px;
     margin: 0 auto;
     font-size: 3em;
 }
 
 .notice #text {
-    display: flex;
-    flex-wrap: wrap;
+    display: block;
     width: 1100px;
     margin: 0 auto;
     font-size: 14px;
