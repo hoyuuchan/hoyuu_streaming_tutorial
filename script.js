@@ -85,6 +85,10 @@ const images = [
   { src: './image/산나비/야옹이대원절레.gif', tag: '~야옹이절레', category: '산나비' },
   { src: './image/산나비/야옹이대원짝짝.gif', tag: '~야옹이짝짝', category: '산나비' },
   { src: './image/산나비/지켜보고있습니다.gif', tag: '~지켜보고있음', category: '산나비' },
+
+  // 3D
+  { src: './image/3D/블렌더.png', tag: '~블렌더', category: '블렌더' },
+  { src: './image/3D/블렌더응답없음.png', tag: '~블렌더응답없음', category: '블렌더' },
   // 추가 이미지 데이터...
 ];
 
