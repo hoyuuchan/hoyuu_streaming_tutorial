@@ -2,6 +2,20 @@ const images = [
   // 3D
   { src: './image/3D/블렌더.png', tag: '~블렌더', category: '블렌더' },
   { src: './image/3D/블렌더응답없음.png', tag: '~블렌더응답없음', category: '블렌더' },
+
+  // 3D
+  { src: './image/감정표현/두렵다.png', tag: '~두렵다', category: '감정표현' },
+  { src: './image/감정표현/띠껍다.png', tag: '~띠껍다', category: '감정표현' },
+  { src: './image/감정표현/마참내.png', tag: '~마참내', category: '감정표현' },
+  { src: './image/감정표현/멋있다.png', tag: '~멋있다', category: '감정표현' },
+  { src: './image/감정표현/손도깔끔.png', tag: '~손도깔끔', category: '감정표현' },
+  { src: './image/감정표현/슬프다.png', tag: '~슬프다',giftegory: '감정표현' },
+  { src: './image/감정표현/심영놀람.gif', tag: '~심영놀람',giftegory: '감정표현' },
+  { src: './image/감정표현/심영놀람2.gif', tag: '~심영놀람2',giftegory: '감정표현' },
+  { src: './image/감정표현/안하겠소.gif', tag: '~안하겠소', category: '감정표현' },
+  { src: './image/감정표현/이상하다.png', tag: '~이상하다', category: '감정표현' },
+  { src: './image/감정표현/즐겁다.png', tag: '~즐겁다', category: '감정표현' },
+  { src: './image/감정표현/화난다.png', tag: '~화난다', category: '감정표현' },
   
   // 언더테일
   { src: './image/언더테일/sans01.gif', tag: '~샌즈01', category: '언더테일' },
