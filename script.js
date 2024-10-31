@@ -3,7 +3,7 @@ const images = [
   { src: './image/3D/블렌더.png', tag: '~블렌더', category: '블렌더' },
   { src: './image/3D/블렌더응답없음.png', tag: '~블렌더응답없음', category: '블렌더' },
 
-  // 3D
+  // 감정표현
   { src: './image/감정표현/두렵다.png', tag: '~두렵다', category: '감정표현' },
   { src: './image/감정표현/띠껍다.png', tag: '~띠껍다', category: '감정표현' },
   { src: './image/감정표현/마참내.png', tag: '~마참내', category: '감정표현' },
@@ -16,6 +16,10 @@ const images = [
   { src: './image/감정표현/이상하다.png', tag: '~이상하다', category: '감정표현' },
   { src: './image/감정표현/즐겁다.png', tag: '~즐겁다', category: '감정표현' },
   { src: './image/감정표현/화난다.png', tag: '~화난다', category: '감정표현' },
+
+  // 3D
+  { src: './image/동방/안된다구.png', tag: '~안된다구', category: '동방' },
+  { src: './image/동방/아하.png', tag: '~아하', category: '동방' },
   
   // 언더테일
   { src: './image/언더테일/sans01.gif', tag: '~샌즈01', category: '언더테일' },
