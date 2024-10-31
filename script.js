@@ -16,6 +16,12 @@ const images = [
   { src: './image/감정표현/이상하다.png', tag: '~이상하다', category: '감정표현' },
   { src: './image/감정표현/즐겁다.png', tag: '~즐겁다', category: '감정표현' },
   { src: './image/감정표현/화난다.png', tag: '~화난다', category: '감정표현' },
+  { src: './image/감정표현/냥경악.png', tag: '~냥경악', category: '감정표현' },
+  { src: './image/감정표현/심영박수.png', tag: '~심영박수', category: '감정표현' },
+  { src: './image/감정표현/심영박수2.png', tag: '~심영박수2', category: '감정표현' },
+  { src: './image/감정표현/잇님놀람.png', tag: '~잇님놀람', category: '감정표현' },
+  { src: './image/감정표현/잇님따봉.png', tag: '~잇님따봉', category: '감정표현' },
+  { src: './image/감정표현/잇님윙크.png', tag: '~잇님윙크', category: '감정표현' },
 
   // 3D
   { src: './image/동방/안된다구.png', tag: '~안된다구', category: '동방' },
