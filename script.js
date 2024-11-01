@@ -81,6 +81,11 @@ const images = [
   { src: './image/언더테일/toriel10.gif', tag: '~토리엘06', category: '언더테일' },
   { src: './image/언더테일/Undyne01.gif', tag: '~언다인01', category: '언더테일' },
   { src: './image/언더테일/UndyneA01.gif', tag: '~언다인02', category: '언더테일' },
+  { src: './image/언더테일/히트플.png', tag: '~히트플', category: '언더테일' },
+  { src: './image/언더테일/히트플깜짝.png', tag: '~히트플깜짝', category: '언더테일' },
+  { src: './image/언더테일/프리스크.png', tag: '~프리스크', category: '언더테일' },
+  { src: './image/언더테일/chara0101.gif', tag: '~차라', category: '언더테일' },
+  //{ src: './image/언더테일/chara0201.gif', tag: '~차라02', category: '언더테일' },
 
   // 산나비
   { src: './image/산나비/마리덜덜.gif', tag: '~마리덜덜', category: '산나비' },
