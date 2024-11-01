@@ -27,7 +27,7 @@ const images = [
   { src: './image/감정표현/제리인사.gif', tag: '~제리인사', category: '감정표현' },
   { src: './image/감정표현/제리기도.gif', tag: '~제리기도', category: '감정표현' },
   { src: './image/감정표현/제리기도2.gif', tag: '~제리기도2', category: '감정표현' },
-  { src: './image/감정표현/제리메롱.gif', tag: '~제리메롱, category: '감정표현' },
+  { src: './image/감정표현/제리메롱.gif', tag: '~제리메롱', category: '감정표현' },
   { src: './image/감정표현/제리줘팸.gif', tag: '~제리줘팸', category: '감정표현' },
   { src: './image/감정표현/제리폭소.gif', tag: '~제리폭소', category: '감정표현' },
 
