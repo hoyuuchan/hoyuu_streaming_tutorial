@@ -31,15 +31,20 @@
     }
 
 // 이미지 로딩 css
-.lazy-image {
-  width: 100px;
-  height: 100px;
-  opacity: 0; /* 이미지가 로드되기 전에는 숨김 */
-  transition: opacity 0.3s ease-in-out;
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
-
-.lazy-image.visible {
-  opacity: 1; /* 로드된 후 서서히 나타남 */
+.image-item {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    transition: opacity 0.3s;
+    opacity: 0;
+}
+.image-item.loaded {
+    opacity: 1;
 }
 
 
