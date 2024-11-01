@@ -1,4 +1,4 @@
-const images = [
+const imageList = [
   // 3D
   { src: './image/3D/블렌더.png', tag: '~블렌더', category: '블렌더' },
   { src: './image/3D/블렌더응답없음.png', tag: '~블렌더응답없음', category: '블렌더' },
