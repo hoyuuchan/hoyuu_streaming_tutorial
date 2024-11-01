@@ -177,3 +177,25 @@ categoryFilter.addEventListener('change', () => {
 
 // 초기 렌더링: 전체 이미지를 표시
 renderImages(images);
+
+// 이미지 로딩 관련
+document.addEventListener("DOMContentLoaded", function () {
+  const lazyImages = document.querySelectorAll(".lazy-image");
+
+  const imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        img.src = img.dataset.src; // 이미지 로드
+        img.onload = () => img.classList.add("visible"); // 페이드인 효과 적용
+        observer.unobserve(img); // 로드 완료된 이미지 관찰 중지
+      }
+    });
+  }, {
+    rootMargin: "0px 0px 50px 0px", // 이미지가 화면에 가까이 오면 로드 시작
+    threshold: 0.1
+  });
+
+  lazyImages.forEach(img => imageObserver.observe(img));
+});
+
