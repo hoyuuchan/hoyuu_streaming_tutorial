@@ -34,7 +34,7 @@ const images = [
   // 동방프로젝트
   { src: './image/동방/안된다구.png', tag: '~안된다구', category: '동방' },
   { src: './image/동방/아하.png', tag: '~아하', category: '동방' },
-  { src: './image/동방/팔이짧아슬픈요괴.png', tag: '~팔이짧아슬픈요괴', category: '동방' },
+  { src: './image/동방/팔이짧아슬픈요괴.gif', tag: '~팔이짧아슬픈요괴', category: '동방' },
   
   // 언더테일
   { src: './image/언더테일/sans01.gif', tag: '~샌즈01', category: '언더테일' },
