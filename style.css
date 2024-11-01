@@ -30,23 +30,6 @@
       display: block;
     }
 
-// 이미지 로딩 css
-.image-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-.image-item {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    transition: opacity 0.3s;
-    opacity: 0;
-}
-.image-item.loaded {
-    opacity: 1;
-}
-
 
 .filter-container {
   text-align: center;
