@@ -22,10 +22,19 @@ const images = [
   { src: './image/감정표현/잇님놀람.png', tag: '~잇님놀람', category: '감정표현' },
   { src: './image/감정표현/잇님따봉.png', tag: '~잇님따봉', category: '감정표현' },
   { src: './image/감정표현/잇님윙크.png', tag: '~잇님윙크', category: '감정표현' },
+  { src: './image/감정표현/톰인사.gif', tag: '~톰인사', category: '감정표현' },
+  { src: './image/감정표현/톰화들짝.gif', tag: '~톰화들짝', category: '감정표현' },
+  { src: './image/감정표현/제리인사.gif', tag: '~제리인사', category: '감정표현' },
+  { src: './image/감정표현/제리기도.gif', tag: '~제리기도', category: '감정표현' },
+  { src: './image/감정표현/제리기도2.gif', tag: '~제리기도2', category: '감정표현' },
+  { src: './image/감정표현/제리메롱.gif', tag: '~제리메롱, category: '감정표현' },
+  { src: './image/감정표현/제리줘팸.gif', tag: '~제리줘팸', category: '감정표현' },
+  { src: './image/감정표현/제리폭소.gif', tag: '~제리폭소', category: '감정표현' },
 
-  // 3D
+  // 동방프로젝트
   { src: './image/동방/안된다구.png', tag: '~안된다구', category: '동방' },
   { src: './image/동방/아하.png', tag: '~아하', category: '동방' },
+  { src: './image/동방/팔이짧아슬픈요괴.png', tag: '~팔이짧아슬픈요괴', category: '동방' },
   
   // 언더테일
   { src: './image/언더테일/sans01.gif', tag: '~샌즈01', category: '언더테일' },
