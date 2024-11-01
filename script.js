@@ -178,24 +178,42 @@ categoryFilter.addEventListener('change', () => {
 // 초기 렌더링: 전체 이미지를 표시
 renderImages(images);
 
+
+
 // 이미지 로딩 관련
-document.addEventListener("DOMContentLoaded", function () {
-  const lazyImages = document.querySelectorAll(".lazy-image");
+const container = document.getElementById("image-container");
 
-  const imageObserver = new IntersectionObserver((entries, observer) => {
+// 이미지 동적 추가 함수
+function createImageElement(src) {
+    const img = document.createElement("img");
+    img.src = src;
+    img.classList.add("image-item");
+    img.loading = "lazy";  // Lazy load 속성 추가
+    img.alt = "이미지";
+    return img;
+}
+
+// 이미지 로드 함수
+function loadImage(entry) {
+    const img = entry.target;
+    img.src = img.getAttribute("data-src");
+    img.classList.add("loaded");
+    observer.unobserve(img);
+}
+
+// IntersectionObserver 설정
+const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const img = entry.target;
-        img.src = img.dataset.src; // 이미지 로드
-        img.onload = () => img.classList.add("visible"); // 페이드인 효과 적용
-        observer.unobserve(img); // 로드 완료된 이미지 관찰 중지
-      }
+        if (entry.isIntersecting) {
+            loadImage(entry);
+        }
     });
-  }, {
-    rootMargin: "0px 0px 50px 0px", // 이미지가 화면에 가까이 오면 로드 시작
-    threshold: 0.1
-  });
+}, { rootMargin: "0px 0px 200px 0px" });  // rootMargin을 조절해 로딩 범위 조절
 
-  lazyImages.forEach(img => imageObserver.observe(img));
+// 이미지 추가 및 감시 시작
+imageList.forEach((src) => {
+    const img = createImageElement(src);
+    img.setAttribute("data-src", src);  // data-src로 원본 경로 설정
+    container.appendChild(img);
+    observer.observe(img);
 });
-
