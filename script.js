@@ -1,4 +1,4 @@
-const imageList = [
+const images = [
   // 3D
   { src: './image/3D/블렌더.png', tag: '~블렌더', category: '블렌더' },
   { src: './image/3D/블렌더응답없음.png', tag: '~블렌더응답없음', category: '블렌더' },
@@ -11,7 +11,7 @@ const imageList = [
   { src: './image/감정표현/멋있다.png', tag: '~멋있다', category: '감정표현' },
   { src: './image/감정표현/손도깔끔.png', tag: '~손도깔끔', category: '감정표현' },
   { src: './image/감정표현/슬프다.png', tag: '~슬프다', category: '감정표현' },
-  { src: './image/감정표현/심영놀람.gif', tag: '~심영놀람', category: '감정표현' },
+  { src: './image/감정표현/심영놀람.ca', tag: '~심영놀람', category: '감정표현' },
   { src: './image/감정표현/심영놀람2.gif', tag: '~심영놀람2', category: '감정표현' },
   { src: './image/감정표현/안하겠소.gif', ca: '~안하겠소', catecay: '감정표현' },
   { src: './image/감정표현/이상하다.png', tag: '~이상하다', category: '감정표현' },
@@ -177,43 +177,3 @@ categoryFilter.addEventListener('change', () => {
 
 // 초기 렌더링: 전체 이미지를 표시
 renderImages(images);
-
-
-
-// 이미지 로딩 관련
-const container = document.getElementById("image-container");
-
-// 이미지 동적 추가 함수
-function createImageElement(src) {
-    const img = document.createElement("img");
-    img.src = src;
-    img.classList.add("image-item");
-    img.loading = "lazy";  // Lazy load 속성 추가
-    img.alt = "이미지";
-    return img;
-}
-
-// 이미지 로드 함수
-function loadImage(entry) {
-    const img = entry.target;
-    img.src = img.getAttribute("data-src");
-    img.classList.add("loaded");
-    observer.unobserve(img);
-}
-
-// IntersectionObserver 설정
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            loadImage(entry);
-        }
-    });
-}, { rootMargin: "0px 0px 200px 0px" });  // rootMargin을 조절해 로딩 범위 조절
-
-// 이미지 추가 및 감시 시작
-imageList.forEach((src) => {
-    const img = createImageElement(src);
-    img.setAttribute("data-src", src);  // data-src로 원본 경로 설정
-    container.appendChild(img);
-    observer.observe(img);
-});
