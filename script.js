@@ -186,6 +186,27 @@ const images = [
 const imageContainer = document.getElementById('imageContainer');
 const categoryFilter = document.getElementById('categoryFilter');
 
+// Intersection Observer 설정
+const observerOptions = {
+  root: null,
+  rootMargin: '50px', // 이미지가 뷰포트 50px 전에 로딩 시작
+  threshold: 0.1
+};
+
+const imageObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const img = entry.target;
+      const realSrc = img.dataset.src;
+      if (realSrc) {
+        img.src = realSrc;
+        img.removeAttribute('data-src');
+        observer.unobserve(img);
+      }
+    }
+  });
+}, observerOptions);
+
 // 이미지 목록을 렌더링하는 함수
 function renderImages(filteredImages) {
   imageContainer.innerHTML = ''; // 기존 이미지 초기화
@@ -194,8 +215,15 @@ function renderImages(filteredImages) {
     const imageBox = document.createElement('div');
     imageBox.className = 'image-box';
 
+    // 이미지 요소 생성 및 lazy loading 설정
     const img = document.createElement('img');
-    img.src = image.src;
+    img.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'; // 투명 placeholder
+    img.dataset.src = image.src; // 실제 이미지 URL을 data-src에 저장
+    img.style.opacity = '0';
+    img.onload = () => {
+      img.style.opacity = '1';
+    };
+    
     imageBox.appendChild(img);
 
     const tag = document.createElement('div');
@@ -217,6 +245,9 @@ function renderImages(filteredImages) {
     });
 
     imageContainer.appendChild(imageBox);
+    
+    // 이미지 관찰 시작
+    imageObserver.observe(img);
   });
 }
 
@@ -225,10 +256,10 @@ categoryFilter.addEventListener('change', () => {
   const selectedCategory = categoryFilter.value;
 
   if (selectedCategory === 'all') {
-    renderImages(images); // 전체 이미지를 렌더링
+    renderImages(images);
   } else {
     const filteredImages = images.filter(image => image.category === selectedCategory);
-    renderImages(filteredImages); // 선택된 카테고리의 이미지만 렌더링
+    renderImages(filteredImages);
   }
 });
 
