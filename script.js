@@ -65,7 +65,7 @@ const images = [
   { src: './image/동방/코이시기대중.webp', tag: '~코이시기대중', category: '동방' },
   { src: './image/동방/코이시흑화.webp', tag: '~코이시흑화', category: '동방' },
   { src: './image/동방/테위뻥이야.webp', tag: '~테위뻥이야', category: '동방' },
-  { src: './image/동방/텐시주세요.webp', tag: '~텐시주세요', category: '동방' },
+  { src: './image/동방/텐시엣헴.webp', tag: '~텐시엣헴', category: '동방' },
   { src: './image/동방/플랑주세요.webp', tag: '~플랑주세요', category: '동방' },
   { src: './image/동방/플랑허접.webp', tag: '~플랑허접', category: '동방' },
   { src: './image/동방/플랑허접2.webp', tag: '~플랑허접2', category: '동방' },
