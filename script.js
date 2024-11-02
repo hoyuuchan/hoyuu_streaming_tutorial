@@ -119,7 +119,25 @@ const images = [
   { src: './image/언더테일/히트플깜짝.png', tag: '~히트플깜짝', category: '언더테일' },
   { src: './image/언더테일/프리스크.png', tag: '~프리스크', category: '언더테일' },
   { src: './image/언더테일/chara0101.gif', tag: '~차라', category: '언더테일' },
-  //{ src: './image/언더테일/chara0201.gif', tag: '~차라02', category: '언더테일' },
+  { src: './image/언더테일/chara0201.gif', tag: '~차라02', category: '언더테일' },
+
+  // 언더테일
+  { src: './image/마크/거미.png', tag: '~거미', category: '언더테일' },
+  { src: './image/마크/닭.png', tag: '~닭', category: '언더테일' },
+  { src: './image/마크/닭ㅠㅠ.png', tag: '~닭ㅠㅠ', category: '언더테일' },
+  { src: './image/마크/돼지.png', tag: '~돼지', category: '언더테일' },
+  { src: './image/마크/돼지ㅠㅠ.png', tag: '~돼지ㅠㅠ', category: '언더테일' },
+  { src: './image/마크/소.png', tag: '~소', category: '언더테일' },
+  { src: './image/마크/소ㅠㅠ.png', tag: '~소', category: '언더테일' },
+  { src: './image/마크/스켈레톤.png', tag: '~소ㅠㅠ', category: '언더테일' },
+  { src: './image/마크/슬라임.png', tag: '~슬라임', category: '언더테일' },
+  { src: './image/마크/양.png', tag: '~양', category: '언더테일' },
+  { src: './image/마크/양ㅠㅠ.png', tag: '~양ㅠㅠ', category: '언더테일' },
+  { src: './image/마크/엔더맨.png', tag: '~엔더맨', category: '언더테일' },
+  { src: './image/마크/좀비.png', tag: '~좀비', category: '언더테일' },
+  { src: './image/마크/주민.png', tag: '~주민', category: '언더테일' },
+  { src: './image/마크/주민ㅠㅠ.png', tag: '~주민ㅠㅠ', category: '언더테일' },
+  { src: './image/마크/크리퍼.png', tag: '~크리퍼', category: '언더테일' },
 
   // 산나비
   { src: './image/산나비/마리덜덜.gif', tag: '~마리덜덜', category: '산나비' },
