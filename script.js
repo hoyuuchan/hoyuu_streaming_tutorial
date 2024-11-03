@@ -18,6 +18,7 @@ const images = [
   { src: './image/감정표현/즐겁다.png', tag: '~즐겁다', category: '감정표현' },
   { src: './image/감정표현/화난다.png', tag: '~화난다', category: '감정표현' },
   { src: './image/감정표현/냥경악.gif', tag: '~냥경악', category: '감정표현' },
+  { src: './image/감정표현/냥따봉.png', tag: '~냥따봉', category: '감정표현' },
   { src: './image/감정표현/심영박수.gif', tag: '~심영박수', category: '감정표현' },
   { src: './image/감정표현/심영박수2.gif', tag: '~심영박수2', category: '감정표현' },
   { src: './image/감정표현/잇님놀람.png', tag: '~잇님놀람', category: '감정표현' },
@@ -121,7 +122,7 @@ const images = [
   { src: './image/언더테일/chara0101.gif', tag: '~차라', category: '언더테일' },
   { src: './image/언더테일/chara0201.gif', tag: '~차라02', category: '언더테일' },
 
-  // 언더테일
+  // 마인크래프트
   { src: './image/마크/거미.png', tag: '~거미', category: '마크' },
   { src: './image/마크/닭.png', tag: '~닭', category: '마크' },
   { src: './image/마크/닭ㅠㅠ.png', tag: '~닭ㅠㅠ', category: '마크' },
