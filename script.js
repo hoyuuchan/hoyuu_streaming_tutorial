@@ -3,6 +3,9 @@ const images = [
   { src: './image/3D/블렌더.png', tag: '~블렌더', category: '블렌더' },
   { src: './image/3D/블렌더응답없음.png', tag: '~블렌더응답없음', category: '블렌더' },
   { src: './image/3D/블렌더수잔.png', tag: '~블렌더수잔', category: '블렌더' },
+  
+  // 오리지널
+  { src: './image/오리지널/란호유.png', tag: '~란호유', category: '란호유' },
 
   // 감정표현
   { src: './image/감정표현/두렵다.png', tag: '~두렵다', category: '감정표현' },
