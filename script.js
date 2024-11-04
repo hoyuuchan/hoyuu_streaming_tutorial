@@ -185,6 +185,13 @@ const images = [
   { src: './image/산나비/야옹이대원절레.gif', tag: '~야옹이절레', category: '산나비' },
   { src: './image/산나비/야옹이대원짝짝.gif', tag: '~야옹이짝짝', category: '산나비' },
   { src: './image/산나비/지켜보고있습니다.gif', tag: '~지켜보고있음', category: '산나비' },
+
+  // 기타
+  { src: './image/리버스/레굴루스.png', tag: '~레굴루스', category: '기타' },
+  { src: './image/리버스/레굴루스점점점.png', tag: '~레굴루스점점점', category: '기타' },
+  { src: './image/리버스/와구.png', tag: '~와구', category: '기타' },
+  { src: './image/림버스/삭제.webp', tag: '~삭제', category: '기타' },
+
   // 추가 이미지 데이터...
 ];
 
