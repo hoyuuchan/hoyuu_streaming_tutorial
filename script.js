@@ -41,9 +41,12 @@ const images = [
   { src: './image/동방/안된다구.png', tag: '~안된다구', category: '동방' },
   { src: './image/동방/아하.png', tag: '~아하', category: '동방' },
   { src: './image/동방/팔이짧아슬픈요괴.gif', tag: '~팔이짧아슬픈요괴', category: '동방' },
+  { src: './image/동방/팔이짧아슬픈요괴2.png', tag: '~팔이짧아슬픈요괴2', category: '동방' },
+  { src: './image/동방/팔이짧아슬픈요괴3.png', tag: '~팔이짧아슬픈요괴3', category: '동방' },
   { src: './image/동방/레밀멋있지.webp', tag: '~레밀멋있지', category: '동방' },
   { src: './image/동방/레밀불꺼조.webp', tag: '~레밀불꺼조', category: '동방' },
   { src: './image/동방/레밀엑설.webp', tag: '~레밀엑설', category: '동방' },
+  { src: './image/동방/레이무동방아냐.webp', tag: '~레이무동방아냐', category: '동방' },
   { src: './image/동방/레이무망한다고.webp', tag: '~레이무망한다고', category: '동방' },
   { src: './image/동방/레이무절규.gif', tag: '~레이무절규', category: '동방' },
   { src: './image/동방/마리사덜덜.webp', tag: '~마리사덜덜', category: '동방' },
@@ -187,10 +190,10 @@ const images = [
   { src: './image/산나비/지켜보고있습니다.gif', tag: '~지켜보고있음', category: '산나비' },
 
   // 기타
-  { src: './image/리버스/레굴루스.png', tag: '~레굴루스', category: '기타' },
-  { src: './image/리버스/레굴루스점점점.png', tag: '~레굴루스점점점', category: '기타' },
-  { src: './image/리버스/와구.png', tag: '~와구', category: '기타' },
-  { src: './image/림버스/삭제.webp', tag: '~삭제', category: '기타' },
+  { src: './image/기타/레굴루스.png', tag: '~레굴루스', category: '기타' },
+  { src: './image/기타/레굴루스점점점.png', tag: '~레굴루스점점점', category: '기타' },
+  { src: './image/기타/와구.png', tag: '~와구', category: '기타' },
+  { src: './image/기타/삭제.webp', tag: '~삭제', category: '기타' },
 
   // 추가 이미지 데이터...
 ];
