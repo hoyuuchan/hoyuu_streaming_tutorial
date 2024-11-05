@@ -45,6 +45,7 @@ const images = [
   { src: './image/동방/팔이짧아슬픈요괴.gif', tag: '~팔이짧아슬픈요괴', category: '동방' },
   { src: './image/동방/팔이짧아슬픈요괴2.png', tag: '~팔이짧아슬픈요괴2', category: '동방' },
   { src: './image/동방/팔이짧아슬픈요괴3.png', tag: '~팔이짧아슬픈요괴3', category: '동방' },
+  { src: './image/동방/클피죽으면.png', tag: '~클피죽으면', category: '동방' },
   { src: './image/동방/레밀멋있지.webp', tag: '~레밀멋있지', category: '동방' },
   { src: './image/동방/레밀불꺼조.webp', tag: '~레밀불꺼조', category: '동방' },
   { src: './image/동방/레밀엑설.webp', tag: '~레밀엑설', category: '동방' },
@@ -80,7 +81,6 @@ const images = [
   { src: './image/동방/플랑허접.webp', tag: '~플랑허접', category: '동방' },
   { src: './image/동방/플랑허접2.webp', tag: '~플랑허접2', category: '동방' },
   { src: './image/동방/플랑볼따구.gif', tag: '~플랑볼따구', category: '동방' },
-  { src: './image/동방/클피죽으면.png', tag: '~클피죽으면', category: '동방' },
   
   // 언더테일
   { src: './image/언더테일/sans01.gif', tag: '~샌즈01', category: '언더테일' },
