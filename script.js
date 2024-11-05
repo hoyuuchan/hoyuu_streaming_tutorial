@@ -28,6 +28,8 @@ const images = [
   { src: './image/감정표현/잇님놀람.png', tag: '~잇님놀람', category: '감정표현' },
   { src: './image/감정표현/잇님따봉.png', tag: '~잇님따봉', category: '감정표현' },
   { src: './image/감정표현/잇님윙크.png', tag: '~잇님윙크', category: '감정표현' },
+  { src: './image/감정표현/잇님절망.png', tag: '~잇님절망', category: '감정표현' },
+  { src: './image/감정표현/잇님하트.png', tag: '~잇님하트', category: '감정표현' },
   { src: './image/감정표현/톰인사.gif', tag: '~톰인사', category: '감정표현' },
   { src: './image/감정표현/톰화들짝.gif', tag: '~톰화들짝', category: '감정표현' },
   { src: './image/감정표현/제리인사.gif', tag: '~제리인사', category: '감정표현' },
@@ -78,6 +80,7 @@ const images = [
   { src: './image/동방/플랑허접.webp', tag: '~플랑허접', category: '동방' },
   { src: './image/동방/플랑허접2.webp', tag: '~플랑허접2', category: '동방' },
   { src: './image/동방/플랑볼따구.gif', tag: '~플랑볼따구', category: '동방' },
+  { src: './image/동방/클피죽으면.png', tag: '~클피죽으면', category: '동방' },
   
   // 언더테일
   { src: './image/언더테일/sans01.gif', tag: '~샌즈01', category: '언더테일' },
