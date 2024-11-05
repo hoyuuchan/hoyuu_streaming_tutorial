@@ -17,7 +17,7 @@ const images = [
   { src: './image/감정표현/고자라니.gif', tag: '~고자라니', category: '감정표현' },
   { src: './image/감정표현/심영놀람.gif', tag: '~심영놀람', category: '감정표현' },
   { src: './image/감정표현/심영놀람2.gif', tag: '~심영놀람2', category: '감정표현' },
-  { src: './image/감정표현/안하겠소.gif', tag: '~안하겠소', catecay: '감정표현' },
+  { src: './image/감정표현/안하겠소.gif', tag: '~안하겠소', category: '감정표현' },
   { src: './image/감정표현/이상하다.png', tag: '~이상하다', category: '감정표현' },
   { src: './image/감정표현/즐겁다.png', tag: '~즐겁다', category: '감정표현' },
   { src: './image/감정표현/화난다.png', tag: '~화난다', category: '감정표현' },
