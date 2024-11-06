@@ -39,6 +39,13 @@ const images = [
   { src: './image/감정표현/제리줘팸.gif', tag: '~제리줘팸', category: '감정표현' },
   { src: './image/감정표현/제리폭소.gif', tag: '~제리폭소', category: '감정표현' },
   { src: './image/감정표현/날속였어.png', tag: '~날속였어', category: '감정표현' },
+  { src: './image/감정표현/페페기대.png', tag: '~페페기대', category: '감정표현' },
+  { src: './image/감정표현/페페눈물.png', tag: '~페페눈물', category: '감정표현' },
+  { src: './image/감정표현/페페따봉.png', tag: '~페페따봉', category: '감정표현' },
+  { src: './image/감정표현/페페웃음.png', tag: '~페페웃음', category: '감정표현' },
+  { src: './image/감정표현/페페절규.png', tag: '~페페절규', category: '감정표현' },
+  { src: './image/감정표현/페페타노스.png', tag: '~페페타노스', category: '감정표현' },
+  { src: './image/감정표현/페페흠.png', tag: '~페페흠', category: '감정표현' },
 
   // 동방프로젝트
   { src: './image/동방/안된다구.png', tag: '~안된다구', category: '동방' },
