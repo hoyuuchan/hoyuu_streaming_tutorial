@@ -38,6 +38,7 @@ const images = [
   { src: './image/감정표현/제리메롱.gif', tag: '~제리메롱', category: '감정표현' },
   { src: './image/감정표현/제리줘팸.gif', tag: '~제리줘팸', category: '감정표현' },
   { src: './image/감정표현/제리폭소.gif', tag: '~제리폭소', category: '감정표현' },
+  { src: './image/감정표현/날속였어.gif', tag: '~날속였어', category: '감정표현' },
 
   // 동방프로젝트
   { src: './image/동방/안된다구.png', tag: '~안된다구', category: '동방' },
