@@ -53,10 +53,9 @@ const images = [
   { src: './image/감정표현/길쭉해요.png', tag: '~길쭉해요', category: '감정표현' },
   { src: './image/감정표현/꺅.png', tag: '~꺅', category: '감정표현' },
   { src: './image/감정표현/나빴어.png', tag: '~나빴어', category: '감정표현' },
-  { src: './image/감정표현/먹을만하네요.png', tag: '~먹을만하네요', category: '감정표현' },
+  { src: './image/감정표현/먹을만.png', tag: '~먹을만', category: '감정표현' },
   { src: './image/감정표현/물음표.png', tag: '~물음표', category: '감정표현' },
   { src: './image/감정표현/뭘바요.png', tag: '~뭘바요', category: '감정표현' },
-  { src: './image/감정표현/미안해요.png', tag: '~미안해요', category: '감정표현' },
   { src: './image/감정표현/미안해요.png', tag: '~미안해요', category: '감정표현' },
   { src: './image/감정표현/반가워요.png', tag: '~반가워요', category: '감정표현' },
   { src: './image/감정표현/배고파요.png', tag: '~배고파요', category: '감정표현' },
@@ -82,6 +81,7 @@ const images = [
   { src: './image/감정표현/할수있어요.png', tag: '~할수있어요', category: '감정표현' },
   { src: './image/감정표현/행복해요.png', tag: '~행복해요', category: '감정표현' },
   { src: './image/감정표현/화났어요.png', tag: '~화났어요', category: '감정표현' },
+  { src: './image/감정표현/상상도못한.png', tag: '~ㄴㅇㄱ', category: '감정표현' },
 
   // 동방프로젝트
   { src: './image/동방/안된다구.png', tag: '~안된다구', category: '동방' },
@@ -264,6 +264,7 @@ const images = [
   { src: './image/기타/레굴루스점점점.png', tag: '~레굴루스점점점', category: '기타' },
   { src: './image/기타/와구.png', tag: '~와구', category: '기타' },
   { src: './image/기타/삭제.webp', tag: '~삭제', category: '기타' },
+  { src: './image/기타/센스.png', tag: '~센스', category: '기타' },
 
   // 추가 이미지 데이터...
 ];
