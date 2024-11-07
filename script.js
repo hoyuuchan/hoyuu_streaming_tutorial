@@ -47,6 +47,9 @@ const images = [
   { src: './image/감정표현/페페절규.png', tag: '~페페절규', category: '감정표현' },
   { src: './image/감정표현/페페타노스.png', tag: '~페페타노스', category: '감정표현' },
   { src: './image/감정표현/페페흠.png', tag: '~페페흠', category: '감정표현' },
+  { src: './image/감정표현/멈춰.png', tag: '~멈춰', category: '감정표현' },
+  { src: './image/감정표현/멈춰2.png', tag: '~멈춰2', category: '감정표현' },
+  { src: './image/감정표현/멈춰3.png', tag: '~멈춰3', category: '감정표현' },
 
   // 동방프로젝트
   { src: './image/동방/안된다구.png', tag: '~안된다구', category: '동방' },
