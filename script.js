@@ -53,7 +53,7 @@ const images = [
   { src: './image/감정표현/길쭉해요.png', tag: '~길쭉해요', category: '감정표현' },
   { src: './image/감정표현/꺅.png', tag: '~꺅', category: '감정표현' },
   { src: './image/감정표현/나빴어.png', tag: '~나빴어', category: '감정표현' },
-  { src: './image/감정표현/먹을만.png', tag: '~먹을만', category: '감정표현' },
+  { src: './image/감정표현/먹을만하네요.png', tag: '~먹을만', category: '감정표현' },
   { src: './image/감정표현/물음표.png', tag: '~물음표', category: '감정표현' },
   { src: './image/감정표현/뭘바요.png', tag: '~뭘바요', category: '감정표현' },
   { src: './image/감정표현/미안해요.png', tag: '~미안해요', category: '감정표현' },
