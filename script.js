@@ -8,9 +8,9 @@ const images = [
   { src: './image/오리지널/란호유.png', tag: '~란호유', category: '란호유' },
 
   // 감정표현
+  { src: './image/감정표현/마참내.png', tag: '~마참내', category: '감정표현' },
   { src: './image/감정표현/두렵다.png', tag: '~두렵다', category: '감정표현' },
   { src: './image/감정표현/띠껍다.png', tag: '~띠껍다', category: '감정표현' },
-  { src: './image/감정표현/마참내.png', tag: '~마참내', category: '감정표현' },
   { src: './image/감정표현/멋있다.png', tag: '~멋있다', category: '감정표현' },
   { src: './image/감정표현/슬프다.png', tag: '~슬프다', category: '감정표현' },
   { src: './image/감정표현/이상하다.png', tag: '~이상하다', category: '감정표현' },
@@ -87,9 +87,9 @@ const images = [
   { src: './image/감정표현/상상도못한.png', tag: '~ㄴㅇㄱ', category: '감정표현' },
   { src: './image/감정표현/현장개추.png', tag: '~개추', category: '감정표현' },
   { src: './image/감정표현/현장몰루.png', tag: '~몰루', category: '감정표현' },
-  { src: './image/감정표현/현장물음표.png', tag: '~물음표', category: '감정표현' },
+  { src: './image/감정표현/현장물음표.png', tag: '~현장물음표', category: '감정표현' },
   { src: './image/감정표현/현장비추.png', tag: '~비추', category: '감정표현' },
-  { src: './image/감정표현/현장안돼.png', tag: '~안돼', category: '감정표현' },
+  { src: './image/감정표현/현장안돼.png', tag: '~안됩니다', category: '감정표현' },
   { src: './image/감정표현/현장어째서.png', tag: '~어째서', category: '감정표현' },
   { src: './image/감정표현/현장에.png', tag: '~에', category: '감정표현' },
   { src: './image/감정표현/현장이새기.png', tag: '~이새기', category: '감정표현' },
