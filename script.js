@@ -85,6 +85,18 @@ const images = [
   { src: './image/감정표현/행복해요.png', tag: '~행복해요', category: '감정표현' },
   { src: './image/감정표현/화났어요.png', tag: '~화났어요', category: '감정표현' },
   { src: './image/감정표현/상상도못한.png', tag: '~ㄴㅇㄱ', category: '감정표현' },
+  { src: './image/감정표현/현장개추.png', tag: '~개추', category: '감정표현' },
+  { src: './image/감정표현/현장몰루.png', tag: '~몰루', category: '감정표현' },
+  { src: './image/감정표현/현장물음표.png', tag: '~물음표', category: '감정표현' },
+  { src: './image/감정표현/현장비추.png', tag: '~비추', category: '감정표현' },
+  { src: './image/감정표현/현장안돼.png', tag: '~안돼', category: '감정표현' },
+  { src: './image/감정표현/현장어째서.png', tag: '~어째서', category: '감정표현' },
+  { src: './image/감정표현/현장에.png', tag: '~에', category: '감정표현' },
+  { src: './image/감정표현/현장이새기.png', tag: '~이새기', category: '감정표현' },
+  { src: './image/감정표현/현장좋았쓰.png', tag: '~좋았쓰', category: '감정표현' },
+  { src: './image/감정표현/현장캡처.png', tag: '~캡쳐', category: '감정표현' },
+  { src: './image/감정표현/현장힘들어.png', tag: '~힘들어', category: '감정표현' },
+  { src: './image/감정표현/현장ㅠㅠ.png', tag: '~ㅠㅠ', category: '감정표현' },
 
   // 동방프로젝트
   { src: './image/동방/안된다구.png', tag: '~안된다구', category: '동방' },
@@ -138,6 +150,9 @@ const images = [
   { src: './image/동방/플랑허접.webp', tag: '~플랑허접', category: '동방' },
   { src: './image/동방/플랑허접2.webp', tag: '~플랑허접2', category: '동방' },
   { src: './image/동방/플랑볼따구.gif', tag: '~플랑볼따구', category: '동방' },
+  { src: './image/동방/안능하제옇.png', tag: '~안능하제옇', category: '동방' },
+  { src: './image/동방/첸물음표.png', tag: '~첸물음표', category: '동방' },
+  { src: './image/동방/퉤에엣.png', tag: '~퉤에엣', category: '동방' },
   
   // 언더테일
   { src: './image/언더테일/sans01.gif', tag: '~샌즈01', category: '언더테일' },
