@@ -283,6 +283,9 @@ const images = [
   { src: './image/기타/와구.png', tag: '~와구', category: '기타' },
   { src: './image/기타/삭제.webp', tag: '~삭제', category: '기타' },
   { src: './image/기타/센스.png', tag: '~센스', category: '기타' },
+  { src: './image/기타/즌다.webp', tag: '~즌다', category: '기타' },
+  { src: './image/기타/즌다조식.webp', tag: '~즌다오키테', category: '기타' },
+  { src: './image/기타/즌즌즌다.webp', tag: '~즌즌즌다', category: '기타' },
 
   // 추가 이미지 데이터...
 ];
