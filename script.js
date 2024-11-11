@@ -1,7 +1,7 @@
 const images = [
   // 3D
   { src: './image/3D/블렌더.png', tag: '~블렌더', category: '블렌더' },
-  { src: './image/3D/블렌더응답없음.png', tag: '~블렌더응답없음', category: '블렌더' },
+  { src: './image/3D/블렌더응답없음.png', tag: '~블렌더응답없음', category: ['블렌더', '절망'] },
   { src: './image/3D/블렌더수잔.png', tag: '~블렌더수잔', category: '블렌더' },
   
   // 오리지널
@@ -23,32 +23,32 @@ const images = [
   { src: './image/감정표현/안하겠소.gif', tag: '~안하겠소', category: '감정표현' },
   { src: './image/감정표현/심영박수.gif', tag: '~심영박수', category: '감정표현' },
   { src: './image/감정표현/심영박수2.gif', tag: '~심영박수2', category: '감정표현' },
-  { src: './image/감정표현/냥경악.gif', tag: '~냥경악', category: '감정표현' },
-  { src: './image/감정표현/냥따봉.png', tag: '~냥따봉', category: '감정표현' },
+  { src: './image/감정표현/냥경악.gif', tag: '~냥경악', category: ['감정표현', '절망'] },
+  { src: './image/감정표현/냥따봉.png', tag: '~냥따봉', category: ['감정표현', '기쁨', '긍정'] },
   { src: './image/감정표현/멈춰.png', tag: '~멈춰1', category: '감정표현' },
   { src: './image/감정표현/멈춰2.png', tag: '~멈춰2', category: '감정표현' },
   { src: './image/감정표현/멈춰3.png', tag: '~멈춰3', category: '감정표현' },
-  { src: './image/감정표현/잇님놀람.png', tag: '~잇님놀람', category: '감정표현' },
-  { src: './image/감정표현/잇님따봉.png', tag: '~잇님따봉', category: '감정표현' },
-  { src: './image/감정표현/잇님윙크.png', tag: '~잇님윙크', category: '감정표현' },
-  { src: './image/감정표현/잇님절망.png', tag: '~잇님절망', category: '감정표현' },
-  { src: './image/감정표현/잇님하트.png', tag: '~잇님하트', category: '감정표현' },
-  { src: './image/감정표현/톰인사.gif', tag: '~톰인사', category: '감정표현' },
+  { src: './image/감정표현/잇님놀람.png', tag: '~잇님놀람', category: ['감정표현', '절망'] },
+  { src: './image/감정표현/잇님따봉.png', tag: '~잇님따봉', category: ['감정표현', '긍정'] },
+  { src: './image/감정표현/잇님윙크.png', tag: '~잇님윙크', category: ['감정표현', '긍정'] },
+  { src: './image/감정표현/잇님절망.png', tag: '~잇님절망', category: ['감정표현', '절망'] },
+  { src: './image/감정표현/잇님하트.png', tag: '~잇님하트', category: ['감정표현', '기쁨', '긍정'] },
+  { src: './image/감정표현/톰인사.gif', tag: '~톰인사', category: ['감정표현', '인사'] },
   { src: './image/감정표현/톰화들짝.gif', tag: '~톰화들짝', category: '감정표현' },
-  { src: './image/감정표현/제리인사.gif', tag: '~제리인사', category: '감정표현' },
-  { src: './image/감정표현/제리기도.gif', tag: '~제리기도', category: '감정표현' },
-  { src: './image/감정표현/제리기도2.gif', tag: '~제리기도2', category: '감정표현' },
-  { src: './image/감정표현/제리메롱.gif', tag: '~제리메롱', category: '감정표현' },
+  { src: './image/감정표현/제리인사.gif', tag: '~제리인사', category: ['감정표현', '인사'] },
+  { src: './image/감정표현/제리기도.gif', tag: '~제리기도', category: ['감정표현', '절망'] },
+  { src: './image/감정표현/제리기도2.gif', tag: '~제리기도2', category: ['감정표현', '절망'] },
+  { src: './image/감정표현/제리메롱.gif', tag: '~제리메롱', category: ['감정표현', '절망'] },
   { src: './image/감정표현/제리줘팸.gif', tag: '~제리줘팸', category: '감정표현' },
-  { src: './image/감정표현/제리폭소.gif', tag: '~제리폭소', category: '감정표현' },
-  { src: './image/감정표현/날속였어.png', tag: '~날속였어', category: '감정표현' },
-  { src: './image/감정표현/이해했어.png', tag: '~이해했어', category: '감정표현' },
-  { src: './image/감정표현/페페기대.png', tag: '~페페기대', category: '감정표현' },
-  { src: './image/감정표현/페페눈물.png', tag: '~페페눈물', category: '감정표현' },
-  { src: './image/감정표현/페페따봉.png', tag: '~페페따봉', category: '감정표현' },
-  { src: './image/감정표현/페페웃음.png', tag: '~페페웃음', category: '감정표현' },
-  { src: './image/감정표현/페페절규.png', tag: '~페페절규', category: '감정표현' },
-  { src: './image/감정표현/페페타노스.png', tag: '~페페타노스', category: '감정표현' },
+  { src: './image/감정표현/제리폭소.gif', tag: '~제리폭소', category: ['감정표현', '기쁨'] },
+  { src: './image/감정표현/날속였어.png', tag: '~날속였어', category: ['감정표현', '절망'] },
+  { src: './image/감정표현/이해했어.png', tag: '~이해했어', category: ['감정표현', '긍정'] },
+  { src: './image/감정표현/페페기대.png', tag: '~페페기대', category: ['감정표현', '긍정'] },
+  { src: './image/감정표현/페페눈물.png', tag: '~페페눈물', category: ['감정표현', '슬픔'] },
+  { src: './image/감정표현/페페따봉.png', tag: '~페페따봉', category: ['감정표현', '기쁨'] },
+  { src: './image/감정표현/페페웃음.png', tag: '~페페웃음', category: ['감정표현', '기쁨'] },
+  { src: './image/감정표현/페페절규.png', tag: '~페페절규', category: ['감정표현', '절망'] },
+  { src: './image/감정표현/페페타노스.png', tag: '~페페타노스', category: ['감정표현', '슬픔', '절망'] },
   { src: './image/감정표현/가만히.png', tag: '~가만히', category: '감정표현' },
   { src: './image/감정표현/고마워요.png', tag: '~고마워요', category: '감정표현' },
   { src: './image/감정표현/귀여운.png', tag: '~귀여운', category: '감정표현' },
@@ -81,36 +81,36 @@ const images = [
   { src: './image/감정표현/좋아해요.png', tag: '~좋아해요', category: '감정표현' },
   { src: './image/감정표현/참잘했어요.png', tag: '~참잘했어요', category: '감정표현' },
   { src: './image/감정표현/푸하하.png', tag: '~푸하하', category: '감정표현' },
-  { src: './image/감정표현/할수있어요.png', tag: '~할수있어요', category: '감정표현' },
-  { src: './image/감정표현/행복해요.png', tag: '~행복해요', category: '감정표현' },
-  { src: './image/감정표현/화났어요.png', tag: '~화났어요', category: '감정표현' },
-  { src: './image/감정표현/상상도못한.png', tag: '~ㄴㅇㄱ', category: '감정표현' },
-  { src: './image/감정표현/현장개추.png', tag: '~개추', category: '감정표현' },
+  { src: './image/감정표현/할수있어요.png', tag: '~할수있어요', category: ['감정표현', '긍정'] },
+  { src: './image/감정표현/행복해요.png', tag: '~행복해요', category: ['감정표현', '기쁨', '긍정'] },
+  { src: './image/감정표현/화났어요.png', tag: '~화났어요', category: ['감정표현', '화남'] },
+  { src: './image/감정표현/상상도못한.png', tag: '~ㄴㅇㄱ', category: ['감정표현', '의문'] },
+  { src: './image/감정표현/현장개추.png', tag: '~개추', category: ['감정표현', '긍정'] },
   { src: './image/감정표현/현장몰루.png', tag: '~몰루', category: '감정표현' },
-  { src: './image/감정표현/현장물음표.png', tag: '~현장물음표', category: '감정표현' },
-  { src: './image/감정표현/현장비추.png', tag: '~비추', category: '감정표현' },
-  { src: './image/감정표현/현장안돼.png', tag: '~안됩니다', category: '감정표현' },
-  { src: './image/감정표현/현장어째서.png', tag: '~어째서', category: '감정표현' },
-  { src: './image/감정표현/현장에.png', tag: '~에', category: '감정표현' },
-  { src: './image/감정표현/현장이새기.png', tag: '~이새기', category: '감정표현' },
-  { src: './image/감정표현/현장좋았쓰.png', tag: '~좋았쓰', category: '감정표현' },
+  { src: './image/감정표현/현장물음표.png', tag: '~현장물음표', category: ['감정표현', '의문'] },
+  { src: './image/감정표현/현장비추.png', tag: '~비추', category: ['감정표현', '부정'] },
+  { src: './image/감정표현/현장안돼.png', tag: '~안됩니다', category: ['감정표현', '부정'] },
+  { src: './image/감정표현/현장어째서.png', tag: '~어째서', category: ['감정표현', '절망'] },
+  { src: './image/감정표현/현장에.png', tag: '~에', category: ['감정표현', '의문'] },
+  { src: './image/감정표현/현장이새기.png', tag: '~이새기', category: ['감정표현', '화남'] },
+  { src: './image/감정표현/현장좋았쓰.png', tag: '~좋았쓰', category: ['감정표현', '긍정', '기쁨'] },
   { src: './image/감정표현/현장캡처.png', tag: '~캡쳐', category: '감정표현' },
   { src: './image/감정표현/현장힘들어.png', tag: '~힘들어', category: '감정표현' },
-  { src: './image/감정표현/현장ㅠㅠ.png', tag: '~ㅠㅠ', category: '감정표현' },
+  { src: './image/감정표현/현장ㅠㅠ.png', tag: '~ㅠㅠ', category: ['감정표현', '슬픔'] },
 
   // 동방프로젝트
-  { src: './image/동방/안된다구.png', tag: '~안된다구', category: '동방' },
-  { src: './image/동방/아하.png', tag: '~아하', category: '동방' },
+  { src: './image/동방/안된다구.png', tag: '~안된다구', category: ['동방', '부정'] },
+  { src: './image/동방/아하.png', tag: '~아하', category: ['동방', '긍정'] },
   { src: './image/동방/자렴.png', tag: '~자렴', category: '동방' },
-  { src: './image/동방/좋아.png', tag: '~좋아', category: '동방' },
-  { src: './image/동방/없어요.png', tag: '~없어요', category: '동방' },
-  { src: './image/동방/쟤가.png', tag: '~쟤가', category: '동방' },
-  { src: './image/동방/절레절레.gif', tag: '~절레절레', category: '동방' },
+  { src: './image/동방/좋아.png', tag: '~좋아', category: ['동방', '긍정'] },
+  { src: './image/동방/없어요.png', tag: '~없어요', category: ['동방', '부정'] },
+  { src: './image/동방/쟤가.png', tag: '~쟤가', category: ['동방', '절망'] },
+  { src: './image/동방/절레절레.gif', tag: '~절레절레', category: ['동방', '부정'] },
   { src: './image/동방/좋을대로.png', tag: '~좋을대로', category: '동방' },
-  { src: './image/동방/루미댄스.gif', tag: '~루미댄스', category: '동방' },
-  { src: './image/동방/라바댄스.gif', tag: '~라바댄스', category: '동방' },
-  { src: './image/동방/레미댄스.gif', tag: '~레미댄스', category: '동방' },
-  { src: './image/동방/치르댄스.webp', tag: '~치르댄스', category: '동방' },
+  { src: './image/동방/루미댄스.gif', tag: '~루미댄스', category: ['동방', '기쁨'] },
+  { src: './image/동방/라바댄스.gif', tag: '~라바댄스', category: ['동방', '기쁨'] },
+  { src: './image/동방/레미댄스.gif', tag: '~레미댄스', category: ['동방', '기쁨'] },
+  { src: './image/동방/치르댄스.webp', tag: '~치르댄스', category: ['동방', '기쁨'] },
   { src: './image/동방/팔이짧아슬픈요괴.gif', tag: '~팔이짧아슬픈요괴', category: '동방' },
   { src: './image/동방/팔이짧아슬픈요괴2.png', tag: '~팔이짧아슬픈요괴2', category: '동방' },
   { src: './image/동방/팔이짧아슬픈요괴3.png', tag: '~팔이짧아슬픈요괴3', category: '동방' },
@@ -118,30 +118,30 @@ const images = [
   { src: './image/동방/레밀멋있지.webp', tag: '~레밀멋있지', category: '동방' },
   { src: './image/동방/레밀불꺼조.webp', tag: '~레밀불꺼조', category: '동방' },
   { src: './image/동방/레밀엑설.webp', tag: '~레밀엑설', category: '동방' },
-  { src: './image/동방/레이무동방아냐.webp', tag: '~레이무동방아냐', category: '동방' },
-  { src: './image/동방/레이무망한다고.webp', tag: '~레이무망한다고', category: '동방' },
-  { src: './image/동방/레이무절규.gif', tag: '~레이무절규', category: '동방' },
+  { src: './image/동방/레이무동방아냐.webp', tag: '~레이무동방아냐', category: ['동방', '부정'] },
+  { src: './image/동방/레이무망한다고.webp', tag: '~레이무망한다고', category: ['동방', '절밍'] },
+  { src: './image/동방/레이무절규.gif', tag: '~레이무절규', category: ['동방', '절망'] },
   { src: './image/동방/마리사덜덜.webp', tag: '~마리사덜덜', category: '동방' },
   { src: './image/동방/마리사덜덜2.gif', tag: '~마리사덜덜2', category: '동방' },
   { src: './image/동방/마리사아이스.webp', tag: '~마리사아이스', category: '동방' },
   { src: './image/동방/모코우주작.webp', tag: '~모코우주작', category: '동방' },
-  { src: './image/동방/사나에갈.webp', tag: '~사나에갈', category: '동방' },
-  { src: './image/동방/사나에신앙.webp', tag: '~사나에신앙', category: '동방' },
-  { src: './image/동방/사나에크으.webp', tag: '~사나에크으', category: '동방' },
+  { src: './image/동방/사나에갈.webp', tag: '~사나에갈', category: ['동방', '화남'] },
+  { src: './image/동방/사나에신앙.webp', tag: '~사나에신앙', category: ['동방', '화남'] },
+  { src: './image/동방/사나에크으.webp', tag: '~사나에크으', category: ['동방', '기쁨'] },
   { src: './image/동방/사쿠야함멈춰.webp', tag: '~사쿠야함멈춰', category: '동방' },
   { src: './image/동방/사토리짝.webp', tag: '~사토리짝', category: '동방' },
   { src: './image/동방/사토리짝2.webp', tag: '~사토리짝2', category: '동방' },
   { src: './image/동방/사토리짝3.gif', tag: '~사토리짝3', category: '동방' },
   { src: './image/동방/사토리빡.webp', tag: '~사토리빡', category: '동방' },
   { src: './image/동방/사토리오린.webp', tag: '~사토리오린', category: '동방' },
-  { src: './image/동방/스와코따봉.webp', tag: '~스와코따봉', category: '동방' },
-  { src: './image/동방/스와코뻐큐.webp', tag: '~스와코뻐큐', category: '동방' },
+  { src: './image/동방/스와코따봉.webp', tag: '~스와코따봉', category: ['동방', '긍정'] },
+  { src: './image/동방/스와코뻐큐.webp', tag: '~스와코뻐큐', category: ['동방', '부정'] },
   { src: './image/동방/스와코엠지.webp', tag: '~스와코엠지', category: '동방' },
   { src: './image/동방/스와코재앙.webp', tag: '~스와코재앙', category: '동방' },
   { src: './image/동방/유유코부거스.webp', tag: '~유유코부거스', category: '동방' },
   { src: './image/동방/유카리17살.webp', tag: '~유카리17살', category: '동방' },
-  { src: './image/동방/치르노이제뭐함.webp', tag: '~치르노이제뭐함', category: '동방' },
-  { src: './image/동방/치르노점점점.webp', tag: '~치르노점점점', category: '동방' },
+  { src: './image/동방/치르노이제뭐함.webp', tag: '~치르노이제뭐함', category: ['동방', '의문'] },
+  { src: './image/동방/치르노점점점.webp', tag: '~치르노점점점', category: ['동방', '절망', '부정'] },
   { src: './image/동방/코이시기대중.webp', tag: '~코이시기대중', category: '동방' },
   { src: './image/동방/코이시흑화.webp', tag: '~코이시흑화', category: '동방' },
   { src: './image/동방/테위뻥이야.webp', tag: '~테위뻥이야', category: '동방' },
@@ -150,8 +150,8 @@ const images = [
   { src: './image/동방/플랑허접.webp', tag: '~플랑허접', category: '동방' },
   { src: './image/동방/플랑허접2.webp', tag: '~플랑허접2', category: '동방' },
   { src: './image/동방/플랑볼따구.gif', tag: '~플랑볼따구', category: '동방' },
-  { src: './image/동방/안능하제옇.png', tag: '~안능하제옇', category: '동방' },
-  { src: './image/동방/첸물음표.png', tag: '~첸물음표', category: '동방' },
+  { src: './image/동방/안능하제옇.png', tag: '~안능하제옇', category: ['동방', '인사'] },
+  { src: './image/동방/첸물음표.png', tag: '~첸물음표', category: ['동방', '의문'] },
   { src: './image/동방/퉤에엣.png', tag: '~퉤에엣', category: '동방' },
   
   // 언더테일
@@ -207,19 +207,19 @@ const images = [
   // 마인크래프트
   { src: './image/마크/거미.png', tag: '~거미', category: '마크' },
   { src: './image/마크/닭.png', tag: '~닭', category: '마크' },
-  { src: './image/마크/닭ㅠㅠ.png', tag: '~닭ㅠㅠ', category: '마크' },
+  { src: './image/마크/닭ㅠㅠ.png', tag: '~닭ㅠㅠ', category: ['마크', '슬픔'] },
   { src: './image/마크/돼지.png', tag: '~돼지', category: '마크' },
-  { src: './image/마크/돼지ㅠㅠ.png', tag: '~돼지ㅠㅠ', category: '마크' },
+  { src: './image/마크/돼지ㅠㅠ.png', tag: '~돼지ㅠㅠ', category: ['마크', '슬픔'] },
   { src: './image/마크/소.png', tag: '~소', category: '마크' },
   { src: './image/마크/소ㅠㅠ.png', tag: '~소', category: '마크' },
-  { src: './image/마크/스켈레톤.png', tag: '~소ㅠㅠ', category: '마크' },
+  { src: './image/마크/스켈레톤.png', tag: '~소ㅠㅠ', category: ['마크', '슬픔'] },
   { src: './image/마크/슬라임.png', tag: '~슬라임', category: '마크' },
   { src: './image/마크/양.png', tag: '~양', category: '마크' },
-  { src: './image/마크/양ㅠㅠ.png', tag: '~양ㅠㅠ', category: '마크' },
+  { src: './image/마크/양ㅠㅠ.png', tag: '~양ㅠㅠ', category: ['마크', '슬픔'] },
   { src: './image/마크/엔더맨.png', tag: '~엔더맨', category: '마크' },
   { src: './image/마크/좀비.png', tag: '~좀비', category: '마크' },
   { src: './image/마크/주민.png', tag: '~주민', category: '마크' },
-  { src: './image/마크/주민ㅠㅠ.png', tag: '~주민ㅠㅠ', category: '마크' },
+  { src: './image/마크/주민ㅠㅠ.png', tag: '~주민ㅠㅠ', category: ['마크', '슬픔'] },
   { src: './image/마크/크리퍼.png', tag: '~크리퍼', category: '마크' },
   { src: './image/마크/구리원석.webp', tag: '~구리원석', category: '마크' },
   { src: './image/마크/구리주괴.webp', tag: '~구리주괴', category: '마크' },
@@ -236,16 +236,16 @@ const images = [
   { src: './image/마크/에메랄드.webp', tag: '~에메랄드', category: '마크' },
 
   // 산나비
-  { src: './image/산나비/마리덜덜.gif', tag: '~마리덜덜', category: '산나비' },
-  { src: './image/산나비/마리바이.gif', tag: '~마리바이', category: '산나비' },
+  { src: './image/산나비/마리덜덜.gif', tag: '~마리덜덜', category: ['산나비', '절망'] },
+  { src: './image/산나비/마리바이.gif', tag: '~마리바이', category: ['산나비', '인사'] },
   { src: './image/산나비/마리반짝.gif', tag: '~마리반짝', category: '산나비' },
-  { src: './image/산나비/마리엣.gif', tag: '~마리엣', category: '산나비' },
+  { src: './image/산나비/마리엣.gif', tag: '~마리엣', category: ['산나비', '의문'] },
   { src: './image/산나비/마리우웩.gif', tag: '~마리우웩', category: '산나비' },
-  { src: './image/산나비/마리월척.gif', tag: '~마리월척', category: '산나비' },
-  { src: './image/산나비/마리절레.gif', tag: '~마리절레', category: '산나비' },
-  { src: './image/산나비/마리짜잔01.gif', tag: '~마리짜잔01', category: '산나비' },
-  { src: './image/산나비/마리짜잔02.gif', tag: '~마리짜잔02', category: '산나비' },
-  { src: './image/산나비/마리짜잔03.gif', tag: '~마리짜잔03', category: '산나비' },
+  { src: './image/산나비/마리월척.gif', tag: '~마리월척', category: ['산나비', '기쁨'] },
+  { src: './image/산나비/마리절레.gif', tag: '~마리절레', category: ['산나비', '부정'] },
+  { src: './image/산나비/마리짜잔01.gif', tag: '~마리짜잔01', category: ['산나비', '인사'] },
+  { src: './image/산나비/마리짜잔02.gif', tag: '~마리짜잔02', category: ['산나비', '인사'] },
+  { src: './image/산나비/마리짜잔03.gif', tag: '~마리짜잔03', category: ['산나비', '인사'] },
   { src: './image/산나비/마리쩐다.gif', tag: '~마리쩐다', category: '산나비' },
   { src: './image/산나비/마리크하하.gif', tag: '~마리크하하', category: '산나비' },
   { src: './image/산나비/마리하아.gif', tag: '~마리하아', category: '산나비' },
@@ -261,8 +261,8 @@ const images = [
   { src: './image/산나비/애기반짝02.gif', tag: '~애기반짝02', category: '산나비' },
   { src: './image/산나비/애기브이.gif', tag: '~애기브이', category: '산나비' },
   { src: './image/산나비/애기생축.gif', tag: '~애기생축', category: '산나비' },
-  { src: './image/산나비/애기신나.gif', tag: '~애기신나', category: '산나비' },
-  { src: './image/산나비/애기싫어.gif', tag: '~애기싫어', category: '산나비' },
+  { src: './image/산나비/애기신나.gif', tag: '~애기신나', category: ['산나비', '기쁨'] },
+  { src: './image/산나비/애기싫어.gif', tag: '~애기싫어', category: ['산나비', '부정'] },
   { src: './image/산나비/애기위험.gif', tag: '~애기위험', category: '산나비' },
   { src: './image/산나비/애기윙크.gif', tag: '~애기윙크', category: '산나비' },
   { src: './image/산나비/애기잘자.gif', tag: '~애기잘자', category: '산나비' },
@@ -284,14 +284,15 @@ const images = [
   { src: './image/기타/삭제.webp', tag: '~삭제', category: '기타' },
   { src: './image/기타/센스.png', tag: '~센스', category: '기타' },
   { src: './image/기타/즌다.webp', tag: '~즌다', category: '기타' },
-  { src: './image/기타/즌다조식.webp', tag: '~즌다오키테', category: '기타' },
   { src: './image/기타/즌즌즌다.webp', tag: '~즌즌즌다', category: '기타' },
+  { src: './image/기타/즌다조식.webp', tag: '~즌다오키테', category: ['기타', '기쁨'] },
 
   // 추가 이미지 데이터...
-];
+  ];
 
-const imageContainer = document.getElementById('imageContainer');
-const categoryFilter = document.getElementById('categoryFilter');
+  const imageContainer = document.getElementById('imageContainer');
+  const categoryFilter = document.getElementById('categoryFilter');
+  const imageFilterRadios = document.querySelectorAll('input[name="imageFilter"]');
 
 // Intersection Observer 설정
 const observerOptions = {
@@ -340,15 +341,15 @@ function renderImages(filteredImages) {
 
     imageBox.addEventListener('click', () => {
       navigator.clipboard.writeText(image.tag)
-        .then(() => {
-          const popup = document.createElement('div');
-          popup.innerText = '클립보드에 복사되었습니다!';
-          popup.className = 'clipboard-popup';
-          document.body.appendChild(popup);
+      .then(() => {
+        const popup = document.createElement('div');
+        popup.innerText = '클립보드에 복사되었습니다!';
+        popup.className = 'clipboard-popup';
+        document.body.appendChild(popup);
 
-          setTimeout(() => document.body.removeChild(popup), 1500);
-        })
-        .catch(err => console.error('클립보드 복사 실패', err));
+        setTimeout(() => document.body.removeChild(popup), 1500);
+      })
+      .catch(err => console.error('클립보드 복사 실패', err));
     });
 
     imageContainer.appendChild(imageBox);
@@ -370,5 +371,30 @@ categoryFilter.addEventListener('change', () => {
   }
 });
 
+// 라디오 버튼 변경 시 필터링
+imageFilterRadios.forEach(radio => {
+  radio.addEventListener('change', () => {
+    filterImages();
+  });
+});
+
+// 이미지 필터링 함수
+function filterImages() {
+  const selectedCategory = categoryFilter.value;
+  const selectedFilters = Array.from(document.querySelectorAll('input[name="imageFilter"]:checked'))
+  .map(radio => radio.value);
+
+  let filteredImages;
+  if (selectedFilters.includes('all')) {
+    filteredImages = images;
+  } else {
+    filteredImages = images.filter(image => {
+      return selectedFilters.some(filter => image.category.includes(filter));
+    });
+  }
+
+  renderImages(filteredImages);
+}
+
 // 초기 렌더링: 전체 이미지를 표시
-renderImages(images);
+filterImages();
