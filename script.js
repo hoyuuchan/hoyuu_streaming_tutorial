@@ -154,6 +154,8 @@ const images = [
   { src: './image/동방/첸물음표.png', tag: '~첸물음표', category: '동방' },
   { src: './image/동방/퉤에엣.png', tag: '~퉤에엣', category: '동방' },
   { src: './image/동방/정엽이.png', tag: '~정엽이', category: '동방' },
+  { src: './image/동방/미노리코.png', tag: '~미노리코', category: '동방' },
+  { src: './image/동방/소산이.png', tag: '~소산이', category: '동방' },
   
   // 언더테일
   { src: './image/언더테일/sans01.gif', tag: '~샌즈01', category: '언더테일' },
