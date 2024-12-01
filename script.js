@@ -98,6 +98,10 @@ const images = [
   { src: './image/감정표현/현장캡처.png', tag: '~캡쳐', category: '감정표현' },
   { src: './image/감정표현/현장힘들어.png', tag: '~힘들어', category: '감정표현' },
   { src: './image/감정표현/현장ㅠㅠ.png', tag: '~ㅠㅠ', category: '감정표현' },
+  { src: './image/감정표현/호동_못된생선.png', tag: '~못된생선', category: '감정표현' },
+  { src: './image/감정표현/호동_인내심한계.png', tag: '~인내심한계', category: '감정표현' },
+  { src: './image/감정표현/호동_정신좀차려.png', tag: '~정신좀차려', category: '감정표현' },
+  { src: './image/감정표현/호동_제정신아님.png', tag: '~제정신아님', category: '감정표현' },
 
   // 동방프로젝트
   { src: './image/동방/안된다구.png', tag: '~안된다구', category: '동방' },
