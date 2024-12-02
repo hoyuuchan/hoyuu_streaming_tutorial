@@ -166,6 +166,9 @@ const images = [
   { src: './image/동방/사나에.png', tag: '~사나에', category: '동방' },
   { src: './image/동방/하타테.png', tag: '~하타테', category: '동방' },
   { src: './image/동방/와카사기히메.png', tag: '~와카사기', category: '동방' },
+  { src: './image/동방/쿠타카.png', tag: '~쿠타카', category: '동방' },
+  { src: './image/동방/레밀리아.png', tag: '~레밀리아', category: '동방' },
+  { src: './image/동방/플랑도르.png', tag: '~플랑도르', category: '동방' },
   
   // 언더테일
   { src: './image/언더테일/sans01.gif', tag: '~샌즈01', category: '언더테일' },
@@ -275,6 +278,9 @@ const images = [
   { src: './image/산나비/마리하이.gif', tag: '~마리하이', category: '산나비' },
   { src: './image/산나비/마리헿.gif', tag: '~마리헿', category: '산나비' },
   { src: './image/산나비/마리흠.gif', tag: '~마리흠', category: '산나비' },
+  { src: './image/산나비/마리으앙01.gif', tag: '~마리으앙01', category: '산나비' },
+  { src: './image/산나비/마리으앙02.gif', tag: '~마리으앙02', category: '산나비' },
+  { src: './image/산나비/마리으앙03.gif', tag: '~마리으앙03', category: '산나비' },
   { src: './image/산나비/게이밍마리01.gif', tag: '~게이밍마리01', category: '산나비' },
   { src: './image/산나비/게이밍마리02.gif', tag: '~게이밍마리02', category: '산나비' },
   { src: './image/산나비/마리타닥.gif', tag: '~마리타닥', category: '산나비' },
