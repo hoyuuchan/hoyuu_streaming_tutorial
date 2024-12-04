@@ -332,6 +332,8 @@ const images = [
   { src: './image/기타/잼민펀치.png', tag: '~잼민펀치', category: '기타' },
   { src: './image/기타/잼민펀치2.png', tag: '~잼민펀치2', category: '기타' },
   { src: './image/기타/안돼돌아가.png', tag: '~안돼돌아가', category: '기타' },
+  { src: './image/기타/도로시씻어.png', tag: '~지휘관씻어', category: '기타' },
+  { src: './image/기타/도로시좀씻어.png', tag: '~지휘관좀씻어', category: '기타' },
 
   // 추가 이미지 데이터...
   ];
