@@ -6,6 +6,7 @@ const images = [
   
   // 오리지널
   { src: './image/오리지널/란호유.png', tag: '~란호유', category: '란호유' },
+  { src: './image/오리지널/음란호유.png', tag: '~음란호유', category: '란호유' },
 
   // 감정표현
   { src: './image/감정표현/마참내.png', tag: '~마참내', category: '감정표현' },
