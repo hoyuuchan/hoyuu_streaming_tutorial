@@ -104,6 +104,13 @@ const images = [
   { src: './image/감정표현/호동_정신좀차려.webp', tag: '~정신좀차려', category: '감정표현' },
   { src: './image/감정표현/호동_제정신아님.webp', tag: '~제정신아님', category: '감정표현' },
 
+  // 디맥
+  { src: './image/디맥/가면라이더.png', tag: '~가면라이더', category: '디제이맥스' },
+  { src: './image/디맥/냐옹이.png', tag: '~냐옹이', category: '디제이맥스' },
+  { src: './image/디맥/다람쥐.png', tag: '~다람쥐', category: '디제이맥스' },
+  { src: './image/디맥/따오기.png', tag: '~따오기', category: '디제이맥스' },
+  { src: './image/디맥/뜸부기.png', tag: '~뜸부기', category: '디제이맥스' },
+
   // 동방프로젝트
   { src: './image/동방/안된다구.png', tag: '~안된다구', category: '동방' },
   { src: './image/동방/아하.png', tag: '~아하', category: '동방' },
