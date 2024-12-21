@@ -165,7 +165,9 @@ const images = [
   { src: './image/동방/플랑볼따구.gif', tag: '~플랑볼따구', category: '동방' },
   { src: './image/동방/안능하제옇.png', tag: '~안능하제옇', category: '동방' },
   { src: './image/동방/첸물음표.png', tag: '~첸물음표', category: '동방' },
-  { src: './image/동방/퉤에엣.png', tag: '~퉤에엣', category: '동방' },
+  { src: './image/동방/첸퉤에엣.png', tag: '~퉤에엣', category: '동방' },
+  { src: './image/동방/첸스으읍.png', tag: '~스으읍', category: '동방' },
+  { src: './image/동방/첸커어억.png', tag: '~커어억', category: '동방' },
   { src: './image/동방/소산이.png', tag: '~소산이', category: '동방' },
   { src: './image/동방/정엽이.png', tag: '~정엽이', category: '동방' },
   { src: './image/동방/미노리코.png', tag: '~미노리코', category: '동방' },
@@ -342,6 +344,8 @@ const images = [
   { src: './image/기타/안돼돌아가.png', tag: '~안돼돌아가', category: '기타' },
   { src: './image/기타/도로시씻어.png', tag: '~지휘관씻어', category: '기타' },
   { src: './image/기타/도로시좀씻어.png', tag: '~지휘관좀씻어', category: '기타' },
+  { src: './image/기타/모자걸댄스.webp', tag: '~모자걸댄스', category: '기타' },
+  { src: './image/기타/볼트공중.png', tag: '~볼트공중', category: '기타' },
 
   // 추가 이미지 데이터...
   ];
