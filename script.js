@@ -179,6 +179,8 @@ const images = [
   { src: './image/동방/쿠타카.png', tag: '~쿠타카', category: '동방' },
   { src: './image/동방/레밀리아.png', tag: '~레밀리아', category: '동방' },
   { src: './image/동방/플랑도르.png', tag: '~플랑도르', category: '동방' },
+  { src: './image/동방/코이시.png', tag: '~코이시', category: '동방' },
+  { src: './image/동방/사토리.png', tag: '~사토리', category: '동방' },
   
   // 언더테일
   { src: './image/언더테일/sans01.gif', tag: '~샌즈01', category: '언더테일' },
