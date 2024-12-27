@@ -7,6 +7,7 @@ const images = [
   // 오리지널
   { src: './image/오리지널/란호유.png', tag: '~란호유', category: '란호유' },
   { src: './image/오리지널/음란호유.png', tag: '~음란호유', category: '란호유' },
+  { src: './image/오리지널/유와씨.webp', tag: '~유와씨', category: '란호유' },
 
   // 감정표현
   { src: './image/감정표현/마참내.png', tag: '~마참내', category: '감정표현' },
@@ -199,6 +200,7 @@ const images = [
   { src: './image/언더테일/sanesss.gif', tag: '~싸네스', category: '언더테일' },
   { src: './image/언더테일/리퍼샌즈.jpg', tag: '~리퍼샌즈', category: '언더테일' },
   { src: './image/언더테일/swapsans.png', tag: '~스왚샌즈', category: '언더테일' },
+  { src: './image/언더테일/호유샌즈.png', tag: '~호유샌즈', category: '언더테일' },
   { src: './image/언더테일/papyrus01.gif', tag: '~파피루스01', category: '언더테일' },
   { src: './image/언더테일/papyrusA01.gif', tag: '~파피루스02', category: '언더테일' },
   { src: './image/언더테일/temmi01.gif', tag: '~테미01', category: '언더테일' },
