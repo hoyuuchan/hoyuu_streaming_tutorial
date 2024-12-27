@@ -178,10 +178,13 @@ const images = [
   { src: './image/동방/하타테.png', tag: '~하타테', category: '동방' },
   { src: './image/동방/와카사기히메.png', tag: '~와카사기', category: '동방' },
   { src: './image/동방/쿠타카.png', tag: '~쿠타카', category: '동방' },
+  { src: './image/동방/타카네.png', tag: '~타카네', category: '동방' },
   { src: './image/동방/레밀리아.png', tag: '~레밀리아', category: '동방' },
   { src: './image/동방/플랑도르.png', tag: '~플랑도르', category: '동방' },
   { src: './image/동방/코이시.png', tag: '~코이시', category: '동방' },
   { src: './image/동방/사토리.png', tag: '~사토리', category: '동방' },
+  { src: './image/동방/치르노.png', tag: '~치르노', category: '동방' },
+  { src: './image/동방/치르노흑.png', tag: '~흑르노', category: '동방' },
   
   // 언더테일
   { src: './image/언더테일/sans01.gif', tag: '~샌즈01', category: '언더테일' },
@@ -195,6 +198,7 @@ const images = [
   { src: './image/언더테일/sans0901.gif', tag: '~샌즈09', category: '언더테일' },
   { src: './image/언더테일/sanesss.gif', tag: '~싸네스', category: '언더테일' },
   { src: './image/언더테일/리퍼샌즈.jpg', tag: '~리퍼샌즈', category: '언더테일' },
+  { src: './image/언더테일/swapsans.png', tag: '~스왚샌즈', category: '언더테일' },
   { src: './image/언더테일/papyrus01.gif', tag: '~파피루스01', category: '언더테일' },
   { src: './image/언더테일/papyrusA01.gif', tag: '~파피루스02', category: '언더테일' },
   { src: './image/언더테일/temmi01.gif', tag: '~테미01', category: '언더테일' },
