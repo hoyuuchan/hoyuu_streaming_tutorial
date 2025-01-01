@@ -3,13 +3,6 @@ const images = [
   { src: './image/3D/블렌더.png', tag: '~블렌더', category: '블렌더' },
   { src: './image/3D/블렌더응답없음.png', tag: '~블렌더응답없음', category: '블렌더' },
   { src: './image/3D/블렌더수잔.png', tag: '~블렌더수잔', category: '블렌더' },
-  
-  // 오리지널
-  { src: './image/오리지널/란호유.png', tag: '~란호유', category: '란호유' },
-  { src: './image/오리지널/음란호유.png', tag: '~음란호유', category: '란호유' },
-  { src: './image/오리지널/음란호유2.png', tag: '~음란호유2', category: '란호유' },
-  { src: './image/오리지널/니코호유.png', tag: '~니코호유', category: '란호유' },
-  { src: './image/오리지널/유와씨.webp', tag: '~유와씨', category: '란호유' },
 
   // 감정표현
   { src: './image/감정표현/마참내.png', tag: '~마참내', category: '감정표현' },
@@ -357,6 +350,13 @@ const images = [
   { src: './image/기타/도로시좀씻어.png', tag: '~지휘관좀씻어', category: '기타' },
   { src: './image/기타/모자걸댄스.webp', tag: '~모자걸댄스', category: '기타' },
   { src: './image/기타/볼트공중.png', tag: '~볼트공중', category: '기타' },
+
+  // 오리지널
+  { src: './image/오리지널/란호유.png', tag: '~란호유', category: '란호유' },
+  { src: './image/오리지널/음란호유.png', tag: '~음란호유', category: '란호유' },
+  { src: './image/오리지널/음란호유2.png', tag: '~음란호유2', category: '란호유' },
+  { src: './image/오리지널/니코호유.png', tag: '~니코호유', category: '란호유' },
+  { src: './image/오리지널/유와씨.webp', tag: '~유와씨', category: '란호유' },
 
   // 추가 이미지 데이터...
   ];
