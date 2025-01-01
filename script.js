@@ -181,6 +181,17 @@ const images = [
   { src: './image/동방/사토리.png', tag: '~사토리', category: '동방' },
   { src: './image/동방/치르노.png', tag: '~치르노', category: '동방' },
   { src: './image/동방/치르노흑.png', tag: '~흑르노', category: '동방' },
+  { src: './image/동방/루미아.png', tag: '~루미아', category: '동방' },
+  { src: './image/동방/요우무.png', tag: '~요우무', category: '동방' },
+  { src: './image/동방/사쿠야.png', tag: '~사쿠야', category: '동방' },
+  { src: './image/동방/파츄리.png', tag: '~파츄리', category: '동방' },
+  { src: './image/동방/홍메이링.png', tag: '~홍메이링', category: '동방' },
+  { src: './image/동방/유카리.png', tag: '~유카리', category: '동방' },
+  { src: './image/동방/파카리.png', tag: '~파카리', category: '동방' },
+  { src: './image/동방/앨리스.png', tag: '~앨리스', category: '동방' },
+  { src: './image/동방/유유코.png', tag: '~유유코', category: '동방' },
+  { src: './image/동방/ZUN.png', tag: '~ZUN', category: '동방' },
+  { src: './image/동방/ZUZ.png', tag: '~ZUZ', category: '동방' },
   
   // 언더테일
   { src: './image/언더테일/sans01.gif', tag: '~샌즈01', category: '언더테일' },
@@ -356,6 +367,9 @@ const images = [
   { src: './image/오리지널/음란호유.png', tag: '~음란호유', category: '란호유' },
   { src: './image/오리지널/음란호유2.png', tag: '~음란호유2', category: '란호유' },
   { src: './image/오리지널/니코호유.png', tag: '~니코호유', category: '란호유' },
+  { src: './image/오리지널/니코호유.png', tag: '~니코호유', category: '란호유' },
+  { src: './image/오리지널/니코호유.png', tag: '~니코호유', category: '란호유' },
+  { src: './image/오리지널/란가사.png', tag: '~란가사', category: '란호유' },
   { src: './image/오리지널/유와씨.webp', tag: '~유와씨', category: '란호유' },
 
   // 추가 이미지 데이터...
