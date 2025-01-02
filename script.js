@@ -165,6 +165,7 @@ const images = [
   { src: './image/동방/첸스으읍.png', tag: '~스으읍', category: '동방' },
   { src: './image/동방/첸커어억.png', tag: '~커어억', category: '동방' },
   { src: './image/동방/모코우댄스.webp', tag: '~모코댄스', category: '동방' },
+  { src: './image/동방/유유코수박.png', tag: '~유유코수박', category: '동방' },
   { src: './image/동방/소산이.png', tag: '~소산이', category: '동방' },
   { src: './image/동방/정엽이.png', tag: '~정엽이', category: '동방' },
   { src: './image/동방/미노리코.png', tag: '~미노리코', category: '동방' },
