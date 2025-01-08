@@ -166,6 +166,7 @@ const images = [
   { src: './image/동방/첸커어억.png', tag: '~커어억', category: '동방' },
   { src: './image/동방/모코우댄스.webp', tag: '~모코댄스', category: '동방' },
   { src: './image/동방/유유코수박.png', tag: '~유유코수박', category: '동방' },
+  { src: './image/동방/동방탓.png', tag: '~동방탓', category: '동방' },
   { src: './image/동방/소산이.png', tag: '~소산이', category: '동방' },
   { src: './image/동방/정엽이.png', tag: '~정엽이', category: '동방' },
   { src: './image/동방/미노리코.png', tag: '~미노리코', category: '동방' },
@@ -373,6 +374,7 @@ const images = [
   { src: './image/오리지널/란호유아니에요.gif', tag: '~호유아니에요', category: '란호유' },
   { src: './image/오리지널/란호유리본.gif', tag: '~호유리본', category: '란호유' },
   { src: './image/오리지널/란호유메이드.gif', tag: '~호유메이드', category: '란호유' },
+  { src: './image/오리지널/란호유아헤.gif', tag: '~호유아헤', category: '란호유' },
   { src: './image/오리지널/유와씨.webp', tag: '~유와씨', category: '란호유' },
 
   // 추가 이미지 데이터...
