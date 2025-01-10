@@ -127,6 +127,7 @@ const images = [
   { src: './image/동방/레밀멋있지.webp', tag: '~레밀멋있지', category: '동방' },
   { src: './image/동방/레밀불꺼조.webp', tag: '~레밀불꺼조', category: '동방' },
   { src: './image/동방/레밀엑설.webp', tag: '~레밀엑설', category: '동방' },
+  { src: './image/동방/레밀차한잔.gif', tag: '~차한잔', category: '동방' },
   { src: './image/동방/레이무동방아냐.webp', tag: '~레이무동방아냐', category: '동방' },
   { src: './image/동방/레이무망한다고.webp', tag: '~레이무망한다고', category: '동방' },
   { src: './image/동방/레이무절규.gif', tag: '~레이무절규', category: '동방' },
@@ -167,6 +168,9 @@ const images = [
   { src: './image/동방/모코우댄스.webp', tag: '~모코댄스', category: '동방' },
   { src: './image/동방/유유코수박.png', tag: '~유유코수박', category: '동방' },
   { src: './image/동방/동방탓.png', tag: '~동방탓', category: '동방' },
+  { src: './image/동방/니하오냥.gif', tag: '~니하오냥', category: '동방' },
+  { src: './image/동방/방방댄스.gif', tag: '~방방댄스', category: '동방' },
+  { src: './image/동방/니토리짝짝.gif', tag: '~니토리짝짝', category: '동방' },
   { src: './image/동방/소산이.png', tag: '~소산이', category: '동방' },
   { src: './image/동방/정엽이.png', tag: '~정엽이', category: '동방' },
   { src: './image/동방/미노리코.png', tag: '~미노리코', category: '동방' },
@@ -192,6 +196,8 @@ const images = [
   { src: './image/동방/유카리파.png', tag: '~파카리', category: '동방' },
   { src: './image/동방/앨리스.png', tag: '~앨리스', category: '동방' },
   { src: './image/동방/유유코.png', tag: '~유유코', category: '동방' },
+  { src: './image/동방/니토리.png', tag: '~니토리', category: '동방' },
+  { src: './image/동방/클라운피스.png', tag: '~클라운피스', category: '동방' },
   { src: './image/동방/ZUN.png', tag: '~ZUN', category: '동방' },
   { src: './image/동방/ZUZ.png', tag: '~ZUZ', category: '동방' },
   
@@ -361,8 +367,10 @@ const images = [
   { src: './image/기타/안돼돌아가.png', tag: '~안돼돌아가', category: '기타' },
   { src: './image/기타/도로시씻어.png', tag: '~지휘관씻어', category: '기타' },
   { src: './image/기타/도로시좀씻어.png', tag: '~지휘관좀씻어', category: '기타' },
-  { src: './image/기타/모자걸댄스.webp', tag: '~모자걸댄스', category: '기타' },
   { src: './image/기타/볼트공중.png', tag: '~볼트공중', category: '기타' },
+  { src: './image/기타/모자걸댄스.webp', tag: '~모자걸댄스', category: '기타' },
+  { src: './image/기타/두근두근.gif', tag: '~두근두근', category: '기타' },
+  { src: './image/기타/강도에요.png', tag: '~강도에요', category: '기타' },
 
   // 오리지널
   { src: './image/오리지널/란호유.png', tag: '~란호유', category: '란호유' },
