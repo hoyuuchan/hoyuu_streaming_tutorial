@@ -374,6 +374,10 @@ const images = [
   { src: './image/기타/모자걸댄스.webp', tag: '~모자걸댄스', category: '기타' },
   { src: './image/기타/두근두근.gif', tag: '~두근두근', category: '기타' },
   { src: './image/기타/강도에요.png', tag: '~강도에요', category: '기타' },
+  { src: './image/기타/기가차드.png', tag: '~기가차드', category: '기타' },
+  { src: './image/기타/기가차드2.png', tag: '~기가차드2', category: '기타' },
+  { src: './image/기타/기가차드3.png', tag: '~기가차드3', category: '기타' },
+  { src: './image/기타/기가차드4.png', tag: '~기가차드4', category: '기타' },
 
   // 오리지널
   { src: './image/오리지널/란호유.png', tag: '~란호유', category: '란호유' },
@@ -381,11 +385,14 @@ const images = [
   { src: './image/오리지널/음란호유2.png', tag: '~음란호유2', category: '란호유' },
   { src: './image/오리지널/니코호유.png', tag: '~니코호유', category: '란호유' },
   { src: './image/오리지널/란가사.png', tag: '~란가사', category: '란호유' },
+  { src: './image/오리지널/500억자산가.png', tag: '~란르밀', category: '란호유' },
+  { src: './image/오리지널/란호유아헤.gif', tag: '~란헤가오', category: '란호유' },
   { src: './image/오리지널/란호유바보털.gif', tag: '~호유바보털', category: '란호유' },
   { src: './image/오리지널/란호유아니에요.gif', tag: '~호유아니에요', category: '란호유' },
   { src: './image/오리지널/란호유리본.gif', tag: '~호유리본', category: '란호유' },
   { src: './image/오리지널/란호유메이드.gif', tag: '~호유메이드', category: '란호유' },
-  { src: './image/오리지널/란호유아헤.gif', tag: '~란헤가오', category: '란호유' },
+  { src: './image/오리지널/란호유쿠키.gif', tag: '~호유쿠키', category: '란호유' },
+  { src: './image/오리지널/란호유쿠키와구.gif', tag: '~호유쿠키와구', category: '란호유' },
   { src: './image/오리지널/유와씨.webp', tag: '~유와씨', category: '란호유' },
 
   // 추가 이미지 데이터...
