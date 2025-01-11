@@ -378,6 +378,7 @@ const images = [
   { src: './image/기타/기가차드2.png', tag: '~기가차드2', category: '기타' },
   { src: './image/기타/기가차드3.png', tag: '~기가차드3', category: '기타' },
   { src: './image/기타/기가차드4.png', tag: '~기가차드4', category: '기타' },
+  { src: './image/기타/흑화쿠키.png', tag: '~흑화쿠키', category: '기타' },
 
   // 오리지널
   { src: './image/오리지널/란호유.png', tag: '~란호유', category: '란호유' },
