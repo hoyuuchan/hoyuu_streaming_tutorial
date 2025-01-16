@@ -378,7 +378,7 @@ const images = [
   { src: './image/기타/기가차드2.png', tag: '~기가차드2', category: '기타' },
   { src: './image/기타/기가차드3.png', tag: '~기가차드3', category: '기타' },
   { src: './image/기타/기가차드4.png', tag: '~기가차드4', category: '기타' },
-  { src: './image/기타/흑화쿠키.png', tag: '~흑화쿠키', category: '기타' },
+  { src: './image/기타/흑화쿠키2.png', tag: '~흑화쿠키2', category: '기타' },
 
   // 오리지널
   { src: './image/오리지널/란호유.png', tag: '~란호유', category: '란호유' },
@@ -394,6 +394,8 @@ const images = [
   { src: './image/오리지널/란호유메이드.gif', tag: '~호유메이드', category: '란호유' },
   { src: './image/오리지널/란호유쿠키.gif', tag: '~호유쿠키', category: '란호유' },
   { src: './image/오리지널/란호유쿠키와구.gif', tag: '~호유쿠키와구', category: '란호유' },
+  { src: './image/오리지널/흑화쿠키.gif', tag: '~흑화쿠키', category: '란호유' },
+  { src: './image/오리지널/란호유네코.gif', tag: '~란호유네코', category: '란호유' },
   { src: './image/오리지널/유와씨.webp', tag: '~유와씨', category: '란호유' },
 
   // 추가 이미지 데이터...
