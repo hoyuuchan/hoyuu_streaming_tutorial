@@ -114,6 +114,7 @@ const images = [
   { src: './image/동방/좋아.png', tag: '~좋아', category: '동방' },
   { src: './image/동방/없어요.png', tag: '~없어요', category: '동방' },
   { src: './image/동방/쟤가.png', tag: '~쟤가', category: '동방' },
+  { src: './image/동방/모르겠어.png', tag: '~모르겠어', category: '동방' },
   { src: './image/동방/절레절레.gif', tag: '~절레절레', category: '동방' },
   { src: './image/동방/좋을대로.png', tag: '~좋을대로', category: '동방' },
   { src: './image/동방/루미댄스.gif', tag: '~루미댄스', category: '동방' },
@@ -202,6 +203,10 @@ const images = [
   { src: './image/동방/유유코.png', tag: '~유유코', category: '동방' },
   { src: './image/동방/니토리.png', tag: '~니토리', category: '동방' },
   { src: './image/동방/클라운피스.png', tag: '~클라운피스', category: '동방' },
+  { src: './image/동방/미스티아.png', tag: '~미스티아', category: '동방' },
+  { src: './image/동방/쿄코.png', tag: '~쿄코', category: '동방' },
+  { src: './image/동방/세이란.png', tag: '~세이란', category: '동방' },
+  { src: './image/동방/링고.png', tag: '~링고', category: '동방' },
   { src: './image/동방/ZUN.png', tag: '~ZUN', category: '동방' },
   { src: './image/동방/ZUZ.png', tag: '~ZUZ', category: '동방' },
   
