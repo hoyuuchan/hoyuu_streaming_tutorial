@@ -210,6 +210,7 @@ const images = [
   { src: './image/동방/쿄코.png', tag: '~쿄코', category: '동방' },
   { src: './image/동방/세이란.png', tag: '~세이란', category: '동방' },
   { src: './image/동방/링고.png', tag: '~링고', category: '동방' },
+  { src: './image/동방/케이네.png', tag: '~케이네', category: '동방' },
   { src: './image/동방/ZUN.png', tag: '~ZUN', category: '동방' },
   { src: './image/동방/ZUZ.png', tag: '~ZUZ', category: '동방' },
   
