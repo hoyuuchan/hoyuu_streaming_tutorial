@@ -105,7 +105,7 @@ const images = [
   { src: './image/올피콘/올피슬퍼.png', tag: '~올피슬퍼', category: '감정표현' },
   { src: './image/올피콘/올피이런.png', tag: '~올피이런', category: '감정표현' },
   { src: './image/올피콘/올피쿨.png', tag: '~올피쿨', category: '감정표현' },
-  { src: './image/올피콘현/올피펫.png', tag: '~올피펫', category: '감정표현' },
+  { src: './image/올피콘/올피펫.png', tag: '~올피펫', category: '감정표현' },
   { src: './image/올피콘/올피하트.png', tag: '~올피하트', category: '감정표현' },
   { src: './image/올피콘/올피해피.png', tag: '~올피해피', category: '감정표현' },
   { src: './image/올피콘/올피화남.png', tag: '~올피화남', category: '감정표현' },
