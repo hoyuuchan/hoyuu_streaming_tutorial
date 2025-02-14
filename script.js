@@ -99,6 +99,17 @@ const images = [
   { src: './image/감정표현/호동_인내심한계.webp', tag: '~인내심한계', category: '감정표현' },
   { src: './image/감정표현/호동_정신좀차려.webp', tag: '~정신좀차려', category: '감정표현' },
   { src: './image/감정표현/호동_제정신아님.webp', tag: '~제정신아님', category: '감정표현' },
+  { src: './image/올피콘/올피ㅋㅋ.png', tag: '~올피ㅋㅋ', category: '감정표현' },
+  { src: './image/올피콘/올피놀람.png', tag: '~올피놀람', category: '감정표현' },
+  { src: './image/올피콘/올피메롱.png', tag: '~올피메롱', category: '감정표현' },
+  { src: './image/올피콘/올피슬퍼.png', tag: '~올피슬퍼', category: '감정표현' },
+  { src: './image/올피콘/올피이런.png', tag: '~올피이런', category: '감정표현' },
+  { src: './image/올피콘/올피쿨.png', tag: '~올피쿨', category: '감정표현' },
+  { src: './image/올피콘현/올피펫.png', tag: '~올피펫', category: '감정표현' },
+  { src: './image/올피콘/올피하트.png', tag: '~올피하트', category: '감정표현' },
+  { src: './image/올피콘/올피해피.png', tag: '~올피해피', category: '감정표현' },
+  { src: './image/올피콘/올피화남.png', tag: '~올피화남', category: '감정표현' },
+  { src: './image/올피콘/올피흠.png', tag: '~올피흠', category: '감정표현' },
 
   // 디맥
   { src: './image/디맥/가면라이더.png', tag: '~가면라이더', category: '디맥' },
@@ -213,6 +224,8 @@ const images = [
   { src: './image/동방/세이란.png', tag: '~세이란', category: '동방' },
   { src: './image/동방/링고.png', tag: '~링고', category: '동방' },
   { src: './image/동방/케이네.png', tag: '~케이네', category: '동방' },
+  { src: './image/동방/곽청아.png', tag: '~곽청아', category: '동방' },
+  { src: './image/동방/텐시.png', tag: '~텐시', category: '동방' },
   { src: './image/동방/ZUN.png', tag: '~ZUN', category: '동방' },
   { src: './image/동방/ZUZ.png', tag: '~ZUZ', category: '동방' },
   
