@@ -252,7 +252,9 @@ const images = [
   { src: './image/동방/링고.png', tag: '~링고', category: '동방' },
   { src: './image/동방/케이네.png', tag: '~케이네', category: '동방' },
   { src: './image/동방/곽청아.png', tag: '~곽청아', category: '동방' },
+  { src: './image/동방/요시카.png', tag: '~요시카', category: '동방' },
   { src: './image/동방/텐시.png', tag: '~텐시', category: '동방' },
+  { src: './image/동방/텐큐.png', tag: '~텐큐', category: '동방' },
   { src: './image/동방/ZUN.png', tag: '~ZUN', category: '동방' },
   { src: './image/동방/ZUZ.png', tag: '~ZUZ', category: '동방' },
   
