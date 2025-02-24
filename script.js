@@ -209,6 +209,7 @@ const images = [
   { src: './image/동방/첸커어억.png', tag: '~커어억', category: '동방' },
   { src: './image/동방/첸즌즌치키.png', tag: '~즌즌치키', category: '동방' },
   { src: './image/동방/유유코수박.png', tag: '~유유코수박', category: '동방' },
+  { src: './image/동방/유유코머임.png', tag: '~이거뭐야', category: '동방' },
   { src: './image/동방/방방댄스.gif', tag: '~방방댄스', category: '동방' },
   { src: './image/동방/니토리짝짝.gif', tag: '~짝짝', category: '동방' },
   { src: './image/동방/파츄리끝내줘.png', tag: '~인생은끝내줘', category: '동방' },
@@ -456,6 +457,9 @@ const images = [
   { src: './image/오리지널/유와씨.webp', tag: '~유와씨', category: '란호유' },
   { src: './image/언더테일/호유샌즈.png', tag: '~호유샌즈', category: '란호유' },
   { src: './image/오리지널/호유란.png', tag: '~호유란', category: '란호유' },
+  { src: './image/오리지널/호유보이.png', tag: '~호유보이', category: '란호유' },
+  { src: './image/오리지널/호유보이2.png', tag: '~호유보이2', category: '란호유' },
+  { src: './image/오리지널/스파게티.png', tag: '~스파게티', category: '란호유' },
 
   // 추가 이미지 데이터...
   ];
