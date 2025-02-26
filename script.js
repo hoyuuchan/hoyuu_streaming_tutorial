@@ -468,6 +468,10 @@ const images = [
   { src: './image/오리지널/호유란.png', tag: '~호유란', category: '란호유' },
   { src: './image/오리지널/호유보이.png', tag: '~호유보이', category: '란호유' },
   { src: './image/오리지널/호유보이2.png', tag: '~호유보이2', category: '란호유' },
+  { src: './image/오리지널/호유댄스.webp', tag: '~호유댄스', category: '란호유' },
+  { src: './image/오리지널/호유댄스2.webp', tag: '~호유댄스2', category: '란호유' },
+  { src: './image/오리지널/호유댄스3.webp', tag: '~호유댄스3', category: '란호유' },
+  { src: './image/오리지널/호유댄스4.webp', tag: '~호유댄스4', category: '란호유' },
   { src: './image/오리지널/스파게티.png', tag: '~스파게티', category: '란호유' },
 
   // 추가 이미지 데이터...
