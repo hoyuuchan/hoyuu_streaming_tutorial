@@ -137,6 +137,8 @@ const images = [
   { src: './image/감정표현/개죽심한욕.png', tag: '~심한욕', category: '감정표현' },
   { src: './image/감정표현/개죽차단.png', tag: '~차단중', category: '감정표현' },
   { src: './image/감정표현/개죽칭찬.png', tag: '~칭찬중', category: '감정표현' },
+  { src: './image/감정표현/뭐라는건지.png', tag: '~뭐라는건지', category: '감정표현' },
+  { src: './image/감정표현/캐피탈리즘호.png', tag: '~캐피탈리즘호', category: '감정표현' },
 
   // 디맥
   { src: './image/디맥/가면라이더.png', tag: '~가면라이더', category: '디맥' },
@@ -466,6 +468,7 @@ const images = [
   { src: './image/오리지널/유와씨.webp', tag: '~유와씨', category: '란호유' },
   { src: './image/언더테일/호유샌즈.png', tag: '~호유샌즈', category: '란호유' },
   { src: './image/오리지널/호유란.png', tag: '~호유란', category: '란호유' },
+  { src: './image/오리지널/호유첸.png', tag: '~호유첸', category: '란호유' },
   { src: './image/오리지널/호유보이.png', tag: '~호유보이', category: '란호유' },
   { src: './image/오리지널/호유보이2.png', tag: '~호유보이2', category: '란호유' },
   { src: './image/오리지널/호유댄스.webp', tag: '~호유댄스', category: '란호유' },
