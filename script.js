@@ -139,6 +139,8 @@ const images = [
   { src: './image/감정표현/개죽칭찬.png', tag: '~칭찬중', category: '감정표현' },
   { src: './image/감정표현/뭐라는건지.png', tag: '~뭐라는건지', category: '감정표현' },
   { src: './image/감정표현/캐피탈리즘호.png', tag: '~캐피탈리즘호', category: '감정표현' },
+  { src: './image/감정표현/캐피탈리즘폴짝.png', tag: '~폴짝', category: '감정표현' },
+  { src: './image/감정표현/캐피탈리즘빚.png', tag: '~빚이', category: '감정표현' },
 
   // 디맥
   { src: './image/디맥/가면라이더.png', tag: '~가면라이더', category: '디맥' },
@@ -267,6 +269,8 @@ const images = [
   { src: './image/동방/텐큐.png', tag: '~텐큐', category: '동방' },
   { src: './image/동방/레이무.png', tag: '~레이무', category: '동방' },
   { src: './image/동방/마리사.png', tag: '~마리사', category: '동방' },
+  { src: './image/동방/우동게.png', tag: '~우동게', category: '동방' },
+  { src: './image/동방/테위.png', tag: '~테위', category: '동방' },
   { src: './image/동방/ZUN.png', tag: '~ZUN', category: '동방' },
   { src: './image/동방/ZUZ.png', tag: '~ZUZ', category: '동방' },
   
