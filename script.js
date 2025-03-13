@@ -272,8 +272,8 @@ const images = [
   { src: './image/동방/마리사.png', tag: '~마리사', category: '동방' },
   { src: './image/동방/우동게.png', tag: '~우동게', category: '동방' },
   { src: './image/동방/테위.png', tag: '~테위', category: '동방' },
-  { src: './image/동방/순호.png', tag: '~테위', category: '동방' },
-  { src: './image/동방/오키나.png', tag: '~테위', category: '동방' },
+  { src: './image/동방/순호.png', tag: '~순호', category: '동방' },
+  { src: './image/동방/오키나.png', tag: '~오키나', category: '동방' },
   { src: './image/동방/ZUN.png', tag: '~ZUN', category: '동방' },
   { src: './image/동방/ZUZ.png', tag: '~ZUZ', category: '동방' },
   
