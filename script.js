@@ -142,6 +142,7 @@ const images = [
   { src: './image/감정표현/캐피탈리즘폴짝.png', tag: '~폴짝', category: '감정표현' },
   { src: './image/감정표현/캐피탈리즘빚.png', tag: '~빚이', category: '감정표현' },
   { src: './image/감정표현/뚱이사랑.png', tag: '~사랑해요', category: '감정표현' },
+  { src: './image/감정표현/고양이실패단.png', tag: '~고양이실패단', category: '감정표현' },
 
   // 디맥
   { src: './image/디맥/가면라이더.png', tag: '~가면라이더', category: '디맥' },
