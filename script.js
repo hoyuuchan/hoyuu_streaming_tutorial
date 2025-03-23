@@ -222,6 +222,9 @@ const images = [
   { src: './image/동방/파츄리끝내줘.png', tag: '~인생은끝내줘', category: '동방' },
   { src: './image/동방/케이네오케이네.webp', tag: '~오케이네', category: '동방' },
   { src: './image/동방/요우무법규.png', tag: '~요우무법규', category: '동방' },
+  { src: './image/동방/코가사원망.png', tag: '~원망스러워', category: '동방' },
+  { src: './image/동방/코가사와.webp', tag: '~코가사와', category: '동방' },
+  { src: './image/동방/세이란일어남.png', tag: '~지금일어났다', category: '동방' },
   { src: './image/동방/시온쾅.webp', tag: '~시온쾅', category: '동방' },
   { src: './image/동방/에린에린.webp', tag: '~에린에린', category: '동방' },
   { src: './image/동방/에린에린2.webp', tag: '~에린에린2', category: '동방' },
@@ -275,6 +278,7 @@ const images = [
   { src: './image/동방/테위.png', tag: '~테위', category: '동방' },
   { src: './image/동방/순호.png', tag: '~순호', category: '동방' },
   { src: './image/동방/오키나.png', tag: '~오키나', category: '동방' },
+  { src: './image/동방/야치에.png', tag: '~야치에', category: '동방' },
   { src: './image/동방/ZUN.png', tag: '~ZUN', category: '동방' },
   { src: './image/동방/ZUZ.png', tag: '~ZUZ', category: '동방' },
   
