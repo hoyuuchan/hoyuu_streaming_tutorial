@@ -148,7 +148,7 @@ const images = [
   { src: './image/감정표현/드라군드.png', tag: '~드', category: '감정표현' },
   { src: './image/감정표현/드라군라.png', tag: '~라', category: '감정표현' },
   { src: './image/감정표현/드라군군.png', tag: '~군', category: '감정표현' },
-  { src: './image/감정표현/어무것도.png', tag: '~어무것도안하고싶다', category: '감정표현' },
+  { src: './image/감정표현/아무것도.png', tag: '~어무것도안하고싶다', category: '감정표현' },
   { src: './image/감정표현/행복회로행복.png', tag: '~행복회로', category: '감정표현' },
   { src: './image/감정표현/행복회로직전.png', tag: '~뜨끈한회로', category: '감정표현' },
   { src: './image/감정표현/행복회로불탐.png', tag: '~불타는회로', category: '감정표현' },
