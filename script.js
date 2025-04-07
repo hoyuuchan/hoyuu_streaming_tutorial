@@ -313,6 +313,8 @@ const images = [
   { src: './image/동방/후모사쿠야.png', tag: '~후모사쿠야', category: '동방' },
   { src: './image/동방/후모순호.png', tag: '~후모순호', category: '동방' },
   { src: './image/동방/후모오쿠.png', tag: '~후모오쿠', category: '동방' },
+  { src: './image/동방/후모오린.png', tag: '~후모오린', category: '동방' },
+  { src: './image/동방/후모파츄리.png', tag: '~후모파츄리', category: '동방' },
   
   // 언더테일
   { src: './image/언더테일/sans01.gif', tag: '~샌즈01', category: '언더테일' },
