@@ -160,6 +160,12 @@ const images = [
   { src: './image/감정표현/사회인봇제비3.png', tag: '~사회인봇제비3', category: '감정표현' },
   { src: './image/감정표현/사회인봇제비4.png', tag: '~사회인봇제비4', category: '감정표현' },
   { src: './image/감정표현/사회인봇제비5.png', tag: '~사회인봇제비5', category: '감정표현' },
+  { src: './image/감정표현/한강수온.png', tag: '~한강수온', category: '감정표현' },
+  { src: './image/감정표현/미쳤습니까.png', tag: '~미쳤습니까', category: '감정표현' },
+  { src: './image/감정표현/무슨소리니봇치야.png', tag: '~무슨소리니봇치야', category: '감정표현' },
+  { src: './image/감정표현/하라는공부.png', tag: '~하라는공부', category: '감정표현' },
+  { src: './image/감정표현/고만해미친놈들아.png', tag: '~고만해미친놈들아', category: '감정표현' },
+  { src: './image/감정표현/계획대로.png', tag: '~계획대로', category: '감정표현' },
 
   // 디맥
   { src: './image/디맥/가면라이더.png', tag: '~가면라이더', category: '디맥' },
