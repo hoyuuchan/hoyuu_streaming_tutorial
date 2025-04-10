@@ -258,6 +258,7 @@ const images = [
   { src: './image/동방/클피움짤.webp', tag: '~클피움짤', category: '동방' },
   { src: './image/동방/헤카티아움짤.webp', tag: '~헤카티아움짤', category: '동방' },
   { src: './image/동방/레이무스런.webp', tag: '~레이무스런', category: '동방' },
+  { src: './image/동방/감마리.webp', tag: '~감마리', category: '동방' },
   { src: './image/동방/코가사.png', tag: '~코가사', category: '동방' },
   { src: './image/동방/시즈하.png', tag: '~시즈하', category: '동방' },
   { src: './image/동방/미노리코.png', tag: '~미노리코', category: '동방' },
