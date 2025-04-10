@@ -317,7 +317,9 @@ const images = [
   { src: './image/동방/후모죠온.png', tag: '~후모죠온', category: '동방' },
   { src: './image/동방/후모시온.png', tag: '~후모시온', category: '동방' },
   { src: './image/동방/후모레이무.png', tag: '~후모레이무', category: '동방' },
+  { src: './image/동방/후모구레이무.png', tag: '~후모구레이무', category: '동방' },
   { src: './image/동방/후모마리사.png', tag: '~후모마리사', category: '동방' },
+  { src: './image/동방/후모구마리사.png', tag: '~후모구마리사', category: '동방' },
   { src: './image/동방/후모치르노.png', tag: '~후모치르노', category: '동방' },
   { src: './image/동방/후모흑르노.png', tag: '~후모흑르노', category: '동방' },
   { src: './image/동방/후모순호.png', tag: '~후모순호', category: '동방' },
@@ -348,6 +350,13 @@ const images = [
   { src: './image/동방/후모루미아.png', tag: '~후모루미아', category: '동방' },
   { src: './image/동방/후모사구메.png', tag: '~후모사구메', category: '동방' },
   { src: './image/동방/후모시키.png', tag: '~후모시키', category: '동방' },
+  { src: './image/동방/후모렌코.png', tag: '~후모렌코', category: '동방' },
+  { src: './image/동방/후모메리.png', tag: '~후모메리', category: '동방' },
+  { src: './image/동방/후모모미지.png', tag: '~후모모미지', category: '동방' },
+  { src: './image/동방/후모미코.png', tag: '~후모미코', category: '동방' },
+  { src: './image/동방/후모세이쟈.png', tag: '~후모세이쟈', category: '동방' },
+  { src: './image/동방/후모에링.png', tag: '~후모에링', category: '동방' },
+  { src: './image/동방/후모유카.png', tag: '~후모유카', category: '동방' },
   { src: './image/동방/후모린노.png', tag: '~후모린노', category: '동방' },
   
   // 언더테일
