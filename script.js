@@ -166,6 +166,7 @@ const images = [
   { src: './image/감정표현/하라는공부.png', tag: '~하라는공부', category: '감정표현' },
   { src: './image/감정표현/고만해미친놈들아.png', tag: '~고만해미친놈들아', category: '감정표현' },
   { src: './image/감정표현/계획대로.png', tag: '~계획대로', category: '감정표현' },
+  { src: './image/감정표현/저건사야해.png', tag: '~저건사야해', category: '감정표현' },
 
   // 디맥
   { src: './image/디맥/가면라이더.png', tag: '~가면라이더', category: '디맥' },
