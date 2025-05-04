@@ -564,7 +564,6 @@ const images = [
   { src: './image/오리지널/란호유쿠키와구.gif', tag: '~호유쿠키와구', category: '란호유' },
   { src: './image/오리지널/흑화쿠키.gif', tag: '~흑화쿠키', category: '란호유' },
   { src: './image/오리지널/란호유네코.gif', tag: '~네코호유', category: '란호유' },
-  { src: './image/오리지널/호유바니.png', tag: '~호유바니', category: '란호유' },
   { src: './image/오리지널/란호유바니.gif', tag: '~호유바니2', category: '란호유' },
   { src: './image/오리지널/란호유바니2.gif', tag: '~호유바니3', category: '란호유' },
   { src: './image/오리지널/란호유바니3.gif', tag: '~호유바니4', category: '란호유' },
