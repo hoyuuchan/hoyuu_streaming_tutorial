@@ -605,7 +605,7 @@ const images = [
   { src: './image/오리지널/호유쭈욱4.gif', tag: '~호유쭈욱4', category: '란호유' },
   { src: './image/오리지널/호유쭈욱5.gif', tag: '~호유쭈욱5', category: '란호유' },
   { src: './image/오리지널/호유쭈욱6.gif', tag: '~호유쭈욱6', category: '란호유' },
-  { src: './image/오리지널/스파게티.gif', tag: '~스파게티', category: '란호유' },
+  { src: './image/오리지널/스파게티.png', tag: '~스파게티', category: '란호유' },
 
   // 추가 이미지 데이터...
   ];
