@@ -582,6 +582,8 @@ const images = [
   { src: './image/오리지널/호유보이2.png', tag: '~호유보이2', category: '란호유' },
   { src: './image/오리지널/호유바니.png', tag: '~호유바니', category: '란호유' },
   { src: './image/오리지널/호유메이드.png', tag: '~호유메이드', category: '란호유' },
+  { src: './image/오리지널/호유미쿠.png', tag: '~호유미쿠', category: '란호유' },
+  { src: './image/오리지널/호유테토.png', tag: '~호유테토', category: '란호유' },
   { src: './image/오리지널/호유댄스.webp', tag: '~호유댄스', category: '란호유' },
   { src: './image/오리지널/호유댄스2.webp', tag: '~호유댄스2', category: '란호유' },
   { src: './image/오리지널/호유댄스3.webp', tag: '~호유댄스3', category: '란호유' },
