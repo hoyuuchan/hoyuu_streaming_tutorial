@@ -8,9 +8,12 @@ const images = allImagesData.map(item => ({
   category: item.categories[0] // 첫 번째 카테고리만 사용 (필요에 따라 조정 가능)
 }));
 
-// 이후 script.js의 나머지 로직 (이미지 표시, 필터링 등)은 그대로 유지합니다.
-// 예:
-// document.addEventListener('DOMContentLoaded', () => {
-//   renderImages(images);
-//   populateCategoryFilter();
-// });
+console.log("변환된 images 배열:", images); // ✨ 이 코드 추가
+
+// script.js (renderImages 함수 내부)
+const imageContainer = document.getElementById('imageContainer');
+if (!imageContainer) {
+    console.error('Error: #imageContainer element not found!');
+    return; // 컨테이너가 없으면 함수 종료
+}
+// ... 이미지 박스 생성 로직 계속
