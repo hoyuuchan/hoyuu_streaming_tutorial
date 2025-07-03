@@ -1,7 +1,7 @@
 // imageData.js
 const allImagesData = [
   {
-    path: 'https://github.com/hoyuuchan/hoyuu_streaming_tutorial/blob/main/image/3D/%EB%B8%94%EB%A0%8C%EB%8D%94.png',
+    path: './image/3D/블렌더.png',
     keywords: ['블렌더'],
     siteTag: '~블렌더', // 사이트에서 표시될 명령어
     categories: ['3D', '블렌더']
