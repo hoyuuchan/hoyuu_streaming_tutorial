@@ -2071,14 +2071,14 @@ const allImagesData = [
   },
   {
     path: 'image/동방/후모누에.png',
-    keywords: ['후모카센'],
-    siteTag: '~후모카센',
+    keywords: ['후모누에'],
+    siteTag: '~후모누에',
     categories: ['동방']
   },
   {
     path: 'image/동방/후모니토리.png',
-    keywords: ['후모카센'],
-    siteTag: '~후모카센',
+    keywords: ['후모니토리'],
+    siteTag: '~후모니토리',
     categories: ['동방']
   },
   {
@@ -2357,6 +2357,66 @@ const allImagesData = [
     siteTag: '~후모히나',
     categories: ['동방']
   },
+
+    // 랜덤 이미지_후모
+  {
+    path: ['image/동방/후모구레이무.png',
+           'image/동방/후모구마리사.png',
+           'image/동방/후모나즈린.png',
+           'image/동방/후모누에.png',
+           'image/동방/후모니토리.png',
+           'image/동방/후모도철.png',
+           'image/동방/후모란.png',
+           'image/동방/후모레밀.png',
+           'image/동방/후모레이무.png',
+           'image/동방/후모렌코.png',
+           'image/동방/후모루미아.png',
+           'image/동방/후모린노.png',
+           'image/동방/후모마리사.png',
+           'image/동방/후모메리.png',
+           'image/동방/후모모미지.png',
+           'image/동방/후모미코.png',
+           'image/동방/후모사구메.png',
+           'image/동방/후모사나에.png',
+           'image/동방/후모사쿠야.png',
+           'image/동방/후모사토리.png',
+           'image/동방/후모세이쟈.png',
+           'image/동방/후모순호.png',
+           'image/동방/후모스와코.png',
+           'image/동방/후모시온.png',
+           'image/동방/후모시키.png',
+           'image/동방/후모아야.png',
+           'image/동방/후모앨리스.png',
+           'image/동방/후모에링.png',
+           'image/동방/후모오린.png',
+           'image/동방/후모오쿠.png',
+           'image/동방/후모오키나.png',
+           'image/동방/후모요우무.png',
+           'image/동방/후모유유코.png',
+           'image/동방/후모유카.png',
+           'image/동방/후모유카리.png',
+           'image/동방/후모죠온.png',
+           'image/동방/후모첸.png',
+           'image/동방/후모치르노.png',
+           'image/동방/후모카센.png',
+           'image/동방/후모코가사.png',
+           'image/동방/후모코이시.png',
+           'image/동방/후모코코로.png',
+           'image/동방/후모텐시.png',
+           'image/동방/후모텐큐.png',
+           'image/동방/후모파르시.png',
+           'image/동방/후모파츄리.png',
+           'image/동방/후모플랑.png',
+           'image/동방/후모하타테.png',
+           'image/동방/후모헤카티아.png',
+           'image/동방/후모흑르노.png',
+           'image/동방/후모히나.png'],
+    keywords: ['후모'],
+    siteTag: '~후모',
+    categories: ['동방']
+  },
+
+  // 디맥
   {
     path: 'image/디맥/가면라이더.png',
     keywords: ['가면라이더'],
@@ -2387,6 +2447,8 @@ const allImagesData = [
     siteTag: '~뜸부기',
     categories: ['디제이맥스']
   },
+
+  // 마크
   {
     path: 'image/마크/거미.png',
     keywords: ['거미'],
@@ -2555,6 +2617,8 @@ const allImagesData = [
     siteTag: '~청금석',
     categories: ['마인크래프트']
   },
+
+  // 산나비
   {
     path: 'image/산나비/게이밍마리01.gif',
     keywords: ['게이밍마리01'],
@@ -2927,6 +2991,8 @@ const allImagesData = [
     siteTag: '~어명집행',
     categories: ['산나비']
   },
+
+  // 언더테일
   {
     path: 'image/언더테일/Undyne01.gif',
     keywords: ['언다인01'],
@@ -3227,6 +3293,8 @@ const allImagesData = [
     siteTag: '~히트플',
     categories: ['언더테일']
   },
+
+  // 오리지널
   {
     path: 'image/오리지널/500억자산가.png',
     keywords: ['란르밀'],
@@ -3634,5 +3702,5 @@ const allImagesData = [
     keywords: ['호유와타리2','와타리메이드'],
     siteTag: '~호유와타리2',
     categories: ['오리지널']
-  }
+  },
 ];
