@@ -607,6 +607,8 @@ const images = [
   { src: './image/오리지널/d1.png', tag: '~아운조용히', category: '란호유' },
   { src: './image/오리지널/d2.png', tag: '~오린따봉', category: '란호유' },
   { src: './image/오리지널/d3.png', tag: '~텐시엉엉', category: '란호유' },
+  { src: './image/오리지널/d4.png', tag: '~레이무부적', category: '란호유' },
+  { src: './image/오리지널/d5.png', tag: '~쿄코진짜', category: '란호유' },
   { src: './image/오리지널/호유댄스.webp', tag: '~호유댄스', category: '란호유' },
   { src: './image/오리지널/호유댄스2.webp', tag: '~호유댄스2', category: '란호유' },
   { src: './image/오리지널/호유댄스3.webp', tag: '~호유댄스3', category: '란호유' },
