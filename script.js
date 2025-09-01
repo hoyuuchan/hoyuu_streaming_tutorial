@@ -252,6 +252,7 @@ const images = [
   { src: './image/동방/요우무법규.png', tag: '~요우무법규', category: '동방' },
   { src: './image/동방/코가사원망.png', tag: '~원망스러워', category: '동방' },
   { src: './image/동방/코가사와.webp', tag: '~코가사와', category: '동방' },
+  { src: './image/동방/코가사칼.webp', tag: '~코가사칼', category: '동방' },
   { src: './image/동방/세이란일어남.png', tag: '~지금일어났다', category: '동방' },
   { src: './image/동방/시온쾅.webp', tag: '~시온쾅', category: '동방' },
   { src: './image/동방/에린에린.webp', tag: '~에린에린', category: '동방' },
