@@ -624,34 +624,35 @@ const images = [
   { src: './image/오리지널/호유도로시2.png', tag: '~호유도로시2', category: '란호유' },
   { src: './image/오리지널/호유증여.png', tag: '~호유증여', category: '란호유' },
   { src: './image/오리지널/호유질.png', tag: '~호유질', category: '란호유' },
-  { src: './image/오리지널/d1.png', tag: '~아운조용히', category: '란호유' },
-  { src: './image/오리지널/d2.png', tag: '~오린따봉', category: '란호유' },
-  { src: './image/오리지널/d3.png', tag: '~텐시엉엉', category: '란호유' },
-  { src: './image/오리지널/d4.png', tag: '~레이무부적', category: '란호유' },
-  { src: './image/오리지널/d5.png', tag: '~ㅈㅉㅇㅇ', category: '란호유' },
-  { src: './image/오리지널/d6.png', tag: '~다봤구나', category: '란호유' },
-  { src: './image/오리지널/d7.png', tag: '~뀨', category: '란호유' },
-  { src: './image/오리지널/d8.png', tag: '~구야꺼', category: '란호유' },
-  { src: './image/오리지널/d9.png', tag: '~그런건가', category: '란호유' },
-  { src: './image/오리지널/d10.png', tag: '~코이시으흐흐', category: '란호유' },
-  { src: './image/오리지널/d11.png', tag: '~사토리으흐흐', category: '란호유' },
-  { src: './image/오리지널/d12.png', tag: '~캬', category: '란호유' },
-  { src: './image/오리지널/d13.png', tag: '~짜잔', category: '란호유' },
-  { src: './image/오리지널/d14.png', tag: '~잘자', category: '란호유' },
-  { src: './image/오리지널/d15.png', tag: '~치르노으앙', category: '란호유' },
-  { src: './image/오리지널/d16.png', tag: '~사나에부거', category: '란호유' },
-  { src: './image/오리지널/d17.png', tag: '~으헤', category: '란호유' },
-  { src: './image/오리지널/d18.png', tag: '~오쿠의문', category: '란호유' },
-  { src: './image/오리지널/d19.png', tag: '~모코우갈', category: '란호유' },
-  { src: './image/오리지널/d20.png', tag: '~유유코줘', category: '란호유' },
-  { src: './image/오리지널/d21.png', tag: '~클피펀치', category: '란호유' },
-  { src: './image/오리지널/d22.png', tag: '~마리사몰루', category: '란호유' },
-  { src: './image/오리지널/d23.png', tag: '~음모론아니야', category: '란호유' },
-  { src: './image/오리지널/d24.png', tag: '~눈을떴구나', category: '란호유' },
-  { src: './image/오리지널/d25.png', tag: '~나즈린고마워요', category: '란호유' },
-  { src: './image/오리지널/d26.png', tag: '~난잘못없어', category: '란호유' },
-  { src: './image/오리지널/d27.png', tag: '~히지리사랑해요', category: '란호유' },
-  { src: './image/오리지널/d28.png', tag: '~에베베', category: '란호유' },
+  { src: './image/오리지널/d1.png', tag: '~아운조용히', category: ['란호유', '동방'] },
+  { src: './image/오리지널/d2.png', tag: '~오린따봉', category: ['란호유', '동방'] },
+  { src: './image/오리지널/d3.png', tag: '~텐시엉엉', category: ['란호유', '동방'] },
+  { src: './image/오리지널/d4.png', tag: '~레이무부적', category: ['란호유', '동방'] },
+  { src: './image/오리지널/d5.png', tag: '~ㅈㅉㅇㅇ', category: ['란호유', '동방'] },
+  { src: './image/오리지널/d6.png', tag: '~다봤구나', category: ['란호유', '동방'] },
+  { src: './image/오리지널/d7.png', tag: '~뀨', category: ['란호유', '동방'] },
+  { src: './image/오리지널/d8.png', tag: '~구야꺼', category: ['란호유', '동방'] },
+  { src: './image/오리지널/d9.png', tag: '~그런건가', category: ['란호유', '동방'] },
+  { src: './image/오리지널/d10.png', tag: '~코이시으흐흐', category: ['란호유', '동방'] },
+  { src: './image/오리지널/d11.png', tag: '~사토리으흐흐', category: ['란호유', '동방'] },
+  { src: './image/오리지널/d12.png', tag: '~캬', category: ['란호유', '동방'] },
+  { src: './image/오리지널/d13.png', tag: '~짜잔', category: ['란호유', '동방'] },
+  { src: './image/오리지널/d14.png', tag: '~잘자', category: ['란호유', '동방'] },
+  { src: './image/오리지널/d15.png', tag: '~치르노으앙', category: ['란호유', '동방'] },
+  { src: './image/오리지널/d16.png', tag: '~사나에부거', category: ['란호유', '동방'] },
+  { src: './image/오리지널/d17.png', tag: '~으헤', category: ['란호유', '동방'] },
+  { src: './image/오리지널/d18.png', tag: '~오쿠의문', category: ['란호유', '동방'] },
+  { src: './image/오리지널/d19.png', tag: '~모코우갈', category: ['란호유', '동방'] },
+  { src: './image/오리지널/d20.png', tag: '~유유코줘', category: ['란호유', '동방'] },
+  { src: './image/오리지널/d21.png', tag: '~클피펀치', category: ['란호유', '동방'] },
+  { src: './image/오리지널/d22.png', tag: '~마리사몰루', category: ['란호유', '동방'] },
+  { src: './image/오리지널/d23.png', tag: '~음모론아니야', category: ['란호유', '동방'] },
+  { src: './image/오리지널/d24.png', tag: '~눈을떴구나', category: ['란호유', '동방'] },
+  { src: './image/오리지널/d25.png', tag: '~나즈린고마워요', category: ['란호유', '동방'] },
+  { src: './image/오리지널/d26.png', tag: '~난잘못없어', category: ['란호유', '동방'] },
+  { src: './image/오리지널/d27.png', tag: '~히지리사랑해요', category: ['란호유', '동방'] },
+  { src: './image/오리지널/d28.png', tag: '~에베베', category: ['란호유', '동방'] },
+  { src: './image/오리지널/d29.png', tag: '~시온거지', category: ['란호유', '동방'], update: true },
   { src: './image/오리지널/호유댄스.webp', tag: '~호유댄스', category: '란호유' },
   { src: './image/오리지널/호유댄스2.webp', tag: '~호유댄스2', category: '란호유' },
   { src: './image/오리지널/호유댄스3.webp', tag: '~호유댄스3', category: '란호유' },
@@ -680,7 +681,6 @@ const images = [
   ];
 
   const imageContainer = document.getElementById('imageContainer');
-  const categoryFilter = document.getElementById('categoryFilter');
 
 // Intersection Observer 설정
 const observerOptions = {
@@ -711,22 +711,31 @@ function renderImages(filteredImages) {
     const imageBox = document.createElement('div');
     imageBox.className = 'image-box';
 
-    // 이미지 요소 생성 및 lazy loading 설정
+    // 1. 이미지 요소 생성
     const img = document.createElement('img');
-    img.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'; // 투명 placeholder
-    img.dataset.src = image.src; // 실제 이미지 URL을 data-src에 저장
+    img.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+    img.dataset.src = image.src;
     img.style.opacity = '0';
     img.onload = () => {
       img.style.opacity = '1';
     };
-    
     imageBox.appendChild(img);
 
+    // 2. 태그 요소 생성 (기존 코드)
     const tag = document.createElement('div');
     tag.className = 'tag';
     tag.innerText = image.tag;
     imageBox.appendChild(tag);
 
+    // [여기 추가됨] 3. update 속성이 true면 빨간 점 추가
+    if (image.update === true) {
+      const badge = document.createElement('div');
+      badge.className = 'new-badge';
+      badge.innerText = 'New'; // 여기에 원하는 글씨를 적습니다
+      imageBox.appendChild(badge);
+    }
+
+    // 클릭 이벤트 (기존 코드)
     imageBox.addEventListener('click', () => {
       navigator.clipboard.writeText(image.tag)
       .then(() => {
@@ -742,21 +751,31 @@ function renderImages(filteredImages) {
 
     imageContainer.appendChild(imageBox);
     
-    // 이미지 관찰 시작
     imageObserver.observe(img);
   });
 }
 
-// 드롭다운 메뉴 변경 시 필터링
-categoryFilter.addEventListener('change', () => {
-  const selectedCategory = categoryFilter.value;
+// 라디오 버튼 필터링 로직 (다중 카테고리 지원 수정됨)
+const radioButtons = document.querySelectorAll('input[name="category"]');
 
-  if (selectedCategory === 'all') {
-    renderImages(images);
-  } else {
-    const filteredImages = images.filter(image => image.category === selectedCategory);
-    renderImages(filteredImages);
-  }
+radioButtons.forEach(radio => {
+  radio.addEventListener('change', (e) => {
+    const selectedCategory = e.target.value;
+
+    if (selectedCategory === 'all') {
+      renderImages(images);
+    } else {
+      const filteredImages = images.filter(image => {
+        // 1. 카테고리가 여러 개(배열)인 경우: 해당 배열 안에 선택된 카테고리가 있는지 확인
+        if (Array.isArray(image.category)) {
+          return image.category.includes(selectedCategory);
+        }
+        // 2. 카테고리가 하나(문자열)인 경우: 정확히 일치하는지 확인
+        return image.category === selectedCategory;
+      });
+      renderImages(filteredImages);
+    }
+  });
 });
 
 // 초기 렌더링: 전체 이미지를 표시
