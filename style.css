@@ -161,9 +161,9 @@
 footer {
   position: fixed;     /* 화면에 고정 */
   bottom: 15px;        /* 바닥에서 약간 띄움 (미관상 더 좋습니다) */
-  left: 0;
+  right: 85px;
   width: 100%;         /* 너비 꽉 채우기 */
-  text-align: center;  /* 내용물 가운데 정렬 */
+  text-align: right;  /* 내용물 가운데 정렬 */
   z-index: 100;        /* 다른 요소들보다 위에 오도록 */
   pointer-events: none; /* 푸터 영역 자체가 클릭을 막지 않도록 설정 */
 }
