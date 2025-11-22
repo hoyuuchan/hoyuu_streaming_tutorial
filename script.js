@@ -587,16 +587,16 @@ const images = [
   { src: './image/오리지널/유와씨.webp', tag: '~유와씨', category: '란호유' },
   { src: './image/오리지널/진짜에요유아.png', tag: '~유아진짜에요', category: '란호유' },
   { src: './image/언더테일/호유샌즈.png', tag: '~호유샌즈', category: '란호유' },
-  { src: './image/오리지널/호유란.png', tag: '~호유란', category: '란호유' },
-  { src: './image/오리지널/호유첸.png', tag: '~호유첸', category: '란호유' },
-  { src: './image/오리지널/호유요우무.png', tag: '~호유요우무', category: '란호유' },
-  { src: './image/오리지널/호유스타.png', tag: '~호유스타', category: '란호유' },
-  { src: './image/오리지널/호유써니.png', tag: '~호유써니', category: '란호유' },
-  { src: './image/오리지널/호유루나.png', tag: '~호유루나', category: '란호유' },
-  { src: './image/오리지널/호유빟어.png', tag: '~호유빟어', category: '란호유' },
-  { src: './image/오리지널/호유마미조.png', tag: '~호유마미조', category: '란호유' },
-  { src: './image/오리지널/호유미코.png', tag: '~호유미코', category: '란호유' },
-  { src: './image/오리지널/호유오쿠.png', tag: '~호유오쿠', category: '란호유' },
+  { src: './image/오리지널/호유란.png', tag: '~호유란', category: ['란호유', '동방'] },
+  { src: './image/오리지널/호유첸.png', tag: '~호유첸', category: ['란호유', '동방'] },
+  { src: './image/오리지널/호유요우무.png', tag: '~호유요우무', category: ['란호유', '동방'] },
+  { src: './image/오리지널/호유스타.png', tag: '~호유스타', category: ['란호유', '동방'] },
+  { src: './image/오리지널/호유써니.png', tag: '~호유써니', category: ['란호유', '동방'] },
+  { src: './image/오리지널/호유루나.png', tag: '~호유루나', category: ['란호유', '동방'] },
+  { src: './image/오리지널/호유빟어.png', tag: '~호유빟어', category: ['란호유', '동방'] },
+  { src: './image/오리지널/호유마미조.png', tag: '~호유마미조', category: ['란호유', '동방'] },
+  { src: './image/오리지널/호유미코.png', tag: '~호유미코', category: ['란호유', '동방'] },
+  { src: './image/오리지널/호유오쿠.png', tag: '~호유오쿠', category: ['란호유', '동방'] },
   { src: './image/오리지널/호유와타리.png', tag: '~호유와타리', category: '란호유' },
   { src: './image/오리지널/호유와타리2.png', tag: '~호유와타리2', category: '란호유' },
   { src: './image/오리지널/호유보이.png', tag: '~호유보이', category: '란호유' },
@@ -680,12 +680,12 @@ const images = [
   // 추가 이미지 데이터...
   ];
 
-  const imageContainer = document.getElementById('imageContainer');
+const imageContainer = document.getElementById('imageContainer');
 
-// Intersection Observer 설정
+// 1. Lazy Loading: Intersection Observer 설정
 const observerOptions = {
   root: null,
-  rootMargin: '50px', // 이미지가 뷰포트 50px 전에 로딩 시작
+  rootMargin: '50px',
   threshold: 0.1
 };
 
@@ -703,7 +703,20 @@ const imageObserver = new IntersectionObserver((entries, observer) => {
   });
 }, observerOptions);
 
-// 이미지 목록을 렌더링하는 함수
+
+// 2. 함수: 이미지를 update: true 기준으로 정렬하는 함수
+function sortImagesByUpdate(imageList) {
+  return imageList.slice().sort((a, b) => {
+    const aIsUpdate = a.update ? 1 : 0;
+    const bIsUpdate = b.update ? 1 : 0;
+    
+    // update: true가 0보다 큰 값을 가지므로, b - a를 통해 내림차순 정렬 (true가 앞으로)
+    return bIsUpdate - aIsUpdate;
+  });
+}
+
+
+// 3. 이미지 목록 렌더링 함수 (New 배지 + Lazy Loading 적용)
 function renderImages(filteredImages) {
   imageContainer.innerHTML = ''; // 기존 이미지 초기화
 
@@ -711,7 +724,7 @@ function renderImages(filteredImages) {
     const imageBox = document.createElement('div');
     imageBox.className = 'image-box';
 
-    // 1. 이미지 요소 생성
+    // 3-1. 이미지 요소 생성 및 lazy loading 설정
     const img = document.createElement('img');
     img.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
     img.dataset.src = image.src;
@@ -721,21 +734,21 @@ function renderImages(filteredImages) {
     };
     imageBox.appendChild(img);
 
-    // 2. 태그 요소 생성 (기존 코드)
+    // 3-2. 태그 요소 생성
     const tag = document.createElement('div');
     tag.className = 'tag';
     tag.innerText = image.tag;
     imageBox.appendChild(tag);
 
-    // [여기 추가됨] 3. update 속성이 true면 빨간 점 추가
-    if (image.update === true) {
+    // 3-3. [New Badge] update: true 일 때 배지 추가 (정렬 기준과 동일하게 'update' 사용)
+    if (image.update === true) { 
       const badge = document.createElement('div');
-      badge.className = 'new-badge';
-      badge.innerText = 'New'; // 여기에 원하는 글씨를 적습니다
+      badge.className = 'new-badge'; 
+      badge.innerText = 'New';
       imageBox.appendChild(badge);
     }
 
-    // 클릭 이벤트 (기존 코드)
+    // 3-4. 클릭 시 복사 이벤트
     imageBox.addEventListener('click', () => {
       navigator.clipboard.writeText(image.tag)
       .then(() => {
@@ -751,32 +764,41 @@ function renderImages(filteredImages) {
 
     imageContainer.appendChild(imageBox);
     
-    imageObserver.observe(img);
+    // 3-5. 이미지 관찰 시작
+    imageObserver.observe(img); 
   });
 }
 
-// 라디오 버튼 필터링 로직 (다중 카테고리 지원 수정됨)
-const radioButtons = document.querySelectorAll('input[name="category"]');
+
+// 4. 라디오 버튼 필터링 및 정렬 로직 (이벤트 리스너)
+const radioButtons = document.querySelectorAll('input[name="category"]'); // NOTE: 실제 HTML이 select라면 이 부분을 수정해야 합니다.
 
 radioButtons.forEach(radio => {
   radio.addEventListener('change', (e) => {
     const selectedCategory = e.target.value;
+    let filteredImages = [];
 
+    // 필터링
     if (selectedCategory === 'all') {
-      renderImages(images);
+      filteredImages = images;
     } else {
-      const filteredImages = images.filter(image => {
-        // 1. 카테고리가 여러 개(배열)인 경우: 해당 배열 안에 선택된 카테고리가 있는지 확인
+      filteredImages = images.filter(image => {
+        // 다중 카테고리 지원
         if (Array.isArray(image.category)) {
           return image.category.includes(selectedCategory);
         }
-        // 2. 카테고리가 하나(문자열)인 경우: 정확히 일치하는지 확인
         return image.category === selectedCategory;
       });
-      renderImages(filteredImages);
     }
+
+    // 정렬을 적용하고 렌더링
+    const sortedImages = sortImagesByUpdate(filteredImages);
+    renderImages(sortedImages);
   });
 });
 
-// 초기 렌더링: 전체 이미지를 표시
-renderImages(images);
+
+// 5. [최종 해결] 페이지 로드 시 초기 렌더링
+// 스크립트가 실행되자마자 (DOM 로드 후) 정렬된 전체 이미지를 렌더링합니다.
+const initiallySortedImages = sortImagesByUpdate(images);
+renderImages(initiallySortedImages);
