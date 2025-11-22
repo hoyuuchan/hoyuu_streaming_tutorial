@@ -802,3 +802,27 @@ radioButtons.forEach(radio => {
 // 스크립트가 실행되자마자 (DOM 로드 후) 정렬된 전체 이미지를 렌더링합니다.
 const initiallySortedImages = sortImagesByUpdate(images);
 renderImages(initiallySortedImages);
+
+// [새로 추가] 도움말 버튼 클릭 이벤트 처리
+const helpButton = document.getElementById('helpButton');
+const helpBox = document.getElementById('helpBox');
+
+const helpMessage = `
+  <strong>📌 채팅콘 사용법</strong><br>
+  1. 원하는 이미지를 클릭하면 명령어가 자동 복사됩니다.<br>
+  2. 방송 채팅창에 붙여넣기하면 콘이 출력됩니다.<br>
+  <strong>✨ 효과 추가</strong><br>
+  명령어 뒤에 <b>커져라!</b>, <b>빙글빙글!</b> 등을 추가해보세요.
+`;
+
+helpButton.addEventListener('click', () => {
+  // 박스 내용 채우기 (HTML 허용)
+  helpBox.innerHTML = helpMessage; 
+  
+  // display 속성 토글 (보이거나 숨기기)
+  if (helpBox.style.display === 'block') {
+    helpBox.style.display = 'none';
+  } else {
+    helpBox.style.display = 'block';
+  }
+});
