@@ -808,11 +808,12 @@ const helpButton = document.getElementById('helpButton');
 const helpBox = document.getElementById('helpBox');
 
 const helpMessage = `
-  <strong>📌 채팅콘 사용법</strong><br>
-  1. 원하는 이미지를 클릭하면 명령어가 자동 복사됩니다.<br>
-  2. 방송 채팅창에 붙여넣기하면 콘이 출력됩니다.<br>
+  <strong>📣 채팅콘 사용법</strong><br>
+  사용할 채팅콘을 클릭하면 명령어가 복사됩니다.<br>
+  명령어를 채팅창에 붙여넣기를 하시면 콘이 출력됩니다.<br>
   <strong>✨ 효과 추가</strong><br>
-  명령어 뒤에 <b>커져라!</b>, <b>빙글빙글!</b> 등을 추가해보세요.
+  명령어 뒤에 <b>커져라!</b>, <b>빙글빙글!</b>, <b>으랏~챠!</b>를 입력해보세요!<br>
+  ex)란호유 으랏~챠!
 `;
 
 helpButton.addEventListener('click', () => {
