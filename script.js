@@ -552,6 +552,7 @@ const images = [
   { src: './image/기타/기가차드4.png', tag: '~기가차드4', category: '기타' },
   { src: './image/기타/기가차드5.png', tag: '~기가차드5', category: '기타' },
   { src: './image/기타/흑화쿠키2.png', tag: '~흑화쿠키2', category: '기타' },
+  { src: './image/기타/테토쮸글.webp', tag: '~테토쮸글', category: '기타', update: true },
 
   // 오리지널
   { src: './image/오리지널/란호유.png', tag: '~란호유', category: '란호유' },
@@ -624,7 +625,7 @@ const images = [
   { src: './image/오리지널/호유도로시2.png', tag: '~호유도로시2', category: '란호유' },
   { src: './image/오리지널/호유증여.png', tag: '~호유증여', category: '란호유' },
   { src: './image/오리지널/호유질.png', tag: '~호유질', category: '란호유' },
-  { src: './image/오리지널/모자걸총.png', tag: '~모자걸총', category: '란호유', update: true },
+  { src: './image/오리지널/모자걸총.png', tag: '~모자걸총', category: '란호유' },
   { src: './image/오리지널/d1.png', tag: '~아운조용히', category: ['란호유', '동방'] },
   { src: './image/오리지널/d2.png', tag: '~오린따봉', category: ['란호유', '동방'] },
   { src: './image/오리지널/d3.png', tag: '~텐시엉엉', category: ['란호유', '동방'] },
