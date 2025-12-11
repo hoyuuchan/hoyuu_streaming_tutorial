@@ -585,8 +585,8 @@ const images = [
   { src: './image/오리지널/란호유의문.png', tag: '~호유의문', category: '란호유' },
   { src: './image/오리지널/란호유씨익.png', tag: '~호유씨익', category: '란호유' },
   { src: './image/오리지널/란호유멍.png', tag: '~호유멍', category: '란호유' },
-  { src: './image/오리지널/유와씨.webp', tag: '~유와씨', category: '란호유' },
-  { src: './image/오리지널/진짜에요유아.png', tag: '~유아진짜에요', category: '란호유' },
+  { src: './image/오리지널/유와씨.webp', tag: '~유와씨', category: '란호유기타' },
+  { src: './image/오리지널/진짜에요유아.png', tag: '~유아진짜에요', category: '란호유기타' },
   { src: './image/언더테일/호유샌즈.png', tag: '~호유샌즈', category: '란호유' },
   { src: './image/오리지널/호유란.png', tag: '~호유란', category: ['란호유', '동방'] },
   { src: './image/오리지널/호유첸.png', tag: '~호유첸', category: ['란호유', '동방'] },
@@ -659,25 +659,25 @@ const images = [
   { src: './image/오리지널/호유댄스2.webp', tag: '~호유댄스2', category: '란호유' },
   { src: './image/오리지널/호유댄스3.webp', tag: '~호유댄스3', category: '란호유' },
   { src: './image/오리지널/호유댄스4.webp', tag: '~호유댄스4', category: '란호유' },
-  { src: './image/오리지널/호바유보.gif', tag: '~호바유보', category: '란호유' },
-  { src: './image/오리지널/호바유보2.gif', tag: '~호바유보2', category: '란호유' },
-  { src: './image/오리지널/호바유보3.webp', tag: '~호바유보3', category: '란호유' },
-  { src: './image/오리지널/호유엣헴.gif', tag: '~호유엣헴', category: '란호유' },
-  { src: './image/오리지널/호유엣헴2.png', tag: '~호유엣헴2', category: '란호유' },
-  { src: './image/오리지널/호유파이어.webp', tag: '~호유파이어', category: '란호유' },
-  { src: './image/오리지널/호유키서.gif', tag: '~호유키서', category: '란호유' },
-  { src: './image/오리지널/호유경악.gif', tag: '~호유경악', category: '란호유' },
-  { src: './image/오리지널/호유아악.gif', tag: '~호유아악', category: '란호유' },
-  { src: './image/오리지널/블렌더고수.png', tag: '~블렌더고수', category: '란호유' },
-  { src: './image/오리지널/지브러시고수.png', tag: '~지브러시고수', category: '란호유' },
-  { src: './image/오리지널/뜌땨땨.png', tag: '~뜌땨땨', category: '란호유' },
-  { src: './image/오리지널/호유쭈욱.gif', tag: '~호유쭈욱', category: '란호유' },
-  { src: './image/오리지널/호유쭈욱2.gif', tag: '~호유쭈욱2', category: '란호유' },
-  { src: './image/오리지널/호유쭈욱3.gif', tag: '~호유쭈욱3', category: '란호유' },
-  { src: './image/오리지널/호유쭈욱4.gif', tag: '~호유쭈욱4', category: '란호유' },
-  { src: './image/오리지널/호유쭈욱5.gif', tag: '~호유쭈욱5', category: '란호유' },
-  { src: './image/오리지널/호유쭈욱6.gif', tag: '~호유쭈욱6', category: '란호유' },
-  { src: './image/오리지널/스파게티.png', tag: '~스파게티', category: '란호유' },
+  { src: './image/오리지널/호바유보.gif', tag: '~호바유보', category: '호유티콘' },
+  { src: './image/오리지널/호바유보2.gif', tag: '~호바유보2', category: '호유티콘' },
+  { src: './image/오리지널/호바유보3.webp', tag: '~호바유보3', category: '호유티콘' },
+  { src: './image/오리지널/호유엣헴.gif', tag: '~호유엣헴', category: '호유티콘' },
+  { src: './image/오리지널/호유엣헴2.png', tag: '~호유엣헴2', category: '호유티콘' },
+  { src: './image/오리지널/호유파이어.webp', tag: '~호유파이어', category: '호유티콘' },
+  { src: './image/오리지널/호유키서.gif', tag: '~호유키서', category: '호유티콘' },
+  { src: './image/오리지널/호유경악.gif', tag: '~호유경악', category: '호유티콘' },
+  { src: './image/오리지널/호유아악.gif', tag: '~호유아악', category: '호유티콘' },
+  { src: './image/오리지널/블렌더고수.png', tag: '~블렌더고수', category: '호유티콘' },
+  { src: './image/오리지널/지브러시고수.png', tag: '~지브러시고수', category: '호유티콘' },
+  { src: './image/오리지널/뜌땨땨.png', tag: '~뜌땨땨', category: '호유티콘' },
+  { src: './image/오리지널/호유쭈욱.gif', tag: '~호유쭈욱', category: '호유티콘' },
+  { src: './image/오리지널/호유쭈욱2.gif', tag: '~호유쭈욱2', category: '호유티콘' },
+  { src: './image/오리지널/호유쭈욱3.gif', tag: '~호유쭈욱3', category: '호유티콘' },
+  { src: './image/오리지널/호유쭈욱4.gif', tag: '~호유쭈욱4', category: '호유티콘' },
+  { src: './image/오리지널/호유쭈욱5.gif', tag: '~호유쭈욱5', category: '호유티콘' },
+  { src: './image/오리지널/호유쭈욱6.gif', tag: '~호유쭈욱6', category: '호유티콘' },
+  { src: './image/오리지널/스파게티.png', tag: '~스파게티', category: '란호유기타' },
 
   // 추가 이미지 데이터...
   ];
@@ -773,31 +773,167 @@ function renderImages(filteredImages) {
 
 
 // 4. 라디오 버튼 필터링 및 정렬 로직 (이벤트 리스너)
-const radioButtons = document.querySelectorAll('input[name="category"]'); // NOTE: 실제 HTML이 select라면 이 부분을 수정해야 합니다.
+/* =========================================
+   [1] 카테고리 구조 정의 (설정)
+   ========================================= */
+const categoryStructure = [
+  { label: '전체', value: 'all', type: 'all' },
+  {
+    label: '오리지널',
+    value: 'original_group',
+    children: [
+      { label: '전체', value: 'all_original' },
+      { label: '란호유', value: '란호유'},
+      { label: '호유티콘 콘테스트', value: '호유티콘'},
+      { label: '기타', value: '란호유기타'}
+    ]
+  },
+  { label: '동방', value: '동방' },
+  { label: '감정표현', value: '감정표현' },
+  
+  // [게임] 그룹: 하위에 여러 카테고리를 가짐
+  { 
+    label: '게임', 
+    value: 'game_group', // 그룹 식별자
+    children: [
+      { label: '전체', value: 'all_game' }, // 게임 전체 보기용
+      { label: '디제이맥스', value: '디맥' },
+      { label: '언더테일', value: '언더테일' },
+      { label: '마인크래프트', value: '마크' },
+      { label: '산나비', value: '산나비' }
+    ]
+  },
+  
+  { label: '블렌더', value: '블렌더' },
+  { label: '기타', value: '기타' }
+];
 
-radioButtons.forEach(radio => {
-  radio.addEventListener('change', (e) => {
-    const selectedCategory = e.target.value;
-    let filteredImages = [];
+// 컨테이너 요소 가져오기
+const mainContainer = document.getElementById('mainCategoryContainer');
+const subContainer = document.getElementById('subCategoryContainer');
 
-    // 필터링
-    if (selectedCategory === 'all') {
-      filteredImages = images;
-    } else {
-      filteredImages = images.filter(image => {
-        // 다중 카테고리 지원
-        if (Array.isArray(image.category)) {
-          return image.category.includes(selectedCategory);
-        }
-        return image.category === selectedCategory;
-      });
+/* =========================================
+   [2] 버튼 생성 함수
+   ========================================= */
+function createRadioButton(container, item, name, isChecked = false) {
+  const input = document.createElement('input');
+  input.type = 'radio';
+  input.id = `radio-${item.value}`;
+  input.name = name; // main-cat 또는 sub-cat
+  input.value = item.value;
+  input.checked = isChecked;
+
+  const label = document.createElement('label');
+  label.htmlFor = `radio-${item.value}`;
+  label.innerText = item.label;
+
+  container.appendChild(input);
+  container.appendChild(label);
+
+  return input;
+}
+
+/* =========================================
+   [3] 메인 카테고리 렌더링
+   ========================================= */
+categoryStructure.forEach((item, index) => {
+  const isFirst = index === 0; // 첫 번째(전체)는 기본 선택
+  const radio = createRadioButton(mainContainer, item, 'main-cat', isFirst);
+
+  // 메인 버튼 클릭 이벤트
+  radio.addEventListener('change', () => {
+    // 1. 하위 카테고리가 있는 경우 (게임)
+    if (item.children) {
+      renderSubCategories(item.children); // 소분류 버튼 생성
+      subContainer.style.display = 'flex'; // 소분류 박스 보이기
+      
+      // 게임 버튼을 누르자마자 '게임 전체'를 보여줌
+      filterImagesByList(item.children.map(c => c.value).filter(v => v !== 'all_game'));
+    } 
+    // 2. 하위 카테고리가 없는 경우 (오리지널, 동방 등)
+    else {
+      subContainer.style.display = 'none'; // 소분류 박스 숨기기
+      subContainer.innerHTML = ''; // 내용 비우기
+      
+      filterImages(item.value); // 바로 필터링 실행
     }
-
-    // 정렬을 적용하고 렌더링
-    const sortedImages = sortImagesByUpdate(filteredImages);
-    renderImages(sortedImages);
   });
 });
+
+/* =========================================
+   [4] 서브 카테고리 렌더링 함수 (모든 그룹 지원 업그레이드)
+   ========================================= */
+function renderSubCategories(children) {
+  subContainer.innerHTML = ''; 
+
+  children.forEach((child, index) => {
+    const isFirst = index === 0;
+    const radio = createRadioButton(subContainer, child, 'sub-cat', isFirst);
+
+    radio.addEventListener('change', () => {
+      // [수정됨] value가 문자열이고 'all_'로 시작하면 '전체 보기'로 인식
+      if (typeof child.value === 'string' && child.value.startsWith('all_')) {
+        // 형제들의 모든 값을 긁어모읍니다 (자신은 제외)
+        const allValues = children
+          .map(c => c.value)            // 값들을 가져옴
+          .flat()                       // 배열이 있으면 평평하게 폅니다
+          .filter(v => v !== child.value); // 현재 눌린 'all_...' 버튼 값은 제외
+          
+        filterImagesByList(allValues);
+      } 
+      // 2. 값이 배열일 때 (예: ['디맥', '란호유'])
+      else if (Array.isArray(child.value)) {
+        filterImagesByList(child.value);
+      }
+      // 3. 값이 하나일 때 (예: '언더테일')
+      else {
+        filterImages(child.value);
+      }
+    });
+  });
+}
+
+/* =========================================
+   [5] 필터링 로직 (단일 값)
+   ========================================= */
+function filterImages(categoryValue) {
+  let filtered = [];
+  if (categoryValue === 'all') {
+    filtered = images;
+  } else {
+    filtered = images.filter(image => {
+      if (Array.isArray(image.category)) {
+        return image.category.includes(categoryValue);
+      }
+      return image.category === categoryValue;
+    });
+  }
+  updateDisplay(filtered);
+}
+
+/* =========================================
+   [6] 필터링 로직 (리스트 - 게임 그룹용)
+   ========================================= */
+function filterImagesByList(categoryList) {
+  // 카테고리가 categoryList 배열 안에 하나라도 포함되면 보여줌
+  const filtered = images.filter(image => {
+    const imgCat = Array.isArray(image.category) ? image.category : [image.category];
+    // 교집합 확인: 이미지의 카테고리 중 하나라도 리스트에 있는지
+    return imgCat.some(cat => categoryList.includes(cat));
+  });
+  updateDisplay(filtered);
+}
+
+/* =========================================
+   [7] 화면 갱신 및 정렬 (공통 함수)
+   ========================================= */
+function updateDisplay(filteredList) {
+  const sorted = sortImagesByUpdate(filteredList); // New 정렬 적용
+  renderImages(sorted); // 화면 그리기
+}
+
+// 초기 로딩 시 '전체' 보여주기
+filterImages('all');
 
 
 // 5. [최종 해결] 페이지 로드 시 초기 렌더링
