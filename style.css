@@ -141,6 +141,45 @@
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
+/* 대분류 버튼 스타일 (기존과 동일) */
+.main-group {
+  margin-bottom: 5px;
+}
+
+/* 소분류 버튼 컨테이너 */
+.sub-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 5px;
+  animation: fadeIn 0.3s ease-in-out; /* 부드럽게 나타나는 효과 */
+}
+
+/* 소분류 라벨 스타일 (조금 더 작게) */
+.sub-group label {
+  font-size: 12px;       /* 글씨 작게 */
+  padding: 6px 14px;     /* 여백 줄임 */
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+/* 소분류 선택됐을 때 */
+.sub-group input[type="radio"]:checked + label {
+  background-color: #555; /* 대분류보다 연한 검정 */
+  color: #fff;
+  border-color: #555;
+}
+
+/* 나타나는 애니메이션 정의 */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
 /* 빨간 New 배지 스타일 */
 .new-badge {
   position: absolute;
