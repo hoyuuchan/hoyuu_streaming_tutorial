@@ -138,7 +138,6 @@
 .radio-group input[type="radio"]:checked + label {
   background-color: #333; /* 선택된 색상 (검정 계열) */
   color: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 /* 대분류 버튼 스타일 (기존과 동일) */
@@ -177,6 +176,25 @@
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-5px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* [추가] 특정 버튼 전용 색상 (노란색) */
+.hoyuuticon {
+    /* background-color: #ffeb3b !important; /* 노란색 배경 */
+    color: #000 !important;              /* 글자 검정색 */
+    border: 2px solid #fdd835 !important;
+}
+
+/* 마우스를 올렸을 때 살짝 더 진하게 */
+.hoyuuticon:hover {
+    background-color: #fdd835 !important;
+}
+
+/* 노란색 버튼이 선택되었을 때 스타일 */
+input[type="radio"]:checked + .hoyuuticon {
+    background-color: #fbc02d !important; /* 선택 시 진한 금색/노랑 */
+    color: #000 !important;
+    border-color: #f9a825 !important;
 }
 
 

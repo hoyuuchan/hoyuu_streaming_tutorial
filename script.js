@@ -785,9 +785,9 @@ const categoryStructure = [
     value: 'original_group',
     children: [
       { label: '전체', value: 'all_original' },
-      { label: '란호유', value: '란호유'},
-      { label: '호유티콘 콘테스트', value: '호유티콘'},
-      { label: '기타', value: '란호유기타'}
+      { label: '🎉호유티콘 콘테스트', value: '호유티콘', className: 'hoyuuticon' },
+      { label: '란호유', value: '란호유' },
+      { label: '기타', value: '란호유기타' }
     ]
   },
   { label: '동방', value: '동방' },
@@ -823,13 +823,18 @@ function createRadioButton(container, item, name, isChecked = false) {
   const input = document.createElement('input');
   input.type = 'radio';
   input.id = `radio-${item.value}`;
-  input.name = name; // main-cat 또는 sub-cat
+  input.name = name;
   input.value = item.value;
   input.checked = isChecked;
 
   const label = document.createElement('label');
   label.htmlFor = `radio-${item.value}`;
   label.innerText = item.label;
+
+  // [추가] 데이터에 className이 있으면 라벨에 클래스 추가
+  if (item.className) {
+    label.classList.add(item.className);
+  }
 
   container.appendChild(input);
   container.appendChild(label);
