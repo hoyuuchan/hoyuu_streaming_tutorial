@@ -91,17 +91,20 @@
 
 
 .filter-container {
-  /* [핵심 변경 사항] */
-  position: -webkit-sticky; /* 사파리 브라우저 호환용 */
-  position: sticky;         /* 스크롤이 닿으면 고정되는 속성 */
-  top: 0;                   /* 화면 맨 위(0px)에 닿을 때 고정 시작 */
+  /* 위치 설정 (스크롤 시 상단 고정 유지) */
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
+  z-index: 1000;
   
-  /* 디자인 요소 */
-  z-index: 1000;            /* 이미지 위로 올라오게 */
-  background-color: rgba(255, 255, 255, 0.95); /* 배경색 */
-  width: 100%;
-  padding: 15px 0;
+  /* 너비를 꽉 채워서 내부 요소를 중앙에 정렬하는 역할 */
+  width: 100%;             
   text-align: center;
+  
+  /* 배경, 패딩, 그림자 등 시각적 요소는 모두 제거 */
+  padding: 0;
+  background-color: transparent; 
+  box-shadow: none;
 }
 
 .radio-group {
@@ -142,7 +145,19 @@
 
 /* 대분류 버튼 스타일 (기존과 동일) */
 .main-group {
-  margin-bottom: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+
+  /* [핵심 추가] 알약 모양 배경 및 너비 설정 */
+  width: fit-content;      /* 내용물 크기만큼만 너비 차지 */
+  margin: 0 auto 5px auto; /* 가운데 정렬 및 아래쪽 여백 */
+  padding: 10px;           /* 요청하신 여백 */
+  
+  /* 배경 꾸미기 */
+  background-color: rgba(255, 255, 255, 1); /* 흰색 투명 배경 */
+  border-radius: 50px;     /* 둥근 모서리 */
 }
 
 /* 소분류 버튼 컨테이너 */
@@ -151,10 +166,13 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 8px;
-  padding: 10px;
-  border-radius: 10px;
-  margin-top: 5px;
-  animation: fadeIn 0.3s ease-in-out; /* 부드럽게 나타나는 효과 */
+  margin-bottom: 10px; /* 메인 그룹과 간격 조절 */
+  animation: fadeIn 0.3s ease-in-out;
+  
+  /* 소분류 컨테이너가 중앙 정렬되도록 너비 설정 */
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* 소분류 라벨 스타일 (조금 더 작게) */

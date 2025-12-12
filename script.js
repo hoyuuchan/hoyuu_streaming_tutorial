@@ -670,8 +670,8 @@ const images = [
   { src: './image/오리지널/호유키서.gif', tag: '~호유키서', category: '호유티콘' },
   { src: './image/오리지널/호유경악.gif', tag: '~호유경악', category: '호유티콘' },
   { src: './image/오리지널/호유아악.gif', tag: '~호유아악', category: '호유티콘' },
-  { src: './image/오리지널/블렌더고수.png', tag: '~블렌더고수', category: '호유티콘' },
-  { src: './image/오리지널/지브러시고수.png', tag: '~지브러시고수', category: '호유티콘' },
+  { src: './image/오리지널/블렌더고수.png', tag: '~블렌더고수', category: ['호유티콘', '블렌더'] },
+  { src: './image/오리지널/지브러시고수.png', tag: '~지브러시고수', category: ['호유티콘', '블렌더'] },
   { src: './image/오리지널/뜌땨땨.png', tag: '~뜌땨땨', category: '호유티콘' },
   { src: './image/오리지널/호유쭈욱.gif', tag: '~호유쭈욱', category: '호유티콘' },
   { src: './image/오리지널/호유쭈욱2.gif', tag: '~호유쭈욱2', category: '호유티콘' },
@@ -790,10 +790,9 @@ const categoryStructure = [
       { label: '기타', value: '란호유기타' }
     ]
   },
-  { label: '동방', value: '동방' },
+  { label: '동방프로젝트', value: '동방' },
   { label: '감정표현', value: '감정표현' },
   
-  // [게임] 그룹: 하위에 여러 카테고리를 가짐
   { 
     label: '게임', 
     value: 'game_group', // 그룹 식별자
