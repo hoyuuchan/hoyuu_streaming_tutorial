@@ -159,6 +159,9 @@ const images = [
   { src: './image/감정표현/계획대로.png', tag: '~계획대로', category: '감정표현' },
   { src: './image/감정표현/저건사야해.png', tag: '~저건사야해', category: '감정표현' },
   { src: './image/감정표현/타라.jpg', tag: '~타라', category: '감정표현' },
+  { src: './image/감정표현/개당황.jpg', tag: '~개당황', category: '감정표현', update: true },
+  { src: './image/감정표현/대부분버그.gif', tag: '~대부분버그', category: '감정표현', update: true },
+  { src: './image/감정표현/시끄러워.png', tag: '~시끄러워', category: '감정표현', update: true },
 
   // 동방프로젝트
   { src: './image/동방/안된다구.png', tag: '~안된다구', category: '동방' },
@@ -554,7 +557,7 @@ const images = [
   { src: './image/기타/기가차드4.png', tag: '~기가차드4', category: '기타' },
   { src: './image/기타/기가차드5.png', tag: '~기가차드5', category: '기타' },
   { src: './image/기타/흑화쿠키2.png', tag: '~흑화쿠키2', category: '기타' },
-  { src: './image/기타/테토쮸글.webp', tag: '~테토쮸글', category: '기타', update: true },
+  { src: './image/기타/테토쮸글.webp', tag: '~테토쮸글', category: '기타' },
 
   // 오리지널
   { src: './image/오리지널/란호유.png', tag: '~란호유', category: '란호유' },
