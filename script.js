@@ -571,7 +571,7 @@ const images = [
   { src: './image/기타/기가차드5.png', tag: '~기가차드5', category: '기타' },
   { src: './image/기타/흑화쿠키2.png', tag: '~흑화쿠키2', category: '기타' },
   { src: './image/기타/테토쮸글.webp', tag: '~테토쮸글', category: '기타' },
-  { src: './image/기타/ 안안에베베.webp', tag: '~ 안안에베베', category: ['게임기타', '감정표현'], update: true },
+  { src: './image/기타/안안에베베.webp', tag: '~안안에베베', category: ['게임기타', '감정표현'], update: true },
   { src: './image/기타/안안뭐.webp', tag: '~안안뭐', category: ['게임기타', '감정표현'], update: true },
   { src: './image/기타/안안ㅋ.webp', tag: '~안안ㅋ', category: ['게임기타', '감정표현'], update: true },
   { src: './image/기타/안안ㅎ.webp', tag: '~안안ㅎ', category: ['게임기타', '감정표현'], update: true },
