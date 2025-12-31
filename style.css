@@ -39,17 +39,23 @@
   margin-top: 20px;
 }
 .notice h1 {
-    width: 1100px;
+    width: 100%;
+    max-width: 1100px;
     margin: 5px auto;
     text-align: center;
     font-size: 3em;
+    box-sizing: border-box;
+    padding: 0 10px;
 }
 
 .notice #text {
     display: block;
-    width: 1100px;
+    width: 100%;
+    max-width: 1100px;
     margin: 0 auto;
     font-size: 14px;
+    box-sizing: border-box;
+    padding: 0 10px;
 }
 
 /* 추가 CSS - 복사 확인 팝업 */
@@ -68,24 +74,68 @@
 }
 
 /* 미디어 쿼리 추가 */
-    @media (max-width: 1000px) {
+    @media (max-width: 1100px) {
       .image-container {
-        width: 1000px;
+        width: 100%;
+        max-width: 1100px;
+        padding: 0 10px;
+        box-sizing: border-box;
       }
     }
-    @media (max-width: 992px) {
-      .image-container {
-        width: 992px;
-      }
-    }
+
+    /* 모바일: 한 줄에 이미지 5개 표시 */
     @media (max-width: 768px) {
       .image-container {
-        width: 768px;
+        width: 100%;
+        max-width: 550px; /* 5개 x 100px + 5개 x 10px(margin) = 550px */
+        padding: 0 5px;
+        box-sizing: border-box;
+      }
+      
+      .notice h1 {
+        font-size: 2em; /* 모바일에서 타이틀 크기 줄임 */
+      }
+      
+      .main-group {
+        padding: 8px;
+      }
+      
+      .radio-group label {
+        padding: 8px 14px;
+        font-size: 12px;
       }
     }
-    @media (max-width: 576px) {
+
+    /* 더 작은 모바일 화면 대응 */
+    @media (max-width: 550px) {
       .image-container {
-        width: 576px;
+        width: 100%;
+        justify-content: center;
+      }
+      
+      .image-box {
+        width: 60px;  /* 이미지 크기 축소 */
+        height: 60px;
+        margin: 3px;
+      }
+      
+      .notice h1 {
+        font-size: 1.5em;
+      }
+      
+      .tag {
+        font-size: 10px;
+      }
+      
+      .footer-pill {
+        font-size: 10px;
+        padding: 4px 10px;
+      }
+      
+      .help-box {
+        width: calc(100% - 40px);
+        right: 20px;
+        left: 20px;
       }
     }
 
