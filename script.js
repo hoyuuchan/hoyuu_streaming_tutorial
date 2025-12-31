@@ -314,7 +314,7 @@ const images = [
   { src: './image/동방/손미천.png', tag: '~손미천', category: '동방' },
   { src: './image/동방/ZUN.png', tag: '~ZUN', category: '동방' },
   { src: './image/동방/ZUZ.png', tag: '~ZUZ', category: '동방' },
-  { src: '', tag: '~랜덤후모', category: '동방', isRandomHumo: true, random: true },
+  { src: '', tag: '~랜덤후모', category: '동방', isRandomFumo: true, random: true },
   { src: './image/동방/후모코가사.png', tag: '~후모코가사', category: '동방' },
   { src: './image/동방/후모아야.png', tag: '~후모아야', category: '동방' },
   { src: './image/동방/후모하타테.png', tag: '~후모하타테', category: '동방' },
@@ -747,15 +747,15 @@ function sortImagesByUpdate(imageList) {
 
 
 // 3. 이미지 목록 렌더링 함수 (New 배지 + Lazy Loading 적용)
-let randomHumoInterval = null; // 랜덤 후모 인터벌 저장용
+let randomFumoInterval = null; // 랜덤 후모 인터벌 저장용
 
 function renderImages(filteredImages) {
   imageContainer.innerHTML = ''; // 기존 이미지 초기화
   
   // 기존 랜덤 후모 인터벌 정리
-  if (randomHumoInterval) {
-    clearInterval(randomHumoInterval);
-    randomHumoInterval = null;
+  if (randomFumoInterval) {
+    clearInterval(randomFumoInterval);
+    randomFumoInterval = null;
   }
 
   filteredImages.forEach(image => {
@@ -766,30 +766,30 @@ function renderImages(filteredImages) {
     const img = document.createElement('img');
     
     // 랜덤 후모 특수 처리
-    if (image.isRandomHumo) {
-      imageBox.classList.add('random-humo-box');
-      const humoImages = images.filter(i => i.tag.startsWith('~후모'));
+    if (image.isRandomFumo) {
+      imageBox.classList.add('random-fumo-box');
+      const fumoImages = images.filter(i => i.tag.startsWith('~후모'));
       
-      function updateRandomHumo() {
-        if (humoImages.length === 0) return;
-        const randomIndex = Math.floor(Math.random() * humoImages.length);
-        const randomHumo = humoImages[randomIndex];
-        img.src = randomHumo.src;
+      function updateRandomFumo() {
+        if (fumoImages.length === 0) return;
+        const randomIndex = Math.floor(Math.random() * fumoImages.length);
+        const randomFumo = fumoImages[randomIndex];
+        img.src = randomFumo.src;
       }
       
       // 초기 이미지 설정
-      if (humoImages.length > 0) {
-        const initialRandom = humoImages[Math.floor(Math.random() * humoImages.length)];
+      if (fumoImages.length > 0) {
+        const initialRandom = fumoImages[Math.floor(Math.random() * fumoImages.length)];
         img.src = initialRandom.src;
       }
       
       img.style.opacity = '1';
-      img.style.width = '100px';
-      img.style.height = '100px';
+      img.style.width = '100%';
+      img.style.height = '100%';
       img.style.objectFit = 'contain';
       
-      // 5초마다 변경
-      randomHumoInterval = setInterval(updateRandomHumo, 2000);
+      // 2초마다 변경
+      randomFumoInterval = setInterval(updateRandomFumo, 2000);
       
       imageBox.appendChild(img);
       
@@ -845,7 +845,7 @@ function renderImages(filteredImages) {
     }
 
     // 랜덤 뱃지 추가
-    if (image.isRandomHumo === true) {
+    if (image.isRandomFumo === true) {
       const randomBadge = document.createElement('div');
       randomBadge.className = 'random-badge';
       randomBadge.innerText = '랜덤';
@@ -1107,6 +1107,56 @@ setTimeout(() => {
   if (mainGroup) {
     mainGroup.addEventListener('scroll', updateScrollGradient);
     updateScrollGradient(); // 초기 상태 설정
+    
+    // [추가] PC에서 마우스 드래그 스크롤 기능
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+    let isDragging = false; // 드래그 여부 추적
+    
+    mainGroup.addEventListener('mousedown', (e) => {
+      isDown = true;
+      isDragging = false; // 드래그 시작 시 초기화
+      mainGroup.style.cursor = 'grabbing';
+      startX = e.pageX - mainGroup.offsetLeft;
+      scrollLeft = mainGroup.scrollLeft;
+    });
+    
+    mainGroup.addEventListener('mouseleave', () => {
+      isDown = false;
+      mainGroup.style.cursor = 'grab';
+    });
+    
+    mainGroup.addEventListener('mouseup', () => {
+      isDown = false;
+      mainGroup.style.cursor = 'grab';
+    });
+    
+    mainGroup.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - mainGroup.offsetLeft;
+      const walk = (x - startX) * 1.5; // 스크롤 속도 조절
+      
+      // 일정 거리 이상 이동하면 드래그로 판정
+      if (Math.abs(x - startX) > 5) {
+        isDragging = true;
+      }
+      
+      mainGroup.scrollLeft = scrollLeft - walk;
+    });
+    
+    // 드래그 중이면 클릭 이벤트 막기
+    mainGroup.addEventListener('click', (e) => {
+      if (isDragging) {
+        e.preventDefault();
+        e.stopPropagation();
+        isDragging = false;
+      }
+    }, true); // capture phase에서 처리
+    
+    // 초기 커서 스타일 설정
+    mainGroup.style.cursor = 'grab';
   }
 }, 100);
 
