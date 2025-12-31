@@ -1075,3 +1075,41 @@ helpButton.addEventListener('click', () => {
   }
 });
 
+// [추가] 메인 카테고리 스크롤 그라데이션 표시 기능
+function updateScrollGradient() {
+  const wrapper = document.querySelector('.main-group-wrapper');
+  const mainGroup = document.querySelector('.main-group');
+  
+  if (!wrapper || !mainGroup) return;
+  
+  const scrollLeft = mainGroup.scrollLeft;
+  const scrollWidth = mainGroup.scrollWidth;
+  const clientWidth = mainGroup.clientWidth;
+  
+  // 왼쪽으로 스크롤 가능한 경우 (처음이 아닌 경우)
+  if (scrollLeft > 5) {
+    wrapper.classList.add('scroll-left');
+  } else {
+    wrapper.classList.remove('scroll-left');
+  }
+  
+  // 오른쪽으로 스크롤 가능한 경우 (끝이 아닌 경우)
+  if (scrollLeft < scrollWidth - clientWidth - 5) {
+    wrapper.classList.add('scroll-right');
+  } else {
+    wrapper.classList.remove('scroll-right');
+  }
+}
+
+// 페이지 로드 시 및 스크롤 시 그라데이션 업데이트
+setTimeout(() => {
+  const mainGroup = document.querySelector('.main-group');
+  if (mainGroup) {
+    mainGroup.addEventListener('scroll', updateScrollGradient);
+    updateScrollGradient(); // 초기 상태 설정
+  }
+}, 100);
+
+// 화면 크기 변경 시에도 업데이트
+window.addEventListener('resize', updateScrollGradient);
+
