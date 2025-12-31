@@ -113,8 +113,11 @@
     /* 더 작은 모바일 화면 대응 */
     @media (max-width: 550px) {
       .image-container {
-        width: 100%;
-        justify-content: center;
+        width: 330px;             /* 5개 x 60px + 5개 x 6px(margin) = 330px */
+        max-width: calc(100% - 20px);
+        margin: 0 auto;           /* 컨테이너 가운데 정렬 */
+        justify-content: flex-start; /* 내부 이미지는 왼쪽 정렬 */
+        padding: 0;
       }
       
       .image-box {
