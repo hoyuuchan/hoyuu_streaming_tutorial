@@ -826,13 +826,10 @@ function renderImages(filteredImages) {
     img.dataset.src = image.src;
     img.style.opacity = '0';
     
-    // 로딩 애니메이션 클래스 추가
-    imageBox.classList.add('image-loader');
-    
     img.onload = () => {
       img.style.opacity = '1';
-      // 로딩 완료 시 애니메이션 클래스 제거
-      imageBox.classList.remove('image-loader');
+      // 로딩 완료 시 배경색 고정 클래스 추가
+      imageBox.classList.add('loaded');
     };
     imageBox.appendChild(img);
 

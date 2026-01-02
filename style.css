@@ -9,15 +9,15 @@
       width: 100px;
       height: 100px;
       margin: 5px;
-      background-color: #f7f7f7;
-    }
-
-    /* 이미지 로딩 애니메이션 */
-    .image-loader {
-      width: 100px;
-      height: 100px;
+      /* 로딩 중 애니메이션 적용 */
       background-color: #ebebec;
       animation: pulse-loading 1.5s infinite ease-in-out;
+    }
+
+    /* 이미지 로딩 완료 시 배경색 고정 */
+    .image-box .loaded {
+      background-color: #f7f7f7;
+      animation: none;
     }
 
     @keyframes pulse-loading {
