@@ -725,12 +725,14 @@ const imageObserver = new IntersectionObserver((entries, observer) => {
       const img = entry.target;
       const realSrc = img.dataset.src;
       if (realSrc) {
-        // 실제 이미지 로드 완료 시 loaded 클래스 추가
+        // 실제 이미지 로드 완료 시 loaded 클래스 추가 및 애니메이션 확실히 제거
         img.onload = () => {
           img.style.opacity = '1';
           const imageBox = img.closest('.image-box');
           if (imageBox) {
             imageBox.classList.add('loaded');
+            imageBox.style.animation = 'none';
+            imageBox.style.backgroundColor = '#f7f7f7';
           }
         };
         img.src = realSrc;

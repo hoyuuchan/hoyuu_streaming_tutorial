@@ -15,9 +15,9 @@
     }
 
     /* 이미지 로딩 완료 시 배경색 고정 */
-    .image-box .loaded {
-      background-color: #f7f7f7;
-      animation: none;
+    .image-box.loaded {
+      background-color: #f7f7f7 !important;
+      animation: none !important;
     }
 
     @keyframes pulse-loading {
