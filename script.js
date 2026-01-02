@@ -825,8 +825,14 @@ function renderImages(filteredImages) {
     img.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
     img.dataset.src = image.src;
     img.style.opacity = '0';
+    
+    // 로딩 애니메이션 클래스 추가
+    imageBox.classList.add('image-loader');
+    
     img.onload = () => {
       img.style.opacity = '1';
+      // 로딩 완료 시 애니메이션 클래스 제거
+      imageBox.classList.remove('image-loader');
     };
     imageBox.appendChild(img);
 
