@@ -725,6 +725,14 @@ const imageObserver = new IntersectionObserver((entries, observer) => {
       const img = entry.target;
       const realSrc = img.dataset.src;
       if (realSrc) {
+        // 실제 이미지 로드 완료 시 loaded 클래스 추가
+        img.onload = () => {
+          img.style.opacity = '1';
+          const imageBox = img.closest('.image-box');
+          if (imageBox) {
+            imageBox.classList.add('loaded');
+          }
+        };
         img.src = realSrc;
         img.removeAttribute('data-src');
         observer.unobserve(img);
@@ -826,11 +834,6 @@ function renderImages(filteredImages) {
     img.dataset.src = image.src;
     img.style.opacity = '0';
     
-    img.onload = () => {
-      img.style.opacity = '1';
-      // 로딩 완료 시 배경색 고정 클래스 추가
-      imageBox.classList.add('loaded');
-    };
     imageBox.appendChild(img);
 
     // 3-2. 태그 요소 생성
