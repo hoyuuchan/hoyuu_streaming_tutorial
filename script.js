@@ -314,7 +314,6 @@ const images = [
   { src: './image/동방/손미천.png', tag: '~손미천', category: '동방' },
   { src: './image/동방/ZUN.png', tag: '~ZUN', category: '동방' },
   { src: './image/동방/ZUZ.png', tag: '~ZUZ', category: '동방' },
-  { src: '', tag: '~랜덤후모', category: '동방', isRandomFumo: true, random: true },
   { src: './image/동방/후모코가사.png', tag: '~후모코가사', category: '동방' },
   { src: './image/동방/후모아야.png', tag: '~후모아야', category: '동방' },
   { src: './image/동방/후모하타테.png', tag: '~후모하타테', category: '동방' },
@@ -757,16 +756,8 @@ function sortImagesByUpdate(imageList) {
 
 
 // 3. 이미지 목록 렌더링 함수 (New 배지 + Lazy Loading 적용)
-let randomFumoInterval = null; // 랜덤 후모 인터벌 저장용
-
 function renderImages(filteredImages) {
   imageContainer.innerHTML = ''; // 기존 이미지 초기화
-  
-  // 기존 랜덤 후모 인터벌 정리
-  if (randomFumoInterval) {
-    clearInterval(randomFumoInterval);
-    randomFumoInterval = null;
-  }
 
   filteredImages.forEach(image => {
     const imageBox = document.createElement('div');
@@ -774,63 +765,6 @@ function renderImages(filteredImages) {
 
     // 3-1. 이미지 요소 생성 및 lazy loading 설정
     const img = document.createElement('img');
-    
-    // 랜덤 후모 특수 처리
-    if (image.isRandomFumo) {
-      imageBox.classList.add('random-fumo-box');
-      const fumoImages = images.filter(i => i.tag.startsWith('~후모'));
-      
-      function updateRandomFumo() {
-        if (fumoImages.length === 0) return;
-        const randomIndex = Math.floor(Math.random() * fumoImages.length);
-        const randomFumo = fumoImages[randomIndex];
-        img.src = randomFumo.src;
-      }
-      
-      // 초기 이미지 설정
-      if (fumoImages.length > 0) {
-        const initialRandom = fumoImages[Math.floor(Math.random() * fumoImages.length)];
-        img.src = initialRandom.src;
-      }
-      
-      img.style.opacity = '1';
-      img.style.width = '100%';
-      img.style.height = '100%';
-      img.style.objectFit = 'contain';
-      
-      // 2초마다 변경
-      randomFumoInterval = setInterval(updateRandomFumo, 2000);
-      
-      imageBox.appendChild(img);
-      
-      // 태그는 항상 ~후모로 고정
-      const tag = document.createElement('div');
-      tag.className = 'tag';
-      tag.innerText = '~후모';
-      imageBox.appendChild(tag);
-      
-      // 랜덤 뱃지 추가
-      const randomBadge = document.createElement('div');
-      randomBadge.className = 'random-badge';
-      randomBadge.innerText = 'random';
-      imageBox.appendChild(randomBadge);
-      
-      // 클릭 시 ~후모 복사
-      imageBox.addEventListener('click', () => {
-        navigator.clipboard.writeText('~후모')
-          .then(() => {
-            const popup = document.createElement('div');
-            popup.innerText = '클립보드에 복사되었습니다!';
-            popup.className = 'clipboard-popup';
-            document.body.appendChild(popup);
-            setTimeout(() => document.body.removeChild(popup), 1500);
-          })
-          .catch(err => console.error('클립보드 복사 실패', err));
-      });
-      
-      imageContainer.appendChild(imageBox);
-      return; // 다음 이미지로
-    }
     
     img.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
     img.dataset.src = image.src;
@@ -850,14 +784,6 @@ function renderImages(filteredImages) {
       badge.className = 'new-badge'; 
       badge.innerText = 'New';
       imageBox.appendChild(badge);
-    }
-
-    // 랜덤 뱃지 추가
-    if (image.isRandomFumo === true) {
-      const randomBadge = document.createElement('div');
-      randomBadge.className = 'random-badge';
-      randomBadge.innerText = '랜덤';
-      imageBox.appendChild(randomBadge);
     }
 
     // 3-4. 클릭 시 복사 이벤트
