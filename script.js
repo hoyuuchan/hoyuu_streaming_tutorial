@@ -356,8 +356,8 @@ const images = [
   { src: './image/동방/후모텐큐.png', tag: '~후모텐큐', category: '동방' },
   { src: './image/동방/후모파르시.png', tag: '~후모파르시', category: '동방' },
   { src: './image/동방/후모히나.png', tag: '~후모히나', category: '동방' },
-  { src: './image/동방/후모니토리.png', tag: '~후모카센', category: '동방' },
-  { src: './image/동방/후모누에.png', tag: '~후모카센', category: '동방' },
+  { src: './image/동방/후모니토리.png', tag: '~후모니토리', category: '동방' },
+  { src: './image/동방/후모누에.png', tag: '~후모누에', category: '동방' },
   { src: './image/동방/후모루미아.png', tag: '~후모루미아', category: '동방' },
   { src: './image/동방/후모사구메.png', tag: '~후모사구메', category: '동방' },
   { src: './image/동방/후모시키.png', tag: '~후모시키', category: '동방' },
@@ -369,7 +369,7 @@ const images = [
   { src: './image/동방/후모에링.png', tag: '~후모에링', category: '동방' },
   { src: './image/동방/후모유카.png', tag: '~후모유카', category: '동방' },
   { src: './image/동방/후모린노.png', tag: '~후모린노', category: '동방' },
-  
+
   // 언더테일
   { src: './image/언더테일/sans01.gif', tag: '~샌즈', category: '언더테일' },
   { src: './image/언더테일/sans0201.gif', tag: '~샌즈2', category: '언더테일' },
@@ -715,7 +715,7 @@ const images = [
   { src: './image/오리지널/스파게티.png', tag: '~스파게티', category: '란호유기타' },
 
   // 추가 이미지 데이터...
-  ];
+];
 
 const imageContainer = document.getElementById('imageContainer');
 
@@ -756,7 +756,7 @@ function sortImagesByUpdate(imageList) {
   return imageList.slice().sort((a, b) => {
     const aIsUpdate = a.update ? 1 : 0;
     const bIsUpdate = b.update ? 1 : 0;
-    
+
     // update: true가 0보다 큰 값을 가지므로, b - a를 통해 내림차순 정렬 (true가 앞으로)
     return bIsUpdate - aIsUpdate;
   });
@@ -773,11 +773,11 @@ function renderImages(filteredImages) {
 
     // 3-1. 이미지 요소 생성 및 lazy loading 설정
     const img = document.createElement('img');
-    
+
     img.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
     img.dataset.src = image.src;
     img.style.opacity = '0';
-    
+
     imageBox.appendChild(img);
 
     // 3-2. 태그 요소 생성
@@ -787,9 +787,9 @@ function renderImages(filteredImages) {
     imageBox.appendChild(tag);
 
     // 3-3. [New Badge] update: true 일 때 배지 추가 (정렬 기준과 동일하게 'update' 사용)
-    if (image.update === true) { 
+    if (image.update === true) {
       const badge = document.createElement('div');
-      badge.className = 'new-badge'; 
+      badge.className = 'new-badge';
       badge.innerText = 'New';
       imageBox.appendChild(badge);
     }
@@ -797,21 +797,21 @@ function renderImages(filteredImages) {
     // 3-4. 클릭 시 복사 이벤트
     imageBox.addEventListener('click', () => {
       navigator.clipboard.writeText(image.tag)
-      .then(() => {
-        const popup = document.createElement('div');
-        popup.innerText = '클립보드에 복사되었습니다!';
-        popup.className = 'clipboard-popup';
-        document.body.appendChild(popup);
+        .then(() => {
+          const popup = document.createElement('div');
+          popup.innerText = '클립보드에 복사되었습니다!';
+          popup.className = 'clipboard-popup';
+          document.body.appendChild(popup);
 
-        setTimeout(() => document.body.removeChild(popup), 1500);
-      })
-      .catch(err => console.error('클립보드 복사 실패', err));
+          setTimeout(() => document.body.removeChild(popup), 1500);
+        })
+        .catch(err => console.error('클립보드 복사 실패', err));
     });
 
     imageContainer.appendChild(imageBox);
-    
+
     // 3-5. 이미지 관찰 시작
-    imageObserver.observe(img); 
+    imageObserver.observe(img);
   });
 }
 
@@ -835,9 +835,9 @@ const categoryStructure = [
   },
   { label: '동방프로젝트', value: '동방' },
   { label: '감정표현', value: '감정표현' },
-  
-  { 
-    label: '게임', 
+
+  {
+    label: '게임',
     value: 'game_group', // 그룹 식별자
     children: [
       { label: '전체', value: 'all_game' }, // 게임 전체 보기용
@@ -849,7 +849,7 @@ const categoryStructure = [
       { label: '기타', value: '게임기타' }
     ]
   },
-  
+
   { label: '블렌더', value: '블렌더' },
   { label: '기타', value: '기타' }
 ];
@@ -897,15 +897,15 @@ categoryStructure.forEach((item, index) => {
     if (item.children) {
       renderSubCategories(item.children); // 소분류 버튼 생성
       subContainer.style.display = 'flex'; // 소분류 박스 보이기
-      
+
       // 게임 버튼을 누르자마자 '게임 전체'를 보여줌
       filterImagesByList(item.children.map(c => c.value).filter(v => v !== 'all_game'));
-    } 
+    }
     // 2. 하위 카테고리가 없는 경우 (오리지널, 동방 등)
     else {
       subContainer.style.display = 'none'; // 소분류 박스 숨기기
       subContainer.innerHTML = ''; // 내용 비우기
-      
+
       filterImages(item.value); // 바로 필터링 실행
     }
   });
@@ -915,7 +915,7 @@ categoryStructure.forEach((item, index) => {
    [4] 서브 카테고리 렌더링 함수 (모든 그룹 지원 업그레이드)
    ========================================= */
 function renderSubCategories(children) {
-  subContainer.innerHTML = ''; 
+  subContainer.innerHTML = '';
 
   children.forEach((child, index) => {
     const isFirst = index === 0;
@@ -929,9 +929,9 @@ function renderSubCategories(children) {
           .map(c => c.value)            // 값들을 가져옴
           .flat()                       // 배열이 있으면 평평하게 폅니다
           .filter(v => v !== child.value); // 현재 눌린 'all_...' 버튼 값은 제외
-          
+
         filterImagesByList(allValues);
-      } 
+      }
       // 2. 값이 배열일 때 (예: ['디맥', '란호유'])
       else if (Array.isArray(child.value)) {
         filterImagesByList(child.value);
@@ -992,49 +992,26 @@ filterImages('all');
 const initiallySortedImages = sortImagesByUpdate(images);
 renderImages(initiallySortedImages);
 
-// [새로 추가] 도움말 버튼 클릭 이벤트 처리
-const helpButton = document.getElementById('helpButton');
-const helpBox = document.getElementById('helpBox');
 
-const helpMessage = `
-  <strong>📣 채팅콘 사용법</strong><br>
-  사용할 채팅콘을 클릭하면 명령어가 복사됩니다.<br>
-  명령어를 채팅창에 붙여넣기를 하시면 콘이 출력됩니다.<br>
-  <strong>✨ 효과 추가</strong><br>
-  명령어 뒤에 <b>커져라!</b>, <b>빙글빙글!</b>, <b>으랏~챠!</b>를 입력해보세요!<br>
-  ex)란호유 으랏~챠!
-`;
-
-helpButton.addEventListener('click', () => {
-  // 박스 내용 채우기 (HTML 허용)
-  helpBox.innerHTML = helpMessage; 
-  
-  // display 속성 토글 (보이거나 숨기기)
-  if (helpBox.style.display === 'block') {
-    helpBox.style.display = 'none';
-  } else {
-    helpBox.style.display = 'block';
-  }
-});
 
 // [추가] 메인 카테고리 스크롤 그라데이션 표시 기능
 function updateScrollGradient() {
   const wrapper = document.querySelector('.main-group-wrapper');
   const mainGroup = document.querySelector('.main-group');
-  
+
   if (!wrapper || !mainGroup) return;
-  
+
   const scrollLeft = mainGroup.scrollLeft;
   const scrollWidth = mainGroup.scrollWidth;
   const clientWidth = mainGroup.clientWidth;
-  
+
   // 왼쪽으로 스크롤 가능한 경우 (처음이 아닌 경우)
   if (scrollLeft > 5) {
     wrapper.classList.add('scroll-left');
   } else {
     wrapper.classList.remove('scroll-left');
   }
-  
+
   // 오른쪽으로 스크롤 가능한 경우 (끝이 아닌 경우)
   if (scrollLeft < scrollWidth - clientWidth - 5) {
     wrapper.classList.add('scroll-right');
@@ -1049,13 +1026,13 @@ setTimeout(() => {
   if (mainGroup) {
     mainGroup.addEventListener('scroll', updateScrollGradient);
     updateScrollGradient(); // 초기 상태 설정
-    
+
     // [추가] PC에서 마우스 드래그 스크롤 기능
     let isDown = false;
     let startX;
     let scrollLeft;
     let isDragging = false; // 드래그 여부 추적
-    
+
     mainGroup.addEventListener('mousedown', (e) => {
       isDown = true;
       isDragging = false; // 드래그 시작 시 초기화
@@ -1063,31 +1040,31 @@ setTimeout(() => {
       startX = e.pageX - mainGroup.offsetLeft;
       scrollLeft = mainGroup.scrollLeft;
     });
-    
+
     mainGroup.addEventListener('mouseleave', () => {
       isDown = false;
       mainGroup.style.cursor = 'grab';
     });
-    
+
     mainGroup.addEventListener('mouseup', () => {
       isDown = false;
       mainGroup.style.cursor = 'grab';
     });
-    
+
     mainGroup.addEventListener('mousemove', (e) => {
       if (!isDown) return;
       e.preventDefault();
       const x = e.pageX - mainGroup.offsetLeft;
       const walk = (x - startX) * 1.5; // 스크롤 속도 조절
-      
+
       // 일정 거리 이상 이동하면 드래그로 판정
       if (Math.abs(x - startX) > 5) {
         isDragging = true;
       }
-      
+
       mainGroup.scrollLeft = scrollLeft - walk;
     });
-    
+
     // 드래그 중이면 클릭 이벤트 막기
     mainGroup.addEventListener('click', (e) => {
       if (isDragging) {
@@ -1096,7 +1073,7 @@ setTimeout(() => {
         isDragging = false;
       }
     }, true); // capture phase에서 처리
-    
+
     // 초기 커서 스타일 설정
     mainGroup.style.cursor = 'grab';
   }
