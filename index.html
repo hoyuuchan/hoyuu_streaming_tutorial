@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>채팅콘 선택기</title>
-  <div class="notice">
-    <h1>채팅콘 선택기</h1>
-    <!--div id="text">
-      호유 방송에서 현재 사용할 수 있는 채팅콘 목록들입니다!<br>
-      사용하실 이미지를 클릭하면 명령어가 자동 복사되고 채팅창에 입력하면 방송화면에 해당 콘이 나옵니다!<br>
-      채팅콘 명령어 뒤에 <b>커져라!</b>, <b>두근두근!</b>, <b>빙글빙글!</b>, <b>으랏~챠!</b>, <b>등장!</b>, <b>도망쳐!</b>를 입력하시면 그에 맞게 다른 방식으로 출력됩니다! <strike>(ex. ~란호유 으랏~챠!)</strike><br><br>
-      <b>혹시 원하시는 채팅콘이 있으시면 언제든지 말씀해주세요! 가능한 선에서 추가해보겠습니다!</b>
-    </div-->
-  </div>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <nav class="nav-menu">
+    <div class="nav-container">
+      <a href="index.html" class="nav-item active">채팅콘 선택기</a>
+      <a href="guide.html" class="nav-item">설명서</a>
+    </div>
+  </nav>
+
   <div class="filter-container">
     <div class="main-group-wrapper">
       <div class="radio-group main-group" id="mainCategoryContainer">
@@ -25,16 +25,13 @@
     <div class="radio-group sub-group" id="subCategoryContainer" style="display: none;">
     </div>
   </div>
-  
+
   <div class="image-container" id="imageContainer">
     <!-- 여기에 이미지 박스가 추가됩니다 -->
   </div>
-  <footer>
-    <span class="footer-pill">Chzzk 란호유 2024-2025</span>
-    <span class="footer-pill help-button" id="helpButton">?</span>  
-    <div id="helpBox" class="help-box">
-    </div>
-  </footer>
+  <script src="data.js"></script>
   <script src="script.js"></script>
+  <script src="nav.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설명서</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Gothic:wght@400;700;800&family=Nanum+Pen+Script&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="nav-menu">
+        <div class="nav-container">
+            <a href="https://chzzk.naver.com/3cf58789ab09865bdc1e2f3a76d66b27 target=" _blank" class="nav-item">
+                <div id="hoyuu-icon"></div>
+            </a>
+            <a href="index.html" class="nav-item">채팅콘 선택기</a>
+            <a href="guide.html" class="nav-item active">설명서</a>
+        </div>
+    </nav>
+
+    <div class="command-container">
+        <!-- 사이드바 토글 버튼 -->
+        <button id="sidebar-toggle" class="sidebar-toggle-btn">≪</button>
+
+        <!-- 메인 콘텐츠 -->
+        <div class="layout-wrapper">
+            <div class="content-area">
+                <div class="intro-grid">
+                </div>
+                <div class="doc-content">
+                </div>
+            </div>
+
+            <!-- 사이드메뉴 -->
+            <aside class="sidebar-area">
+                <div class="sidebar-header">
+                    <h3>목차</h3>
+                </div>
+                <div class="command-list" id="command-grid">
+                    <!-- 자바스크립트로 동적 생성됩니다 -->
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- 
+    [명령어 데이터 소스] 
+    화면에는 보이지 않지만(style="display:none"), 
+    guide.js에서 이 내용을 읽어와 화면을 구성합니다.
+    -->
+    <div id="command-data-source" style="display:none;">
+        <!-- 채팅콘 -->
+        <div class="group" data-category="채팅콘">
+            <div class="item" data-name="채팅콘 사용법">
+                <span class="info-preview">방송화면에 이미지를 띄울 수 있어요!</span>
+                <span class="info">
+                    <a href="./index.html"><b>채팅콘 선택기</b></a>에서 원하는 채팅콘을 클릭하고,
+                    채팅창에 붙여넣기만 하면 끝!
+                    수동으로 입력하고 싶으면
+                    <b>~채팅콘이름</b>으로 입력하면 됩니다!
+                </span>
+                <span class="guide-ex"><span style="color: #aaa;">채팅 버튼을 눌러보세요</span></span>
+                <span class="image"></span>
+            </div>
+            <div class="item" data-name="채팅콘 명령어">
+                <span class="info-preview">느슨해진 채팅콘에 긴장감 주기</span>
+                <span class="info">
+                    채팅콘에 채팅 명령어를 쓰면
+                    채팅콘에 다양한 효과를 줄 수 있어요!
+                    자세한 설명은 <b>명령어 목록</b> 항목을 참고해주세요!
+                </span>
+                <span class="tip">
+                    명령어끼리 조합도 가능해요!<br>
+                    <b>~모자걸댄스 커져라! 두근두근!</b>
+                </span>
+                <span class="guide-ex"><span style="color: #aaa;">채팅 버튼을 눌러보세요</span></span>
+            </div>
+        </div>
+
+        <!-- 캐릭터 채팅 -->
+        <div class="group" data-category="캐릭터 채팅">
+            <div class="item" data-name="기본 캐릭터<span class='piyo-icon'></span>">
+                <span class="image">./image/guide/piyo_stand.png</span>
+                <span class="info">
+                    여러분들의 기본 모습이에요!
+                    채팅을 치면 방송에 캐릭터가 나타나요!
+                    채팅을 치지 않으면 10분 뒤에 사라져요!
+                    <strike class="delayed-text">여기서는 안사라지는데 설마 기다린거임???</strike>
+                </span>
+                <span class="guide-ch"><span style="color: #fff;">.</span></span>
+            </div>
+            <div class="item" data-name="코인<span class='coin-icon'></span>">
+                <span class="info-preview">특별한 기능을 사용하고 싶을 때 쓸 수 있어요!</span>
+                <span class="info">
+                    <b>코인<span class='coin-icon'></span></b>은 캐릭터 채팅에서 특별한 명령어를 사용하는데 쓰는 화폐에요!
+                    (지금은 명령어만! 나중에는 캐릭터를 꾸미는 것도 가능할 예정이에요!)
+
+                    <b>코인<span class='coin-icon'></span></b>은 캐릭터<img src="./image/guide/piyo_stand.png"
+                        style="width: 26px;">가 나타나있는 시간동안
+                    <b>1분에 다섯개씩</b> 쌓여요!
+
+                    코인을 사용하는 명령어는 <span class='coin-icon'></span>으로 표시됩니다!
+                    (추후 아바타 변경 등 다양한 기능을 코인으로 사용할 수 있게 할 예정이에요!)
+                </span>
+            </div>
+        </div>
+
+        <!-- 명령어 목록 -->
+        <div class="group" data-category="명령어 목록">
+            <div class="item" data-name="커져라!">
+                <span class="info-preview">채팅콘이 두배로 커져요!</span>
+                <span class="image">./image/오리지널/호유매드니스.png</span>
+                <span class="info">
+                    지루하고 현학적인 작은 채팅콘을
+                    크게 키워서 쓸 수 있어요!
+                </span>
+                <span class="guide-ex">~호유매드니스 <b>커져라!</b></span>
+                <span class="tag">#일반채팅</span>
+                <span class="tag">#캐릭터채팅</span>
+            </div>
+            <div class="item" data-name="두근두근!">
+                <span class="info-preview">채팅콘의 심장이 두근두근!</span>
+                <span class="image">./image/기타/두근두근.gif</span>
+                <span class="info">
+                    다들 내가 쓴 채팅콘을 봐줘!!!
+                    이미지를 강조할 때 사용돼여!
+                </span>
+                <span class="tip"><b>커져라!</b>와 함께 사용하면 효과 두배!</span>
+                <span class="guide-ex">~두근두근 <b>두근두근!</b></span>
+                <span class="tag">#일반채팅</span>
+                <span class="tag">#캐릭터채팅</span>
+            </div>
+            <div class="item" data-name="빙글빙글!">
+                <span class="info-preview">채팅콘을 빙글빙글 돌려요!</span>
+                <span class="image">./image/감정표현/시끄러워.png</span>
+                <span class="info">
+                    천방지축 어리둥절
+                    빙글빙글 돌아가는
+                    채팅콘의 하루
+                </span>
+                <span class="tip">
+                    <img src="./image/guide/kisser.webp" style="width: 2.1em; vertical-align: middle;">
+                    빙글빙글 돌아요~
+                </span>
+                <span class="guide-ex">~시끄러워 <b>빙글빙글!</b></span>
+                <span class="tag">#일반채팅</span>
+                <span class="tag">#캐릭터채팅</span>
+            </div>
+            <div class="item" data-name="네르지마세요!">
+                <span class="image">./image/오리지널/호피키.png</span>
+                <span class="info">
+                    으앙! 호피키 네르지마세요!
+                    호피키 바보 아니란 말이에요!!
+                </span>
+                <span class="guide-ex">~호피키 <b>네르지마세요!</b></span>
+                <span class="tag">#일반채팅</span>
+                <span class="tag">#캐릭터채팅</span>
+            </div>
+            <div class="item" data-name="사실그거마미조임!">
+                <span class="info-preview">이 페이지도 사실 마미조임</span>
+                <span class="image">./image/동방/후모누에.png</span>
+                <span class="info">
+                    누에?
+                    그거 마미조임 ㅅㄱ
+                </span>
+                <span class="guide-ex">~후모누에 <b>사실그거마미조임!</b></span>
+                <span class="tag">#일반채팅</span>
+                <span class="tag">#캐릭터채팅</span>
+            </div>
+            <div class="item" data-name="달리기!">
+                <span class="image"></span>
+                <span class="info">캐릭터가 랜덤한 거리를 달려여!</span>
+                <span class="tip">달려! 를 써도 작동해요!</span>
+                <span class="guide-ch">달리기!</span>
+                <span class="tag">#캐릭터채팅</span>
+            </div>
+            <div class="item" data-name="점프!">
+                <span class="image"></span>
+                <span class="info">
+                    캐릭터가 랜덤한 높이로 점프해요!
+                    심플하죠?
+                </span>
+                <span class="tip">입장은 점프 입장이 국룰이지</span>
+                <span class="guide-ch">점프!</span>
+                <span class="tag">#캐릭터채팅</span>
+            </div>
+            <div class="item" data-name="비행!">
+                <span class="info-preview">캐릭터가 잠깐 날아올라요!</span>
+                <span class="image"></span>
+                <span class="info">
+                    캐릭터가 랜덤한 높이를
+                    잠깐 날아오르다 착지해요!
+                </span>
+                <span class="guide-ch">비행!</span>
+                <span class="tag">#캐릭터채팅</span>
+            </div>
+            <div class="item" data-name="멈춰!">
+                <span class="image"></span>
+                <span class="info">
+                    원하는 곳에 캐릭터를 주차하고 싶을 때 쓸 수 있어요!
+                    멈춘 상태에서는 채팅을 안쳐도
+                    30분동안 캐릭터가 멈춰있어요!
+                </span>
+                <span class="guide-ch">멈춰!</span>
+                <span class="tag">#캐릭터채팅</span>
+            </div>
+            <div class="item" data-name="움직여!">
+                <span class="image"></span>
+                <span class="info">멈춘 캐릭터를 다시 움직이고 싶을 때 쓸 수 있어요!</span>
+                <span class="guide-ch">움직여!</span>
+                <span class="tag">#캐릭터채팅</span>
+            </div>
+            <div class="item" data-name="얼마남음?">
+                <span class="image"></span>
+                <span class="info-preview">뒤져서 나오면 10코인에 한대다</span>
+                <span class="info">
+                    코인<span class='coin-icon'></span>이 얼마 남아있는지 확인할 수 있어요!
+                    처음에는 100개를 드리고 있어요!
+                </span>
+                <span class="tip">얼마남음?, 동전!, 코인! 을 써도 작동해요!</span>
+                <span class="guide-ch">얼마남음?</span>
+                <span class="tag">#캐릭터채팅</span>
+            </div>
+            <div class="item" data-name="거다이맥스!<span class='coin-icon'></span>" data-coin="-5">
+                <span class="info-preview">캐릭터은(는) 다이맥스밴드를 지니고 있는듯 하다.</span>
+                <span class="image"></span>
+                <span class="info">
+                    이걸 입력하면 화면의 내 캐릭터가 커져요!
+                    입력할 수록 캐릭터가 점점 커지고
+                    최대 다섯번까지 커질 수 있어요!
+                </span>
+                <span class="tip">
+                    <b>거다이맥스5!</b><br>
+                    이렇게 입력하면 바로 원하는 단계까지 커질 수 있어요!
+                </span>
+                <span class="guide-ch">거다이맥스!</span>
+                <span class="tag">#캐릭터채팅</span>
+            </div>
+            <div class="item" data-name="투척!<span class='coin-icon'></span>" data-coin="-1">
+                <span class="info-preview">석전놀이는 조선시대의 유구한 민속 놀이였다.</span>
+                <span class="image"></span>
+                <span class="info">
+                    캐릭터가 바라보는 방향으로 채팅콘을 던질 수 있어요!
+                    불만이 있으면 이것을 던지렴
+                </span>
+                <span class="tip">
+                    투척은 한번에 10개까지 할 수 있어요!<br>
+                    10개를 한꺼번에 발사하고 싶다면 <b>투척10!</b>을 입력!
+                </span>
+                <span class="guide-ch">투척!</span>
+                <span class="tag">#캐릭터채팅</span>
+            </div>
+            <div class="item" data-name="박제!<span class='coin-icon'></span>" data-coin="-100">
+                <span class="image"></span>
+                <span class="info-preview">박제가 되어버린 천재를 아시오?</span>
+                <span class="info">
+                    방송 화면의 랜덤한 위치에
+                    채팅내용이나 채팅콘을 박제시킬 수 있어요!
+                    <b>10분 동안</b> 화면에 박제됩니다!
+                </span>
+                <span class="tip"><b>커져라!</b>와 같이 쓸 수 있어요!</span>
+                <span class="guide-ch">박제!</span>
+                <span class="tag">#캐릭터채팅</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="nav.js"></script>
+    <script src="guide.js"></script>
+</body>
+
+</html>
