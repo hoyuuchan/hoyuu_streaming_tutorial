@@ -1105,7 +1105,7 @@
       transform: translate(-50%, -50%);
       width: 100px;
       height: 100px;
-      background-image: url('../image/dccon/동방/13마미조.png');
+      background-image: url('./image/guide/13마미조.png');
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
