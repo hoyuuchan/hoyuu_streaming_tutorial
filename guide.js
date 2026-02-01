@@ -1013,11 +1013,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 박제 기능 구현
     function triggerPinElement() {
-        if (!images || images.length === 0) return;
-
-        // 1. 랜덤 이미지 선택
-        const randomIdx = Math.floor(Math.random() * images.length);
-        const selectedImage = images[randomIdx];
+        // [MODIFIED] 버퍼에서 이미지 가져오기
+        const selectedImage = getPreloadedImage();
+        if (!selectedImage) return; // 이미지 데이터가 없으면 중단
 
         // 2. 텍스트 업데이트 및 복사 (~태그 박제!)
         const pinCommand = `${selectedImage.tag} 박제!`;
@@ -1111,11 +1109,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 투척 기능 구현
     function triggerThrowElement() {
-        if (!images || images.length === 0) return;
-
-        // 1. 랜덤 이미지 1개 선택 (5개 모두 동일한 이미지 사용)
-        const randomIdx = Math.floor(Math.random() * images.length);
-        const selectedImage = images[randomIdx];
+        // [MODIFIED] 버퍼에서 이미지 가져오기
+        const selectedImage = getPreloadedImage();
+        if (!selectedImage) return; // 이미지 데이터가 없으면 중단
 
         // 2. 랜덤 개수 (1~10) 결정
         const throwCount = Math.floor(Math.random() * 10) + 1;
@@ -1454,6 +1450,55 @@ document.addEventListener('DOMContentLoaded', () => {
     let stopEasterEggClicks = 0;
     let isStopEasterEggActive = false;
     let bubbleFollowInterval = null;
+
+    // [NEW] 투척/박제 이미지 미리 로드 시스템
+    const throwImageBuffer = [];
+    const MAX_BUFFER_SIZE = 5;
+
+    // 버퍼 채우기 함수
+    function fillThrowImageBuffer() {
+        if (typeof images === 'undefined' || images.length === 0) return;
+
+        while (throwImageBuffer.length < MAX_BUFFER_SIZE) {
+            const randomIdx = Math.floor(Math.random() * images.length);
+            const item = images[randomIdx];
+
+            // 이미지 객체 미리 로드 (브라우저 캐시 활용)
+            const img = new Image();
+            img.src = item.src;
+
+            // 데이터 객체에 함께 저장
+            throwImageBuffer.push({
+                ...item, // 기존 데이터 복사 (src, tag 등)
+                preloadedImg: img // 로드된 이미지 객체 참조 (필요시 사용)
+            });
+        }
+    }
+
+    // 버퍼에서 하나 꺼내오기 함수
+    function getPreloadedImage() {
+        // 이미지가 하나도 없다면 긴급히 하나 채움
+        if (throwImageBuffer.length === 0) {
+            fillThrowImageBuffer();
+        }
+
+        // 버퍼가 비어있으면 (images 자체가 없는 경우 등) null 반환
+        if (throwImageBuffer.length === 0) return null;
+
+        // 앞에서 하나 꺼냄 (FIFO)
+        const item = throwImageBuffer.shift();
+
+        // 꺼낸 만큼 다시 채워넣기 (비동기적으로/즉시 실행)
+        // setTimeout을 사용하여 현재 실행 흐름 방해 최소화
+        setTimeout(fillThrowImageBuffer, 0);
+
+        return item;
+    }
+
+    // 초기화 시 버퍼 채우기 (최초 1회 실행)
+    // images 데이터가 로드된 상태여야 함 (data.js가 먼저 로드되므로 가능)
+    // 약간의 지연 후 실행하여 초기 렌더링 부하 분산
+    setTimeout(fillThrowImageBuffer, 1000);
 
     // [NEW] 말풍선 따라가기 로직
     function startFollowingBubble() {
