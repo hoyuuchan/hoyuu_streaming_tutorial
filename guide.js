@@ -655,10 +655,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // [채팅콘 사용법] 랜덤 채팅콘 로직
         if (cmd.name === '채팅콘 사용법' || cmd.name === '채팅콘 명령어') {
-            // images 배열 확인 (data.js에서 로드됨)
-            if (typeof images !== 'undefined' && images.length > 0) {
-                const randomIdx = Math.floor(Math.random() * images.length);
-                const randomItem = images[randomIdx];
+            // [MODIFIED] 버퍼에서 이미지 가져오기
+            const randomItem = getPreloadedImage();
+
+            if (randomItem) {
 
                 let finalText = randomItem.tag;
                 let effectClass = '';
