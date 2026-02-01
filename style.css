@@ -1813,6 +1813,14 @@
       height: 100px;
     }
 
+    /* [FIX] 커져라 효과 강제 적용 */
+    .chat-bubble img.big {
+      width: 200px !important;
+      height: 200px !important;
+      max-width: none !important;
+      /* 혹시 있을 max-width 제한 해제 */
+    }
+
     /* Input area inside chat col */
     .doc-chat-col .doc-example-container {
       margin: 0;
