@@ -366,7 +366,7 @@
       width: fit-content;
       /* 내용물 크기에 맞춤 */
       max-width: calc(100% - 20px);
-      margin: 0 auto 5px auto;
+      margin: 0 auto 20px auto;
 
       /* [MODIFIED] nav-links 스타일 적용 (Glassmorphism) */
       background-color: rgba(255, 255, 255, 0.9);
