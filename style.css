@@ -367,8 +367,14 @@
       /* 내용물 크기에 맞춤 */
       max-width: calc(100% - 20px);
       margin: 0 auto 5px auto;
-      background-color: rgba(255, 255, 255, 1);
+
+      /* [MODIFIED] nav-links 스타일 적용 (Glassmorphism) */
+      background-color: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
       border-radius: 50px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+
       padding: 10px;
     }
 
@@ -585,60 +591,115 @@
       /* 텍스트 배지 부분은 클릭/드래그 가능하게 복원 */
     }
 
-    /* 네비게이션 메뉴 스타일 */
+    /* 네비게이션 메뉴 스타일 (Floating Pill Design) */
     .nav-menu {
-      /* 배경색 제거 */
-      background-color: transparent;
-      padding: 20px 0 10px 0;
-      /* 상단 여백 추가 */
-      margin-bottom: 20px;
-      /* 그림자 제거 */
-      box-shadow: none;
+      position: relative;
+      top: 20px;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin-bottom: 40px;
+      margin-top: 20px;
+      pointer-events: none;
+      /* 컨테이너 자체는 클릭 통과 */
     }
 
     .nav-container {
-      max-width: 1100px;
-      margin: 0 auto;
+      pointer-events: auto;
+      /* 내부 버튼은 클릭 가능 */
       display: flex;
-      justify-content: center;
-      /* 가운데 정렬 */
-      padding: 0 10px;
-      gap: 15px;
-      /* 버튼 사이 간격 */
-      position: relative;
-      /* 인디케이터 기준점 */
+      /* inline-flex에서 flex로 변경하여 너비 확보 */
+      width: 95%;
+      /* 화면 너비의 95% 차지 */
+      max-width: 1100px;
+      /* 최대 너비 제한 */
+      align-items: center;
+      /* background-color 제거 (투명하게) */
+      /* backdrop-filter 제거 */
+      padding: 6px 8px;
+      /* border-radius 제거 */
+      /* box-shadow 제거 */
+      /* border 제거 */
+    }
+
+    /* [NEW] 텍스트 아이템들을 감싸는 알약 스타일 컨테이너 */
+    .nav-links {
+      display: inline-flex;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.9);
+      /* 약간 투명한 흰색 */
+      backdrop-filter: blur(10px);
+      /* 블러 효과 */
+      padding: 6px 8px;
+      border-radius: 50px;
+      /* 완전한 타원형 (알약) */
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.05);
+      /* 부드러운 그림자 */
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      gap: 5px;
+      /* 아이템 간격 */
     }
 
     .nav-item {
-      color: #adb5bd;
       text-decoration: none;
-      font-size: 1.5em;
+      color: #666;
+      font-size: 0.95rem;
       font-weight: 700;
-      padding: 10px 10px;
-      transition: color 0.3s ease;
-      position: relative;
-      z-index: 2;
-      background-color: transparent;
-      letter-spacing: -0.02em;
-      text-align: center;
+      padding: 10px 24px;
+      border-radius: 40px;
+      /* 내부 아이템도 둥글게 */
+      transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      white-space: nowrap;
     }
 
     .nav-item:hover {
-      color: #333;
+      color: #000;
+      background-color: rgba(0, 0, 0, 0.05);
+      /* 호버 시 연한 회색 배경 */
     }
 
     .nav-item.active {
-      color: #333;
+      background-color: #333;
+      color: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transform: scale(1.02);
+      /* 활성 상태 살짝 커짐 */
     }
 
+    /* 호유 아이콘 스타일 조정 */
     #hoyuu-icon {
-      width: 50px;
-      height: 50px;
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
       background-image: url('./image/guide/hoyuu.png');
       background-color: #333;
       background-size: cover;
       background-position: center;
+      transition: transform 0.2s;
+    }
+
+    /* 아이콘 감싸는 링크 스타일 */
+    .nav-container>a:first-child {
+      padding: 4px;
+      /* 아이콘 주변 패딩 줄임 */
+      margin-right: auto;
+      /* [NEW] 나머지 아이템을 오른쪽으로 밈 */
+      margin-left: 5px;
+      /* 왼쪽 여백 살짝 추가 */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    .nav-container>a:first-child:hover {
+      background-color: transparent;
+      /* 아이콘 배경 호버 효과 제거 */
+    }
+
+    .nav-container>a:first-child:hover #hoyuu-icon {
+      transform: rotate(10deg) scale(1.1);
+      /* 아이콘 자체 애니메이션 */
     }
 
     /* 모바일 대응 */
@@ -979,47 +1040,19 @@
 
     @keyframes squash_animation {
       0% {
-        transform: scaleY(1);
-      }
-
-      10% {
-        transform: scaleY(0.9);
-      }
-
-      20% {
-        transform: scaleY(0.8);
-      }
-
-      30% {
-        transform: scaleY(0.7);
-      }
-
-      40% {
-        transform: scaleY(0.7);
+        transform: scaleX(1) scaleY(1);
       }
 
       50% {
-        transform: scaleY(0.7);
-      }
-
-      60% {
-        transform: scaleY(0.7);
-      }
-
-      70% {
-        transform: scaleY(0.7);
+        transform: scaleX(1) scaleY(0.3);
       }
 
       80% {
-        transform: scaleY(0.8);
-      }
-
-      90% {
-        transform: scaleY(0.9);
+        transform: scaleX(1) scaleY(0.3);
       }
 
       100% {
-        transform: scaleY(1);
+        transform: scaleX(1) scaleY(1);
       }
     }
 
@@ -1183,7 +1216,7 @@
     .content-area {
       flex: 1;
       min-width: 0;
-      /* Flexbox overflow 방지 */
+      margin-left: 25px;
     }
 
     .doc-content {
@@ -1218,6 +1251,7 @@
       right: 0;
 
       overflow-y: auto;
+      overflow-x: hidden;
       z-index: 1000;
       box-sizing: border-box;
       box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
@@ -1398,6 +1432,7 @@
 
       .content-area {
         width: 100%;
+        margin: 0;
       }
     }
 
@@ -1531,6 +1566,29 @@
     .doc-copy-btn.copied {
       background-color: #26b679;
       color: #fff;
+    }
+
+    /* [NEW] 뚜봇 시뮬레이션 버튼 (이벤트 x) */
+    .doc-dummy-btn {
+      background-color: #e1e1e5;
+      border: none;
+      border-radius: 10px;
+      padding: 6px 12px;
+      font-size: 0.85rem;
+      color: #6d6e50;
+      cursor: pointer;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .doc-dummy-btn:hover {
+      background-color: #26b679;
+      color: #fff;
+    }
+
+    /* [NEW] 뚜봇 템플릿 숨김 */
+    .guide-ddu {
+      display: none;
     }
 
     @keyframes fadeInContent {
@@ -1790,11 +1848,12 @@
     }
 
     .chat-profile-icon {
-      width: 32px;
-      height: 32px;
-      background-color: #ddd;
-      border-radius: 50%;
-      /* 아이콘 이미지 필요시 background-image 추가 */
+      width: 20px;
+      height: 20px;
+      background-image: url('./image/guide/manager.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
 
     /* Existing chat bubble for chat simulator (keep separate) */
@@ -1957,27 +2016,13 @@
     }
 
     .intro-command-list {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      display: flex;
+      flex-wrap: wrap;
       gap: 10px;
       margin: 0 auto;
     }
 
-    .intro-card {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 20px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-      cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
-      border: 1px solid #eee;
-    }
 
-    .intro-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-      border-color: #ddd;
-    }
 
     .intro-card-title {
       font-size: 1.2em;
@@ -1996,9 +2041,35 @@
       line-height: 1.4;
     }
 
+    /* 모바일 대응 (600px에서 1열로 변경) */
     @media (max-width: 600px) {
-      .intro-command-list {
+      .nav-container {
+        padding: 5px;
+        gap: 2px;
+        width: 90%;
+        /* 화면 너비에 맞게 조정 */
+        justify-content: space-between;
+      }
+
+      .nav-item {
+        padding: 8px 12px;
+        font-size: 0.9em;
+      }
+
+      #hoyuu-icon {
+        width: 32px;
+        height: 32px;
+      }
+
+      .intro-grid {
         grid-template-columns: 1fr;
+        padding: 0 10px;
+      }
+
+      /* 모바일에서 header font size 조정 */
+      .intro-category-header {
+        font-size: 1.2em;
+        text-align: center;
       }
     }
 
@@ -2074,4 +2145,268 @@
     .doc-tip-icon:active {
       filter: grayscale(0);
       opacity: 1;
+    }
+
+    /* -------------------------------------------------------------------------- */
+    /* [Intro Card & Sub-Category Styles] */
+    /* -------------------------------------------------------------------------- */
+
+    .intro-card {
+      background-color: #fff;
+      border: 1px solid #e9ecef;
+      border-radius: 16px;
+      padding: 20px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1 1 calc(50% - 20px);
+      box-sizing: border-box;
+      /* 패딩 포함 너비 계산 */
+      max-width: 100%;
+      /* 화면 밖으로 나가는 것 방지 */
+    }
+
+    .intro-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      border-color: #bbb;
+    }
+
+    .intro-card-title {
+      font-size: 1.2em;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    .intro-card-desc {
+      font-size: 0.95em;
+      color: #666;
+      line-height: 1.4;
+    }
+
+    /* [NEW] 한 줄 꽉 찼을 때 가로 배치 스타일 (JS에서 클래스 토글) */
+    .intro-card.wide-layout {
+      flex-direction: row !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      text-align: left;
+      /* 기본 정렬 */
+    }
+
+    .intro-card.wide-layout .intro-card-title {
+      margin-bottom: 0 !important;
+      flex-shrink: 0;
+      /* 제목 줄어들지 않게 */
+    }
+
+    .intro-card.wide-layout .intro-card-desc {
+      margin-left: 20px;
+      /* 제목과 간격 */
+      text-align: right;
+      /* 내용 오른쪽 정렬 */
+      flex-grow: 1;
+    }
+
+    /* 서브 아이템 스타일 */
+    .intro-card.sub-item {
+      padding: 15px;
+      background-color: #f8f9fa;
+      /* 살짝 구분되는 배경색 */
+      border: 1px dashed #ced4da;
+      /* 점선 테두리로 하위 느낌 */
+      align-items: center;
+      /* 중앙 정렬 */
+      text-align: center;
+      flex: 0 0 calc(34% - 19px);
+      box-sizing: border-box;
+    }
+
+    .intro-card.sub-item .intro-card-title {
+      margin-bottom: 0;
+      font-size: 1em;
+    }
+
+    .intro-card.sub-item:hover {
+      background-color: #fff;
+      border-style: solid;
+    }
+
+    /* [NEW] 사이드바 하위 메뉴 인덴트 강제 적용 (기존 !important override) */
+    .command-list .command-box.sub-item-box {
+      margin-left: 10px !important;
+      /* width: calc(100% - 20px) !important; */
+    }
+
+    /* [NEW] 하위 메뉴 "-" 접두사 추가 (한줄 유지) */
+    .command-list .command-box.sub-item-box .command-name::before {
+      content: "- ";
+      margin-right: 4px;
+      color: #888;
+    }
+
+    /* 모바일 대응 (600px에서 1열로 변경) */
+    @media (max-width: 600px) {
+      .intro-card.sub-item {
+        flex-basis: 100% !important;
+
+        /* [NEW] sub-item은 모바일에서도 가운데 정렬 유지 (wide-layout 덮어쓰기) */
+        flex-direction: column !important;
+        text-align: center !important;
+        justify-content: center !important;
+        align-items: center !important;
+      }
+
+      /* wide-layout 때문에 생긴 margin reset */
+      .intro-card.sub-item.wide-layout .intro-card-desc {
+        margin-left: 0 !important;
+        text-align: center !important;
+      }
+    }
+
+    /* -------------------------------------------------------------------------- */
+    /* [으랏~챠! Effect Styles] */
+    /* -------------------------------------------------------------------------- */
+
+    .jjibu {
+      position: relative;
+      min-height: 100px;
+      width: 140px;
+      /* 두 이미지가 겹쳐서 나오므로 적절한 너비 확보 */
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    .jjibu img:first-child {
+      animation: none;
+    }
+
+    .jjibu img {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      /* animation: changeHeight 0.1s 0.5s forwards; */
+      /* 사용자 요청에 따라 changeHeight는 애니메이션 정의가 수정되었으므로 여기선 유지하거나 필요한 경우 수정 */
+      animation: changeHeight 0.1s 0.5s forwards;
+    }
+
+    /* 왼쪽 이미지 (으랏챠.gif) 위치 조정 - 짤림 방지 */
+    .jjibu img.notani {
+      z-index: -1;
+      left: -40px;
+      /* -90px 처럼 너무 과한 음수 마진 대신 적절한 위치 조정 */
+      margin-left: 0;
+      animation: none !important;
+    }
+
+    /* 채팅 버블 높이 문제 해결 */
+    .chat-msg .chat-bubble {
+      /* height: auto !important; 기존 스타일 유지 */
+      /* min-height: 40px; 텍스트 두 줄 문제로 제거 */
+      overflow: visible !important;
+      /* 내부 이미지가 튀어나와도 보이게 */
+    }
+
+    /* 으랏차 전용 컨테이너가 있을 때 버블 스타일 보정 */
+    .chat-bubble:has(.jjibu) {
+      padding-bottom: 0px;
+      width: auto;
+      min-width: 140px;
+    }
+
+    /* 키프레임 정의 (코드에 없어서 추가함) */
+    @keyframes changeHeight {
+      from {
+        height: 100px;
+      }
+
+      to {
+        height: 20px;
+        /* 기본 높이 */
+      }
+    }
+
+    /* Animate.css 호환 (없을 경우 대비) */
+    .animate__animated {
+      animation-duration: 1s;
+      animation-fill-mode: both;
+    }
+
+    .animate__bounce {
+      animation-name: bounce;
+      transform-origin: center bottom;
+    }
+
+    @keyframes bounce {
+
+      from,
+      20%,
+      53%,
+      80%,
+      to {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        transform: translate3d(0, 0, 0);
+      }
+
+      40%,
+      43% {
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        transform: translate3d(0, -30px, 0);
+      }
+
+      70% {
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        transform: translate3d(0, -15px, 0);
+      }
+
+      90% {
+        transform: translate3d(0, -4px, 0);
+      }
+    }
+
+    /* -------------------------------------------------------------------------- */
+    /* [Item Link & Item No Styles] */
+    /* -------------------------------------------------------------------------- */
+
+    /* Item No (비활성 아이템) */
+    .command-box.item-no,
+    .intro-card.item-no {
+      cursor: default !important;
+      opacity: 0.9;
+    }
+
+    .command-box.item-no:hover,
+    .intro-card.item-no:hover {
+      transform: none !important;
+      box-shadow: none !important;
+      border-color: #e9ecef !important;
+      /* 원래 색상 유지 */
+    }
+
+    .command-list .command-box.item-no:hover {
+      background-color: transparent !important;
+      border-left: none !important;
+      padding-left: 12px !important;
+      /* 원래 패딩 복구 */
+      font-weight: normal;
+      color: #444;
+    }
+
+    .command-list .command-box.item-no.sub-item-box:hover {
+      padding-left: 10px !important;
+      /* sub-item margin offset 보정 */
+    }
+
+    /* Item Link (외부 링크) */
+    .command-box.item-link .command-name::after,
+    .intro-card.item-link .intro-card-title::after {
+      content: ' ↗';
+      font-size: 0.8em;
+      color: #999;
+      font-weight: normal;
     }

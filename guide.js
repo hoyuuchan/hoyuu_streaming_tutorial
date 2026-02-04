@@ -19,43 +19,81 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 명령어 데이터 정의 (그룹화됨)
     // HTML에서 명령어 데이터 파싱
+    // HTML에서 명령어 데이터 파싱
     function parseCommandDataFromHTML() {
         const sourceContainer = document.getElementById('command-data-source');
         if (!sourceContainer) return [];
+
+        // [NEW] 아이템 파싱 헬퍼 함수
+        const parseItem = (itemEl) => {
+            const name = itemEl.dataset.name;
+            const infoEl = itemEl.querySelector('.info');
+            const imageEl = itemEl.querySelector('.image');
+            const guideExEl = itemEl.querySelector('.guide-ex');
+            const infoPreviewEl = itemEl.querySelector('.info-preview');
+
+            // [NEW] 링크 및 비활성 아이템 체크
+            const isLink = itemEl.classList.contains('item-link');
+            const isNoAction = itemEl.classList.contains('item-no');
+
+            let linkUrl = '';
+            if (isLink) {
+                const linkEl = itemEl.querySelector('a');
+                if (linkEl) {
+                    linkUrl = linkEl.getAttribute('href');
+                }
+            }
+
+            return {
+                type: 'item', // 식별자
+                isLink: isLink,
+                isNoAction: isNoAction,
+                linkUrl: linkUrl,
+                name: name,
+                cleanName: name ? name.replace(/<[^>]*>?/gm, '') : '', // [NEW] 태그 제거한 이름 (URL용)
+                // innerHTML을 사용하여 HTML 태그(예: coin-icon)와 줄바꿈을 모두 유지
+                info: infoEl ? infoEl.innerHTML.trim() : '',
+                image: imageEl ? imageEl.textContent.trim() : '',
+                guide_ex: guideExEl ? guideExEl.innerHTML.trim() : '',
+                guide_ddu: itemEl.querySelector('.guide-ddu') ? itemEl.querySelector('.guide-ddu').innerHTML.trim() : '', // [NEW] 뚜봇 전용 템플릿 파싱
+                guide_ch: itemEl.querySelector('.guide-ch') ? itemEl.querySelector('.guide-ch').innerHTML.trim() : '',
+                info_preview: infoPreviewEl ? infoPreviewEl.innerHTML.trim() : '',
+                tip: itemEl.querySelector('.tip') ? itemEl.querySelector('.tip').innerHTML.trim() : '',
+                coin: itemEl.dataset.coin || '',
+                tags: Array.from(itemEl.querySelectorAll('.tag')).map(t => t.innerHTML.trim())
+            };
+        };
 
         const groups = [];
         const groupElements = sourceContainer.querySelectorAll('.group');
 
         groupElements.forEach(groupEl => {
             const category = groupEl.dataset.category;
-            const items = [];
-            const itemElements = groupEl.querySelectorAll('.item');
+            const children = []; // items -> children으로 개념 변경 (계층 구조 지원)
 
-            itemElements.forEach(itemEl => {
-                const name = itemEl.dataset.name;
-                const infoEl = itemEl.querySelector('.info');
-                const imageEl = itemEl.querySelector('.image');
-                const guideExEl = itemEl.querySelector('.guide-ex');
-                const infoPreviewEl = itemEl.querySelector('.info-preview');
+            // 직계 자식만 순회
+            Array.from(groupEl.children).forEach(child => {
+                if (child.classList.contains('item')) {
+                    children.push(parseItem(child));
+                } else if (child.classList.contains('sub-group')) {
+                    const subCategory = child.dataset.category;
+                    const subItems = [];
+                    // 서브 그룹 내 아이템 파싱
+                    child.querySelectorAll('.item').forEach(subItemEl => {
+                        subItems.push(parseItem(subItemEl));
+                    });
 
-                items.push({
-                    name: name,
-                    cleanName: name.replace(/<[^>]*>?/gm, ''), // [NEW] 태그 제거한 이름 (URL용)
-                    // innerHTML을 사용하여 HTML 태그(예: coin-icon)와 줄바꿈을 모두 유지
-                    info: infoEl ? infoEl.innerHTML.trim() : '',
-                    image: imageEl ? imageEl.textContent.trim() : '',
-                    guide_ex: guideExEl ? guideExEl.innerHTML.trim() : '',
-                    guide_ch: itemEl.querySelector('.guide-ch') ? itemEl.querySelector('.guide-ch').innerHTML.trim() : '',
-                    info_preview: infoPreviewEl ? infoPreviewEl.innerHTML.trim() : '',
-                    tip: itemEl.querySelector('.tip') ? itemEl.querySelector('.tip').innerHTML.trim() : '',
-                    coin: itemEl.dataset.coin || '',
-                    tags: Array.from(itemEl.querySelectorAll('.tag')).map(t => t.innerHTML.trim())
-                });
+                    children.push({
+                        type: 'sub-group',
+                        category: subCategory,
+                        items: subItems
+                    });
+                }
             });
 
             groups.push({
                 category: category,
-                items: items
+                children: children // items -> children
             });
         });
 
@@ -87,6 +125,54 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderSidebar() {
         gridContainer.innerHTML = ''; // 초기화
 
+        // [NEW] 렌더링 헬퍼 함수
+        const renderSidebarItem = (cmd, container, isSub = false) => {
+            const box = document.createElement('div');
+            box.classList.add('command-box');
+            if (isSub) {
+                box.classList.add('sub-item-box'); // CSS용 클래스
+            }
+            box.dataset.name = cmd.name; // 매칭을 위해 원본 이름 저장
+
+            // 간단하게 이름만 표시
+            box.innerHTML = `
+                <div class="command-box-content">
+                    <div class="command-name">${cmd.name}</div>
+                </div>
+            `;
+
+            // 클릭 이벤트 (인라인 콘텐츠 변경)
+            box.addEventListener('click', () => {
+                // [NEW] 링크 아이템 처리
+                if (cmd.isLink && cmd.linkUrl) {
+                    window.open(cmd.linkUrl, '_blank');
+                    return;
+                }
+
+                // [NEW] 비활성 아이템 처리
+                if (cmd.isNoAction) {
+                    return; // 아무 동작 안함
+                }
+
+                // [NEW] 이미 활성화된 항목이면 중단 (중복 로드 및 히스토리 방지)
+                if (box.classList.contains('active-item')) return;
+
+                showCommandDetail(cmd);
+
+                // 활성 상태 표시
+                document.querySelectorAll('.command-box').forEach(b => b.classList.remove('active-item'));
+                box.classList.add('active-item');
+            });
+
+            // [NEW] 클래스 추가 (스타일링용)
+            if (cmd.isLink) box.classList.add('item-link');
+            if (cmd.isNoAction) box.classList.add('item-no');
+
+            container.appendChild(box);
+            // 관찰 시작 
+            boxObserver.observe(box);
+        };
+
         commandGroups.forEach(group => {
             // 대분류 헤더 생성
             const header = document.createElement('h4');
@@ -94,34 +180,18 @@ document.addEventListener('DOMContentLoaded', () => {
             header.innerText = group.category;
             gridContainer.appendChild(header);
 
-            // 소분류 아이템 생성
-            group.items.forEach(cmd => {
-                const box = document.createElement('div');
-                box.classList.add('command-box');
-                box.dataset.name = cmd.name; // 매칭을 위해 원본 이름 저장
-
-                // 간단하게 이름만 표시
-                box.innerHTML = `
-                    <div class="command-box-content">
-                        <div class="command-name">${cmd.name}</div>
-                    </div>
-                `;
-
-                // 클릭 이벤트 (인라인 콘텐츠 변경)
-                box.addEventListener('click', () => {
-                    // [NEW] 이미 활성화된 항목이면 중단 (중복 로드 및 히스토리 방지)
-                    if (box.classList.contains('active-item')) return;
-
-                    showCommandDetail(cmd);
-
-                    // 활성 상태 표시
-                    document.querySelectorAll('.command-box').forEach(b => b.classList.remove('active-item'));
-                    box.classList.add('active-item');
-                });
-
-                gridContainer.appendChild(box);
-                // 관찰 시작 
-                boxObserver.observe(box);
+            // [MODIFIED] 계층 구조 렌더링
+            group.children.forEach(child => {
+                if (child.type === 'sub-group') {
+                    // [NEW] 서브 그룹 헤더 제거 (요청사항: 카테고리 이름 X)
+                    // 아이템만 렌더링 (들여쓰기 적용)
+                    child.items.forEach(cmd => {
+                        renderSidebarItem(cmd, gridContainer, true);
+                    });
+                } else {
+                    // 일반 아이템
+                    renderSidebarItem(child, gridContainer, false);
+                }
             });
         });
 
@@ -148,39 +218,105 @@ document.addEventListener('DOMContentLoaded', () => {
             const header = document.createElement('h3');
             header.className = 'intro-category-header';
             header.innerText = group.category;
-            header.style.gridColumn = "1 / -1"; // 꽉 차게
+            header.style.width = "100%"; // 꽉 차게
             header.style.marginTop = "30px";
             header.style.marginBottom = "10px";
             header.style.color = "#555";
             gridList.appendChild(header);
 
-            group.items.forEach(cmd => {
-                const card = document.createElement('div');
-                card.className = 'intro-card';
+            header.style.color = "#555";
+            gridList.appendChild(header);
 
-                // 간단한 정보 표시 (info_preview 우선 사용)
-                let descText = cmd.info_preview || (cmd.info ? cmd.info.split('\n')[0] : '');
+            // [MODIFIED] 계층 구조에 따른 레이아웃 처리
+            group.children.forEach(child => {
+                if (child.type === 'sub-group') {
+                    // [NEW] 서브 그룹 컨테이너 (Full Width)
+                    const subContainer = document.createElement('div');
+                    subContainer.className = 'intro-sub-group-container';
+                    // CSS에서 grid 제어할 예정이지만 인라인 스타일로 구조 잡기
+                    subContainer.style.width = '100%'; // 전체 너비 사용
+                    subContainer.style.display = 'flex';
+                    subContainer.style.flexWrap = 'wrap';
+                    // subContainer.style.gridTemplateColumns = 'repeat(4, 1fr)'; // 내부도 2열 (또는 모바일 1열)
+                    subContainer.style.gap = '20px';
+                    subContainer.style.marginTop = '10px';
+                    subContainer.style.marginBottom = '20px';
 
-                card.innerHTML = `
-                    <div class="intro-card-title">${cmd.name}</div>
-                    <div class="intro-card-desc">${descText}</div>
-                `;
+                    child.items.forEach(cmd => {
+                        const card = document.createElement('div');
+                        // [NEW] 서브 아이템 클래스
+                        card.className = 'intro-card sub-item';
 
-                card.addEventListener('click', () => {
-                    showCommandDetail(cmd);
-                    // 사이드바 활성화 표시 연동
-                    document.querySelectorAll('.command-box').forEach(box => {
-                        // innerText 비교 대신 dataset.name 비교로 변경 (HTML 태그 포함된 이름 대응)
-                        if (box.dataset.name === cmd.name) {
-                            document.querySelectorAll('.command-box').forEach(b => b.classList.remove('active-item'));
-                            box.classList.add('active-item');
-                            // 화면 중앙으로 스크롤 이동
-                            box.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        }
+                        // [NEW] 미리보기 없음, 제목만 표시
+                        card.innerHTML = `
+                             <div class="intro-card-title">${cmd.name}</div>
+                        `;
+
+                        // 클릭 이벤트
+                        card.addEventListener('click', () => {
+                            showCommandDetail(cmd);
+                            document.querySelectorAll('.command-box').forEach(box => {
+                                if (box.dataset.name === cmd.name) {
+                                    document.querySelectorAll('.command-box').forEach(b => b.classList.remove('active-item'));
+                                    box.classList.add('active-item');
+                                    box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                }
+                            });
+                        });
+
+                        subContainer.appendChild(card);
+                        // [NEW] 리사이즈 관찰 시작
+                        cardResizeObserver.observe(card);
                     });
-                });
 
-                gridList.appendChild(card);
+                    gridList.appendChild(subContainer);
+
+                } else {
+                    // 일반 아이템
+                    const cmd = child;
+                    const card = document.createElement('div');
+                    card.className = 'intro-card';
+
+                    // 간단한 정보 표시
+                    let descText = cmd.info_preview || (cmd.info ? cmd.info.split('\n')[0] : '');
+
+                    card.innerHTML = `
+                        <div class="intro-card-title">${cmd.name}</div>
+                        <div class="intro-card-desc">${descText}</div>
+                    `;
+
+                    card.addEventListener('click', () => {
+                        // [NEW] 링크 아이템 처리
+                        if (cmd.isLink && cmd.linkUrl) {
+                            window.open(cmd.linkUrl, '_blank');
+                            return;
+                        }
+
+                        // [NEW] 비활성 아이템 처리
+                        if (cmd.isNoAction) {
+                            return; // 아무 동작 안함
+                        }
+
+                        showCommandDetail(cmd);
+                        document.querySelectorAll('.command-box').forEach(box => {
+                            // 일반 아이템의 경우 dataset.name으로 매칭
+                            if (box.dataset.name === cmd.name) {
+                                document.querySelectorAll('.command-box').forEach(b => b.classList.remove('active-item'));
+                                box.classList.add('active-item');
+                                box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            }
+                        });
+                    });
+
+                    // [NEW] 클래스 추가 (스타일링용)
+                    if (cmd.isLink) card.classList.add('item-link');
+                    if (cmd.isNoAction) card.classList.add('item-no');
+
+                    gridList.appendChild(card);
+
+                    // [NEW] 리사이즈 관찰 시작
+                    cardResizeObserver.observe(card);
+                }
             });
         });
     }
@@ -197,6 +333,24 @@ document.addEventListener('DOMContentLoaded', () => {
         list.innerHTML = '';
         return list;
     }
+
+    // [NEW] 카드 너비 감지 및 스타일 변경 (ResizeObserver)
+    const cardResizeObserver = new ResizeObserver(entries => {
+        entries.forEach(entry => {
+            const card = entry.target;
+            const parent = card.parentElement;
+            if (!parent) return;
+
+            // 부모 너비의 90% 이상이면 한 줄을 다 차지하는 것으로 간주
+            const isWide = entry.contentRect.width > (parent.clientWidth * 0.9);
+
+            if (isWide) {
+                card.classList.add('wide-layout');
+            } else {
+                card.classList.remove('wide-layout');
+            }
+        });
+    });
 
     /* -------------------------------------------------------------------------- */
     /* [Inline Content Render Logic] */
@@ -217,12 +371,22 @@ document.addEventListener('DOMContentLoaded', () => {
             const decodedHash = decodeURIComponent(hash);
 
             for (const group of commandGroups) {
-                // [MODIFIED] cleanName으로 검색 (URL엔 태그가 없으므로)
-                const item = group.items.find(i => i.cleanName === decodedHash);
-                if (item) {
-                    foundCmd = item;
-                    break;
+                // [MODIFIED] cleanName으로 검색 (계층 구조 지원)
+                for (const child of group.children) {
+                    if (child.type === 'sub-group') {
+                        const item = child.items.find(i => i.cleanName === decodedHash);
+                        if (item) {
+                            foundCmd = item;
+                            break;
+                        }
+                    } else {
+                        if (child.cleanName === decodedHash) {
+                            foundCmd = child;
+                            break;
+                        }
+                    }
                 }
+                if (foundCmd) break;
             }
 
             if (foundCmd) {
@@ -364,6 +528,40 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         }
 
+        // [NEW] 뚜봇(Ddubot) 템플릿 처리
+        if (cmd.guide_ddu) {
+            // [MODIFIED] 입력 텍스트 추출 로직
+            let dduInputText = ''; // 기본값
+            let dduContentHtml = cmd.guide_ddu;
+
+            // 임시 DOM 생성하여 파싱
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = cmd.guide_ddu;
+            // 첫 번째 span을 입력 텍스트로 간주 (혹은 특정 클래스 지정이 낫지만 예시 코드상 그냥 span)
+            const inputSpan = tempDiv.querySelector('span');
+
+            if (inputSpan) {
+                dduInputText = inputSpan.innerText; // span 안의 텍스트를 입력창 내용으로 사용
+                inputSpan.remove(); // 메시지 내용에서는 제거
+                dduContentHtml = tempDiv.innerHTML; // span 제거된 나머지 HTML
+            }
+
+            // exText 생성 (추출한 텍스트 적용)
+            // 스타일 color:#aaa 제거 (입력된 텍스트는 검정색이 자연스러움, 기본값일때만 회색)
+            const textStyle = dduInputText === '(직접 입력 가능)' ? 'style="color:#aaa;"' : '';
+
+            exText = `
+                <div class="doc-example-container">
+                    <div class="doc-example-text" ${textStyle}>${dduInputText}</div>
+                    <button class="doc-dummy-btn" style="cursor: pointer;">채팅</button>
+                </div>
+            `;
+
+            // 파싱된 나머지 콘텐츠를 cmd 객체에 잠시 저장하여 아래에서 사용
+            cmd.cleaned_ddu = dduContentHtml;
+        }
+
+
         // 이미지 처리
         let imageHtml = '';
         if (cmd.image) {
@@ -382,14 +580,24 @@ document.addEventListener('DOMContentLoaded', () => {
             let inlineStyle = '';
             if (cmd.name === "커져라!") {
                 const currentSize = growEasterEggBaseSize + (growEasterEggCount * growEasterEggIncrement);
-                inlineStyle = `style="width: ${currentSize}px; height: ${currentSize}px; max-width: none;"`;
+                inlineStyle = `style = "width: ${currentSize}px; height: ${currentSize}px; max-width: none;"`;
             }
 
-            imageHtml = `
-                <div class="doc-image-container ${containerClass}">
-                    <img src="${cmd.image}" class="${imgClass}" alt="${cmd.name}" ${inlineStyle}>
-                </div>
-            `;
+            // [NEW] 으랏~챠! 이스터에그 : 상세 페이지 진입 시에도 애니메이션 적용 & 이미지 2개
+            if (cmd.name === '으랏~챠!') {
+                imageHtml = `
+                    <div class="doc-image-container modify_type jjibu animate__animated animate__bounce">
+                         <img class="dccon notani" src="./image/guide/으랏챠.gif" style="width: 100px; height: 100px; max-width: none;">
+                         <img src="${cmd.image}" style="width: 100px; height: 100px; max-width: none;">
+                    </div>
+                `;
+            } else {
+                imageHtml = `
+                    <div class="doc-image-container ${containerClass}">
+                        <img src="${cmd.image}" class="${imgClass}" alt="${cmd.name}" ${inlineStyle}>
+                    </div>
+                `;
+            }
         }
 
         // 코인 정보 (있을 경우만)
@@ -423,7 +631,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // [MODIFIED] 기본 캐릭터('채팅')일 경우 버튼 비활성화 (클릭 이벤트 제거)
             // cmd.name에 태그가 포함될 수 있으므로 cleanName으로 비교
-            let btnAttr = `onclick="simulateCharacterAction('${guideText.replace(/'/g, "\\'").replace(/"/g, '&quot;')}', this)"`;
+            let btnAttr = `onclick = "simulateCharacterAction('${guideText.replace(/'/g, "\\'").replace(/"/g, ' & quot; ')}', this)"`;
             let btnClass = "doc-copy-btn";
 
             if (cmd.cleanName === '기본 캐릭터') {
@@ -553,6 +761,84 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
 
+        } else if (cmd.guide_ddu) {
+            // [NEW] 뚜봇 레이아웃 (2단)
+            docContent.innerHTML = `
+                <div class="doc-layout-split">
+                    <!-- Left Column -->
+                    <div class="doc-main-col">
+                        <button id="back-to-main-btn" class="back-btn">❮ 목록으로</button>
+                        <h1 class="doc-title">${cmd.name}${coinHtml}</h1>
+                        <div class="doc-header-line"></div>
+                        <div class="doc-center-wrapper">
+                            ${imageHtml}
+                            <div class="doc-description">${infoText}</div>
+                        </div>
+                        ${cmd.tip ? `<div class="doc-tip">
+                             <div class="doc-tip-icon">💡</div>${tipHtml}
+                        </div>` : ''}
+                        <div class="doc-tag-container">${tagHtml}</div>
+                    </div>
+                    <!-- Right Column -->
+                    <div class="doc-chat-col">
+                        <div class="chat-simulator">
+                             <div class="chat-header">채팅</div>
+                             <div class="chat-messages" id="chat-simulator-area">
+                                <div class="chat-msg system">채팅방에 오신 것을 환영합니다!</div>
+                                <div class="chat-notice-box">
+                                    <div class="notice-icon">📢</div>
+                                    <div class="notice-text">
+                                        쾌적한 시청 환경을 위해 일부 메시지는 필터링 됩니다. 클린 라이브 채팅 문화 만들기에 동참해 주세요.
+                                    </div>
+                                </div>
+                                <!-- 뚜봇 메시지 자동 출력 -->
+                                ${(() => {
+                    // [MODIFIED] 줄바꿈 기준으로 메시지 분리 (cleaned_ddu 사용)
+                    // cmd.cleaned_ddu가 없으면 기존 guide_ddu 사용(방어 코드)
+                    const sourceContent = cmd.cleaned_ddu || cmd.guide_ddu;
+
+                    // HTML 파싱으로 텍스트만 추출해서 줄바꿈 처리하는 게 안전함
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = sourceContent;
+                    const pureText = tempDiv.innerText; // innerText는 줄바꿈을 보존함
+
+                    const lines = pureText.split('\n');
+                    return lines.map(line => {
+                        const trimmedLine = line.trim();
+                        if (!trimmedLine) return ''; // 빈 줄 무시
+
+                        return `
+                        <div class="chat-msg bot" style="align-items: flex-start; gap: 8px;">
+                            <div class="chat-profile-icon" style="flex-shrink: 0;"></div>
+                            <div style="font-weight: bold; font-size: 0.9em; white-space: nowrap; color: #314edc;">뚜팔봇</div>
+                            <div style="color: #314edc; word-break: break-all;">
+                                ${trimmedLine}
+                            </div>
+                        </div>
+                        `;
+                    }).join('');
+                })()}
+                             </div>
+                        </div>
+                        <div class="chat-input-area">
+                            ${exText}
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // 입력창 활성화 (실제 입력 가능하게 하려면 추가 로직 필요하지만, 여기선 disabled 버튼만 렌더링됨)
+            // [MODIFIED] 버튼 클래스 변경 (이벤트 연결 방지) 및 disabled 제거 (hover 효과 유지)
+            // .doc-dummy-btn 클래스를 CSS에 추가해야 함.
+            exText = `
+                <div class="doc-example-container">
+                    <div class="doc-example-text" style="color:#aaa;">(직접 입력 가능)</div>
+                    <button class="doc-dummy-btn" style="cursor: pointer;">채팅</button>
+                </div>
+            `;
+
+            // docContent에 exText를 주입하지 않았음. 위 HTML 템플릿의 ${exText}에 들어감.
+
         } else {
             // 기존 레이아웃 (1단)
             docContent.innerHTML = `
@@ -654,7 +940,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!chatArea) return;
 
         // [채팅콘 사용법] 랜덤 채팅콘 로직
-        if (cmd.name === '채팅콘 사용법' || cmd.name === '채팅콘 명령어') {
+        if (cmd.name === '채팅콘 사용법' || cmd.name === '채팅콘 명령어' || cmd.name === '또다른 채팅콘 사용법') {
             // [MODIFIED] 버퍼에서 이미지 가져오기
             const randomItem = getPreloadedImage();
 
@@ -664,6 +950,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 let effectClass = '';
                 let containerClass = '';
                 let effectName = '';
+                let inlineStyle = ''; // [NEW] 인라인 스타일 추가
+
+                // [NEW] 또다른 채팅콘 사용법: 좌우 반전
+                if (cmd.name === '또다른 채팅콘 사용법') {
+                    finalText = `~~${randomItem.tag}`;
+                    inlineStyle = 'transform: scaleX(-1);';
+                }
 
                 // [NEW] 채팅 명령어일 경우 랜덤 효과 추가
                 if (cmd.name === '채팅콘 명령어') {
@@ -714,7 +1007,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 botMsg.className = 'chat-msg bot';
 
                 // 이미지 HTML 생성 (효과 적용)
-                let imgHtml = `<img src="${randomItem.src}" class="${effectClass}" style="max-height:200px;">`;
+                // [MODIFIED] inlineStyle 적용 (또다른 채팅콘 사용법 대응)
+                let imgHtml = `<img src="${randomItem.src}" class="${effectClass}" style="max-height:200px; ${inlineStyle}">`;
 
                 // 기본적으로 100px이지만, 효과에 따라 스타일 조정이 CSS에 있을 것임.
                 // 다만 기존 코드 참조하면 style="max-width:100px;"가 inline으로 박혀있음.
@@ -736,7 +1030,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 const noticeMsg = document.createElement('div');
                 noticeMsg.className = 'chat-msg bot';
                 noticeMsg.innerHTML = `
-                   <div class="chat-profile-icon"></div>
                    <div class="chat-bubble">
                        복사되었습니다!
                    </div>
@@ -834,13 +1127,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
 
-            botMsg.innerHTML = `
+            if (cmd.name === '으랏~챠!') {
+                botMsg.innerHTML = `
                 <div class="chat-bubble">
-                    <div class="doc-image-container ${containerClass}" style="margin:0;">
-                         <img src="${cmd.image}" class="${imgClass}" alt="${cmd.name}" ${inlineStyle}>
+                    <div class="doc-image-container modify_type jjibu animate__animated animate__bounce" style="margin-left:70px;">
+                         <img class="dccon notani" src="./image/guide/으랏챠.gif" style="width: 100px; height: 100px; max-width: none;">
+                         <img src="${cmd.image}" style="width: 100px; height: 100px; max-width: none;">
                     </div>
                 </div>
-             `;
+                `;
+            } else {
+                botMsg.innerHTML = `
+                    <div class="chat-bubble">
+                        <div class="doc-image-container ${containerClass}" style="margin:0;">
+                             <img src="${cmd.image}" class="${imgClass}" alt="${cmd.name}" ${inlineStyle}>
+                        </div>
+                    </div>
+                 `;
+            }
             chatArea.appendChild(botMsg);
 
             // 텍스트 메시지 (복사 완료 알림)
@@ -921,7 +1225,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const originalText = element.innerText;
             element.innerText = '복사됨!';
             element.classList.add('copied');
-
+     
             setTimeout(() => {
                 element.innerText = originalText;
                 element.classList.remove('copied');
