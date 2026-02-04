@@ -1151,7 +1151,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const noticeMsg = document.createElement('div');
             noticeMsg.className = 'chat-msg bot';
             noticeMsg.innerHTML = `
-                <div class="chat-profile-icon"></div>
                 <div class="chat-bubble">
                     복사되었습니다!
                 </div>
