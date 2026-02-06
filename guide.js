@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // [NEW] 링크 및 비활성 아이템 체크
             const isLink = itemEl.classList.contains('item-link');
             const isNoAction = itemEl.classList.contains('item-no');
+            const isNew = itemEl.classList.contains('item-new');
 
             let linkUrl = '';
             if (isLink) {
@@ -48,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 type: 'item', // 식별자
                 isLink: isLink,
                 isNoAction: isNoAction,
+                isNew: isNew,
                 linkUrl: linkUrl,
                 name: name,
                 cleanName: name ? name.replace(/<[^>]*>?/gm, '') : '', // [NEW] 태그 제거한 이름 (URL용)
@@ -166,6 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // [NEW] 클래스 추가 (스타일링용)
             if (cmd.isLink) box.classList.add('item-link');
             if (cmd.isNoAction) box.classList.add('item-no');
+            if (cmd.isNew) box.classList.add('item-new');
 
             container.appendChild(box);
             // 관찰 시작 
@@ -245,6 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         const card = document.createElement('div');
                         // [NEW] 서브 아이템 클래스
                         card.className = 'intro-card sub-item';
+                        if (cmd.isNew) card.classList.add('item-new');
 
                         // [NEW] 미리보기 없음, 제목만 표시
                         card.innerHTML = `
@@ -275,6 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const cmd = child;
                     const card = document.createElement('div');
                     card.className = 'intro-card';
+                    if (cmd.isNew) card.classList.add('item-new');
 
                     // 간단한 정보 표시
                     let descText = cmd.info_preview || (cmd.info ? cmd.info.split('\n')[0] : '');
@@ -635,8 +640,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 btnAttr = 'style="cursor: default;"';
             }
 
+            // [NEW] isNew 속성에 따라 클래스 추가
+            // const containerClass = cmd.isNew ? 'doc-example-container item-new' : 'doc-example-container';
+            // reverted based on user feedback (apply to intro-card only)
+            const containerClass = 'doc-example-container';
+
             const exInputHtml = `
-                <div class="doc-example-container">
+                <div class="${containerClass}">
                     <div class="doc-example-text">${displayText}</div>
                     <button class="${btnClass}" ${btnAttr}>채팅</button>
                 </div>

@@ -527,29 +527,28 @@
     }
 
 
-    /* 빨간 New 배지 스타일 */
+    /* 설명서 N과 같은 스타일로 통합 */
     .new-badge {
+      border-color: #333 !important;
+      overflow: visible !important;
+    }
+
+    .new-badge::after {
+      content: 'N';
       position: absolute;
-      top: 5px;
-      right: 5px;
-      background-color: #ff0000;
-      /* 빨간색 */
-      color: white;
-      /* 글씨색 */
-      font-size: 10px;
-      /* 글씨 크기 */
-      font-weight: bold;
-      /* 굵게 */
-      padding: 2px 6px;
-      /* 글씨 주변 여백 (상하 2px, 좌우 6px) */
-      border-radius: 10px;
-      /* 둥근 모서리 (알약 모양) */
+      top: -8px;
+      right: -8px;
+      background-color: #333;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 900;
+      width: 18px;
+      height: 18px;
+      line-height: 18px;
+      text-align: center;
+      border-radius: 50%;
       z-index: 10;
-      /* 이미지보다 위에 */
-      pointer-events: none;
-      /* 배지를 클릭해도 뒤에 있는 이미지가 클릭되도록 설정 */
-      line-height: 1;
-      /* 글자 높이 정렬 */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
 
     /* [수정됨] 푸터 컨테이너 (위치 고정 역할) */
@@ -621,7 +620,7 @@
       /* border 제거 */
     }
 
-    /* [NEW] 텍스트 아이템들을 감싸는 알약 스타일 컨테이너 */
+    /* 텍스트 아이템들을 감싸는 알약 스타일 컨테이너 */
     .nav-links {
       display: inline-flex;
       align-items: center;
@@ -682,7 +681,7 @@
       padding: 4px;
       /* 아이콘 주변 패딩 줄임 */
       margin-right: auto;
-      /* [NEW] 나머지 아이템을 오른쪽으로 밈 */
+      /* 나머지 아이템을 오른쪽으로 밈 */
       margin-left: 5px;
       /* 왼쪽 여백 살짝 추가 */
       display: flex;
@@ -1420,7 +1419,7 @@
     /* [Inline Documentation Styling] */
     /* -------------------------------------------------------------------------- */
 
-    /* [NEW] 마미조 이스터에그 모드 */
+    /* 마미조 이스터에그 모드 */
     .doc-content.mamijo-mode {
       position: relative;
     }
@@ -1463,7 +1462,7 @@
       }
     }
 
-    /* [NEW] 애니메이션 없이 즉시 적용 (재방문 시) */
+    /* 애니메이션 없이 즉시 적용 (재방문 시) */
     .doc-content.mamijo-mode.no-animation>* {
       animation: none;
       opacity: 0;
@@ -1564,6 +1563,60 @@
     .doc-dummy-btn:hover {
       background-color: #26b679;
       color: #fff;
+    }
+
+    .doc-dummy-btn:hover {
+      background-color: #26b679;
+      color: #fff;
+    }
+
+    /* [NEW] intro-card (메인) item-new 스타일 */
+    .intro-card.item-new {
+      border-color: #333 !important;
+      position: relative;
+      overflow: visible !important;
+    }
+
+    .intro-card.item-new::after {
+      content: 'N';
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      background-color: #333;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 900;
+      width: 18px;
+      height: 18px;
+      line-height: 18px;
+      text-align: center;
+      border-radius: 50%;
+      z-index: 10;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    /* [NEW] 사이드바 아이템 item-new 스타일 */
+    .command-list .command-box.item-new {
+      position: relative !important;
+      overflow: visible !important;
+    }
+
+    .command-list .command-box.item-new::after {
+      content: 'N';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 10px;
+      background-color: #333;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 900;
+      width: 16px;
+      height: 16px;
+      line-height: 16px;
+      text-align: center;
+      border-radius: 50%;
+      z-index: 10;
     }
 
     /* [NEW] 뚜봇 템플릿 숨김 */
@@ -2156,7 +2209,7 @@
       line-height: 1.4;
     }
 
-    /* [NEW] 한 줄 꽉 찼을 때 가로 배치 스타일 (JS에서 클래스 토글) */
+    /* 한 줄 꽉 찼을 때 가로 배치 스타일 (JS에서 클래스 토글) */
     .intro-card.wide-layout {
       flex-direction: row !important;
       justify-content: space-between !important;
@@ -2203,12 +2256,12 @@
       border-style: solid;
     }
 
-    /* [NEW] 사이드바 하위 메뉴 인덴트 강제 적용 (기존 !important override) */
+    /* 사이드바 하위 메뉴 인덴트 강제 적용 (기존 !important override) */
     .command-list .command-box.sub-item-box {
       margin-left: 10px !important;
     }
 
-    /* [NEW] 하위 메뉴 "-" 접두사 추가 (한줄 유지) */
+    /* 하위 메뉴 "-" 접두사 추가 (한줄 유지) */
     .command-list .command-box.sub-item-box .command-name::before {
       content: "- ";
       margin-right: 4px;
@@ -2224,7 +2277,7 @@
       .intro-card.sub-item {
         flex-basis: 100% !important;
 
-        /* [NEW] sub-item은 모바일에서도 가운데 정렬 유지 (wide-layout 덮어쓰기) */
+        /* sub-item은 모바일에서도 가운데 정렬 유지 (wide-layout 덮어쓰기) */
         flex-direction: column !important;
         text-align: center !important;
         justify-content: center !important;
