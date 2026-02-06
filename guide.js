@@ -1371,10 +1371,10 @@ document.addEventListener('DOMContentLoaded', () => {
             transform: translate(-50%, 0) scale(0.5) rotate(-10deg);
             z-index: 10000;
             background: rgba(51, 51, 51, 0.95);
-            border: 2px solid #4ade80;
+            border: 2px solid #333;
             border-radius: 12px;
             padding: 12px 16px;
-            box-shadow: 0 4px 20px rgba(74, 222, 128, 0.3), 0 0 40px rgba(74, 222, 128, 0.1);
+            box-shadow: 0 4px 20px rgba(99, 99, 99, 0.3), 0 0 40px rgba(99, 99, 99, 0.1);
             font-size: 16px;
             font-weight: 700;
             opacity: 0;

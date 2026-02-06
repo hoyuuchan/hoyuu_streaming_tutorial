@@ -72,7 +72,7 @@ function renderImages(filteredImages) {
     if (image.update === true) {
       const badge = document.createElement('div');
       badge.className = 'new-badge';
-      badge.innerText = 'New';
+      // badge.innerText = 'New';
       imageBox.appendChild(badge);
     }
 
