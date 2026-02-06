@@ -180,7 +180,6 @@
     }
 
 
-
     .notice {
       margin-top: 20px;
     }
@@ -1059,8 +1058,8 @@
     /* 코인 아이콘 스타일 */
     .coin-icon {
       display: inline-block;
-      width: 12px;
-      height: 12px;
+      width: 10px;
+      height: 10px;
       background: linear-gradient(135deg, #FFF6A5 0%, #FFD700 40%, #B8860B 100%);
       border-radius: 50%;
       box-shadow: 0 0 4px rgba(255, 215, 0, 0.6);
@@ -1092,25 +1091,6 @@
       width: 20px;
       height: 20px;
       display: inline-block;
-    }
-
-    /* 태그 스타일 */
-    .doc-tag {
-      background: #333;
-      color: #fff;
-      width: auto;
-      font-size: 0.8em;
-      font-weight: 600;
-      text-align: center;
-      border-radius: 30px;
-      float: right;
-      padding: 6px 12px;
-      margin-left: 10px;
-    }
-
-    .doc-tag-container {
-      display: flow-root;
-      position: relative;
     }
 
     /* 마미조 효과 */
@@ -1380,7 +1360,7 @@
 
     .command-list .command-box .command-name {
       font-size: 1em !important;
-      /* 개별 폰트 사이즈 무시하고 통일 */
+      font-weight: 500;
     }
 
     /* 코인 아이콘 등 내부 요소 크기 조절 */
@@ -1896,18 +1876,6 @@
       font-size: 0.85rem;
     }
 
-    /* 태그 컨테이너 하단 배치 (Left Col) */
-    .doc-main-col .doc-tag-container {
-      /* margin-top: auto; -- Removed to allow center-wrapper to control spacing */
-      width: 100%;
-      display: flex;
-      justify-content: flex-end;
-      /* 태그 우측 정렬 */
-      align-items: center;
-      margin-top: 10px;
-      /* Slight margin from content */
-    }
-
     /* Centering Wrapper for Image and Description */
     .doc-center-wrapper {
       flex: 1;
@@ -2032,7 +2000,7 @@
     }
 
     .intro-card-title .coin-icon {
-      vertical-align: text-top;
+      vertical-align: baseline;
     }
 
     .intro-card-desc {
@@ -2238,7 +2206,6 @@
     /* [NEW] 사이드바 하위 메뉴 인덴트 강제 적용 (기존 !important override) */
     .command-list .command-box.sub-item-box {
       margin-left: 10px !important;
-      /* width: calc(100% - 20px) !important; */
     }
 
     /* [NEW] 하위 메뉴 "-" 접두사 추가 (한줄 유지) */
@@ -2246,6 +2213,10 @@
       content: "- ";
       margin-right: 4px;
       color: #888;
+    }
+
+    .sub-item-box .command-name {
+      font-weight: 400 !important;
     }
 
     /* 모바일 대응 (600px에서 1열로 변경) */
@@ -2400,6 +2371,11 @@
     .command-list .command-box.item-no.sub-item-box:hover {
       padding-left: 10px !important;
       /* sub-item margin offset 보정 */
+    }
+
+    /* Item No 서브메뉴 */
+    .item-no .command-name::before {
+      content: "─ ";
     }
 
     /* Item Link (외부 링크) */

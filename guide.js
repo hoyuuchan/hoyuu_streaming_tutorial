@@ -59,8 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 guide_ch: itemEl.querySelector('.guide-ch') ? itemEl.querySelector('.guide-ch').innerHTML.trim() : '',
                 info_preview: infoPreviewEl ? infoPreviewEl.innerHTML.trim() : '',
                 tip: itemEl.querySelector('.tip') ? itemEl.querySelector('.tip').innerHTML.trim() : '',
-                coin: itemEl.dataset.coin || '',
-                tags: Array.from(itemEl.querySelectorAll('.tag')).map(t => t.innerHTML.trim())
+                coin: itemEl.dataset.coin || ''
             };
         };
 
@@ -612,15 +611,7 @@ document.addEventListener('DOMContentLoaded', () => {
             tipHtml = `<div class="tip">${cmd.tip}</div>`;
         }
 
-        // 태그 정보
-        let tagHtml = '';
-        if (cmd.tags && cmd.tags.length > 0) {
-            // 여러 태그를 순회하며 생성. 
-            // float:right 이므로 HTML상 먼저 나온게 가장 오른쪽에 붙음 -> 순서를 유지하려면 이대로 두거나, 
-            // 원하는 시각적 순서에 따라 reverse()가 필요할 수도 있음. 
-            // 일단 그대로 출력.
-            tagHtml = cmd.tags.map(t => `<div class="doc-tag">${t}</div>`).join('');
-        }
+
 
         // HTML 주입
         if (cmd.guide_ch) {
@@ -665,7 +656,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         ${cmd.tip ? `<div class="doc-tip">
                             <div class="doc-tip-icon">💡</div>${tipHtml}
                         </div>` : ''}
-                        <div class="doc-tag-container">${tagHtml}</div>
+
                     </div>
                     <!-- Right Column: 캐릭터 스테이지 -->
                     <div class="doc-chat-col">
@@ -730,7 +721,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         ${cmd.tip ? `<div class="doc-tip">
                             <div class="doc-tip-icon">💡</div>${tipHtml}
                         </div>` : ''}
-                        <div class="doc-tag-container">${tagHtml}</div>
+
                     </div>
                     <!-- Right Column: 채팅 시뮬레이터 & 입력창 -->
                     <div class="doc-chat-col">
@@ -777,7 +768,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         ${cmd.tip ? `<div class="doc-tip">
                              <div class="doc-tip-icon">💡</div>${tipHtml}
                         </div>` : ''}
-                        <div class="doc-tag-container">${tagHtml}</div>
+
                     </div>
                     <!-- Right Column -->
                     <div class="doc-chat-col">
@@ -849,7 +840,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="doc-description">${infoText}</div>
                 ${exText ? `${exText}` : ''}
                 ${cmd.tip ? `<div class="doc-tip">${tipHtml}</div>` : ''}
-                <div class="doc-tag-container">${tagHtml}</div>
+
             `;
         }
 
@@ -1307,6 +1298,8 @@ document.addEventListener('DOMContentLoaded', () => {
             triggerThrowElement();
         } else if (text.includes('박제!')) {
             triggerPinElement();
+        } else if (text.includes('통통!')) {
+            triggerBounceElement();
         }
     };
 
@@ -1609,6 +1602,117 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, 100);
             }, 400); // 하강 시간
         }, 400); // 상승 시간
+    }
+
+    function triggerBounceElement() {
+        const stage = document.getElementById('character-stage-area');
+        const charImg = stage ? stage.querySelector('.character-stande') : null;
+        if (!stage || !charImg) return;
+
+        if (isCharacterMainAction) return;
+        isCharacterMainAction = true;
+
+        const startLeft = charImg.offsetLeft;
+        const startBottom = parseFloat(getComputedStyle(charImg).bottom) || 0;
+
+        const stageWidth = stage.clientWidth;
+        const stageHeight = stage.clientHeight;
+        const charWidth = charImg.offsetWidth;
+        const charHeight = charImg.offsetHeight;
+
+        charImg.style.transition = 'none';
+        charImg.style.position = 'absolute';
+        charImg.style.left = `${startLeft}px`;
+        charImg.style.bottom = `${startBottom}px`;
+
+        const originalTransform = charImg.style.transform || '';
+
+        const gravity = 1500;
+        const safeHeight = stageHeight - charHeight;
+        let velY = Math.sqrt(2 * gravity * safeHeight) * 1.1;
+
+        let velX = (Math.random() - 0.5) * 800;
+
+        let rotation = 0;
+        let angularVelocity = (Math.random() - 0.5) * 360 * 2;
+
+        const bounce = 0.85;
+        const friction = 0.98;
+
+        let posX = startLeft;
+        let posY = startBottom;
+
+        let lastTime = performance.now();
+        let bounceGroundHitCount = 0;
+
+        function update(currentTime) {
+            if (!isCharacterMainAction) return;
+
+            const dt = Math.min((currentTime - lastTime) / 1000, 0.05);
+            lastTime = currentTime;
+
+            velY -= gravity * dt;
+
+            velX *= 0.998;
+            velY *= 0.998;
+
+            rotation += angularVelocity * dt;
+            angularVelocity *= 0.995;
+
+            posX += velX * dt;
+            posY += velY * dt;
+
+            if (posX < 0) {
+                posX = 0;
+                velX = Math.abs(velX) * bounce;
+                angularVelocity = Math.abs(angularVelocity) * 0.8;
+            } else if (posX > stageWidth - charWidth) {
+                posX = stageWidth - charWidth;
+                velX = -Math.abs(velX) * bounce;
+                angularVelocity = -Math.abs(angularVelocity) * 0.8;
+            }
+
+            if (posY > stageHeight - charHeight) {
+                posY = stageHeight - charHeight;
+                velY = -Math.abs(velY) * bounce;
+                velX += (Math.random() - 0.5) * 400;
+            }
+
+            if (posY <= 0) {
+                posY = 0;
+                velY = Math.abs(velY) * bounce;
+                velX *= friction;
+                bounceGroundHitCount++;
+            }
+
+            charImg.style.left = `${posX}px`;
+            charImg.style.bottom = `${posY}px`;
+
+            let currentScaleX = 1;
+            if (originalTransform.includes('scaleX(-1)')) currentScaleX = -1;
+            charImg.style.transform = `scaleX(${currentScaleX}) rotate(${rotation}deg)`;
+
+            const speed = Math.sqrt(velX * velX + velY * velY);
+            if (posY <= 1 && speed < 50 && bounceGroundHitCount > 2) {
+                stopBounce();
+                return;
+            }
+
+            requestAnimationFrame(update);
+        }
+
+        function stopBounce() {
+            if (!isCharacterMainAction) return;
+            isCharacterMainAction = false;
+
+            charImg.style.transition = '';
+            charImg.style.position = '';
+            charImg.style.left = '';
+            charImg.style.bottom = '0px';
+            charImg.style.transform = originalTransform.replace(/rotate\([^)]*\)/, '');
+        }
+
+        requestAnimationFrame(update);
     }
 
     function triggerFlyElement() {
