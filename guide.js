@@ -1310,6 +1310,8 @@ document.addEventListener('DOMContentLoaded', () => {
             triggerPinElement();
         } else if (text.includes('통통!')) {
             triggerBounceElement();
+        } else if (text.includes('탄막!')) {
+            triggerDanmakuElement();
         }
     };
 
@@ -2387,6 +2389,177 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             // 영구 지속이더라도 기존 타이머는 위에서 클리어됨
         }
+    }
+
+    function triggerDanmakuElement() {
+        // [NEW] 미리 정의된 문구 리스트 (태그를 직접 명시)
+        const messages = [
+            `~호유매드니스 내가 나설 차례인가... 탄막!`,
+            `~호유매드니스 매매매맫니스 매매매맫니스 ~~호유매드니스 탄막!`,
+            `~모코댄스 ~호유댄스 ~모자걸댄스 탄막!`,
+            `와! ~샌즈! 탄막!`,
+            `항상 시청해주셔서 정말 ~나즈린고마워요 탄막!`,
+            `~호유키라 🥕 탄막!`,
+            `한번 쓸 때마다 10코인을 써여! 근데 2분이면 금방 범 ㄱ-`,
+            `원래 여긴 ~블렌더 작업방이였어... 탄막!`,
+            `지금까지 준비된 랜덤 대사는 몇개일까용? 탄막!`
+        ];
+
+        // 랜덤 선택
+        const command = messages[Math.floor(Math.random() * messages.length)];
+
+        // Update input text
+        const inputAreaText = document.querySelector('.doc-example-text');
+        if (inputAreaText) {
+            inputAreaText.innerText = command;
+        }
+
+        // Copy feedback (원본 텍스트 복사)
+        navigator.clipboard.writeText(command).then(() => {
+            showCopyFeedback();
+        });
+
+        // Trigger Effect
+        // 1. "탄막!" 제거 (화면 표시용)
+        let displayContent = command.replace(/탄막!/g, '').replace(/탄막/g, '').trim();
+
+        // 2. 채팅콘(~태그, ~~태그) 파싱 및 이미지 변환
+        // data.js의 tag는 '~이름' 형식이므로, 텍스트 상의 '~이름'과 정확히 일치하는지 확인
+        // 정규식: ~ 또는 ~~ 뒤에 한글/영문/숫자
+        // ~~를 먼저 매칭하기 위해 정규식 구성
+        displayContent = displayContent.replace(/(~{1,2})([가-힣a-zA-Z0-9]+)/g, (match, prefix, tagName) => {
+            // prefix: '~' or '~~'
+            // tagName: '호유매드니스' etc.
+
+            // data.js 태그 형식은 '~이름'
+            const searchTag = `~${tagName}`;
+
+            if (typeof images !== 'undefined') {
+                const imgObj = images.find(img => img.tag === searchTag);
+                if (imgObj) {
+                    // ~~인 경우 반전 스타일 추가
+                    const flipStyle = prefix === '~~' ? 'transform: scaleX(-1);' : '';
+                    return `<img src="${imgObj.src}" style="height: 50px; vertical-align: middle; margin: 0 2px; ${flipStyle}">`;
+                }
+            }
+            return match; // 이미지 없으면 텍스트 유지
+        });
+
+        // 폰트 스타일 적용
+        const finalHtml = `<span style="font-family: 'Paperozi'; font-size: 50px; color: white; vertical-align: middle;">${displayContent}</span>`;
+        danmaku(finalHtml);
+    }
+
+    function danmaku(content) {
+        // 탄막 내용이 없으면 취소
+        if (!content || content.trim() === '') {
+            console.log('[탄막] 표시할 내용이 없음');
+            return false;
+        }
+
+        // HTML 태그 제거한 텍스트와 이미지 존재 여부 확인
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = content;
+        const textOnly = (tempDiv.textContent || tempDiv.innerText || '').trim();
+        const hasImages = /<img[^>]*>/i.test(content);
+
+        // 텍스트도 없고 이미지도 없으면 취소
+        if (!textOnly && !hasImages) {
+            console.log('[탄막] 표시할 내용이 없음 (텍스트/이미지 모두 없음)');
+            return false;
+        }
+
+        // 탄막 요소 생성 (HTML 콘텐츠 사용 - 이미지 포함)
+        const danmakuElement = document.createElement('div');
+        danmakuElement.className = 'danmaku-text';
+        danmakuElement.innerHTML = content;
+
+        // 화면 높이 기준으로 랜덤 Y 위치 (상단 10% ~ 하단 70% 범위)
+        const minY = window.innerHeight * 0.1;
+        const maxY = window.innerHeight * 0.7;
+        const randomY = minY + Math.random() * (maxY - minY);
+
+        // 속도 설정 (기본값 200)
+        const speed = 200;
+
+        // 초기 상태: 화면 밖 오른쪽에 숨김 (visibility로 완전히 숨김)
+        danmakuElement.style.right = '0px';
+        danmakuElement.style.top = `${randomY}px`;
+        danmakuElement.style.visibility = 'hidden';
+        danmakuElement.style.transform = 'translateX(100%)'; // 화면 밖 오른쪽
+
+        document.body.appendChild(danmakuElement);
+
+        // 애니메이션 시작 함수
+        const startAnimation = () => {
+            // 실제 너비 측정
+            const elementWidth = danmakuElement.offsetWidth;
+            const screenWidth = window.innerWidth;
+
+            // 이동 거리 계산 (화면 너비 + 요소 너비)
+            const totalDistance = screenWidth + elementWidth;
+            // 속도(초당 픽셀)로 지속시간 계산 (길이와 무관하게 일정한 속도)
+            const duration = totalDistance / speed;
+
+            // 시작 위치 재설정: 화면 오른쪽 바깥
+            danmakuElement.style.right = '0px';
+            danmakuElement.style.transform = `translateX(${elementWidth}px)`;
+            danmakuElement.style.visibility = 'visible';
+
+            // 강제 리플로우
+            void danmakuElement.offsetWidth;
+
+            // CSS 애니메이션으로 왼쪽으로 이동
+            danmakuElement.style.transition = `transform ${duration}s linear`;
+            danmakuElement.style.transform = `translateX(-${screenWidth}px)`;
+
+            // 애니메이션 종료 후 요소 제거
+            setTimeout(() => {
+                if (danmakuElement && danmakuElement.parentNode) {
+                    danmakuElement.remove();
+                }
+            }, duration * 1000 + 100);
+
+            console.log(`[탄막] 애니메이션 시작 - 속도: ${speed}px/s, 지속시간: ${duration.toFixed(1)}초`);
+        };
+
+        // 이미지가 있으면 모든 이미지 로드 후 애니메이션 시작
+        const images = danmakuElement.querySelectorAll('img');
+        if (images.length > 0) {
+            let loadedCount = 0;
+            const totalImages = images.length;
+
+            const onImageLoad = () => {
+                loadedCount++;
+                if (loadedCount >= totalImages) {
+                    startAnimation();
+                }
+            };
+
+            images.forEach(img => {
+                if (img.complete) {
+                    // 이미 로드됨 (캐시된 이미지)
+                    onImageLoad();
+                } else {
+                    img.onload = onImageLoad;
+                    img.onerror = onImageLoad; // 에러 시에도 진행
+                }
+            });
+
+            // 3초 타임아웃 (이미지 로드 실패 시에도 진행)
+            setTimeout(() => {
+                if (loadedCount < totalImages) {
+                    console.log('[탄막] 이미지 로드 타임아웃, 애니메이션 강제 시작');
+                    loadedCount = totalImages; // 중복 호출 방지
+                    startAnimation();
+                }
+            }, 3000);
+        } else {
+            // 이미지가 없으면 바로 애니메이션 시작
+            startAnimation();
+        }
+
+        return true;
     }
 
     // 사이드바 드래그 스크롤 기능 추가
