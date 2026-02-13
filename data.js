@@ -583,7 +583,7 @@
   { src: './image/기타/안안에베베.webp', tag: '~안안에베베', category: ['게임기타', '감정표현'] },
   { src: './image/기타/안안뭐.webp', tag: '~안안뭐', category: ['게임기타', '감정표현'] },
   { src: './image/기타/안안ㅋ.webp', tag: '~안안ㅋ', category: ['게임기타', '감정표현'] },
-  { src: './image/기타/안안ㅎ.webp', tag: '~안안ㅎ', category: ['게임기타', '감정표현'], update: true },
+  { src: './image/기타/안안ㅎ.webp', tag: '~안안ㅎ', category: ['게임기타', '감정표현'] },
   { src: './image/기타/켈시그런가.png', tag: '~켈시그런가', category: ['게임기타', '감정표현'], update: true },
   { src: './image/기타/켈시그런건가.png', tag: '~켈시그런건가', category: ['게임기타', '감정표현'], update: true },
   { src: './image/기타/켈시그만.png', tag: '~켈시그만', category: ['게임기타', '감정표현'], update: true },
