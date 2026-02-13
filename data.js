@@ -50,7 +50,7 @@
   { src: './image/감정표현/페페절규.png', tag: '~페페절규', category: '감정표현' },
   { src: './image/감정표현/페페타노스.png', tag: '~페페타노스', category: '감정표현' },
   { src: './image/감정표현/페페흠.png', tag: '~페페흠', category: '감정표현' },
-  { src: './image/감정표현/페페키보드.png', tag: '~페페키보드', category: '감정표현', update: true },
+  { src: './image/감정표현/페페키보드.gif', tag: '~페페키보드', category: '감정표현', update: true },
   { src: './image/감정표현/가만히.png', tag: '~가만히', category: '감정표현' },
   { src: './image/감정표현/고마워요.png', tag: '~고마워요', category: '감정표현' },
   { src: './image/감정표현/귀여운.png', tag: '~귀여운', category: '감정표현' },
