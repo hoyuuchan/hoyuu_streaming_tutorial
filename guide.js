@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Intro Popup Logic moved to nav.js
+
     // 명령어 데이터 정의 (그룹화됨)
     // HTML에서 명령어 데이터 파싱
     // HTML에서 명령어 데이터 파싱
@@ -224,6 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
             header.style.marginTop = "30px";
             header.style.marginBottom = "10px";
             header.style.color = "#555";
+            header.style.fontSize = "1.5em";
             gridList.appendChild(header);
 
             header.style.color = "#555";
@@ -607,7 +610,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // 코인 정보 (있을 경우만)
         let coinHtml = '';
         if (cmd.coin) {
-            coinHtml = `<div class="coin-pay"><span class='coin-icon'></span> ${cmd.coin}개</div>`;
+            coinHtml = `<div class="coin-pay"><span class='coin-icon'></span> <span class="coin-text">${cmd.coin}개</span></div>`;
         }
 
         // tip 정보
@@ -656,7 +659,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="doc-layout-split">
                     <!-- Left Column: 설명 영역 -->
                     <div class="doc-main-col">
-                        <button id="back-to-main-btn" class="back-btn">❮ 목록으로</button>
+
                         <h1 class="doc-title">${cmd.name}${coinHtml}</h1>
                         <div class="doc-header-line"></div>
                         <div class="doc-center-wrapper">
@@ -721,7 +724,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="doc-layout-split">
                     <!-- Left Column: 설명 영역 -->
                     <div class="doc-main-col">
-                        <button id="back-to-main-btn" class="back-btn">❮ 목록으로</button>
+
                         <h1 class="doc-title">${cmd.name}${coinHtml}</h1>
                         <div class="doc-header-line"></div>
                         <div class="doc-center-wrapper">
@@ -768,7 +771,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="doc-layout-split">
                     <!-- Left Column -->
                     <div class="doc-main-col">
-                        <button id="back-to-main-btn" class="back-btn">❮ 목록으로</button>
+
                         <h1 class="doc-title">${cmd.name}${coinHtml}</h1>
                         <div class="doc-header-line"></div>
                         <div class="doc-center-wrapper">
@@ -843,7 +846,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             // 기존 레이아웃 (1단)
             docContent.innerHTML = `
-                <button id="back-to-main-btn" class="back-btn">❮ 목록으로</button>
+
                 <h1 class="doc-title">${cmd.name}${coinHtml}</h1>
                 <div class="doc-header-line"></div>
                 ${imageHtml}
@@ -854,21 +857,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         }
 
-        // 뒤로가기 버튼 이벤트 리스너 추가
-        const backBtn = document.getElementById('back-to-main-btn');
-        if (backBtn) {
-            backBtn.addEventListener('click', () => {
-                // History API 적용
-                // 목록으로 돌아갈 때는 해시를 제거하고 목록 뷰를 보여줌
-                if (window.location.hash) {
-                    // 뒤로가기 히스토리 스택을 위해 pushState 사용
-                    history.pushState(null, '', 'guide.html'); // or just remove hash
-                    showIntro();
-                } else {
-                    showIntro();
-                }
-            });
-        }
+
 
         // 만약 지연 표시 텍스트가 있다면 타이머 설정
         const delayedTexts = docContent.querySelectorAll('.delayed-text');
@@ -1239,6 +1228,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // 캐릭터 동작 시뮬레이션 (guide-ch)
     let isCharacterMainAction = false; // 동작 중복 방지 플래그 (점프, 비행 공유)
     let isActionCooldown = false; // [NEW] 버튼 쿨타임 플래그 (2초)
+    let isAscending = false; // [NEW] 승천 상태 플래그
+    let isDescending = false; // [NEW] 하강 상태 플래그
 
     window.simulateCharacterAction = function (text, element) {
         // 애니메이션 중복 실행 방지
@@ -1312,6 +1303,8 @@ document.addEventListener('DOMContentLoaded', () => {
             triggerBounceElement();
         } else if (text.includes('탄막!')) {
             triggerDanmakuElement();
+        } else if (text.includes('승천!')) {
+            triggerAscendElement();
         }
     };
 
@@ -2620,5 +2613,112 @@ document.addEventListener('DOMContentLoaded', () => {
                 showIntro(); // 이미 해시 없으면 UI만 리셋
             }
         });
+    }
+
+    // ==========================================
+    // [NEW] 승천 (Ascend) 구현
+    // ==========================================
+    function triggerAscendElement() {
+        const charImg = document.querySelector('#character-stage-area .character-stande');
+        if (!charImg) return;
+
+        isAscending = true;
+        isCharacterMainAction = true;
+
+        // 현재 위치 캡처 및 transition 중단
+        const computedLeft = getComputedStyle(charImg).left;
+        charImg.style.transition = 'none';
+        charImg.style.left = computedLeft;
+        void charImg.offsetWidth;
+
+        // idle 이미지로 변경
+        charImg.src = './image/guide/piyo_stand.png';
+        const charHeight = charImg.clientHeight || 150; // 높이 측정
+
+        // 천사링(halo) 추가 - 위치 동기화
+        const halo = addHalo(charImg);
+        if (halo) {
+            halo.style.left = computedLeft;
+            halo.style.bottom = `${charHeight + 10}px`; // 머리 위 10px
+            // 천사링 승천 애니메이션 시작
+            halo.classList.add('ascending');
+        }
+
+        // 승천 옵션 (기본값 5초)
+        const durationSeconds = 2;
+        const totalDurationMs = durationSeconds * 1000;
+
+        // 승천 애니메이션 클래스 추가
+        charImg.classList.add('ascending');
+
+        // 승천 완료 후 숨김 처리 (애니메이션 3초)
+        setTimeout(() => {
+            // 아바타 숨김
+            charImg.style.display = 'none';
+            charImg.classList.remove('ascending');
+            removeHalo(charImg);
+            isAscending = false;
+
+            // 귀환 타이머 설정
+            setTimeout(() => {
+                triggerDescendElement();
+            }, totalDurationMs);
+
+        }, 3000); // 승천 애니메이션 시간
+    }
+
+    // 하강 (승천 후 귀환)
+    function triggerDescendElement() {
+        const stage = document.getElementById('character-stage-area');
+        const charImg = stage ? stage.querySelector('.character-stande') : null;
+
+        if (!charImg || isDescending) return;
+
+        isDescending = true;
+
+        // 하강 시작 - element 표시 및 초기 위치 설정
+        charImg.style.display = '';
+        charImg.style.opacity = '0';
+        charImg.style.transform = 'translateY(-100vh)';
+        charImg.style.bottom = '0px';
+
+        // 강제 reflow 후 하강 애니메이션 클래스 추가
+        void charImg.offsetWidth;
+        charImg.classList.add('descending');
+
+        // 하강 완료 후 상태 초기화 (애니메이션 2.5초)
+        setTimeout(() => {
+            charImg.classList.remove('descending');
+
+            charImg.style.opacity = '';
+            charImg.style.transform = 'translateX(-50%)'; // guide.js 기본값 복구
+            charImg.style.transition = '';
+
+            isDescending = false;
+            isCharacterMainAction = false;
+
+        }, 2500); // 하강 애니메이션 시간 (CSS와 동일)
+    }
+
+    // 천사링 추가
+    function addHalo(element) {
+        if (!element) return null;
+        // 기존 천사링 제거
+        removeHalo(element);
+
+        const halo = document.createElement('div');
+        halo.className = 'ascend-halo';
+        // element(img)는 void element라 자식을 못 가짐. 부모에 추가해야 함.
+        element.parentElement.appendChild(halo);
+        return halo;
+    }
+
+    // 천사링 제거
+    function removeHalo(element) {
+        if (!element || !element.parentElement) return;
+        const halo = element.parentElement.querySelector('.ascend-halo');
+        if (halo) {
+            halo.remove();
+        }
     }
 });

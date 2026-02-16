@@ -11,16 +11,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Gothic:wght@400;700;800&family=Nanum+Pen+Script&display=swap"
         rel="stylesheet">
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-54S5TLH5');</script>
-    <!-- End Google Tag Manager -->
 </head>
 
 <body>
@@ -32,6 +22,7 @@
             <div class="nav-links">
                 <a href="index.html" class="nav-item">채팅콘 선택기</a>
                 <a href="guide.html" class="nav-item active">설명서</a>
+                <a href="portfolio.html" class="nav-item">작업물</a>
             </div>
         </div>
     </nav>
@@ -67,9 +58,6 @@
     guide.js에서 이 내용을 읽어와 화면을 구성합니다.
     -->
     <div id="command-data-source" style="display:none;">
-        <div class="item item-link" data-name="ddd">
-            <a href="https://chzzk.naver.com/3cf58789ab09865bdc1e2f3a76d66b27" target="_blank">ddd</a>
-        </div>
         <!-- 일반 채팅 -->
         <div class="group" data-category="일반 채팅">
             <div class="item" data-name="채팅콘 사용법">
@@ -77,8 +65,7 @@
                 <span class="info">
                     <a href="./index.html"><b>채팅콘 선택기</b></a>에서 원하는 채팅콘을 클릭하고,
                     채팅창에 붙여넣기만 하면 끝!
-                    수동으로 입력하고 싶으면
-                    <b>~채팅콘이름</b>으로 입력하면 됩니다!
+                    직접 <b>~</b>를 입력 후 채팅콘 이름을 치셔도 돼요!
                 </span>
                 <span class="guide-ex"><span style="color: #aaa;">채팅 버튼을 눌러보세요</span></span>
                 <span class="image"></span>
@@ -363,7 +350,7 @@
                     <span class="tip"><b>커져라!</b>와 같이 쓸 수 있어요!</span>
                     <span class="guide-ch">박제!</span>
                 </div>
-                <div class="item item-new" data-name="탄막!<span class='coin-icon'></span>" data-coin="-10">
+                <div class="item" data-name="탄막!<span class='coin-icon'></span>" data-coin="-10">
                     <span class="image"></span>
                     <span class="info">
                         니코동처럼 오른쪽에서
@@ -373,6 +360,18 @@
                     <span class="tip"><b>커져라!</b>같은 명령어와 조합은 안돼요!</span>
                     <span class="guide-ch">탄막!</span>
                 </div>
+                <div class="item item-new" data-name="승천!<span class='coin-icon'></span>" data-coin="-1004">
+                    <span class="image"></span>
+                    <span class="info">
+                        캐릭터가 화면 밖을 넘어
+                        <b>30분 동안</b> 하늘 위로 올라가요!
+                    </span>
+                    <span class="tip">
+                        <b>승천!</b> 상태때는 특별한 말풍선으로 바껴요!
+                        <br><b>성불!</b>이라고 써도 작동해요!
+                    </span>
+                    <span class="guide-ch">승천!</span>
+                </div>
             </div>
         </div>
     </div>
@@ -380,6 +379,29 @@
     <script src="./data.js"></script>
     <script src="./nav.js"></script>
     <script src="./guide.js"></script>
+    <!-- 소개 팝업 오버레이 -->
+    <div id="intro-overlay" class="intro-overlay">
+        <div class="intro-circle-bg"></div>
+        <div class="intro-content">
+            <button id="intro-close-btn" class="intro-close-btn">×</button>
+            <div class="intro-text-container">
+                <h1>안녕하세요!</h1>
+                <div class="intro-links">
+                    <a href="https://chzzk.naver.com/3cf58789ab09865bdc1e2f3a76d66b27" target="_blank"
+                        class="intro-link-btn chzzk">가나다</a>
+                </div>
+                <div class="intro-links">
+                    <a href="https://chzzk.naver.com/3cf58789ab09865bdc1e2f3a76d66b27" target="_blank"
+                        class="intro-link-btn twitter">가나다</a>
+                </div>
+                <div class="intro-links">
+                    <a href="https://chzzk.naver.com/3cf58789ab09865bdc1e2f3a76d66b27" target="_blank"
+                        class="intro-link-btn pixiv">가나다</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-54S5TLH5" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
