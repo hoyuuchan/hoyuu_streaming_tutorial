@@ -174,6 +174,7 @@
   { src: './image/감정표현/란란루.gif', tag: '~란란루', category: '감정표현' },
   { src: './image/감정표현/창섭댄스.gif', tag: '~창섭댄스', category: '감정표현' },
   { src: './image/감정표현/창섭댄스2.gif', tag: '~창섭댄스2', category: '감정표현' },
+  { src: './image/감정표현/머리를.png', tag: '~내려쳐요', category: '감정표현', update: true },
 
   // 동방프로젝트
   { src: './image/동방/안된다구.png', tag: '~안된다구', category: '동방' },
@@ -666,7 +667,8 @@
   { src: './image/오리지널/호유냥이.png', tag: '~호유냥이', category: ['란호유', '호유링기링'] },
   { src: './image/오리지널/호유냥이2.png', tag: '~호유냥이2', category: ['란호유', '호유링기링'] },
   { src: './image/오리지널/호유멘헤라.png', tag: '~호유멘헤라', category: ['란호유', '호유링기링'] },
-  { src: './image/오리지널/호유알렉.png', tag: '~호유알렉', category: ['란호유', '호유링기링'], update: true },
+  { src: './image/오리지널/호유알렉.png', tag: '~호유알렉', category: ['란호유', '호유링기링'] },
+  { src: './image/오리지널/호유갸루.png', tag: '~호유갸루', category: ['란호유', '호유링기링'], update: true },
   { src: './image/오리지널/호피키.png', tag: '~호피키', category: '란호유' },
   { src: './image/오리지널/호피키.gif', tag: '~호피키으앙', category: '란호유' },
   { src: './image/오리지널/호유노.png', tag: '~호유노', category: ['란호유', '호유링기링'] },
@@ -691,7 +693,8 @@
   { src: './image/오리지널/호유스마일.png', tag: '~호유스마일', category: ['호유링기링', '게임기타'] },
   { src: './image/오리지널/호유에마.png', tag: '~호유에마', category: ['호유링기링', '게임기타'] },
   { src: './image/오리지널/호유키라.png', tag: '~호유키라', category: ['호유링기링', '게임기타'] },
-  { src: './image/오리지널/호유엠마.png', tag: '~호유엠마', category: '호유링기링' },
+  { src: './image/오리지널/호유엠마.png', tag: '~호유에마', category: ['호유링기링', '게임기타'] },
+  { src: './image/오리지널/호유안안.png', tag: '~호유안안', category: ['호유링기링', '게임기타'], update: true },
   { src: './image/오리지널/호유슈가.png', tag: '~호유슈가', category: ['호유링기링', '게임기타'] },
   { src: './image/오리지널/호유우루슈.png', tag: '~호유우루슈', category: '호유링기링' },
   { src: './image/오리지널/d1.png', tag: '~아운조용히', category: ['호유링기링', '동방'] },
