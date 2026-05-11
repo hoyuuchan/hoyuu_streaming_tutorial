@@ -128,8 +128,8 @@ const songData = [
   {
     "id": "imported_1778527836834_xcstxpc",
     "title": "メルト (멜트)",
-    "artist": "",
-    "image": ""
+    "artist": "하츠네 미쿠",
+    "image": "./image/guide/song/melt.jpg"
   },
   {
     "id": "imported_1778527836834_mbdiuf1",
