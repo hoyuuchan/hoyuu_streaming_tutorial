@@ -12,12 +12,6 @@ const songData = [
     "image": "./image/guide/song/kickback.jpg"
   },
   {
-    "id": "imported_1778527836835_k01izm9",
-    "title": "흐르는 강물",
-    "artist": "",
-    "image": ""
-  },
-  {
     "id": "imported_1778527836835_e1az40r",
     "title": "달이 차오른다 가자",
     "artist": "",
