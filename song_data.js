@@ -86,8 +86,8 @@ const songData = [
   {
     "id": "imported_1778527836834_ke6gh9l",
     "title": "고추참치",
-    "artist": "",
-    "image": ""
+    "artist": "돌카스",
+    "image": "./image/guide/song/tuna.jpg"
   },
   {
     "id": "imported_1778527836834_3unssvb",
