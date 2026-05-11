@@ -26,8 +26,8 @@ const songData = [
   {
     "id": "imported_1778527836834_kpnegjl",
     "title": "-ERROR",
-    "artist": "니키였나..ㄹ",
-    "image": ""
+    "artist": "Lily",
+    "image": "./image/guide/song/error.jpg"
   },
   {
     "id": "imported_1778527836834_8kyjrmm",
