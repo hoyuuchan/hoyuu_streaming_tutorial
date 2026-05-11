@@ -122,8 +122,8 @@ const songData = [
   {
     "id": "imported_1778527836834_9ve2xdr",
     "title": "クノイチでも恋がしたい (쿠노이치라도 사랑이 하고 싶어)",
-    "artist": "",
-    "image": ""
+    "artist": "하츠네 미쿠, 카가미네 린",
+    "image": "./image/guide/song/kunoichi.jpg"
   },
   {
     "id": "imported_1778527836834_xcstxpc",
