@@ -2,8 +2,8 @@ const songData = [
   {
     "id": "imported_1778527836835_t39rmom",
     "title": "Lazenca, Save us",
-    "artist": "1",
-    "image": ""
+    "artist": "N.EX.T",
+    "image": "./image/guide/song/lazenca.webp"
   },
   {
     "id": "imported_1778527836835_9kquuvr",
