@@ -13,9 +13,9 @@ const songData = [
   },
   {
     "id": "imported_1778527836835_e1az40r",
-    "title": "달이 차오른다 가자",
-    "artist": "",
-    "image": ""
+    "title": "달이 차오른다, 가자",
+    "artist": "장기하와 얼굴들",
+    "image": "./image/guide/song/moon.jpg"
   },
   {
     "id": "imported_1778527836835_j3i7kup",
