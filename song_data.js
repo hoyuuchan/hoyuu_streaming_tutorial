@@ -92,8 +92,8 @@ const songData = [
   {
     "id": "imported_1778527836834_3unssvb",
     "title": "Lemon",
-    "artist": "",
-    "image": ""
+    "artist": "요네즈 켄시",
+    "image": "./image/guide/song/lemon.jpg"
   },
   {
     "id": "imported_1778527836834_06ye6q6",
