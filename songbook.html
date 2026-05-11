@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노래책</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Paperozi', sans-serif;
+            color: #212529;
+        }
+
+        .songbook-container {
+            width: 1100px;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .songbook-title {
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            color: #333;
+            letter-spacing: -0.02em;
+        }
+
+        .song-list {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .song-item {
+            background-color: #fff;
+            border: 1px solid #e9ecef;
+            border-radius: 16px;
+            padding: 20px;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: calc(33.333% - 13.333px);
+            height: 120px;
+            box-sizing: border-box;
+            gap: 20px;
+            overflow: hidden;
+        }
+
+        @media (max-width: 768px) {
+            .song-item {
+                width: 100%;
+            }
+        }
+
+        .song-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border-color: #bbb;
+        }
+
+        .song-cover {
+            width: 80px;
+            height: 80px;
+            border-radius: 12px;
+            object-fit: cover;
+            background-color: #f0f0f0;
+            flex-shrink: 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .song-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-grow: 1;
+            overflow: hidden;
+        }
+
+        .song-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #333;
+            margin: 0 0 5px 0;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            position: relative;
+        }
+
+        .marquee-content {
+            white-space: nowrap;
+            flex-shrink: 0;
+            padding-right: 30px;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .song-artist {
+            font-size: 0.95em;
+            color: #666;
+            margin: 0;
+            line-height: 1.4;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav-menu">
+        <div class="nav-container">
+            <a href="https://chzzk.naver.com/3cf58789ab09865bdc1e2f3a76d66b27" target="_blank" class="nav-item">
+                <div id="hoyuu-icon"></div>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-item">채팅콘 선택기</a>
+                <a href="guide.html" class="nav-item">설명서</a>
+                <a href="songbook.html" class="nav-item active">노래책</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="songbook-container">
+        <div class="songbook-title">곡 목록</div>
+
+        <div class="song-list" id="songList">
+            <!-- JS로 동적 생성됩니다 -->
+            <div style="text-align: center; padding: 20px; color: #888;">노래 목록을 불러오는 중...</div>
+        </div>
+    </div>
+
+    <script>
+        // 캐시 무시: 매번 최신 song_data.js를 불러오기 위해 동적으로 스크립트 생성
+        function initScript() {
+            const script = document.createElement('script');
+            let src = 'song_data.js';
+            // file:// 프로토콜로 열었을 때는 쿼리스트링이 오류를 발생시키므로 제외
+            if (window.location.protocol !== 'file:') {
+                src += '?t=' + new Date().getTime();
+            }
+            script.src = src;
+            script.onload = loadSongList;
+            script.onerror = function () {
+                console.error('song_data.js 파일을 불러올 수 없습니다.');
+                document.getElementById('songList').innerHTML = '<div style="text-align: center; padding: 20px; color: #888;">데이터를 불러올 수 없습니다.</div>';
+            };
+            document.body.appendChild(script);
+        }
+
+        function loadSongList() {
+            let songs = [];
+
+            if (typeof songData !== 'undefined') {
+                songs = songData;
+            } else {
+                console.error('song_data.js 파일에서 데이터를 불러오지 못했습니다.');
+            }
+
+            const container = document.getElementById('songList');
+            container.innerHTML = ''; // 로딩 텍스트 제거
+
+            if (songs && songs.length > 0) {
+                songs.forEach(song => {
+                    const songEl = document.createElement('div');
+                    songEl.className = 'song-item';
+
+                    // 이미지가 없거나 깨진 경우를 위한 기본값 처리
+                    const imgSrc = song.image || 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'80\' height=\'80\'%3E%3Crect width=\'100%25\' height=\'100%25\' fill=\'%23eeeeee\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' font-family=\'sans-serif\' font-size=\'10\' fill=\'%23999999\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3ENo Image%3C/text%3E%3C/svg%3E';
+
+                    songEl.innerHTML = `
+                    <img class="song-cover" src="${imgSrc}" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'80\' height=\'80\'%3E%3Crect width=\'100%25\' height=\'100%25\' fill=\'%23eeeeee\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' font-family=\'sans-serif\' font-size=\'10\' fill=\'%23999999\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3ENo Image%3C/text%3E%3C/svg%3E';" alt="${song.title} 앨범아트">
+                    <div class="song-info">
+                        <div class="song-title">
+                            <span class="marquee-content">${song.title}</span>
+                        </div>
+                        <p class="song-artist">${song.artist}</p>
+                    </div>
+                `;
+                    container.appendChild(songEl);
+
+                    // 마퀴 효과 스크립트 적용
+                    setTimeout(() => {
+                        const titleEl = songEl.querySelector('.song-title');
+                        const textSpan = titleEl.querySelector('.marquee-content');
+                        // 영역을 넘어가면
+                        if (textSpan.scrollWidth > titleEl.clientWidth) {
+                            const clone = textSpan.cloneNode(true);
+                            titleEl.appendChild(clone);
+                            // 초당 30픽셀 이동을 기준으로 애니메이션 시간 계산 (길이에 비례하여 시간 증가 = 속도 일정)
+                            const duration = textSpan.scrollWidth / 30;
+                            titleEl.querySelectorAll('.marquee-content').forEach(el => {
+                                el.style.animation = `scroll-left ${duration}s linear infinite`;
+                            });
+                        } else {
+                            textSpan.style.paddingRight = '0';
+                        }
+                    }, 0);
+                });
+            } else {
+                container.innerHTML = '<div style="text-align: center; padding: 20px; color: #888;">등록된 노래가 없습니다.</div>';
+            }
+        }
+
+        // 페이지 로드 시 노래 목록 스크립트 불러오기
+        document.addEventListener('DOMContentLoaded', initScript);
+    </script>
+
+</body>
+
+</html>
