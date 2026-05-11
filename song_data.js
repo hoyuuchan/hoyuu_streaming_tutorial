@@ -62,8 +62,8 @@ const songData = [
   {
     "id": "imported_1778527836834_4ao7ks9",
     "title": "NB RANGERS- 운명의 Destiny",
-    "artist": "",
-    "image": ""
+    "artist": "A.MON",
+    "image": "./image/guide/song/extension3.jpg"
   },
   {
     "id": "imported_1778527836834_rptzvom",
