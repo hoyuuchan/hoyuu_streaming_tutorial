@@ -56,8 +56,8 @@ const songData = [
   {
     "id": "imported_1778527836834_ve01rb9",
     "title": "天樂 (천악)",
-    "artist": "",
-    "image": ""
+    "artist": "카가미네 린",
+    "image": "./image/guide/song/tengaku.webp"
   },
   {
     "id": "imported_1778527836834_4ao7ks9",
