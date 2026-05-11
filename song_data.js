@@ -8,8 +8,8 @@ const songData = [
   {
     "id": "imported_1778527836835_9kquuvr",
     "title": "KICK BACK",
-    "artist": "f",
-    "image": ""
+    "artist": "요네즈 켄시",
+    "image": "./image/guide/song/kickback.jpg"
   },
   {
     "id": "imported_1778527836835_k01izm9",
