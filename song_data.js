@@ -104,8 +104,8 @@ const songData = [
   {
     "id": "imported_1778527836834_k8gwxiz",
     "title": "Neo-Aspect",
-    "artist": "",
-    "image": ""
+    "artist": "Roselia",
+    "image": "./image/guide/song/neo.webp"
   },
   {
     "id": "imported_1778527836834_l9hfla4",
