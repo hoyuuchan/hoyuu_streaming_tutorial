@@ -38,8 +38,8 @@ const songData = [
   {
     "id": "imported_1778527836834_7iwzukg",
     "title": "내꺼 하는 법",
-    "artist": "",
-    "image": ""
+    "artist": "아야츠노 유니",
+    "image": "./image/guide/song/nae.jpg"
   },
   {
     "id": "imported_1778527836834_sgz0eis",
