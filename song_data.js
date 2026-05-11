@@ -8,7 +8,7 @@ const songData = [
   {
     "id": "imported_1778527836835_9kquuvr",
     "title": "KICK BACK",
-    "artist": "",
+    "artist": "f",
     "image": ""
   },
   {
