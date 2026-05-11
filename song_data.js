@@ -44,8 +44,8 @@ const songData = [
   {
     "id": "imported_1778527836834_sgz0eis",
     "title": "いーあるふぁんくらぶ (하나 둘 팬클럽)",
-    "artist": "",
-    "image": ""
+    "artist": "카가미네 린, GUMI",
+    "image": "./image/guide/song/iaru.jpg"
   },
   {
     "id": "imported_1778527836834_sb7mf1c",
