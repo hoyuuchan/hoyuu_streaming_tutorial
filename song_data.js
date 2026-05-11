@@ -80,8 +80,8 @@ const songData = [
   {
     "id": "imported_1778527836834_ynkjb0n",
     "title": "右肩の蝶 (우견의 나비)",
-    "artist": "",
-    "image": ""
+    "artist": "카가미네 린",
+    "image": "./image/guide/song/migi.jpg"
   },
   {
     "id": "imported_1778527836834_ke6gh9l",
