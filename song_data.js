@@ -32,8 +32,8 @@ const songData = [
   {
     "id": "imported_1778527836834_8kyjrmm",
     "title": "初音ミクの消失 -DEAD END- (하츠네 미쿠의 소실 -DEAD END-)",
-    "artist": "",
-    "image": ""
+    "artist": "하츠네 미쿠",
+    "image": "./image/guide/song/dead.jpg"
   },
   {
     "id": "imported_1778527836834_7iwzukg",
