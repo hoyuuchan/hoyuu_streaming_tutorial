@@ -68,8 +68,8 @@ const songData = [
   {
     "id": "imported_1778527836834_rptzvom",
     "title": "잘하는 집을 안가봐서 그래",
-    "artist": "",
-    "image": ""
+    "artist": "과나",
+    "image": "./image/guide/song/goodhome.jpg"
   },
   {
     "id": "imported_1778527836834_o39egju",
