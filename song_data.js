@@ -50,8 +50,8 @@ const songData = [
   {
     "id": "imported_1778527836834_sb7mf1c",
     "title": "不死傳說 (불사전설)",
-    "artist": "",
-    "image": ""
+    "artist": "진혁신",
+    "image": "./image/guide/song/bulsa.jpg"
   },
   {
     "id": "imported_1778527836834_ve01rb9",
