@@ -110,8 +110,8 @@ const songData = [
   {
     "id": "imported_1778527836834_l9hfla4",
     "title": "가자 에버그레이스!",
-    "artist": "",
-    "image": ""
+    "artist": "롹슨족",
+    "image": "./image/guide/song/evergrace.png"
   },
   {
     "id": "imported_1778527836834_mdtv57l",
