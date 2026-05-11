@@ -116,8 +116,8 @@ const songData = [
   {
     "id": "imported_1778527836834_mdtv57l",
     "title": "シルエット (실루엣)",
-    "artist": "",
-    "image": ""
+    "artist": "KANA-BOON",
+    "image": "./image/guide/song/sil.webp"
   },
   {
     "id": "imported_1778527836834_9ve2xdr",
