@@ -74,8 +74,8 @@ const songData = [
   {
     "id": "imported_1778527836834_o39egju",
     "title": "사라지네(Vocal.돈키호테)",
-    "artist": "",
-    "image": ""
+    "artist": "ProjectMoon",
+    "image": "./image/guide/song/disapear.jpg"
   },
   {
     "id": "imported_1778527836834_ynkjb0n",
