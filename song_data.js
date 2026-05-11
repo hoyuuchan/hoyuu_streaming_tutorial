@@ -20,8 +20,8 @@ const songData = [
   {
     "id": "imported_1778527836835_j3i7kup",
     "title": "オトナブルー (오토나 블루)",
-    "artist": "",
-    "image": ""
+    "artist": "새로운 학교의 리더즈",
+    "image": "./image/guide/song/otona.webp"
   },
   {
     "id": "imported_1778527836834_kpnegjl",
