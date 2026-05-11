@@ -98,8 +98,8 @@ const songData = [
   {
     "id": "imported_1778527836834_06ye6q6",
     "title": "ワールズエンド・ダンスホール (월즈 앤드 댄스홀)",
-    "artist": "",
-    "image": ""
+    "artist": "하츠네 미쿠, 메구리네 루카",
+    "image": "./image/guide/song/worlds.webp"
   },
   {
     "id": "imported_1778527836834_k8gwxiz",
