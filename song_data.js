@@ -176,8 +176,8 @@ const songData = [
   {
     "id": "imported_1778527836834_mztrpk1",
     "title": "lost my music",
-    "artist": "",
-    "image": ""
+    "artist": "스즈미야 하루히 (CV. 히라노 아야)",
+    "image": "./image/guide/song/lomamu.png"
   },
   {
     "id": "imported_1778527836834_zdtxer8",
