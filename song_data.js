@@ -35,18 +35,7 @@ const songData = [
     "artist": "하츠네 미쿠",
     "image": "./image/guide/song/dead.jpg",
     "difficulty": "5",
-    "tags": [
-      {
-        "text": "test",
-        "textColor": "#ffffff",
-        "borderColor": "#ff4081"
-      },
-      {
-        "text": "tt",
-        "textColor": "#ffffff",
-        "borderColor": "#29cd1d"
-      }
-    ]
+    "tags": []
   },
   {
     "id": "imported_1778527836834_7iwzukg",
