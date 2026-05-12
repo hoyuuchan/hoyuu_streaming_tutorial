@@ -118,10 +118,20 @@ const songData = [
     "image": "./image/guide/song/worlds.webp"
   },
   {
-    "id": "imported_1778527836834_k8gwxiz",
+    "id": "song_1778552183899",
     "title": "Neo-Aspect",
     "artist": "Roselia",
-    "image": "./image/guide/song/neo.webp"
+    "image": "./image/guide/song/neo.webp",
+    "difficulty": "4",
+    "tags": []
+  },
+  {
+    "id": "new_1778552168822",
+    "title": "FIRE BIRD",
+    "artist": "Roselia",
+    "image": "./image/guide/song/firebird.jpg",
+    "difficulty": "4",
+    "tags": []
   },
   {
     "id": "imported_1778527836834_l9hfla4",
