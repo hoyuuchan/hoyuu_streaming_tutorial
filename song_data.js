@@ -224,8 +224,8 @@ const songData = [
   {
     "id": "imported_1778527836834_ie6mjrd",
     "title": "잘 부탁드립니다",
-    "artist": "넹",
-    "image": ""
+    "artist": "익스",
+    "image": "./image/guide/song/yoroshiku.webp"
   }
 ];
 
