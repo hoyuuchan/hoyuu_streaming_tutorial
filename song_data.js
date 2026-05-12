@@ -152,8 +152,8 @@ const songData = [
   {
     "id": "imported_1778527836834_95k7d1i",
     "title": "작은 하마 이야기",
-    "artist": "",
-    "image": ""
+    "artist": "-",
+    "image": "./image/guide/song/hama.jpg"
   },
   {
     "id": "imported_1778527836834_5tls0zw",
