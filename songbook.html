@@ -188,7 +188,7 @@
                     if (song.tags) {
                         if (Array.isArray(song.tags)) tagsArr = song.tags;
                         else if (typeof song.tags === 'string') {
-                            try { tagsArr = JSON.parse(song.tags); } catch(e) {}
+                            try { tagsArr = JSON.parse(song.tags); } catch (e) { }
                         }
                     }
                     let tagsHtml = '';
@@ -203,8 +203,8 @@
                         const diffNum = parseInt(song.difficulty);
                         diffHtml = `
                         <div style="position: relative; display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; margin-left: 5px;">
-                            <span style="font-size: 32px; color: #ffb300; position: absolute; top: -4px;">★</span>
-                            <span style="position: absolute; font-size: 13px; color: #fff; font-weight: 900; top: 8px;">${diffNum}</span>
+                            <span style="font-size: 26px; color: #ffb300; position: absolute; top: -3px;">★</span>
+                            <span style="position: absolute; font-size: 13px; color: #fff; font-weight: 900; top: 10px;">${diffNum}</span>
                         </div>`;
                     }
 
