@@ -206,8 +206,8 @@ const songData = [
   {
     "id": "imported_1778527836834_ngci9dt",
     "title": "낭만 고양이",
-    "artist": "",
-    "image": ""
+    "artist": "체리필터",
+    "image": "./image/guide/song/romancecat.webp"
   },
   {
     "id": "imported_1778527836834_0bhn2kb",
