@@ -164,8 +164,8 @@ const songData = [
   {
     "id": "imported_1778527836834_da75lse",
     "title": "愛を伝えたいだとか (사랑을 전하고 싶다던가)",
-    "artist": "",
-    "image": ""
+    "artist": "아이묭",
+    "image": "./image/guide/song/aiwo.webp"
   },
   {
     "id": "imported_1778527836834_yr0se2p",
