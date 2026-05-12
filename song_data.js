@@ -170,8 +170,8 @@ const songData = [
   {
     "id": "imported_1778527836834_yr0se2p",
     "title": "思い出は億千万 (추억은 억천만)",
-    "artist": "",
-    "image": ""
+    "artist": "네코캔",
+    "image": "./image/guide/song/omoide.jpg"
   },
   {
     "id": "imported_1778527836834_mztrpk1",
