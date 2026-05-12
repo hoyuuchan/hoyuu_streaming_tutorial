@@ -30,6 +30,17 @@
             letter-spacing: -0.02em;
         }
 
+        .songbook-notice {
+            font-size: 0.6em;
+            font-weight: 500;
+            margin-top: 10px;
+            color: #666;
+        }
+
+        .songbook-notice p {
+            margin: 5px 0 0 0;
+        }
+
         .song-list {
             display: flex;
             flex-direction: row;
@@ -138,11 +149,17 @@
     </nav>
 
     <div class="songbook-container">
-        <div class="songbook-title">곡 목록</div>
+        <div class="songbook-title">
+            곡 목록
+            <div class="songbook-notice">
+                <p>부를 줄 아는 노래들을 모아두었어여! (부를 줄만 알지 제대로 부르는게 몇개 없음 주의;)</p>
+                <p>다같이 재밌게 놀기 위해 만들었어여!!</p>
+            </div>
+        </div>
 
         <div class="song-list" id="songList">
             <!-- JS로 동적 생성됩니다 -->
-            <div style="text-align: center; padding: 20px; color: #888;">노래 목록을 불러오는 중...</div>
+            <div style="text-align: center; padding: 20px; color: #888;">로딩중이에용...</div>
         </div>
     </div>
 
