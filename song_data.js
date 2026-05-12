@@ -140,8 +140,8 @@ const songData = [
   {
     "id": "imported_1778527836834_0xduanx",
     "title": "왜 날 이렇게 낳나",
-    "artist": "",
-    "image": ""
+    "artist": "타카피",
+    "image": "./image/guide/song/whyme.jpg"
   },
   {
     "id": "imported_1778527836834_8faqekn",
