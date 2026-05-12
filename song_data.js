@@ -47,7 +47,7 @@ const songData = [
     "image": "./image/guide/song/otona.webp"
   },
   {
-    "id": "song_1778613311066",
+    "id": "song_1778613582093",
     "title": "-ERROR",
     "artist": "Lily",
     "image": "./image/guide/song/error.jpg",
@@ -59,15 +59,22 @@ const songData = [
         "borderColor": "#ff4242"
       }
     ],
-    "description": "테스트"
+    "description": ""
   },
   {
-    "id": "imported_1778527836834_8kyjrmm",
+    "id": "song_1778613727512",
     "title": "初音ミクの消失 -DEAD END- (하츠네 미쿠의 소실 -DEAD END-)",
     "artist": "하츠네 미쿠",
     "image": "./image/guide/song/dead.jpg",
     "difficulty": "5",
-    "tags": []
+    "tags": [
+      {
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
+      }
+    ],
+    "description": ""
   },
   {
     "id": "imported_1778527836834_7iwzukg",
@@ -76,13 +83,16 @@ const songData = [
     "image": "./image/guide/song/nae.jpg"
   },
   {
-    "id": "imported_1778527836834_sgz0eis",
+    "id": "song_1778613828073",
     "title": "いーあるふぁんくらぶ (하나 둘 팬클럽)",
     "artist": "카가미네 린, GUMI",
-    "image": "./image/guide/song/iaru.jpg"
+    "image": "./image/guide/song/iaru.jpg",
+    "difficulty": "3",
+    "tags": [],
+    "description": ""
   },
   {
-    "id": "imported_1778527836834_sb7mf1c",
+    "id": "song_1778614649411",
     "title": "不死傳說 (불사전설)",
     "artist": "진혁신",
     "image": "./image/guide/song/bulsa.jpg",
@@ -91,21 +101,40 @@ const songData = [
       {
         "text": "1절만",
         "textColor": "#ffffff",
-        "borderColor": "#333333"
+        "borderColor": "#000333"
       }
-    ]
+    ],
+    "description": "홍콩판 강철의 연금술사 오프닝이에여!"
   },
   {
-    "id": "imported_1778527836834_ve01rb9",
+    "id": "song_1778613985490",
     "title": "天樂 (천악)",
     "artist": "카가미네 린",
-    "image": "./image/guide/song/tengaku.webp"
+    "image": "./image/guide/song/tengaku.webp",
+    "difficulty": "4",
+    "tags": [
+      {
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
+      }
+    ],
+    "description": ""
   },
   {
-    "id": "imported_1778527836834_4ao7ks9",
+    "id": "song_1778614074226",
     "title": "NB RANGERS- 운명의 Destiny",
     "artist": "A.MON",
-    "image": "./image/guide/song/extension3.jpg"
+    "image": "./image/guide/song/extension3.jpg",
+    "difficulty": "4",
+    "tags": [
+      {
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
+      }
+    ],
+    "description": ""
   },
   {
     "id": "imported_1778527836834_0bhn2kb",
@@ -114,10 +143,19 @@ const songData = [
     "image": "./image/guide/song/liberty3.jpg"
   },
   {
-    "id": "imported_1778527836834_rptzvom",
+    "id": "song_1778614118088",
     "title": "잘하는 집을 안가봐서 그래",
     "artist": "과나",
-    "image": "./image/guide/song/goodhome.jpg"
+    "image": "./image/guide/song/goodhome.jpg",
+    "difficulty": "5",
+    "tags": [
+      {
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
+      }
+    ],
+    "description": ""
   },
   {
     "id": "imported_1778527836834_o39egju",
@@ -126,16 +164,22 @@ const songData = [
     "image": "./image/guide/song/disapear.jpg"
   },
   {
-    "id": "imported_1778527836834_ynkjb0n",
+    "id": "song_1778614178632",
     "title": "右肩の蝶 (우견의 나비)",
     "artist": "카가미네 린",
-    "image": "./image/guide/song/migi.jpg"
+    "image": "./image/guide/song/migi.jpg",
+    "difficulty": "5",
+    "tags": [],
+    "description": ""
   },
   {
-    "id": "imported_1778527836834_ke6gh9l",
+    "id": "song_1778614160859",
     "title": "고추참치",
     "artist": "돌카스",
-    "image": "./image/guide/song/tuna.jpg"
+    "image": "./image/guide/song/tuna.jpg",
+    "difficulty": "1",
+    "tags": [],
+    "description": ""
   },
   {
     "id": "imported_1778527836834_3unssvb",
@@ -144,32 +188,63 @@ const songData = [
     "image": "./image/guide/song/lemon.jpg"
   },
   {
-    "id": "imported_1778527836834_06ye6q6",
+    "id": "song_1778614206046",
     "title": "ワールズエンド・ダンスホール (월즈 앤드 댄스홀)",
     "artist": "하츠네 미쿠, 메구리네 루카",
-    "image": "./image/guide/song/worlds.webp"
+    "image": "./image/guide/song/worlds.webp",
+    "difficulty": "5",
+    "tags": [],
+    "description": ""
   },
   {
-    "id": "song_1778552183899",
+    "id": "song_1778614665599",
     "title": "Neo-Aspect",
     "artist": "Roselia",
     "image": "./image/guide/song/neo.webp",
     "difficulty": "4",
-    "tags": []
+    "tags": [
+      {
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
+      }
+    ],
+    "description": ""
   },
   {
-    "id": "new_1778552168822",
+    "id": "song_1778614673652",
     "title": "FIRE BIRD",
     "artist": "Roselia",
     "image": "./image/guide/song/firebird.jpg",
     "difficulty": "4",
-    "tags": []
+    "tags": [
+      {
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
+      }
+    ],
+    "description": ""
   },
   {
-    "id": "imported_1778527836834_l9hfla4",
+    "id": "song_1778614289585",
     "title": "가자 에버그레이스!",
     "artist": "롹슨족",
-    "image": "./image/guide/song/evergrace.png"
+    "image": "./image/guide/song/evergrace.png",
+    "difficulty": "3",
+    "tags": [
+      {
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
+      },
+      {
+        "text": "살짝 개사함",
+        "textColor": "#ffffff",
+        "borderColor": "#42b7ff"
+      }
+    ],
+    "description": ""
   },
   {
     "id": "imported_1778527836834_mdtv57l",
@@ -178,40 +253,75 @@ const songData = [
     "image": "./image/guide/song/sil.webp"
   },
   {
-    "id": "imported_1778527836834_9ve2xdr",
+    "id": "song_1778614312441",
     "title": "クノイチでも恋がしたい (쿠노이치라도 사랑이 하고 싶어)",
     "artist": "하츠네 미쿠, 카가미네 린",
-    "image": "./image/guide/song/kunoichi.jpg"
+    "image": "./image/guide/song/kunoichi.jpg",
+    "difficulty": "4",
+    "tags": [],
+    "description": ""
   },
   {
-    "id": "imported_1778527836834_xcstxpc",
+    "id": "song_1778614325148",
     "title": "メルト (멜트)",
     "artist": "하츠네 미쿠",
-    "image": "./image/guide/song/melt.jpg"
+    "image": "./image/guide/song/melt.jpg",
+    "difficulty": "5",
+    "tags": [],
+    "description": ""
   },
   {
-    "id": "imported_1778527836834_mbdiuf1",
+    "id": "song_1778614352611",
     "title": "파워 레인저 (매직 포스)",
     "artist": "-",
-    "image": "./image/guide/song/magicforce.webp"
+    "image": "./image/guide/song/magicforce.webp",
+    "difficulty": "3",
+    "tags": [],
+    "description": ""
   },
   {
-    "id": "imported_1778527836834_0xduanx",
+    "id": "song_1778614364574",
     "title": "왜 날 이렇게 낳나",
     "artist": "타카피",
-    "image": "./image/guide/song/whyme.jpg"
+    "image": "./image/guide/song/whyme.jpg",
+    "difficulty": "2",
+    "tags": [],
+    "description": ""
   },
   {
-    "id": "imported_1778527836834_8faqekn",
+    "id": "song_1778614634874",
     "title": "強風オールバック(강풍 올백)",
     "artist": "카아이 유키",
-    "image": "./image/guide/song/strongwind.webp"
+    "image": "./image/guide/song/strongwind.webp",
+    "difficulty": "2",
+    "tags": [
+      {
+        "text": "4키내림",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4081"
+      },
+      {
+        "text": "호유창법",
+        "textColor": "#ffffff",
+        "borderColor": "#333333"
+      }
+    ],
+    "description": ""
   },
   {
-    "id": "imported_1778527836834_95k7d1i",
+    "id": "song_1778614839599",
     "title": "작은 하마 이야기",
-    "artist": "-",
-    "image": "./image/guide/song/hama.jpg"
+    "artist": "두클립",
+    "image": "./image/guide/song/hama.jpg",
+    "difficulty": "2",
+    "tags": [
+      {
+        "text": "살짝 개사함",
+        "textColor": "#ffffff",
+        "borderColor": "#42b7ff"
+      }
+    ],
+    "description": "부르면 재밌을거 같아서 넣었는데 욕이 너무 많음 ㄱ-"
   },
   {
     "id": "imported_1778527836834_9etcu8v",
@@ -220,22 +330,49 @@ const songData = [
     "image": "./image/guide/song/cnblue.jpg"
   },
   {
-    "id": "imported_1778527836834_da75lse",
+    "id": "song_1778614867921",
     "title": "愛を伝えたいだとか (사랑을 전하고 싶다던가)",
     "artist": "아이묭",
-    "image": "./image/guide/song/aiwo.webp"
+    "image": "./image/guide/song/aiwo.webp",
+    "difficulty": "4",
+    "tags": [
+      {
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
+      }
+    ],
+    "description": ""
   },
   {
-    "id": "imported_1778527836834_yr0se2p",
+    "id": "song_1778614876426",
     "title": "思い出は億千万 (추억은 억천만)",
     "artist": "네코캔",
-    "image": "./image/guide/song/omoide.jpg"
+    "image": "./image/guide/song/omoide.jpg",
+    "difficulty": "5",
+    "tags": [
+      {
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
+      }
+    ],
+    "description": ""
   },
   {
-    "id": "imported_1778527836834_y7gcz1c",
+    "id": "song_1778614888697",
     "title": "エアーマンが倒せない (에어맨이 쓰러지지 않아)",
     "artist": "네코캔",
-    "image": "./image/guide/song/airman.jpg"
+    "image": "./image/guide/song/airman.jpg",
+    "difficulty": "5",
+    "tags": [
+      {
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
+      }
+    ],
+    "description": ""
   },
   {
     "id": "imported_1778527836834_mztrpk1",
@@ -256,10 +393,19 @@ const songData = [
     "image": "./image/guide/song/tomboy.webp"
   },
   {
-    "id": "imported_1778527836834_8ixg5z1",
+    "id": "song_1778614919308",
     "title": "ぴゅあぴゅあはーと",
     "artist": "방과 후 티타임",
-    "image": "./image/guide/song/purepure.webp"
+    "image": "./image/guide/song/purepure.webp",
+    "difficulty": "5",
+    "tags": [
+      {
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
+      }
+    ],
+    "description": ""
   },
   {
     "id": "imported_1778527836834_ngci9dt",
