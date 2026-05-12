@@ -146,8 +146,8 @@ const songData = [
   {
     "id": "imported_1778527836834_8faqekn",
     "title": "強風オールバック(강풍 올백)",
-    "artist": "",
-    "image": ""
+    "artist": "카아이 유키",
+    "image": "./image/guide/song/strongwind.webp"
   },
   {
     "id": "imported_1778527836834_95k7d1i",
