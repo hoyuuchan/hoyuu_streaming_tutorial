@@ -1,9 +1,19 @@
 const songData = [
   {
-    "id": "imported_1778527836835_t39rmom",
+    "id": "song_1778587001827",
+    "title": "Fabulous Secret Powers (우주게이 히맨)",
+    "artist": "SLACKCiRCUS",
+    "image": "./image/guide/song/heeman.jpg",
+    "difficulty": "1",
+    "tags": []
+  },
+  {
+    "id": "song_1778584198756",
     "title": "Lazenca, Save us",
     "artist": "N.EX.T",
-    "image": "./image/guide/song/lazenca.webp"
+    "image": "./image/guide/song/lazenca.webp",
+    "difficulty": "2",
+    "tags": []
   },
   {
     "id": "imported_1778527836835_9kquuvr",

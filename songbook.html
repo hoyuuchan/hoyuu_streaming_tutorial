@@ -49,20 +49,40 @@
         }
 
         .song-item {
+            position: relative;
+            z-index: 1;
             background-color: #fff;
             border: 1px solid #e9ecef;
             border-radius: 16px;
             padding: 20px;
-            transition: all 0.2s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
             display: flex;
             flex-direction: row;
-            align-items: center;
+            align-items: flex-start;
+            align-content: flex-start;
+            flex-wrap: nowrap;
             width: calc(50% - 10px);
             height: 120px;
             box-sizing: border-box;
             gap: 20px;
             overflow: hidden;
+            cursor: pointer;
+        }
+
+        .song-item.expanded {
+            height: 250px;
+            margin-bottom: -130px;
+            z-index: 100;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border-color: #999;
+            flex-wrap: wrap;
+        }
+
+        .song-list.has-expanded .song-item:not(.expanded) {
+            filter: blur(2px) grayscale(30%);
+            opacity: 0.6;
+            transform: scale(0.98);
         }
 
         @media (max-width: 768px) {
@@ -90,8 +110,10 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            flex-grow: 1;
+            flex: 1 1 0;
             overflow: hidden;
+            height: 80px;
+            min-width: 0;
         }
 
         .song-title {
@@ -130,6 +152,24 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
+
+        .song-meta {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-shrink: 0;
+            height: 80px;
+            transition: all 0.3s ease;
+        }
+
+        .song-item.expanded .song-meta {
+            width: 100%;
+            height: auto;
+            margin-top: -5px;
+            padding-top: 15px;
+            border-top: 1px dashed #eee;
+            justify-content: flex-start;
+        }
     </style>
 </head>
 
@@ -151,8 +191,9 @@
         <div class="songbook-title">
             노래 목록
             <div class="songbook-notice">
-                <p>부를 줄 아는 노래들을 모아두었어여! (부를 줄만 알지 제대로 부르는게 몇개 없음 주의;)</p>
-                <p>다같이 재밌게 놀기 위해 만들었어여!!</p>
+                <p>부를 줄 아는 노래와 추천해주신 노래들을 모아두었어여! 차차 추가할 수 있으면 해볼게여!</p>
+                <p>목 상태에 따라서 안부를 수도 있긴한데 왠만하면 다 부를 수 있게 노력할게영!</p>
+                <p>(※ 부를 줄만 알지 제대로 부르는게 몇개 없음 주의;)</p>
             </div>
         </div>
 
@@ -232,11 +273,26 @@
                         </div>
                         <p class="song-artist">${song.artist}</p>
                     </div>
-                    <div class="song-meta" style="display: flex; align-items: center; gap: 6px; flex-shrink: 0;">
+                    <div class="song-meta">
                         ${tagsHtml}
                         ${diffHtml}
                     </div>
                 `;
+                    songEl.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        const isExpanded = songEl.classList.contains('expanded');
+
+                        document.querySelectorAll('.song-item.expanded').forEach(item => {
+                            item.classList.remove('expanded');
+                        });
+
+                        if (!isExpanded) {
+                            songEl.classList.add('expanded');
+                            container.classList.add('has-expanded');
+                        } else {
+                            container.classList.remove('has-expanded');
+                        }
+                    });
                     container.appendChild(songEl);
 
                     // 마퀴 효과 스크립트 적용
@@ -259,6 +315,18 @@
                 });
             } else {
                 container.innerHTML = '<div style="text-align: center; padding: 20px; color: #888;">등록된 노래가 없습니다.</div>';
+            }
+
+            // 바깥 클릭 시 접히도록 이벤트 리스너 추가 (단 한번만 등록되도록 처리)
+            if (!document.body.dataset.clickListenerAttached) {
+                document.addEventListener('click', () => {
+                    document.querySelectorAll('.song-item.expanded').forEach(item => {
+                        item.classList.remove('expanded');
+                    });
+                    const c = document.getElementById('songList');
+                    if (c) c.classList.remove('has-expanded');
+                });
+                document.body.dataset.clickListenerAttached = "true";
             }
         }
 
