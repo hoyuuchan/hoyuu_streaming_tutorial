@@ -206,8 +206,8 @@ const songData = [
   {
     "id": "imported_1778527836834_8ixg5z1",
     "title": "ぴゅあぴゅあはーと",
-    "artist": "",
-    "image": ""
+    "artist": "방과 후 티타임",
+    "image": "./image/guide/song/purepure.webp"
   },
   {
     "id": "imported_1778527836834_ngci9dt",
