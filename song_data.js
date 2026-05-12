@@ -217,9 +217,9 @@ const songData = [
   },
   {
     "id": "imported_1778527836834_vqtan0y",
-    "title": "言って。(말해줘)",
-    "artist": "",
-    "image": ""
+    "title": "言って。(말해줘.)",
+    "artist": "요루시카",
+    "image": "./image/guide/song/itte.png"
   },
   {
     "id": "imported_1778527836834_ie6mjrd",
