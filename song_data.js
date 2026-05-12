@@ -218,8 +218,8 @@ const songData = [
   {
     "id": "imported_1778527836834_0bhn2kb",
     "title": "DJ 조선",
-    "artist": "",
-    "image": ""
+    "artist": "이오몽",
+    "image": "./image/guide/song/liberty3.jpg"
   },
   {
     "id": "imported_1778527836834_vqtan0y",
