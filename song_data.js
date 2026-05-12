@@ -1,11 +1,12 @@
 const songData = [
   {
-    "id": "song_1778587001827",
+    "id": "song_1778613159835",
     "title": "Fabulous Secret Powers (우주게이 히맨)",
     "artist": "SLACKCiRCUS",
     "image": "./image/guide/song/heeman.jpg",
     "difficulty": "1",
-    "tags": []
+    "tags": [],
+    "description": "이게 왜 노래방 버전이 있는거임;"
   },
   {
     "id": "song_1778584198756",
@@ -16,16 +17,28 @@ const songData = [
     "tags": []
   },
   {
-    "id": "imported_1778527836835_9kquuvr",
+    "id": "song_1778613133429",
     "title": "KICK BACK",
     "artist": "요네즈 켄시",
-    "image": "./image/guide/song/kickback.jpg"
+    "image": "./image/guide/song/kickback.jpg",
+    "difficulty": "4",
+    "tags": [
+      {
+        "text": "흉내만냄",
+        "textColor": "#ffffff",
+        "borderColor": "#333333"
+      }
+    ],
+    "description": ""
   },
   {
-    "id": "imported_1778527836835_e1az40r",
+    "id": "song_1778613215432",
     "title": "달이 차오른다, 가자",
     "artist": "장기하와 얼굴들",
-    "image": "./image/guide/song/moon.jpg"
+    "image": "./image/guide/song/moon.jpg",
+    "difficulty": "2",
+    "tags": [],
+    "description": ""
   },
   {
     "id": "imported_1778527836835_j3i7kup",
@@ -34,10 +47,19 @@ const songData = [
     "image": "./image/guide/song/otona.webp"
   },
   {
-    "id": "imported_1778527836834_kpnegjl",
+    "id": "song_1778613311066",
     "title": "-ERROR",
     "artist": "Lily",
-    "image": "./image/guide/song/error.jpg"
+    "image": "./image/guide/song/error.jpg",
+    "difficulty": "4",
+    "tags": [
+      {
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
+      }
+    ],
+    "description": "테스트"
   },
   {
     "id": "imported_1778527836834_8kyjrmm",
