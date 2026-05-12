@@ -156,12 +156,6 @@ const songData = [
     "image": "./image/guide/song/hama.jpg"
   },
   {
-    "id": "imported_1778527836834_5tls0zw",
-    "title": "Track 9",
-    "artist": "",
-    "image": ""
-  },
-  {
     "id": "imported_1778527836834_9etcu8v",
     "title": "직감",
     "artist": "",
