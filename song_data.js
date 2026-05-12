@@ -182,8 +182,8 @@ const songData = [
   {
     "id": "imported_1778527836834_zdtxer8",
     "title": "Tomboy",
-    "artist": "",
-    "image": ""
+    "artist": "혁오",
+    "image": "./image/guide/song/tomboy.webp"
   },
   {
     "id": "imported_1778527836834_3petcy3",
