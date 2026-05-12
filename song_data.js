@@ -134,8 +134,8 @@ const songData = [
   {
     "id": "imported_1778527836834_mbdiuf1",
     "title": "파워 레인저 (매직 포스)",
-    "artist": "",
-    "image": ""
+    "artist": "-",
+    "image": "./image/guide/song/magicforce.webp"
   },
   {
     "id": "imported_1778527836834_0xduanx",
