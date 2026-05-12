@@ -66,6 +66,12 @@ const songData = [
     "image": "./image/guide/song/extension3.jpg"
   },
   {
+    "id": "imported_1778527836834_0bhn2kb",
+    "title": "DJ 조선",
+    "artist": "이오몽",
+    "image": "./image/guide/song/liberty3.jpg"
+  },
+  {
     "id": "imported_1778527836834_rptzvom",
     "title": "잘하는 집을 안가봐서 그래",
     "artist": "과나",
@@ -174,16 +180,16 @@ const songData = [
     "image": "./image/guide/song/omoide.jpg"
   },
   {
+    "id": "imported_1778527836834_y7gcz1c",
+    "title": "エアーマンが倒せない (에어맨이 쓰러지지 않아)",
+    "artist": "네코캔",
+    "image": "./image/guide/song/airman.jpg"
+  },
+  {
     "id": "imported_1778527836834_mztrpk1",
     "title": "lost my music",
     "artist": "스즈미야 하루히 (CV. 히라노 아야)",
     "image": "./image/guide/song/lomamu.png"
-  },
-  {
-    "id": "imported_1778527836834_zdtxer8",
-    "title": "Tomboy",
-    "artist": "혁오",
-    "image": "./image/guide/song/tomboy.webp"
   },
   {
     "id": "imported_1778527836834_3petcy3",
@@ -192,10 +198,10 @@ const songData = [
     "image": "./image/guide/song/lomamu.png"
   },
   {
-    "id": "imported_1778527836834_y7gcz1c",
-    "title": "エアーマンが倒せない (에어맨이 쓰러지지 않아)",
-    "artist": "네코캔",
-    "image": "./image/guide/song/airman.jpg"
+    "id": "imported_1778527836834_zdtxer8",
+    "title": "Tomboy",
+    "artist": "혁오",
+    "image": "./image/guide/song/tomboy.webp"
   },
   {
     "id": "imported_1778527836834_8ixg5z1",
@@ -208,12 +214,6 @@ const songData = [
     "title": "낭만 고양이",
     "artist": "체리필터",
     "image": "./image/guide/song/romancecat.webp"
-  },
-  {
-    "id": "imported_1778527836834_0bhn2kb",
-    "title": "DJ 조선",
-    "artist": "이오몽",
-    "image": "./image/guide/song/liberty3.jpg"
   },
   {
     "id": "imported_1778527836834_vqtan0y",
