@@ -188,8 +188,8 @@ const songData = [
   {
     "id": "imported_1778527836834_3petcy3",
     "title": "God knows...",
-    "artist": "",
-    "image": ""
+    "artist": "스즈미야 하루히 (CV. 히라노 아야)",
+    "image": "./image/guide/song/lomamu.png"
   },
   {
     "id": "imported_1778527836834_y7gcz1c",
