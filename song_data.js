@@ -194,8 +194,8 @@ const songData = [
   {
     "id": "imported_1778527836834_y7gcz1c",
     "title": "エアーマンが倒せない (에어맨이 쓰러지지 않아)",
-    "artist": "웨 안쓰러짐",
-    "image": ""
+    "artist": "네코캔",
+    "image": "./image/guide/song/airman.jpg"
   },
   {
     "id": "imported_1778527836834_bwmeho7",
