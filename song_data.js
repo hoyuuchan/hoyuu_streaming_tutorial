@@ -158,8 +158,8 @@ const songData = [
   {
     "id": "imported_1778527836834_9etcu8v",
     "title": "직감",
-    "artist": "",
-    "image": ""
+    "artist": "씨엔블루",
+    "image": "./image/guide/song/cnblue.jpg"
   },
   {
     "id": "imported_1778527836834_da75lse",
