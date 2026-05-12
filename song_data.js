@@ -198,12 +198,6 @@ const songData = [
     "image": "./image/guide/song/airman.jpg"
   },
   {
-    "id": "imported_1778527836834_bwmeho7",
-    "title": "안녕하세요",
-    "artist": "",
-    "image": ""
-  },
-  {
     "id": "imported_1778527836834_8ixg5z1",
     "title": "ぴゅあぴゅあはーと",
     "artist": "방과 후 티타임",
