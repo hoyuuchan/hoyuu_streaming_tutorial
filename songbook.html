@@ -266,7 +266,7 @@
             container.innerHTML = ''; // 로딩 텍스트 제거
 
             if (songs && songs.length > 0) {
-                songs.forEach(song => {
+                songs.filter(song => !song.hidden).forEach(song => {
                     const wrapperEl = document.createElement('div');
                     wrapperEl.className = 'song-wrapper';
 

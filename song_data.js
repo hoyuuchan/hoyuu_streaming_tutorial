@@ -21,7 +21,8 @@ const songData = [
         "borderColor": "#ff4242"
       }
     ],
-    "description": ""
+    "description": "",
+    "hidden": false
   },
   {
     "id": "song_1778613133429",
