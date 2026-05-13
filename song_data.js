@@ -9,12 +9,19 @@ const songData = [
     "description": "이게 왜 노래방 버전이 있는거임;"
   },
   {
-    "id": "song_1778584198756",
+    "id": "song_1778661003958",
     "title": "Lazenca, Save us",
     "artist": "N.EX.T",
     "image": "./image/guide/song/lazenca.webp",
     "difficulty": "2",
-    "tags": []
+    "tags": [
+      {
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
+      }
+    ],
+    "description": ""
   },
   {
     "id": "song_1778613133429",
@@ -41,10 +48,19 @@ const songData = [
     "description": ""
   },
   {
-    "id": "imported_1778527836835_j3i7kup",
+    "id": "song_1778661037920",
     "title": "オトナブルー (오토나 블루)",
     "artist": "새로운 학교의 리더즈",
-    "image": "./image/guide/song/otona.webp"
+    "image": "./image/guide/song/otona.webp",
+    "difficulty": "2",
+    "tags": [
+      {
+        "text": "저음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#42d4f5"
+      }
+    ],
+    "description": ""
   },
   {
     "id": "song_1778613582093",
@@ -62,7 +78,7 @@ const songData = [
     "description": ""
   },
   {
-    "id": "song_1778613727512",
+    "id": "song_1778661066996",
     "title": "初音ミクの消失 -DEAD END- (하츠네 미쿠의 소실 -DEAD END-)",
     "artist": "하츠네 미쿠",
     "image": "./image/guide/song/dead.jpg",
@@ -72,9 +88,14 @@ const songData = [
         "text": "고음주의",
         "textColor": "#ffffff",
         "borderColor": "#ff4242"
+      },
+      {
+        "text": "발음뭉개기",
+        "textColor": "#ffffff",
+        "borderColor": "#7b42ff"
       }
     ],
-    "description": ""
+    "description": "아웃사이더 아조시도 이 노래는 거르지 않을가.."
   },
   {
     "id": "imported_1778527836834_7iwzukg",
@@ -137,17 +158,20 @@ const songData = [
     "description": ""
   },
   {
-    "id": "imported_1778527836834_0bhn2kb",
+    "id": "song_1778661258929",
     "title": "DJ 조선",
     "artist": "이오몽",
-    "image": "./image/guide/song/liberty3.jpg"
+    "image": "./image/guide/song/liberty3.jpg",
+    "difficulty": "2",
+    "tags": [],
+    "description": ""
   },
   {
-    "id": "song_1778614118088",
+    "id": "song_1778661093986",
     "title": "잘하는 집을 안가봐서 그래",
     "artist": "과나",
     "image": "./image/guide/song/goodhome.jpg",
-    "difficulty": "5",
+    "difficulty": "4",
     "tags": [
       {
         "text": "고음주의",
@@ -158,18 +182,27 @@ const songData = [
     "description": ""
   },
   {
-    "id": "imported_1778527836834_o39egju",
+    "id": "song_1778661204422",
     "title": "사라지네(Vocal.돈키호테)",
     "artist": "ProjectMoon",
-    "image": "./image/guide/song/disapear.jpg"
+    "image": "./image/guide/song/disapear.jpg",
+    "difficulty": "3",
+    "tags": [],
+    "description": ""
   },
   {
-    "id": "song_1778614178632",
+    "id": "song_1778661124223",
     "title": "右肩の蝶 (우견의 나비)",
     "artist": "카가미네 린",
     "image": "./image/guide/song/migi.jpg",
     "difficulty": "5",
-    "tags": [],
+    "tags": [
+      {
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
+      }
+    ],
     "description": ""
   },
   {
@@ -182,18 +215,32 @@ const songData = [
     "description": ""
   },
   {
-    "id": "imported_1778527836834_3unssvb",
+    "id": "song_1778661138084",
     "title": "Lemon",
     "artist": "요네즈 켄시",
-    "image": "./image/guide/song/lemon.jpg"
+    "image": "./image/guide/song/lemon.jpg",
+    "difficulty": "3",
+    "tags": [],
+    "description": ""
   },
   {
-    "id": "song_1778614206046",
+    "id": "song_1778661311203",
     "title": "ワールズエンド・ダンスホール (월즈 앤드 댄스홀)",
     "artist": "하츠네 미쿠, 메구리네 루카",
     "image": "./image/guide/song/worlds.webp",
     "difficulty": "5",
-    "tags": [],
+    "tags": [
+      {
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
+      },
+      {
+        "text": "발음뭉개기",
+        "textColor": "#ffffff",
+        "borderColor": "#7b42ff"
+      }
+    ],
     "description": ""
   },
   {
@@ -227,7 +274,7 @@ const songData = [
     "description": ""
   },
   {
-    "id": "song_1778614289585",
+    "id": "song_1778661351548",
     "title": "가자 에버그레이스!",
     "artist": "롹슨족",
     "image": "./image/guide/song/evergrace.png",
@@ -241,28 +288,37 @@ const songData = [
       {
         "text": "살짝 개사함",
         "textColor": "#ffffff",
-        "borderColor": "#42b7ff"
+        "borderColor": "#428bff"
       }
     ],
     "description": ""
   },
   {
-    "id": "imported_1778527836834_mdtv57l",
+    "id": "song_1778661360487",
     "title": "シルエット (실루엣)",
     "artist": "KANA-BOON",
-    "image": "./image/guide/song/sil.webp"
-  },
-  {
-    "id": "song_1778614312441",
-    "title": "クノイチでも恋がしたい (쿠노이치라도 사랑이 하고 싶어)",
-    "artist": "하츠네 미쿠, 카가미네 린",
-    "image": "./image/guide/song/kunoichi.jpg",
-    "difficulty": "4",
+    "image": "./image/guide/song/sil.webp",
+    "difficulty": "2",
     "tags": [],
     "description": ""
   },
   {
-    "id": "song_1778614325148",
+    "id": "song_1778661413066",
+    "title": "クノイチでも恋がしたい (쿠노이치라도 사랑이 하고 싶어)",
+    "artist": "하츠네 미쿠, 카가미네 린",
+    "image": "./image/guide/song/kunoichi.jpg",
+    "difficulty": "4",
+    "tags": [
+      {
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
+      }
+    ],
+    "description": ""
+  },
+  {
+    "id": "song_1778661422153",
     "title": "メルト (멜트)",
     "artist": "하츠네 미쿠",
     "image": "./image/guide/song/melt.jpg",
@@ -271,22 +327,22 @@ const songData = [
     "description": ""
   },
   {
-    "id": "song_1778614352611",
+    "id": "song_1778661429989",
     "title": "파워 레인저 (매직 포스)",
     "artist": "-",
     "image": "./image/guide/song/magicforce.webp",
-    "difficulty": "3",
+    "difficulty": "2",
     "tags": [],
     "description": ""
   },
   {
-    "id": "song_1778614364574",
+    "id": "song_1778661442360",
     "title": "왜 날 이렇게 낳나",
     "artist": "타카피",
     "image": "./image/guide/song/whyme.jpg",
     "difficulty": "2",
     "tags": [],
-    "description": ""
+    "description": "이거 가사 짱 웃김 ㅋㅋ"
   },
   {
     "id": "song_1778614634874",
@@ -322,12 +378,6 @@ const songData = [
       }
     ],
     "description": "부르면 재밌을거 같아서 넣었는데 욕이 너무 많음 ㄱ-"
-  },
-  {
-    "id": "imported_1778527836834_9etcu8v",
-    "title": "직감",
-    "artist": "씨엔블루",
-    "image": "./image/guide/song/cnblue.jpg"
   },
   {
     "id": "song_1778614867921",
@@ -375,16 +425,34 @@ const songData = [
     "description": ""
   },
   {
-    "id": "imported_1778527836834_mztrpk1",
+    "id": "song_1778661514110",
     "title": "lost my music",
     "artist": "스즈미야 하루히 (CV. 히라노 아야)",
-    "image": "./image/guide/song/lomamu.png"
+    "image": "./image/guide/song/lomamu.png",
+    "difficulty": "4",
+    "tags": [
+      {
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
+      }
+    ],
+    "description": ""
   },
   {
-    "id": "imported_1778527836834_3petcy3",
+    "id": "song_1778661503500",
     "title": "God knows...",
     "artist": "스즈미야 하루히 (CV. 히라노 아야)",
-    "image": "./image/guide/song/lomamu.png"
+    "image": "./image/guide/song/lomamu.png",
+    "difficulty": "5",
+    "tags": [
+      {
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
+      }
+    ],
+    "description": ""
   },
   {
     "id": "imported_1778527836834_zdtxer8",
@@ -408,22 +476,37 @@ const songData = [
     "description": ""
   },
   {
-    "id": "imported_1778527836834_ngci9dt",
+    "id": "song_1778661591059",
     "title": "낭만 고양이",
     "artist": "체리필터",
-    "image": "./image/guide/song/romancecat.webp"
+    "image": "./image/guide/song/romancecat.webp",
+    "difficulty": "4",
+    "tags": [
+      {
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
+      }
+    ],
+    "description": ""
   },
   {
-    "id": "imported_1778527836834_vqtan0y",
+    "id": "song_1778661581168",
     "title": "言って。(말해줘.)",
     "artist": "요루시카",
-    "image": "./image/guide/song/itte.png"
+    "image": "./image/guide/song/itte.png",
+    "difficulty": "3",
+    "tags": [],
+    "description": ""
   },
   {
-    "id": "imported_1778527836834_ie6mjrd",
+    "id": "song_1778661563856",
     "title": "잘 부탁드립니다",
     "artist": "익스",
-    "image": "./image/guide/song/yoroshiku.webp"
+    "image": "./image/guide/song/yoroshiku.webp",
+    "difficulty": "2",
+    "tags": [],
+    "description": ""
   }
 ];
 
