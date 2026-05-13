@@ -78,21 +78,21 @@ const songData = [
     "description": ""
   },
   {
-    "id": "song_1778663137335",
+    "id": "song_1778663901335",
     "title": "初音ミクの消失 -DEAD END- (하츠네 미쿠의 소실 -DEAD END-)",
     "artist": "하츠네 미쿠",
     "image": "./image/guide/song/dead.jpg",
     "difficulty": "5",
     "tags": [
       {
-        "text": "발음뭉개기",
-        "textColor": "#ffffff",
-        "borderColor": "#7b42ff"
-      },
-      {
         "text": "고음주의",
         "textColor": "#ffffff",
         "borderColor": "#ff4242"
+      },
+      {
+        "text": "발음뭉개기",
+        "textColor": "#ffffff",
+        "borderColor": "#7b42ff"
       }
     ],
     "description": "아웃사이더 아조시도 이 노래는 거르지 않을가.."
@@ -318,12 +318,18 @@ const songData = [
     "description": ""
   },
   {
-    "id": "song_1778661422153",
+    "id": "song_1778663908745",
     "title": "メルト (멜트)",
     "artist": "하츠네 미쿠",
     "image": "./image/guide/song/melt.jpg",
     "difficulty": "5",
-    "tags": [],
+    "tags": [
+      {
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
+      }
+    ],
     "description": ""
   },
   {
@@ -453,12 +459,6 @@ const songData = [
       }
     ],
     "description": ""
-  },
-  {
-    "id": "imported_1778527836834_zdtxer8",
-    "title": "Tomboy",
-    "artist": "혁오",
-    "image": "./image/guide/song/tomboy.webp"
   },
   {
     "id": "song_1778614919308",
