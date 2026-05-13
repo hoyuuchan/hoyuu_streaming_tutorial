@@ -1,5 +1,16 @@
 const songData = [
   {
+    "id": "song_1778704426520",
+    "title": "건강박수",
+    "artist": "",
+    "image": "",
+    "difficulty": "0",
+    "tags": [],
+    "description": "",
+    "youtubeLink": "https://www.youtube.com/watch?v=VNszoqKHPAI",
+    "hidden": false
+  },
+  {
     "id": "song_1778704394275",
     "title": "夜の踊り子 (밤의 무희)",
     "artist": "사카낙션",
