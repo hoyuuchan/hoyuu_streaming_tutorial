@@ -78,21 +78,21 @@ const songData = [
     "description": ""
   },
   {
-    "id": "song_1778661066996",
+    "id": "song_1778663137335",
     "title": "初音ミクの消失 -DEAD END- (하츠네 미쿠의 소실 -DEAD END-)",
     "artist": "하츠네 미쿠",
     "image": "./image/guide/song/dead.jpg",
     "difficulty": "5",
     "tags": [
       {
-        "text": "고음주의",
-        "textColor": "#ffffff",
-        "borderColor": "#ff4242"
-      },
-      {
         "text": "발음뭉개기",
         "textColor": "#ffffff",
         "borderColor": "#7b42ff"
+      },
+      {
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
       }
     ],
     "description": "아웃사이더 아조시도 이 노래는 거르지 않을가.."
