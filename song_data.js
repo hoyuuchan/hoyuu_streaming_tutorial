@@ -6,7 +6,8 @@ const songData = [
     "image": "./image/guide/song/heeman.jpg",
     "difficulty": "1",
     "tags": [],
-    "description": "이게 왜 노래방 버전이 있는거임;"
+    "description": "이게 왜 노래방 버전이 있는거임;",
+    "hidden": true
   },
   {
     "id": "song_1778661003958",
@@ -384,7 +385,8 @@ const songData = [
         "borderColor": "#42b7ff"
       }
     ],
-    "description": "부르면 재밌을거 같아서 넣었는데 욕이 너무 많음 ㄱ-"
+    "description": "부르면 재밌을거 같아서 넣었는데 욕이 너무 많음 ㄱ-",
+    "hidden": true
   },
   {
     "id": "song_1778614867921",
