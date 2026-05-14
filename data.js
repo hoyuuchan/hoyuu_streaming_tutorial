@@ -724,7 +724,7 @@
   { src: './image/오리지널/호유레굴루스.png', tag: '~호유레굴', category: ['호유링기링', '게임기타'] },
   { src: './image/오리지널/호유쿄카.png', tag: '~호유쿄카', category: ['호유링기링'] },
   { src: './image/오리지널/호유갸루이상해씨.png', tag: '~호유갸루이상해씨', category: ['호유링기링'] },
-  { src: './image/오리지널/호유갸루야돈.png', tag: '~호유갸루야돈', category: ['호유링기링'] },
+  { src: './image/오리지널/호유갸루야돈.png', tag: '~호유갸루야돈', category: ['호유링기링'], update: true },
   { src: './image/오리지널/d1.png', tag: '~아운조용히', category: ['호유링기링', '동방'] },
   { src: './image/오리지널/d2.png', tag: '~오린따봉', category: ['호유링기링', '동방'] },
   { src: './image/오리지널/d3.png', tag: '~텐시엉엉', category: ['호유링기링', '동방'] },
