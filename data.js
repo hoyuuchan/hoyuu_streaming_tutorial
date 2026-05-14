@@ -177,7 +177,7 @@
   { src: './image/감정표현/머리를.png', tag: '~내려쳐요', category: '감정표현' },
   { src: './image/감정표현/쮸쀼쮸쀼.png', tag: '~쮸쀼쮸쀼', category: '감정표현' },
   { src: './image/감정표현/맛있어요.webp', tag: '~맛있어요', category: '감정표현', update: true },
-  { src: './image/감정표현/햇반.png', tag: '~햇반', category: '감정표현', update: true },
+  { src: './image/감정표현/햇반.jpg', tag: '~햇반', category: '감정표현', update: true },
 
   // 동방프로젝트
   { src: './image/동방/안된다구.png', tag: '~안된다구', category: '동방' },
