@@ -1,32 +1,46 @@
 const songData = [
   {
-    "id": "song_1778704426520",
-    "title": "건강박수",
-    "artist": "",
-    "image": "",
-    "difficulty": "0",
+    "id": "new_1778749007278",
+    "title": "バクシンバクシンバクシンシン(박신박신박신신)",
+    "artist": "사쿠라 바쿠신오 (CV. 미사와 사치카)",
+    "image": "./image/guide/song/baksin.jpg",
+    "difficulty": "3",
     "tags": [],
     "description": "",
-    "youtubeLink": "https://www.youtube.com/watch?v=VNszoqKHPAI",
-    "hidden": true,
-    "pendingDelete": false
-  },
-  {
-    "id": "song_1778704394275",
-    "title": "夜の踊り子 (밤의 무희)",
-    "artist": "사카낙션",
-    "image": "",
-    "difficulty": "2",
-    "tags": [],
-    "description": "",
-    "youtubeLink": "https://www.youtube.com/watch?v=W1-0gX5nM-g",
+    "youtubeLink": "",
     "hidden": true
   },
   {
-    "id": "song_1778704343716",
+    "id": "new_1778720509759",
+    "title": "건강박수",
+    "artist": "테켄뮤직",
+    "image": "./image/guide/song/baksu.jpg",
+    "difficulty": "2",
+    "tags": [
+      {
+        "text": "살짝 개사함",
+        "textColor": "#ffffff",
+        "borderColor": "#428bff"
+      }
+    ],
+    "description": "",
+    "youtubeLink": "https://www.youtube.com/watch?v=VNszoqKHPAI"
+  },
+  {
+    "id": "new_1778720422918",
+    "title": "夜の踊り子 (밤의 무희)",
+    "artist": "사카낙션",
+    "image": "./image/guide/song/yoruno.jpg",
+    "difficulty": "2",
+    "tags": [],
+    "description": "",
+    "youtubeLink": "https://www.youtube.com/watch?v=W1-0gX5nM-g"
+  },
+  {
+    "id": "new_1778720331927",
     "title": "おちゃめ機能 (장난기 기능)",
     "artist": "카사네 테토",
-    "image": "",
+    "image": "./image/guide/song/omocha.webp",
     "difficulty": "4",
     "tags": [
       {
@@ -36,25 +50,24 @@ const songData = [
       }
     ],
     "description": "",
-    "youtubeLink": "https://www.youtube.com/watch?v=cgOZbN56fWk",
-    "hidden": true
+    "youtubeLink": "https://www.youtube.com/watch?v=cgOZbN56fWk"
   },
   {
-    "id": "song_1778704321780",
+    "id": "new_1778748947668",
     "title": "モエチャッカファイア (차가운 상어 아가씨)",
-    "artist": "-",
-    "image": "",
+    "artist": "issey",
+    "image": "./image/guide/song/sameko.webp",
     "difficulty": "3",
     "tags": [],
-    "description": "",
+    "description": "이거 남자 노래인줄 몰랐음;",
     "youtubeLink": "https://www.youtube.com/watch?v=DEVVZFVZwvY",
     "hidden": true
   },
   {
-    "id": "song_1778704265127",
+    "id": "new_1778749146957",
     "title": "Ms. VICTORIA (Game Size)",
     "artist": "-",
-    "image": "",
+    "image": "./image/guide/song/msvictoria.webp",
     "difficulty": "4",
     "tags": [
       {
@@ -65,6 +78,22 @@ const songData = [
     ],
     "description": "",
     "youtubeLink": "https://www.youtube.com/watch?v=rz95Ubar1bQ",
+    "hidden": true
+  },
+  {
+    "id": "song_1778614839599",
+    "title": "작은 하마 이야기",
+    "artist": "두클립",
+    "image": "./image/guide/song/hama.jpg",
+    "difficulty": "2",
+    "tags": [
+      {
+        "text": "살짝 개사함",
+        "textColor": "#ffffff",
+        "borderColor": "#42b7ff"
+      }
+    ],
+    "description": "부르면 재밌을거 같아서 넣었는데 욕이 너무 많음 ㄱ-",
     "hidden": true
   },
   {
@@ -440,22 +469,6 @@ const songData = [
       }
     ],
     "description": ""
-  },
-  {
-    "id": "song_1778614839599",
-    "title": "작은 하마 이야기",
-    "artist": "두클립",
-    "image": "./image/guide/song/hama.jpg",
-    "difficulty": "2",
-    "tags": [
-      {
-        "text": "살짝 개사함",
-        "textColor": "#ffffff",
-        "borderColor": "#42b7ff"
-      }
-    ],
-    "description": "부르면 재밌을거 같아서 넣었는데 욕이 너무 많음 ㄱ-",
-    "hidden": true
   },
   {
     "id": "song_1778614867921",
