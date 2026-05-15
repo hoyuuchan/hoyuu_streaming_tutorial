@@ -11,6 +11,26 @@ const songData = [
     "hidden": true
   },
   {
+    "id": "song_1778661351548",
+    "title": "가자 에버그레이스!",
+    "artist": "롹슨족",
+    "image": "./image/guide/song/evergrace.png",
+    "difficulty": "3",
+    "tags": [
+      {
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
+      },
+      {
+        "text": "살짝 개사함",
+        "textColor": "#ffffff",
+        "borderColor": "#428bff"
+      }
+    ],
+    "description": ""
+  },
+  {
     "id": "new_1778720509759",
     "title": "건강박수",
     "artist": "테켄뮤직",
@@ -104,7 +124,7 @@ const songData = [
     "difficulty": "1",
     "tags": [],
     "description": "이게 왜 노래방 버전이 있는거임;",
-    "hidden": true
+    "hidden": false
   },
   {
     "id": "song_1778661003958",
@@ -369,26 +389,6 @@ const songData = [
         "text": "고음주의",
         "textColor": "#ffffff",
         "borderColor": "#ff4242"
-      }
-    ],
-    "description": ""
-  },
-  {
-    "id": "song_1778661351548",
-    "title": "가자 에버그레이스!",
-    "artist": "롹슨족",
-    "image": "./image/guide/song/evergrace.png",
-    "difficulty": "3",
-    "tags": [
-      {
-        "text": "고음주의",
-        "textColor": "#ffffff",
-        "borderColor": "#ff4242"
-      },
-      {
-        "text": "살짝 개사함",
-        "textColor": "#ffffff",
-        "borderColor": "#428bff"
       }
     ],
     "description": ""
