@@ -1,5 +1,27 @@
 const songData = [
   {
+    "id": "song_1779479833442",
+    "title": "질풍가도",
+    "artist": "",
+    "image": "",
+    "difficulty": "0",
+    "tags": [],
+    "description": "",
+    "youtubeLink": "",
+    "hidden": false
+  },
+  {
+    "id": "song_1779278733476",
+    "title": "MAMA",
+    "artist": "",
+    "image": "",
+    "difficulty": "0",
+    "tags": [],
+    "description": "",
+    "youtubeLink": "https://www.youtube.com/watch?v=smP0zdhaYXM",
+    "hidden": true
+  },
+  {
     "id": "new_1778749007278",
     "title": "バクシンバクシンバクシンシン(박신박신박신신)",
     "artist": "사쿠라 바쿠신오 (CV. 미사와 사치카)",
