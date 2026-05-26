@@ -8,7 +8,7 @@ const songData = [
     "tags": [],
     "description": "",
     "youtubeLink": "",
-    "hidden": false
+    "hidden": true
   },
   {
     "id": "song_1779278733476",
