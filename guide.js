@@ -427,6 +427,26 @@ document.addEventListener('DOMContentLoaded', () => {
         clearInfiniteWalk();
         isCharacterMainAction = false;
 
+        if (currentPinnedElement) {
+            currentPinnedElement.remove();
+            currentPinnedElement = null;
+        }
+        if (pinTimeout) {
+            clearTimeout(pinTimeout);
+            pinTimeout = null;
+        }
+        if (currentBouncingElement) {
+            if (typeof currentBouncingElement._cancelBounce === 'function') {
+                currentBouncingElement._cancelBounce();
+            }
+            currentBouncingElement.remove();
+            currentBouncingElement = null;
+        }
+        if (bouncingTimeout) {
+            clearTimeout(bouncingTimeout);
+            bouncingTimeout = null;
+        }
+
         if (typeof gigantamaxTimer !== 'undefined' && gigantamaxTimer) {
             clearTimeout(gigantamaxTimer);
             gigantamaxTimer = null;
@@ -451,6 +471,26 @@ document.addEventListener('DOMContentLoaded', () => {
         clearAllManagedTimers();
         clearInfiniteWalk();
         isCharacterMainAction = false; // 강제 초기화
+
+        if (currentPinnedElement) {
+            currentPinnedElement.remove();
+            currentPinnedElement = null;
+        }
+        if (pinTimeout) {
+            clearTimeout(pinTimeout);
+            pinTimeout = null;
+        }
+        if (currentBouncingElement) {
+            if (typeof currentBouncingElement._cancelBounce === 'function') {
+                currentBouncingElement._cancelBounce();
+            }
+            currentBouncingElement.remove();
+            currentBouncingElement = null;
+        }
+        if (bouncingTimeout) {
+            clearTimeout(bouncingTimeout);
+            bouncingTimeout = null;
+        }
 
         // [NEW] 거다이맥스 상태 초기화 (이스터에그 활성 시 유지)
         if (!isGigantamaxEasterEggActive) {
@@ -1307,12 +1347,16 @@ document.addEventListener('DOMContentLoaded', () => {
             triggerAscendElement();
         } else if (text.includes('분신술!')) {
             triggerCloneElement();
+        } else if (text.includes('둥둥!')) {
+            triggerBouncePinElement();
         }
     };
 
-    // 박제 관리 변수
+    // 박제 및 둥둥 관리 변수
     let currentPinnedElement = null;
     let pinTimeout = null;
+    let currentBouncingElement = null;
+    let bouncingTimeout = null;
 
     // 박제 기능 구현
     function triggerPinElement() {
@@ -1406,6 +1450,122 @@ document.addEventListener('DOMContentLoaded', () => {
                         currentPinnedElement = null;
                     }
                 }, 500);
+            }
+        }, 10000);
+    }
+
+    // 둥둥 기능 구현 (바운싱 박제)
+    function triggerBouncePinElement() {
+        // [MODIFIED] 버퍼에서 이미지 가져오기
+        const selectedImage = getPreloadedImage();
+        if (!selectedImage) return; // 이미지 데이터가 없으면 중단
+
+        // 2. 텍스트 업데이트 및 복사 (~태그 둥둥!)
+        const pinCommand = `${selectedImage.tag} 둥둥!`;
+
+        const inputAreaText = document.querySelector('.doc-example-text');
+        if (inputAreaText) {
+            inputAreaText.innerText = pinCommand;
+        }
+
+        // 복사 수행
+        navigator.clipboard.writeText(pinCommand).then(() => {
+            showCopyFeedback();
+        });
+
+        // 기존 둥둥 정리
+        if (bouncingTimeout) {
+            clearTimeout(bouncingTimeout);
+            bouncingTimeout = null;
+        }
+
+        if (currentBouncingElement) {
+            if (typeof currentBouncingElement._cancelBounce === 'function') {
+                currentBouncingElement._cancelBounce();
+            }
+            currentBouncingElement.remove();
+            currentBouncingElement = null;
+        }
+
+        // 랜덤 초기 위치
+        const margin = 50;
+        const randomX = margin + Math.random() * (window.innerWidth - margin * 2 - 200);
+        const randomY = margin + Math.random() * (window.innerHeight - margin * 2 - 100);
+
+        const pinnedElement = document.createElement('div');
+        pinnedElement.className = 'pinned-content-bouncing';
+        
+        // 이미지 태그 생성
+        const imgHtml = `<img src="${selectedImage.src}" style="width: 100px; height: 100px; display: block;">`;
+        pinnedElement.innerHTML = `<div class="pinned-body">${imgHtml}</div>`;
+        pinnedElement.style.left = `${randomX}px`;
+        pinnedElement.style.top = `${randomY}px`;
+
+        document.body.appendChild(pinnedElement);
+        currentBouncingElement = pinnedElement;
+
+        // 등장 애니메이션 (페이드인)
+        setTimeout(() => {
+            pinnedElement.classList.add('visible');
+        }, 50);
+
+        // 바운싱 상태
+        const speed = 2; // 기본 속도
+        let posX = randomX;
+        let posY = randomY;
+        let vx = (Math.random() < 0.5 ? 1 : -1) * speed;
+        let vy = (Math.random() < 0.5 ? 1 : -1) * speed;
+        let rafId = null;
+
+        const bounce = () => {
+            // 요소가 DOM에서 제거됐으면 중단
+            if (!pinnedElement.isConnected) {
+                rafId = null;
+                return;
+            }
+
+            const w = pinnedElement.offsetWidth || 100;
+            const h = pinnedElement.offsetHeight || 100;
+            const maxX = Math.max(0, window.innerWidth - w);
+            const maxY = Math.max(0, window.innerHeight - h);
+
+            posX += vx;
+            posY += vy;
+
+            if (posX <= 0) { posX = 0; vx = Math.abs(vx); }
+            if (posX >= maxX) { posX = maxX; vx = -Math.abs(vx); }
+            if (posY <= 0) { posY = 0; vy = Math.abs(vy); }
+            if (posY >= maxY) { posY = maxY; vy = -Math.abs(vy); }
+
+            pinnedElement.style.left = `${posX}px`;
+            pinnedElement.style.top = `${posY}px`;
+            rafId = requestAnimationFrame(bounce);
+        };
+
+        // 바운싱 즉시 시작
+        rafId = requestAnimationFrame(bounce);
+
+        // RAF 취소 함수 저장
+        pinnedElement._cancelBounce = () => {
+            if (rafId !== null) {
+                cancelAnimationFrame(rafId);
+                rafId = null;
+            }
+        };
+
+        // 10초 후 제거
+        bouncingTimeout = setTimeout(() => {
+            if (pinnedElement && pinnedElement.parentNode) {
+                pinnedElement.classList.add('removing');
+                // 트랜지션 완료 후 삭제 (400ms)
+                setTimeout(() => {
+                    if (pinnedElement.parentNode) {
+                        pinnedElement.remove();
+                    }
+                    if (currentBouncingElement === pinnedElement) {
+                        currentBouncingElement = null;
+                    }
+                }, 400);
             }
         }, 10000);
     }
