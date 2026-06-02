@@ -1517,6 +1517,38 @@ document.addEventListener('DOMContentLoaded', () => {
         let vy = (Math.random() < 0.5 ? 1 : -1) * speed;
         let rafId = null;
 
+        // 크기 캐싱 및 화면 크기 변수
+        let cachedWidth = 100;
+        let cachedHeight = 100;
+        let screenWidth = window.innerWidth;
+        let screenHeight = window.innerHeight;
+
+        // ResizeObserver 등록 (레이아웃 스래싱 방지)
+        let resizeObserver = null;
+        if (typeof ResizeObserver !== 'undefined') {
+            resizeObserver = new ResizeObserver(() => {
+                cachedWidth = pinnedElement.offsetWidth || 100;
+                cachedHeight = pinnedElement.offsetHeight || 100;
+            });
+            resizeObserver.observe(pinnedElement);
+        } else {
+            // fallback
+            const measure = () => {
+                cachedWidth = pinnedElement.offsetWidth || 100;
+                cachedHeight = pinnedElement.offsetHeight || 100;
+            };
+            measure();
+            pinnedElement.querySelectorAll('img').forEach(img => {
+                img.addEventListener('load', measure);
+            });
+        }
+
+        const handleResize = () => {
+            screenWidth = window.innerWidth;
+            screenHeight = window.innerHeight;
+        };
+        window.addEventListener('resize', handleResize);
+
         const bounce = () => {
             // 요소가 DOM에서 제거됐으면 중단
             if (!pinnedElement.isConnected) {
@@ -1524,10 +1556,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            const w = pinnedElement.offsetWidth || 100;
-            const h = pinnedElement.offsetHeight || 100;
-            const maxX = Math.max(0, window.innerWidth - w);
-            const maxY = Math.max(0, window.innerHeight - h);
+            const w = cachedWidth;
+            const h = cachedHeight;
+            const maxX = Math.max(0, screenWidth - w);
+            const maxY = Math.max(0, screenHeight - h);
 
             posX += vx;
             posY += vy;
@@ -1545,12 +1577,17 @@ document.addEventListener('DOMContentLoaded', () => {
         // 바운싱 즉시 시작
         rafId = requestAnimationFrame(bounce);
 
-        // RAF 취소 함수 저장
+        // RAF 취소 및 리소스 정리 함수 저장
         pinnedElement._cancelBounce = () => {
             if (rafId !== null) {
                 cancelAnimationFrame(rafId);
                 rafId = null;
             }
+            if (resizeObserver) {
+                resizeObserver.disconnect();
+                resizeObserver = null;
+            }
+            window.removeEventListener('resize', handleResize);
         };
 
         // 10초 후 제거
