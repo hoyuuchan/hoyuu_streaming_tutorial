@@ -1,5 +1,31 @@
 const songData = [
   {
+    "id": "new_1780520012842",
+    "title": "미워요",
+    "artist": "정인",
+    "image": "./image/guide/song/miwo.jpg",
+    "difficulty": "3",
+    "tags": [
+      {
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
+      }
+    ],
+    "description": "",
+    "youtubeLink": "https://www.youtube.com/watch?v=E7ym9ODPWqg"
+  },
+  {
+    "id": "new_1780519732953",
+    "title": "Wash Away (feat. 에일리)",
+    "artist": "긱스",
+    "image": "./image/guide/song/washaway.jpg",
+    "difficulty": "2",
+    "tags": [],
+    "description": "",
+    "youtubeLink": "https://www.youtube.com/watch?v=471Oyf2M7Rg"
+  },
+  {
     "id": "song_1779479833442",
     "title": "질풍가도",
     "artist": "",
@@ -11,15 +37,15 @@ const songData = [
     "hidden": true
   },
   {
-    "id": "song_1779278733476",
+    "id": "new_1780520073324",
     "title": "MAMA",
-    "artist": "",
-    "image": "",
-    "difficulty": "0",
+    "artist": "EXO-K",
+    "image": "./image/guide/song/mama.jpg",
+    "difficulty": "2",
     "tags": [],
     "description": "",
     "youtubeLink": "https://www.youtube.com/watch?v=smP0zdhaYXM",
-    "hidden": true
+    "hidden": false
   },
   {
     "id": "new_1778749007278",
