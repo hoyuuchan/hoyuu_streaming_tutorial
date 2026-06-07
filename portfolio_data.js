@@ -1,5 +1,16 @@
 const portfolioData = [
   {
+    "id": "ringgi_1780872018935_pzdku",
+    "year": "2026",
+    "title": "레굴루스",
+    "date": "2026.04.19",
+    "mainImage": "./image/guide/ringgi/ë êµ´ë£¨ì¤.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
     "id": "ringgi_1780871915492_7zrc5",
     "year": "2026",
     "title": "우젠 쿄카",
