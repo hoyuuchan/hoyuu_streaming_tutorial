@@ -1,5 +1,16 @@
 const portfolioData = [
   {
+    "id": "ringgi_1780871915492_7zrc5",
+    "year": "2026",
+    "title": "우젠 쿄카",
+    "date": "2026.04.26",
+    "mainImage": "./image/guide/ringgi/ì°ì  ì¿ì¹´.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
     "id": "ringgi_1780871153612",
     "year": "2026",
     "title": "갸루 이상해씨",
