@@ -1,5 +1,27 @@
 const portfolioData = [
   {
+    "id": "ringgi_1780871084271_9v2vv",
+    "year": "2026",
+    "title": "메이드 나츠메 안안",
+    "date": "2026.05.24",
+    "mainImage": "./image/guide/ringgi/ë©ì´ëìì.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780871041759_uuj61",
+    "year": "2026",
+    "title": "아리아 (깡깡이 ver)",
+    "date": "2026.05.31",
+    "mainImage": "./image/guide/ringgi/ìë¦¬ì.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
     "id": "ringgi_1780869484579",
     "year": "2026",
     "title": "오토나세 우나",
