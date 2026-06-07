@@ -1,5 +1,38 @@
 const portfolioData = [
   {
+    "id": "ringgi_1780871153612",
+    "year": "2026",
+    "title": "갸루 이상해씨",
+    "date": "2026.05.03",
+    "mainImage": "./image/guide/ringgi/ê°¸ë£¨ì´ìí´ì¨.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780871138363_so961",
+    "year": "2026",
+    "title": "갸루 야돈",
+    "date": "2026.05.10",
+    "mainImage": "./image/guide/ringgi/ê°¸ë£¨ì¼ë.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780871117730_x4i00",
+    "year": "2026",
+    "title": "꾸꾸까까 관리자",
+    "date": "2026.05.17",
+    "mainImage": "./image/guide/ringgi/êµ¬êµ¬ê°ê°.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
     "id": "ringgi_1780871084271_9v2vv",
     "year": "2026",
     "title": "메이드 나츠메 안안",
