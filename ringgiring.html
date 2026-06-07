@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>링기링 - 낙서 아카이브</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Gothic:wght@400;700;800&family=Nanum+Pen+Script&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f6f8;
+            font-family: 'Paperozi', 'Nanum Gothic', sans-serif;
+            margin: 0;
+            padding-bottom: 80px;
+        }
+
+        .archive-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 60px auto 40px;
+            padding: 0 20px;
+        }
+
+        .archive-title {
+            font-size: 4.5rem;
+            color: #222;
+            margin: 0 0 10px 0;
+            line-height: 1.1;
+            display: inline-block;
+        }
+
+        .archive-desc {
+            font-size: 1.1rem;
+            color: #666;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .ringgi-count-badge {
+            display: inline-block;
+            margin-top: 15px;
+            background-color: #333;
+            color: #fff;
+            font-size: 0.9rem;
+            font-weight: 700;
+            padding: 6px 16px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Polaroid Grid Layout */
+        .ringgi-grid-container {
+            width: 1200px;
+            max-width: 95%;
+            margin: 0 auto;
+            padding: 20px 0;
+            box-sizing: border-box;
+        }
+
+        .ringgi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 35px;
+            justify-content: center;
+        }
+
+        /* Polaroid Card Design */
+        .ringgi-card {
+            background-color: #ffffff;
+            padding: 15px 15px 25px 15px;
+            border-radius: 4px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05), 0 2px 5px rgba(0, 0, 0, 0.03);
+            cursor: pointer;
+            transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        /* Polaroid Hover Effect */
+        .ringgi-card:hover {
+            transform: scale(1.05) rotate(0deg) !important;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12), 0 5px 15px rgba(0, 0, 0, 0.06);
+            z-index: 10;
+        }
+
+        .ringgi-img-wrapper {
+            width: 100%;
+            aspect-ratio: 1;
+            /* Square ratio for polaroid style */
+            overflow: hidden;
+            background-color: #fafafa;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 2px;
+        }
+
+        .ringgi-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            /* Do not crop the doodles */
+            transition: transform 0.3s ease;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        .ringgi-card:hover .ringgi-img-wrapper img {
+            transform: scale(1.03);
+        }
+
+        .ringgi-caption {
+            font-size: 1.8rem;
+            color: #333;
+            margin: 20px 0 0 0;
+            text-align: center;
+            line-height: 1.2;
+            word-break: break-all;
+            padding: 0 5px;
+        }
+
+        .ringgi-date {
+            font-size: 0.8rem;
+            color: #999;
+            margin-top: 8px;
+            font-family: 'Paperozi', sans-serif;
+            font-weight: 500;
+        }
+
+        /* Empty state styling */
+        .ringgi-empty {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 80px 20px;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+            border: 1px solid #eef0f2;
+        }
+
+        .ringgi-empty-title {
+            font-size: 2.5rem;
+            color: #888;
+            margin: 0 0 10px 0;
+        }
+
+        .ringgi-empty-desc {
+            font-size: 1rem;
+            color: #aaa;
+            margin: 0;
+        }
+
+        /* Lightbox Custom Premium Overlay */
+        .premium-lightbox {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(18, 18, 20, 0.95);
+            backdrop-filter: blur(10px);
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .premium-lightbox.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .lightbox-close-btn {
+            position: absolute;
+            top: 25px;
+            right: 30px;
+            background: transparent;
+            border: none;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 44px;
+            font-weight: 300;
+            cursor: pointer;
+            transition: color 0.2s, transform 0.2s;
+            z-index: 2002;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .lightbox-close-btn:hover {
+            color: #fff;
+            transform: scale(1.1) rotate(90deg);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .lightbox-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 28px;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            z-index: 2001;
+            user-select: none;
+        }
+
+        .lightbox-nav-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .lightbox-nav-btn.prev {
+            left: 30px;
+        }
+
+        .lightbox-nav-btn.next {
+            right: 30px;
+        }
+
+        .lightbox-container {
+            max-width: 85%;
+            max-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .lightbox-img-wrapper {
+            position: relative;
+            max-width: 100%;
+            max-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+            background-color: #1a1a1a;
+        }
+
+        .lightbox-image {
+            max-width: 100%;
+            max-height: 70vh;
+            object-fit: contain;
+            transform: scale(0.95);
+            transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .premium-lightbox.active .lightbox-image {
+            transform: scale(1);
+        }
+
+        .lightbox-info {
+            text-align: center;
+            margin-top: 20px;
+            color: #fff;
+            max-width: 600px;
+        }
+
+        .lightbox-title {
+            font-size: 2.8rem;
+            margin: 0;
+            color: #fff;
+            line-height: 1.2;
+        }
+
+        .lightbox-date {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 6px;
+            font-weight: 500;
+        }
+
+        /* Responsive adaptations */
+        @media (max-width: 768px) {
+            .archive-title {
+                font-size: 3.5rem;
+            }
+
+            .ringgi-grid {
+                gap: 20px;
+            }
+
+            .lightbox-nav-btn {
+                width: 44px;
+                height: 44px;
+                font-size: 20px;
+            }
+
+            .lightbox-nav-btn.prev {
+                left: 15px;
+            }
+
+            .lightbox-nav-btn.next {
+                right: 15px;
+            }
+
+            .lightbox-close-btn {
+                top: 15px;
+                right: 15px;
+                width: 40px;
+                height: 40px;
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Menu (Shared) -->
+    <nav class="nav-menu">
+        <div class="nav-container">
+            <a href="https://chzzk.naver.com/3cf58789ab09865bdc1e2f3a76d66b27" target="_blank" class="nav-item">
+                <div id="hoyuu-icon"></div>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-item">채팅콘</a>
+                <a href="guide.html" class="nav-item">설명서</a>
+                <a href="songbook.html" class="nav-item">노래책</a>
+                <a href="ringgiring.html" class="nav-item active">링기링</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header Section -->
+    <header class="archive-header">
+        <h1 class="archive-title">🎨 호유의 낙서장 (링기링)</h1>
+        <p class="archive-desc">방송 중 끄적였거나 틈틈이 그려둔 귀여운 낙서들을 보관하는 공간입니다.</p>
+        <span class="ringgi-count-badge" id="doodleCount">낙서 0개</span>
+    </header>
+
+    <!-- Polaroid Grid Container -->
+    <main class="ringgi-grid-container">
+        <div class="ringgi-grid" id="doodleGrid">
+            <!-- Doodles will be dynamically loaded here -->
+            <div class="ringgi-empty">
+                <h3 class="ringgi-empty-title">낙서를 불러오는 중...</h3>
+                <p class="ringgi-empty-desc">아카이브에서 낙서를 불러오고 있습니다. 잠시만 기다려주세요!</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Premium Fullscreen Lightbox Modal -->
+    <div id="premiumLightbox" class="premium-lightbox">
+        <button class="lightbox-close-btn" onclick="closeLightbox()">&times;</button>
+        <button class="lightbox-nav-btn prev" id="prevBtn" onclick="navigateLightbox(-1)">&#10094;</button>
+        <button class="lightbox-nav-btn next" id="nextBtn" onclick="navigateLightbox(1)">&#10095;</button>
+
+        <div class="lightbox-container">
+            <div class="lightbox-img-wrapper" onclick="event.stopPropagation()">
+                <img id="lightboxImg" class="lightbox-image" src="" alt="확대 이미지">
+            </div>
+            <div class="lightbox-info">
+                <h3 id="lightboxTitle" class="lightbox-title">낙서 제목</h3>
+                <div id="lightboxDate" class="lightbox-date">2026.06.08</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script imports -->
+    <script src="portfolio_data.js"></script>
+    <script src="nav.js"></script>
+    <script>
+        // Global variables
+        let ringgiringItems = [];
+        let currentLightboxIndex = -1;
+
+        // Render Doodles from portfolioData
+        function loadDoodles() {
+            const gridContainer = document.getElementById('doodleGrid');
+            const countBadge = document.getElementById('doodleCount');
+
+            if (typeof portfolioData === 'undefined') {
+                gridContainer.innerHTML = `
+                    <div class="ringgi-empty">
+                        <h3 class="ringgi-empty-title">데이터를 찾을 수 없음</h3>
+                        <p class="ringgi-empty-desc">portfolio_data.js 파일을 로드하지 못했거나 데이터가 비어있습니다.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            // Filter doodles by type: 'ringgiring'
+            ringgiringItems = portfolioData.filter(item => item.type === 'ringgiring');
+
+            // Sort by ID or date descending (latest first)
+            ringgiringItems.sort((a, b) => {
+                // If id is timestamp-based, compare id strings
+                return b.id.localeCompare(a.id);
+            });
+
+            // Update badge count
+            countBadge.innerText = `낙서 ${ringgiringItems.length}개`;
+
+            if (ringgiringItems.length === 0) {
+                gridContainer.innerHTML = `
+                    <div class="ringgi-empty">
+                        <h3 class="ringgi-empty-title">아직 비어있어요 🖌️</h3>
+                    </div>
+                `;
+                return;
+            }
+
+            gridContainer.innerHTML = '';
+
+            ringgiringItems.forEach((item, index) => {
+                const card = document.createElement('div');
+                card.className = 'ringgi-card';
+
+                // Add slight random rotation to cards for a cozy, scattered polaroid board feeling
+                const randomRotate = (Math.random() * 4 - 2).toFixed(1); // random angle between -2deg and 2deg
+                card.style.transform = `rotate(${randomRotate}deg)`;
+                card.setAttribute('onclick', `openLightbox(${index})`);
+
+                card.innerHTML = `
+                    <div class="ringgi-img-wrapper">
+                        <img src="${item.mainImage}" alt="${item.title}" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'100\'%3E%3Crect width=\'100%25\' height=\'100%25\' fill=\'%23eeeeee\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' font-family=\'sans-serif\' font-size=\'12\' fill=\'%23999999\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3ENo Image%3C/text%3E%3C/svg%3E';">
+                    </div>
+                    <h3 class="ringgi-caption">${item.title}</h3>
+                    <span class="ringgi-date">${item.date}</span>
+                `;
+
+                gridContainer.appendChild(card);
+            });
+        }
+
+        // Lightbox Functions
+        function openLightbox(index) {
+            if (index < 0 || index >= ringgiringItems.length) return;
+
+            currentLightboxIndex = index;
+            const item = ringgiringItems[index];
+
+            const lightbox = document.getElementById('premiumLightbox');
+            const lightboxImg = document.getElementById('lightboxImg');
+            const lightboxTitle = document.getElementById('lightboxTitle');
+            const lightboxDate = document.getElementById('lightboxDate');
+
+            lightboxImg.src = item.mainImage;
+            lightboxTitle.innerText = item.title;
+            lightboxDate.innerText = item.date;
+
+            lightbox.style.display = 'flex';
+            // Force redraw before adding class for opacity transition
+            lightbox.offsetHeight;
+            lightbox.classList.add('active');
+
+            // Prevent body scroll when lightbox is open
+            document.body.style.overflow = 'hidden';
+
+            // Show/hide navigation arrows based on counts
+            document.getElementById('prevBtn').style.display = ringgiringItems.length > 1 ? 'flex' : 'none';
+            document.getElementById('nextBtn').style.display = ringgiringItems.length > 1 ? 'flex' : 'none';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('premiumLightbox');
+            lightbox.classList.remove('active');
+
+            // Allow body scroll again
+            document.body.style.overflow = 'auto';
+
+            setTimeout(() => {
+                if (!lightbox.classList.contains('active')) {
+                    lightbox.style.display = 'none';
+                }
+            }, 300); // Wait for transition duration (0.3s)
+        }
+
+        function navigateLightbox(direction) {
+            if (ringgiringItems.length <= 1) return;
+
+            let newIndex = currentLightboxIndex + direction;
+            if (newIndex < 0) {
+                newIndex = ringgiringItems.length - 1; // loop to end
+            } else if (newIndex >= ringgiringItems.length) {
+                newIndex = 0; // loop to start
+            }
+
+            // Smoothly change lightbox content with slight scale transition
+            const lightboxImg = document.getElementById('lightboxImg');
+            lightboxImg.style.transform = 'scale(0.95)';
+            lightboxImg.style.opacity = '0.5';
+
+            setTimeout(() => {
+                currentLightboxIndex = newIndex;
+                const item = ringgiringItems[newIndex];
+
+                lightboxImg.src = item.mainImage;
+                document.getElementById('lightboxTitle').innerText = item.title;
+                document.getElementById('lightboxDate').innerText = item.date;
+
+                lightboxImg.style.transform = 'scale(1)';
+                lightboxImg.style.opacity = '1';
+            }, 150);
+        }
+
+        // Close when clicking overlay backdrop
+        document.getElementById('premiumLightbox').addEventListener('click', function (e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+
+        // Keyboard navigation (Esc to close, Left/Right arrow to navigate)
+        document.addEventListener('keydown', function (e) {
+            const lightbox = document.getElementById('premiumLightbox');
+            if (lightbox.classList.contains('active')) {
+                if (e.key === 'Escape') {
+                    closeLightbox();
+                } else if (e.key === 'ArrowLeft') {
+                    navigateLightbox(-1);
+                } else if (e.key === 'ArrowRight') {
+                    navigateLightbox(1);
+                }
+            }
+        });
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', () => {
+            loadDoodles();
+        });
+    </script>
+</body>
+
+</html>
