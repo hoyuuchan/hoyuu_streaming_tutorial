@@ -1,10 +1,128 @@
 const songData = [
   {
-    "id": "new_1780520012842",
+    "id": "song_1780865898247",
+    "title": "Pretender",
+    "artist": "Official髭男dism",
+    "image": "./image/guide/song/officialhige.jpg",
+    "difficulty": "3",
+    "tags": [
+      {
+        "text": "연습중",
+        "textColor": "#212121",
+        "borderColor": "#8eff42"
+      }
+    ],
+    "description": "",
+    "youtubeLink": ""
+  },
+  {
+    "id": "new_1780865890896",
+    "title": "광대",
+    "artist": "리쌍",
+    "image": "./image/guide/song/gwangdae.jpg",
+    "difficulty": "2",
+    "tags": [
+      {
+        "text": "연습중",
+        "textColor": "#212121",
+        "borderColor": "#8eff42"
+      }
+    ],
+    "description": "",
+    "youtubeLink": "https://youtu.be/jaf0KLWM9lI?si=kpbGuPQNWNw-kr-e"
+  },
+  {
+    "id": "new_1780865864181",
+    "title": "きゅうくらりん",
+    "artist": "카후",
+    "image": "./image/guide/song/kyuru.jpg",
+    "difficulty": "3",
+    "tags": [
+      {
+        "text": "연습중",
+        "textColor": "#212121",
+        "borderColor": "#8eff42"
+      }
+    ],
+    "description": "",
+    "youtubeLink": "https://www.youtube.com/watch?v=cGlPhm0vyc4",
+    "hidden": true
+  },
+  {
+    "id": "new_1780865090647",
+    "title": "오리날다",
+    "artist": "체리필터",
+    "image": "./image/guide/song/flyingduck.jpg",
+    "difficulty": "3",
+    "tags": [
+      {
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
+      }
+    ],
+    "description": "",
+    "youtubeLink": "https://youtu.be/6cf7_lmamqQ?si=qgcUha8noYZxuesu"
+  },
+  {
+    "id": "new_1780865178677",
+    "title": "Help me, ERINNNNNN!!",
+    "artist": "COOL&CREATE",
+    "image": "./image/guide/song/helpme.webp",
+    "difficulty": "2",
+    "tags": [],
+    "description": "",
+    "youtubeLink": "https://youtu.be/yhfAW9ecjDY?si=hpPpX0a1_cvBJSiY"
+  },
+  {
+    "id": "new_1780865699749",
+    "title": "Again & Again",
+    "artist": "2PM",
+    "image": "./image/guide/song/againagain.png",
+    "difficulty": "2",
+    "tags": [
+      {
+        "text": "연습중",
+        "textColor": "#212121",
+        "borderColor": "#8eff42"
+      }
+    ],
+    "description": "",
+    "youtubeLink": "https://www.youtube.com/watch?v=LCk3fyCy40g"
+  },
+  {
+    "id": "song_1780599763448",
+    "title": "그대에게",
+    "artist": "",
+    "image": "",
+    "difficulty": "0",
+    "tags": [],
+    "description": "",
+    "youtubeLink": "https://www.youtube.com/watch?v=gJqCO8E63-s",
+    "hidden": true
+  },
+  {
+    "id": "new_1780865486122",
+    "title": "숲속의 작은 질럿",
+    "artist": "-",
+    "image": "./image/guide/song/forestzealot.jpg",
+    "difficulty": "2",
+    "tags": [
+      {
+        "text": "저음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#42d4f5"
+      }
+    ],
+    "description": "숲속의 작은 레스토랑을 질럿이 부른 버전으로 부릅니당",
+    "youtubeLink": "https://www.youtube.com/watch?v=5zBBVNjXYLg"
+  },
+  {
+    "id": "song_1780865340974",
     "title": "미워요",
     "artist": "정인",
     "image": "./image/guide/song/miwo.jpg",
-    "difficulty": "3",
+    "difficulty": "4",
     "tags": [
       {
         "text": "고음주의",
@@ -263,13 +381,6 @@ const songData = [
       }
     ],
     "description": "아웃사이더 아조시도 이 노래는 거르지 않을가.."
-  },
-  {
-    "id": "imported_1778527836834_7iwzukg",
-    "title": "내꺼 하는 법",
-    "artist": "아야츠노 유니",
-    "image": "./image/guide/song/nae.jpg",
-    "hidden": true
   },
   {
     "id": "song_1778613828073",
