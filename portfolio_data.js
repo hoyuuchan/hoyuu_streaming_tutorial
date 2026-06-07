@@ -1,5 +1,16 @@
 const portfolioData = [
   {
+    "id": "ringgi_1780869484579",
+    "year": "2026",
+    "title": "오토나세 우나",
+    "date": "2026.06.08",
+    "mainImage": "./image/guide/ringgi/ì°ë.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
     "id": "2025-swim",
     "year": "2025",
     "title": "야쿠모가의 여름휴가",
