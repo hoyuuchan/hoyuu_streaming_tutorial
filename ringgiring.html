@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>링기링 - 낙서 아카이브</title>
+    <title>링기링 아카이브</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,44 +19,75 @@
             padding-bottom: 80px;
         }
 
-        .archive-header {
-            text-align: center;
-            max-width: 800px;
-            margin: 60px auto 40px;
-            padding: 0 20px;
+        .ringgi-container {
+            width: 1100px;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 40px 20px 40px 20px;
+            box-sizing: border-box;
         }
 
-        .archive-title {
-            font-size: 4.5rem;
-            color: #222;
-            margin: 0 0 10px 0;
-            line-height: 1.1;
-            display: inline-block;
+        .ringgi-title {
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            /* padding-bottom: 10px; */
+            color: #333;
+            letter-spacing: -0.02em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
         }
 
-        .archive-desc {
-            font-size: 1.1rem;
-            color: #666;
-            margin: 0;
+        .ringgi-notice {
+            font-size: 0.9em;
             font-weight: 500;
+            /* margin-top: 10px; */
+            padding: 0 0 10px 0;
+            color: #666;
+        }
+
+        .ringgi-notice p {
+            margin: 5px 0 0 0;
         }
 
         .ringgi-count-badge {
             display: inline-block;
-            margin-top: 15px;
             background-color: #333;
             color: #fff;
-            font-size: 0.9rem;
+            font-size: 0.55em;
             font-weight: 700;
-            padding: 6px 16px;
+            padding: 4px 12px;
             border-radius: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            line-height: 1;
+        }
+
+        .ringgi-sort-btn {
+            background-color: #ffffff;
+            border: 1px solid #e1e5eb;
+            color: #333;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 0.55em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .ringgi-sort-btn:hover {
+            background-color: #f0f2f5;
+            border-color: #cbd5e1;
         }
 
         /* Polaroid Grid Layout */
         .ringgi-grid-container {
-            width: 1200px;
-            max-width: 95%;
+            width: 100%;
             margin: 0 auto;
             padding: 20px 0;
             box-sizing: border-box;
@@ -64,8 +95,8 @@
 
         .ringgi-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 35px;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 30px;
             justify-content: center;
         }
 
@@ -119,7 +150,7 @@
         }
 
         .ringgi-caption {
-            font-size: 1.8rem;
+            font-size: 1.3rem;
             color: #333;
             margin: 20px 0 0 0;
             text-align: center;
@@ -349,23 +380,30 @@
         </div>
     </nav>
 
-    <!-- Page Header Section -->
-    <header class="archive-header">
-        <h1 class="archive-title">🎨 호유의 낙서장 (링기링)</h1>
-        <p class="archive-desc">방송 중 끄적였거나 틈틈이 그려둔 귀여운 낙서들을 보관하는 공간입니다.</p>
-        <span class="ringgi-count-badge" id="doodleCount">낙서 0개</span>
-    </header>
-
-    <!-- Polaroid Grid Container -->
-    <main class="ringgi-grid-container">
-        <div class="ringgi-grid" id="doodleGrid">
-            <!-- Doodles will be dynamically loaded here -->
-            <div class="ringgi-empty">
-                <h3 class="ringgi-empty-title">낙서를 불러오는 중...</h3>
-                <p class="ringgi-empty-desc">아카이브에서 낙서를 불러오고 있습니다. 잠시만 기다려주세요!</p>
+    <div class="ringgi-container">
+        <!-- Page Header Section -->
+        <div class="ringgi-title">
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <span>링기링 아카이브</span>
+                <span class="ringgi-count-badge" id="doodleCount">낙서 0개</span>
             </div>
+            <button id="sortBtn" onclick="toggleSort()" class="ringgi-sort-btn">내림차순 ↓</button>
         </div>
-    </main>
+        <div class="ringgi-notice">
+            <p>방송에서 신청을 받아 그린 그림들의 아카이브입니다. 일주일에 한번 업데이트 예정!</p>
+        </div>
+
+        <!-- Polaroid Grid Container -->
+        <main class="ringgi-grid-container">
+            <div class="ringgi-grid" id="doodleGrid">
+                <!-- Doodles will be dynamically loaded here -->
+                <div class="ringgi-empty">
+                    <h3 class="ringgi-empty-title">낙서를 불러오는 중...</h3>
+                    <p class="ringgi-empty-desc">아카이브에서 낙서를 불러오고 있습니다. 잠시만 기다려주세요!</p>
+                </div>
+            </div>
+        </main>
+    </div>
 
     <!-- Premium Fullscreen Lightbox Modal -->
     <div id="premiumLightbox" class="premium-lightbox">
@@ -391,6 +429,21 @@
         // Global variables
         let ringgiringItems = [];
         let currentLightboxIndex = -1;
+        let currentSortOrder = 'desc'; // 기본값 내림차순 ↓
+
+        function toggleSort() {
+            const btn = document.getElementById('sortBtn');
+            if (currentSortOrder === 'desc') {
+                currentSortOrder = 'asc';
+                btn.innerText = '오름차순 ↑';
+            } else {
+                currentSortOrder = 'desc';
+                btn.innerText = '내림차순 ↓';
+            }
+            loadDoodles();
+        }
+
+        window.toggleSort = toggleSort;
 
         // Render Doodles from portfolioData
         function loadDoodles() {
@@ -410,14 +463,28 @@
             // Filter doodles by type: 'ringgiring'
             ringgiringItems = portfolioData.filter(item => item.type === 'ringgiring');
 
-            // Sort by ID or date descending (latest first)
+            // Sort by Date (latest first or oldest first)
             ringgiringItems.sort((a, b) => {
-                // If id is timestamp-based, compare id strings
-                return b.id.localeCompare(a.id);
+                const dateA = a.date || '';
+                const dateB = b.date || '';
+
+                if (dateA !== dateB) {
+                    if (currentSortOrder === 'asc') {
+                        return dateA.localeCompare(dateB);
+                    } else {
+                        return dateB.localeCompare(dateA);
+                    }
+                }
+                // Fallback to ID comparison if dates are identical
+                if (currentSortOrder === 'asc') {
+                    return a.id.localeCompare(b.id);
+                } else {
+                    return b.id.localeCompare(a.id);
+                }
             });
 
             // Update badge count
-            countBadge.innerText = `낙서 ${ringgiringItems.length}개`;
+            countBadge.innerText = `${ringgiringItems.length}개 그림`;
 
             if (ringgiringItems.length === 0) {
                 gridContainer.innerHTML = `
