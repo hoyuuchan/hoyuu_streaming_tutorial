@@ -3,7 +3,7 @@ const portfolioData = [
     "id": "ringgi_1780869484579",
     "year": "2026",
     "title": "오토나세 우나",
-    "date": "2026.06.08",
+    "date": "2026.06.07",
     "mainImage": "./image/guide/ringgi/ì°ë.png",
     "mainImageStyle": "object-position: center;",
     "description": "",
