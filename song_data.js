@@ -1,5 +1,33 @@
 const songData = [
   {
+    "id": "new_1778749146957",
+    "title": "Ms. VICTORIA (Game Size)",
+    "artist": "-",
+    "image": "./image/guide/song/msvictoria.webp",
+    "difficulty": "4",
+    "tags": [
+      {
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
+      }
+    ],
+    "description": "",
+    "youtubeLink": "https://www.youtube.com/watch?v=rz95Ubar1bQ",
+    "hidden": true
+  },
+  {
+    "id": "new_1778749007278",
+    "title": "バクシンバクシンバクシンシン(박신박신박신신)",
+    "artist": "사쿠라 바쿠신오 (CV. 미사와 사치카)",
+    "image": "./image/guide/song/baksin.jpg",
+    "difficulty": "3",
+    "tags": [],
+    "description": "",
+    "youtubeLink": "",
+    "hidden": true
+  },
+  {
     "id": "song_1780865898247",
     "title": "Pretender",
     "artist": "Official髭男dism",
@@ -155,26 +183,20 @@ const songData = [
     "hidden": true
   },
   {
-    "id": "new_1780520073324",
+    "id": "song_1780866723850",
     "title": "MAMA",
     "artist": "EXO-K",
     "image": "./image/guide/song/mama.jpg",
     "difficulty": "2",
-    "tags": [],
+    "tags": [
+      {
+        "text": "연습중",
+        "textColor": "#212121",
+        "borderColor": "#8eff42"
+      }
+    ],
     "description": "",
-    "youtubeLink": "https://www.youtube.com/watch?v=smP0zdhaYXM",
-    "hidden": false
-  },
-  {
-    "id": "new_1778749007278",
-    "title": "バクシンバクシンバクシンシン(박신박신박신신)",
-    "artist": "사쿠라 바쿠신오 (CV. 미사와 사치카)",
-    "image": "./image/guide/song/baksin.jpg",
-    "difficulty": "3",
-    "tags": [],
-    "description": "",
-    "youtubeLink": "",
-    "hidden": true
+    "youtubeLink": "https://www.youtube.com/watch?v=smP0zdhaYXM"
   },
   {
     "id": "song_1778661351548",
@@ -247,23 +269,6 @@ const songData = [
     "tags": [],
     "description": "이거 남자 노래인줄 몰랐음;",
     "youtubeLink": "https://www.youtube.com/watch?v=DEVVZFVZwvY",
-    "hidden": true
-  },
-  {
-    "id": "new_1778749146957",
-    "title": "Ms. VICTORIA (Game Size)",
-    "artist": "-",
-    "image": "./image/guide/song/msvictoria.webp",
-    "difficulty": "4",
-    "tags": [
-      {
-        "text": "고음주의",
-        "textColor": "#ffffff",
-        "borderColor": "#ff4242"
-      }
-    ],
-    "description": "",
-    "youtubeLink": "https://www.youtube.com/watch?v=rz95Ubar1bQ",
     "hidden": true
   },
   {
