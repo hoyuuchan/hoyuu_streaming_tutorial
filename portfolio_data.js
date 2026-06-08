@@ -1,15 +1,92 @@
 const portfolioData = [
   {
+    "id": "ringgi_1780908852491",
+    "year": "2025",
+    "title": "키라",
+    "date": "2025.12.28",
+    "mainImage": "./image/guide/ringgi/키라.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780908852489_1k0wm",
+    "year": "2026",
+    "title": "엔마 아이",
+    "date": "2026.01.11",
+    "mainImage": "./image/guide/ringgi/엔마아이.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780908794963_l4kfz",
+    "year": "2026",
+    "title": "이터널슈가 쿠키",
+    "date": "2026.01.18",
+    "mainImage": "./image/guide/ringgi/이터널슈가.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780908713450_4e4sv",
+    "year": "2026",
+    "title": "NO MERCY 다인",
+    "date": "2026.02.01",
+    "mainImage": "./image/guide/ringgi/다인2.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780908656425_l8mqw",
+    "year": "2026",
+    "title": "시청자 자캐 (Aristar님)",
+    "date": "2026.02.01",
+    "mainImage": "./image/guide/ringgi/칸나.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780908583193_29av7",
+    "year": "2026",
+    "title": "우루슈",
+    "date": "2026.02.08",
+    "mainImage": "./image/guide/ringgi/우루슈.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780908543504_p0zcf",
+    "year": "2026",
+    "title": "웨딩드레스 호유",
+    "date": "2026.02.15",
+    "mainImage": "./image/guide/ringgi/웨딩호유.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
     "id": "ringgi_1780906713487",
     "year": "2026",
     "title": "고양이날 호유",
     "date": "2026.02.22",
-    "mainImage": "./image/guide/ringgi/ë¥ì´.png",
+    "mainImage": "./image/guide/ringgi/냥이.png",
     "mainImageStyle": "object-position: center;",
     "description": "",
     "detailImages": [
-      "냥이.png",
-      "냥이2.png"
+      "./image/guide/ringgi/냥이.png",
+      "./image/guide/ringgi/냥이2.png"
     ],
     "type": "ringgiring"
   },
