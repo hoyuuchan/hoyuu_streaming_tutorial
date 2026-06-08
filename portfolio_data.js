@@ -1,5 +1,82 @@
 const portfolioData = [
   {
+    "id": "ringgi_1780918721869",
+    "year": "2025",
+    "title": "고독방송 유나",
+    "date": "2025.09.13",
+    "mainImage": "./image/guide/ringgi/유나.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780918721867_fzvp6",
+    "year": "2025",
+    "title": "카르티시아",
+    "date": "2025.09.20",
+    "mainImage": "./image/guide/ringgi/카르티시아.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780918704167_x0g0y",
+    "year": "2025",
+    "title": "증오의 여왕",
+    "date": "2025.08.02",
+    "mainImage": "./image/guide/ringgi/증오의여왕2x.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780918619289_g4qpf",
+    "year": "2025",
+    "title": "한복 호유",
+    "date": "2025.08.09",
+    "mainImage": "./image/guide/ringgi/한복호유.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780918575595_l5198",
+    "year": "2025",
+    "title": "M200",
+    "date": "2025.08.16",
+    "mainImage": "./image/guide/ringgi/m200.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780918519637_xf6u4",
+    "year": "2025",
+    "title": "매드니스 호유",
+    "date": "2025.08.30",
+    "mainImage": "./image/guide/ringgi/가야.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780918260909_beb0h",
+    "year": "2025",
+    "title": "냐앙하는 와카사기히메",
+    "date": "2025.09.07",
+    "mainImage": "./image/guide/ringgi/빟어.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
     "id": "ringgi_1780916643642",
     "year": "2025",
     "title": "질 스팅레이",
