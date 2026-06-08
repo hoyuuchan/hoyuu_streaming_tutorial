@@ -1,5 +1,49 @@
 const portfolioData = [
   {
+    "id": "ringgi_1780906100434",
+    "year": "2026",
+    "title": "멘헤라 호유",
+    "date": "2026.03.01",
+    "mainImage": "./image/guide/ringgi/ë©í¤ë¼í¸ì .png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780906039690_vwaby",
+    "year": "2026",
+    "title": "알렉산더 (호유 ver)",
+    "date": "2026.03.15",
+    "mainImage": "./image/guide/ringgi/ìë í¸ì .png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780906014445_jhbwf",
+    "year": "2026",
+    "title": "카사네 테토 (브레인랏 ver)",
+    "date": "2026.03.08",
+    "mainImage": "./image/guide/ringgi/ë¸ë ì¸íí .png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780905775916_yitqk",
+    "year": "2026",
+    "title": "나츠메 안안",
+    "date": "2026.03.29",
+    "mainImage": "./image/guide/ringgi/ìì.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
     "id": "ringgi_1780872137436",
     "year": "2026",
     "title": "로시",
@@ -259,5 +303,5 @@ const portfolioData = [
 ];
 
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = portfolioData;
+    module.exports = portfolioData;
 }
