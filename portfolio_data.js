@@ -1,5 +1,60 @@
 const portfolioData = [
   {
+    "id": "ringgi_1780911409174",
+    "year": "2025",
+    "title": "권총을 겨누고 있는 모자걸",
+    "date": "2025.11.30",
+    "mainImage": "./image/guide/ringgi/모자걸.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780911409172_vzr0n",
+    "year": "2025",
+    "title": "피나",
+    "date": "2025.12.07",
+    "mainImage": "./image/guide/ringgi/피나.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780911344341_3zuem",
+    "year": "2025",
+    "title": "스마일",
+    "date": "2025.12.14",
+    "mainImage": "./image/guide/ringgi/스마일.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780911089486_p51pg",
+    "year": "2025",
+    "title": "스파게티 와장창 호유",
+    "date": "2025.12.22",
+    "mainImage": "./image/guide/ringgi/스파게티호유.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780910977333_dvsel",
+    "year": "2025",
+    "title": "사쿠라바 에마",
+    "date": "2025.12.21",
+    "mainImage": "./image/guide/ringgi/에마.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
     "id": "ringgi_1780908852491",
     "year": "2025",
     "title": "키라",
@@ -394,5 +449,5 @@ const portfolioData = [
 ];
 
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = portfolioData;
+    module.exports = portfolioData;
 }
