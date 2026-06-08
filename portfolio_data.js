@@ -1,5 +1,121 @@
 const portfolioData = [
   {
+    "id": "ringgi_1780953945098",
+    "year": "2025",
+    "title": "다인",
+    "date": "2025.06.21",
+    "mainImage": "./image/guide/ringgi/다인.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780953945096_xlxgb",
+    "year": "2025",
+    "title": "스타 사파이어",
+    "date": "2025.06.22",
+    "mainImage": "./image/guide/ringgi/스타.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780953877527_rh71o",
+    "year": "2025",
+    "title": "랑이",
+    "date": "2025.06.28",
+    "mainImage": "./image/guide/ringgi/랑이.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [
+      "./image/guide/ringgi/랑이.png",
+      "./image/guide/ringgi/랑이2.png"
+    ],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780953772389_pwf44",
+    "year": "2025",
+    "title": "메이드 와타리",
+    "date": "2025.06.29",
+    "mainImage": "./image/guide/ringgi/와타리메이드.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780953639365_vma11",
+    "year": "2025",
+    "title": "카드 캡터 체리 호유",
+    "date": "2025.07.05",
+    "mainImage": "./image/guide/ringgi/체리호유.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780953457966_99g4c",
+    "year": "2025",
+    "title": "유와씨",
+    "date": "2025.07.07",
+    "mainImage": "./image/guide/ringgi/유와씨.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780953382604_ux2x2",
+    "year": "2025",
+    "title": "도로시",
+    "date": "2025.07.13",
+    "mainImage": "./image/guide/ringgi/도로시.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780953299223_mnnw0",
+    "year": "2025",
+    "title": "서니 밀크",
+    "date": "2025.07.13",
+    "mainImage": "./image/guide/ringgi/써니.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780953068314_m4so8",
+    "year": "2025",
+    "title": "루나 차일드",
+    "date": "2025.07.19",
+    "mainImage": "./image/guide/ringgi/루나.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780952925938_rsgee",
+    "year": "2025",
+    "title": "문어잠옷을 입은 도나루님(시청자)",
+    "date": "2025.07.26",
+    "mainImage": "./image/guide/ringgi/나루문어.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [
+      "./image/guide/ringgi/나루문어.png",
+      "./image/guide/ringgi/나루문어짜증나.png"
+    ],
+    "type": "ringgiring"
+  },
+  {
     "id": "ringgi_1780918721869",
     "year": "2025",
     "title": "고독방송 유나",
