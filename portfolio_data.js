@@ -1,5 +1,38 @@
 const portfolioData = [
   {
+    "id": "ringgi_1780916643642",
+    "year": "2025",
+    "title": "질 스팅레이",
+    "date": "2025.09.28",
+    "mainImage": "./image/guide/ringgi/질.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780916643641_1kcg7",
+    "year": "2025",
+    "title": "후타츠이와 마미조",
+    "date": "2025.10.05",
+    "mainImage": "./image/guide/ringgi/마미조.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780916586610_3t6nf",
+    "year": "2025",
+    "title": "유노 호유",
+    "date": "2025.10.12",
+    "mainImage": "./image/guide/ringgi/유노호유.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
     "id": "ringgi_1780915751441",
     "year": "2025",
     "title": "토요사토미미노 미코",
@@ -228,7 +261,7 @@ const portfolioData = [
   {
     "id": "ringgi_1780906039690_vwaby",
     "year": "2026",
-    "title": "알렉산더 (호유 ver)",
+    "title": "알렉산더 호유",
     "date": "2026.03.15",
     "mainImage": "./image/guide/ringgi/ìë í¸ì .png",
     "mainImageStyle": "object-position: center;",
@@ -239,7 +272,7 @@ const portfolioData = [
   {
     "id": "ringgi_1780906014445_jhbwf",
     "year": "2026",
-    "title": "카사네 테토 (브레인랏 ver)",
+    "title": "브레인랏 테토",
     "date": "2026.03.08",
     "mainImage": "./image/guide/ringgi/ë¸ë ì¸íí .png",
     "mainImageStyle": "object-position: center;",
@@ -349,7 +382,7 @@ const portfolioData = [
   {
     "id": "ringgi_1780871041759_uuj61",
     "year": "2026",
-    "title": "아리아 (깡깡이 ver)",
+    "title": "깡깡이 아리아",
     "date": "2026.05.31",
     "mainImage": "./image/guide/ringgi/ìë¦¬ì.png",
     "mainImageStyle": "object-position: center;",

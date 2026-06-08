@@ -155,7 +155,7 @@
             margin: 20px 0 0 0;
             text-align: center;
             line-height: 1.2;
-            word-break: break-all;
+            word-break: auto-phrase;
             padding: 0 5px;
         }
 
@@ -201,14 +201,18 @@
             height: 100%;
             background-color: rgba(248, 249, 250, 0.95);
             backdrop-filter: blur(10px);
-            justify-content: center;
-            align-items: center;
             opacity: 0;
             transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            overflow-y: auto;
+            box-sizing: border-box;
+            padding: 60px 80px;
         }
 
         .premium-lightbox.active {
             display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100%;
             opacity: 1;
         }
 
@@ -275,22 +279,20 @@
 
         .lightbox-container {
             max-width: 85%;
-            max-height: 85vh;
+            margin: auto;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start;
             position: relative;
-            overflow-y: auto;
-            padding-right: 15px;
         }
 
         .lightbox-img-wrapper {
             position: relative;
             max-width: 100%;
             display: flex;
-            flex-direction: column;
-            gap: 15px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 20px;
             align-items: center;
             justify-content: center;
             border-radius: 8px;
@@ -302,6 +304,11 @@
             object-fit: contain;
             transform: scale(0.95);
             transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.3s ease;
+        }
+
+        .lightbox-img-wrapper.has-multiple .lightbox-image {
+            max-width: 45%;
+            max-height: 70vh;
         }
 
         .premium-lightbox.active .lightbox-image {
@@ -375,7 +382,7 @@
                 <a href="index.html" class="nav-item">채팅콘</a>
                 <a href="guide.html" class="nav-item">설명서</a>
                 <a href="songbook.html" class="nav-item">노래책</a>
-                <a href="ringgiring.html" class="nav-item active">링기링</a>
+                <a href="ringgiring.html" class="nav-item active">링기링 아카이브</a>
             </div>
         </div>
     </nav>
@@ -538,6 +545,12 @@
                 ? item.detailImages
                 : [item.mainImage];
 
+            if (imagesToShow.length > 1) {
+                lightboxImgWrapper.classList.add('has-multiple');
+            } else {
+                lightboxImgWrapper.classList.remove('has-multiple');
+            }
+
             // Render all images
             imagesToShow.forEach((src, idx) => {
                 const img = document.createElement('img');
@@ -566,10 +579,7 @@
             lightbox.classList.add('active');
 
             // Reset lightbox scroll to top
-            const container = lightbox.querySelector('.lightbox-container');
-            if (container) {
-                container.scrollTop = 0;
-            }
+            lightbox.scrollTop = 0;
 
             // Prevent body scroll when lightbox is open
             document.body.style.overflow = 'hidden';
@@ -621,6 +631,12 @@
                     ? item.detailImages
                     : [item.mainImage];
 
+                if (imagesToShow.length > 1) {
+                    lightboxImgWrapper.classList.add('has-multiple');
+                } else {
+                    lightboxImgWrapper.classList.remove('has-multiple');
+                }
+
                 imagesToShow.forEach((src, idx) => {
                     const img = document.createElement('img');
                     img.className = 'lightbox-image';
@@ -642,9 +658,9 @@
                 document.getElementById('lightboxDate').innerText = item.date;
 
                 // Reset lightbox scroll to top
-                const container = document.querySelector('.lightbox-container');
-                if (container) {
-                    container.scrollTop = 0;
+                const lightboxEl = document.getElementById('premiumLightbox');
+                if (lightboxEl) {
+                    lightboxEl.scrollTop = 0;
                 }
             }, 150);
         }
