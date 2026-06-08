@@ -1,5 +1,74 @@
 const portfolioData = [
   {
+    "id": "ringgi_1780915751441",
+    "year": "2025",
+    "title": "토요사토미미노 미코",
+    "date": "2025.10.26",
+    "mainImage": "./image/guide/ringgi/미코.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780915751439_n5aqo",
+    "year": "2025",
+    "title": "T포즈를 하고있는 유키미쿠 2024",
+    "date": "2025.10.26",
+    "mainImage": "./image/guide/ringgi/유키미쿠2024.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [
+      "./image/guide/ringgi/유키미쿠2024.png",
+      "./image/guide/ringgi/유키미쿠2024_2.png"
+    ],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780915667861_3y4ho",
+    "year": "2025",
+    "title": "물구나무선 할로우 나이트 주인공",
+    "date": "2025.11.02",
+    "mainImage": "./image/guide/ringgi/할나.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780915510930_5c1g0",
+    "year": "2025",
+    "title": "호유옷 입고 태보하는 도나루님",
+    "date": "2025.11.02",
+    "mainImage": "./image/guide/ringgi/나루태보.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780915386431_5lxag",
+    "year": "2025",
+    "title": "뉴클리어 도장 오쿠",
+    "date": "2025.11.09",
+    "mainImage": "./image/guide/ringgi/오쿠.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1780915326287_h7rsf",
+    "year": "2025",
+    "title": "째트킥 호유",
+    "date": "2025.11.16",
+    "mainImage": "./image/guide/ringgi/째트킥호유.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
     "id": "ringgi_1780911409174",
     "year": "2025",
     "title": "권총을 겨누고 있는 모자걸",
