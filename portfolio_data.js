@@ -236,7 +236,7 @@ const portfolioData = [
   {
     "id": "ringgi_1780869484579",
     "year": "2026",
-    "title": "오토마치 우나",
+    "title": "오토마치 우나 Talk EX",
     "date": "2026.06.07",
     "mainImage": "./image/guide/ringgi/ì°ë.png",
     "mainImageStyle": "object-position: center;",
@@ -394,5 +394,5 @@ const portfolioData = [
 ];
 
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = portfolioData;
+  module.exports = portfolioData;
 }
