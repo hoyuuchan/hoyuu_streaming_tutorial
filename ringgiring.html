@@ -275,31 +275,33 @@
 
         .lightbox-container {
             max-width: 85%;
-            max-height: 80vh;
+            max-height: 85vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             position: relative;
+            overflow-y: auto;
+            padding-right: 15px;
         }
 
         .lightbox-img-wrapper {
             position: relative;
             max-width: 100%;
-            max-height: 70vh;
             display: flex;
+            flex-direction: column;
+            gap: 15px;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
             border-radius: 8px;
         }
 
         .lightbox-image {
             max-width: 100%;
-            max-height: 70vh;
+            max-height: 75vh;
             object-fit: contain;
             transform: scale(0.95);
-            transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.3s ease;
         }
 
         .premium-lightbox.active .lightbox-image {
@@ -524,11 +526,37 @@
             const item = ringgiringItems[index];
 
             const lightbox = document.getElementById('premiumLightbox');
-            const lightboxImg = document.getElementById('lightboxImg');
+            const lightboxImgWrapper = lightbox.querySelector('.lightbox-img-wrapper');
             const lightboxTitle = document.getElementById('lightboxTitle');
             const lightboxDate = document.getElementById('lightboxDate');
 
-            lightboxImg.src = item.mainImage;
+            // Clear previous images
+            lightboxImgWrapper.innerHTML = '';
+
+            // If detailImages array exists and has elements, show those. Otherwise, show mainImage.
+            const imagesToShow = (item.detailImages && item.detailImages.length > 0)
+                ? item.detailImages
+                : [item.mainImage];
+
+            // Render all images
+            imagesToShow.forEach((src, idx) => {
+                const img = document.createElement('img');
+                img.className = 'lightbox-image';
+                img.src = src;
+                img.alt = `${item.title} - 이미지 ${idx + 1}`;
+                img.style.opacity = '0';
+                img.onerror = function() {
+                    this.onerror = null;
+                    this.src = 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'100\'%3E%3Crect width=\'100%25\' height=\'100%25\' fill=\'%23eeeeee\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' font-family=\'sans-serif\' font-size=\'12\' fill=\'%23999999\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3ENo Image%3C/text%3E%3C/svg%3E';
+                };
+                lightboxImgWrapper.appendChild(img);
+                
+                // Animate fade-in
+                setTimeout(() => {
+                    img.style.opacity = '1';
+                }, 50);
+            });
+
             lightboxTitle.innerText = item.title;
             lightboxDate.innerText = item.date;
 
@@ -536,6 +564,12 @@
             // Force redraw before adding class for opacity transition
             lightbox.offsetHeight;
             lightbox.classList.add('active');
+
+            // Reset lightbox scroll to top
+            const container = lightbox.querySelector('.lightbox-container');
+            if (container) {
+                container.scrollTop = 0;
+            }
 
             // Prevent body scroll when lightbox is open
             document.body.style.overflow = 'hidden';
@@ -569,21 +603,49 @@
                 newIndex = 0; // loop to start
             }
 
-            // Smoothly change lightbox content with slight scale transition
-            const lightboxImg = document.getElementById('lightboxImg');
-            lightboxImg.style.transform = 'scale(0.95)';
-            lightboxImg.style.opacity = '0.5';
+            // Smoothly change lightbox content with transition
+            const lightboxImgWrapper = document.querySelector('.lightbox-img-wrapper');
+            const images = lightboxImgWrapper.querySelectorAll('.lightbox-image');
+            images.forEach(img => {
+                img.style.transform = 'scale(0.95)';
+                img.style.opacity = '0.5';
+            });
 
             setTimeout(() => {
                 currentLightboxIndex = newIndex;
                 const item = ringgiringItems[newIndex];
 
-                lightboxImg.src = item.mainImage;
+                // Clear and render new images
+                lightboxImgWrapper.innerHTML = '';
+                const imagesToShow = (item.detailImages && item.detailImages.length > 0)
+                    ? item.detailImages
+                    : [item.mainImage];
+
+                imagesToShow.forEach((src, idx) => {
+                    const img = document.createElement('img');
+                    img.className = 'lightbox-image';
+                    img.src = src;
+                    img.alt = `${item.title} - 이미지 ${idx + 1}`;
+                    img.style.opacity = '0';
+                    img.onerror = function() {
+                        this.onerror = null;
+                        this.src = 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'100\'%3E%3Crect width=\'100%25\' height=\'100%25\' fill=\'%23eeeeee\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' font-family=\'sans-serif\' font-size=\'12\' fill=\'%23999999\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3ENo Image%3C/text%3E%3C/svg%3E';
+                    };
+                    lightboxImgWrapper.appendChild(img);
+                    
+                    setTimeout(() => {
+                        img.style.opacity = '1';
+                    }, 50);
+                });
+
                 document.getElementById('lightboxTitle').innerText = item.title;
                 document.getElementById('lightboxDate').innerText = item.date;
 
-                lightboxImg.style.transform = 'scale(1)';
-                lightboxImg.style.opacity = '1';
+                // Reset lightbox scroll to top
+                const container = document.querySelector('.lightbox-container');
+                if (container) {
+                    container.scrollTop = 0;
+                }
             }, 150);
         }
 

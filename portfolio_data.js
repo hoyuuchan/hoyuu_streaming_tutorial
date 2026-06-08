@@ -1,5 +1,19 @@
 const portfolioData = [
   {
+    "id": "ringgi_1780906713487",
+    "year": "2026",
+    "title": "고양이날 호유",
+    "date": "2026.02.22",
+    "mainImage": "./image/guide/ringgi/ë¥ì´.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [
+      "냥이.png",
+      "냥이2.png"
+    ],
+    "type": "ringgiring"
+  },
+  {
     "id": "ringgi_1780906100434",
     "year": "2026",
     "title": "멘헤라 호유",
