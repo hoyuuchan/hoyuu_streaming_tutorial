@@ -1,5 +1,52 @@
 const portfolioData = [
   {
+    "id": "ringgi_1781039214611",
+    "year": "2025",
+    "title": "바니걸 호유",
+    "date": "2025.04.11",
+    "mainImage": "./image/guide/ringgi/바유.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [
+      "./image/guide/ringgi/바유.png",
+      "./image/guide/ringgi/바유2.png"
+    ],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1781039115111_qfj42",
+    "year": "2025",
+    "title": "메이드 호유",
+    "date": "2025.04.25",
+    "mainImage": "./image/guide/ringgi/메이드호유.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1781039016126_mrrgc",
+    "year": "2025",
+    "title": "명일방주 Ash",
+    "date": "2025.05.31",
+    "mainImage": "./image/guide/ringgi/애쉬.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1781038894945_y1bqk",
+    "year": "2025",
+    "title": "젖소잠옷 호유",
+    "date": "2025.06.14",
+    "mainImage": "./image/guide/ringgi/젖소호유.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
     "id": "ringgi_1780953945098",
     "year": "2025",
     "title": "다인",
