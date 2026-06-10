@@ -1,5 +1,38 @@
 const portfolioData = [
   {
+    "id": "ringgi_1781090650000",
+    "year": "2026",
+    "title": "도로시 호유",
+    "date": "-",
+    "mainImage": "./image/guide/ringgi/도로시호유2.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1781090586083_7upco",
+    "year": "2026",
+    "title": "유키미쿠 2021",
+    "date": "-",
+    "mainImage": "./image/guide/ringgi/미쿠.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1781090474395_9ei90",
+    "year": "2026",
+    "title": "독 타입 미쿠",
+    "date": "-",
+    "mainImage": "./image/guide/ringgi/독미쿠.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
     "id": "ringgi_1781088797832",
     "year": "2025",
     "title": "레이싱걸 레나",
