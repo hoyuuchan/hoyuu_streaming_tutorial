@@ -1,5 +1,16 @@
 const portfolioData = [
   {
+    "id": "ringgi_1781088797832",
+    "year": "2025",
+    "title": "레이싱걸 레나",
+    "date": "2025.06.21",
+    "mainImage": "./image/guide/ringgi/레나.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
     "id": "ringgi_1781039214611",
     "year": "2025",
     "title": "바니걸 호유",
