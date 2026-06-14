@@ -1,5 +1,16 @@
 const portfolioData = [
   {
+    "id": "ringgi_1781471500209",
+    "year": "2026",
+    "title": "신쿠",
+    "date": "2026.06.14",
+    "mainImage": "./image/guide/ringgi/신쿠.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
     "id": "ringgi_1781090650000",
     "year": "2026",
     "title": "도로시 호유",
