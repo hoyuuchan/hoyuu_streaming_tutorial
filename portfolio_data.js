@@ -1,5 +1,16 @@
 const portfolioData = [
   {
+    "id": "ringgi_1782133418091",
+    "year": "2026",
+    "title": "수영복 키사키",
+    "date": "2026.06.21",
+    "mainImage": "./image/guide/ringgi/키사키수영복.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
     "id": "ringgi_1781471500209",
     "year": "2026",
     "title": "신쿠",
