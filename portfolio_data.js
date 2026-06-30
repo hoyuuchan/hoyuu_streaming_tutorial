@@ -1,5 +1,16 @@
 const portfolioData = [
   {
+    "id": "ringgi_1782826603671",
+    "year": "2026",
+    "title": "레드후드",
+    "date": "2026.06.28",
+    "mainImage": "./image/guide/ringgi/레드후드.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
     "id": "ringgi_1782133418091",
     "year": "2026",
     "title": "수영복 키사키",
