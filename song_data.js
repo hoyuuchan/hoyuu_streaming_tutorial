@@ -1,5 +1,110 @@
 const songData = [
   {
+    "id": "song_1783238428192",
+    "title": "Manic",
+    "artist": "오토마치 우나 & 라나",
+    "image": "",
+    "difficulty": "0",
+    "tags": [
+      {
+        "text": "연습중",
+        "textColor": "#212121",
+        "borderColor": "#8eff42"
+      }
+    ],
+    "description": "https://youtu.be/i5qKMUG4Nrc?si=Hmc0Ap8DbCPtOHIz",
+    "youtubeLink": ""
+  },
+  {
+    "id": "song_1783238369202",
+    "title": "恋は渾沌の隷也 (사랑은 혼돈의 노예)",
+    "artist": "뒤에서부터 기어오는 부대G",
+    "image": "",
+    "difficulty": "0",
+    "tags": [
+      {
+        "text": "연습중",
+        "textColor": "#212121",
+        "borderColor": "#8eff42"
+      }
+    ],
+    "description": "",
+    "youtubeLink": ""
+  },
+  {
+    "id": "song_1783238273668",
+    "title": "NO, Thank You!",
+    "artist": "방과 후 티타임",
+    "image": "",
+    "difficulty": "0",
+    "tags": [
+      {
+        "text": "연습중",
+        "textColor": "#212121",
+        "borderColor": "#8eff42"
+      }
+    ],
+    "description": "",
+    "youtubeLink": ""
+  },
+  {
+    "id": "song_1783238232656",
+    "title": "Love Is Thrill, Shock, Suspense (Korean ver.)",
+    "artist": "진선주",
+    "image": "",
+    "difficulty": "0",
+    "tags": [],
+    "description": "",
+    "youtubeLink": ""
+  },
+  {
+    "id": "song_1783238159042",
+    "title": "1991",
+    "artist": "요네즈 켄시",
+    "image": "",
+    "difficulty": "0",
+    "tags": [
+      {
+        "text": "연습중",
+        "textColor": "#212121",
+        "borderColor": "#8eff42"
+      }
+    ],
+    "description": "https://youtu.be/g5WqWEVdpgg?si=em9Df7_ofjDqnxis",
+    "youtubeLink": ""
+  },
+  {
+    "id": "song_1783238075259",
+    "title": "비둘기",
+    "artist": "크라잉넛",
+    "image": "",
+    "difficulty": "0",
+    "tags": [],
+    "description": "",
+    "youtubeLink": ""
+  },
+  {
+    "id": "song_1783238041115",
+    "title": "Bling-Bang-Bang-Born",
+    "artist": "Creepy Nuts",
+    "image": "",
+    "difficulty": "0",
+    "tags": [],
+    "description": "",
+    "youtubeLink": ""
+  },
+  {
+    "id": "song_1783237961515",
+    "title": "JANE DOE",
+    "artist": "요네즈 켄시",
+    "image": "",
+    "difficulty": "0",
+    "tags": [],
+    "description": "",
+    "youtubeLink": "",
+    "hidden": false
+  },
+  {
     "id": "new_1778749146957",
     "title": "Ms. VICTORIA (Game Size)",
     "artist": "-",
