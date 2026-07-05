@@ -41,7 +41,8 @@ const songData = [
       }
     ],
     "description": "",
-    "youtubeLink": ""
+    "youtubeLink": "",
+    "hidden": true
   },
   {
     "id": "new_1780865890896",
@@ -57,7 +58,8 @@ const songData = [
       }
     ],
     "description": "",
-    "youtubeLink": "https://youtu.be/jaf0KLWM9lI?si=kpbGuPQNWNw-kr-e"
+    "youtubeLink": "https://youtu.be/jaf0KLWM9lI?si=kpbGuPQNWNw-kr-e",
+    "hidden": true
   },
   {
     "id": "new_1780865864181",
@@ -116,7 +118,8 @@ const songData = [
       }
     ],
     "description": "",
-    "youtubeLink": "https://www.youtube.com/watch?v=LCk3fyCy40g"
+    "youtubeLink": "https://www.youtube.com/watch?v=LCk3fyCy40g",
+    "hidden": true
   },
   {
     "id": "song_1780599763448",
@@ -196,7 +199,8 @@ const songData = [
       }
     ],
     "description": "",
-    "youtubeLink": "https://www.youtube.com/watch?v=smP0zdhaYXM"
+    "youtubeLink": "https://www.youtube.com/watch?v=smP0zdhaYXM",
+    "hidden": true
   },
   {
     "id": "song_1778661351548",
