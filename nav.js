@@ -1,17 +1,107 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const navContainer = document.querySelector('.nav-container');
-    const navItems = document.querySelectorAll('.nav-item');
+    // 호유 아이콘 원형 확장(Circular Reveal) 메뉴
+    const hoyuuIconBtn = document.getElementById('hoyuuIconBtn');
+    const hoyuuCircleOverlay = document.getElementById('hoyuuCircleOverlay');
+    const hoyuuCloseIcon = document.getElementById('hoyuuDropdownCloseBtn');
 
-    // 클릭 이벤트 처리 (단순 페이지 이동)
-    // navItems의 href 속성으로 자연스럽게 이동되므로, 별도의 JS 처리가 필요 없을 수도 있음.
-    // 하지만 active 클래스 관리를 위해 남겨둔다면 아래와 같이 수정.
-    // 사실 페이지가 이동되면 HTML/CSS에서 active 클래스를 지정해두었으므로 JS로 active를 바꿀 필요도 없음.
-    // 따라서 nav.js의 대부분의 로직을 제거해도 무방함.
+    if (!hoyuuIconBtn || !hoyuuCircleOverlay || !hoyuuCloseIcon) return;
 
-    // 만약 현재 페이지에서도 active 상태를 유지하고 싶다면 URL 비교 로직 정도만 있으면 됨.
-    // 하지만 guide.html과 index.html이 분리되어 있고 각 파일에서 class="nav-item active"를 이미 지정하고 있음.
-    // 그러므로 JS는 아무런 동작을 하지 않아도 됨.
+    const revealTargets = hoyuuCircleOverlay.querySelectorAll(
+        '.hoyuu-circle-close-icon, .hoyuu-dropdown-links'
+    );
 
-    // 사용자 요청: "움직이는 모션 삭제", "대기 후 이동 삭제"
-    // -> 즉, 그냥 a 태그 본연의 기능(바로 이동)만 남기면 됨.
+    let isOpen = false;
+    let rafId = null;
+
+    // easeInOutCubic
+    function ease(t) {
+        return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    }
+
+    function animate(opening) {
+        if (rafId) cancelAnimationFrame(rafId);
+
+        const rect = hoyuuIconBtn.getBoundingClientRect();
+        const startX = rect.left + rect.width / 2;
+        const startY = rect.top + rect.height / 2;
+        const W = window.innerWidth;
+        const H = window.innerHeight;
+        const maxR = Math.hypot(W, H) * 1.05;
+        const orbitR = Math.max(50, Math.min(W, H) * 0.12);
+        const duration = 520;
+        const startTime = performance.now();
+
+        hoyuuCloseIcon.style.left = startX + 'px';
+        hoyuuCloseIcon.style.top = startY + 'px';
+        hoyuuCircleOverlay.classList.toggle('open', opening);
+
+        if (!opening) {
+            revealTargets.forEach((el) => (el.style.opacity = '0'));
+            hoyuuCircleOverlay
+                .querySelectorAll('.hoyuu-dropdown-links a.show-desc')
+                .forEach((l) => l.classList.remove('show-desc'));
+        }
+
+        function frame(now) {
+            const p = Math.min((now - startTime) / duration, 1);
+            const ep = ease(p);
+            const dirP = opening ? ep : 1 - ep;
+
+            const angle = dirP * Math.PI * 0.9;
+            const cx = startX + orbitR * Math.sin(angle);
+            const cy = startY + orbitR * (1 - Math.cos(angle));
+            const r = dirP * maxR;
+
+            hoyuuCircleOverlay.style.clipPath = `circle(${r}px at ${cx}px ${cy}px)`;
+
+            if (p < 1) {
+                rafId = requestAnimationFrame(frame);
+            } else if (opening) {
+                revealTargets.forEach((el) => (el.style.opacity = '1'));
+            }
+        }
+
+        rafId = requestAnimationFrame(frame);
+    }
+
+    function setOpen(open) {
+        isOpen = open;
+        animate(open);
+    }
+
+    hoyuuIconBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        setOpen(!isOpen);
+    });
+
+    hoyuuCloseIcon.addEventListener('click', (e) => {
+        e.stopPropagation();
+        setOpen(false);
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    // 메뉴 링크 설명글 툴팁 - hover가 없는 터치 기기는 첫 탭에 설명글만 보여주고,
+    // 같은 링크를 다시 탭해야 실제 이동하도록 처리
+    const descLinks = document.querySelectorAll('.hoyuu-dropdown-links a[data-desc]');
+    if (!descLinks.length) return;
+
+    const isCoarsePointer = window.matchMedia('(hover: none)').matches;
+    if (!isCoarsePointer) return;
+
+    descLinks.forEach((link) => {
+        link.addEventListener('click', (e) => {
+            if (!link.classList.contains('show-desc')) {
+                e.preventDefault();
+                descLinks.forEach((l) => l.classList.remove('show-desc'));
+                link.classList.add('show-desc');
+            }
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.hoyuu-dropdown-links a[data-desc]')) {
+            descLinks.forEach((l) => l.classList.remove('show-desc'));
+        }
+    });
 });

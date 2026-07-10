@@ -594,7 +594,8 @@
       margin-top: 20px;
       pointer-events: none;
       /* 컨테이너 자체는 클릭 통과 */
-      z-index: 100;
+      z-index: 999999997;
+      /* 페이지의 다른 어떤 요소보다도 항상 최상단에 표시 */
     }
 
     .nav-container {
@@ -660,7 +661,7 @@
     }
 
     /* 호유 아이콘 스타일 조정 */
-    #hoyuu-icon {
+    .hoyuu-icon {
       width: 48px;
       height: 48px;
       border-radius: 50%;
@@ -671,28 +672,153 @@
       transition: transform 0.2s;
     }
 
-    /* 아이콘 감싸는 링크 스타일 */
-    .nav-container>a:first-child {
+    /* 아이콘 감싸는 버튼 스타일 (클릭 시 드롭다운 메뉴 오픈) */
+    .hoyuu-icon-btn {
+      background: none;
+      border: none;
       padding: 4px;
-      /* 아이콘 주변 패딩 줄임 */
-      margin-right: auto;
-      /* 나머지 아이템을 오른쪽으로 밈 */
-      margin-left: 5px;
-      /* 왼쪽 여백 살짝 추가 */
+      margin: 0;
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 50%;
+      cursor: pointer;
+      font: inherit;
     }
 
-    .nav-container>a:first-child:hover {
+    .nav-container>.hoyuu-icon-btn {
+      margin-right: auto;
+      /* 나머지 아이템을 오른쪽으로 밈 */
+      margin-left: 5px;
+      /* 왼쪽 여백 살짝 추가 */
+    }
+
+    .hoyuu-icon-btn:hover {
       background-color: transparent;
       /* 아이콘 배경 호버 효과 제거 */
     }
 
-    .nav-container>a:first-child:hover #hoyuu-icon {
+    .hoyuu-icon-btn:hover .hoyuu-icon {
       transform: rotate(10deg) scale(1.1);
       /* 아이콘 자체 애니메이션 */
+    }
+
+    /* -------------------------------------------------------------------------- */
+    /* [호유 아이콘 원형 확장(Circular Reveal) 메뉴] */
+    /* -------------------------------------------------------------------------- */
+    /* clip-path의 원 중심/반지름은 nav.js가 매 프레임 인라인 스타일로 계산해서 넣어줌 */
+    .hoyuu-circle-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 999999999;
+      /* 페이지의 다른 어떤 요소보다도 항상 최상단에 표시 */
+      /* index.html filter-container(.main-group-wrapper)와 동일한 글래스모피즘 */
+      background-color: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      clip-path: circle(0px at 0px 0px);
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hoyuu-circle-overlay.open {
+      pointer-events: auto;
+    }
+
+    /* 원이 시작되는 지점(=실제 hoyuu-icon 위치)에 그대로 남아, 다시 탭하면 닫히는 아이콘 */
+    /* 메뉴가 열리면 아바타 이미지 대신 X 아이콘으로 바뀜(닫기 버튼 역할) */
+    .hoyuu-circle-close-icon {
+      position: fixed;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    .hoyuu-circle-close-icon .hoyuu-icon {
+      transition: opacity 0.2s ease;
+    }
+
+    .hoyuu-circle-close-icon::before,
+    .hoyuu-circle-close-icon::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 22px;
+      height: 3px;
+      background-color: #333;
+      border-radius: 2px;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    .hoyuu-circle-close-icon::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .hoyuu-circle-close-icon::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    .hoyuu-circle-overlay.open .hoyuu-circle-close-icon .hoyuu-icon {
+      opacity: 0;
+    }
+
+    .hoyuu-circle-overlay.open .hoyuu-circle-close-icon::before,
+    .hoyuu-circle-overlay.open .hoyuu-circle-close-icon::after {
+      opacity: 1;
+    }
+
+    .hoyuu-dropdown-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      padding: 0 24px;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    /* 메뉴 글씨(링크) hover/탭 시 아래에 설명글 툴팁 표시 */
+    /* 설명 문구는 각 링크의 data-desc 속성에 직접 입력 */
+    .hoyuu-dropdown-links a[data-desc] {
+      position: relative;
+    }
+
+    .hoyuu-dropdown-links a[data-desc]::after {
+      content: attr(data-desc);
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, 4px);
+      width: max-content;
+      max-width: 240px;
+      white-space: normal;
+      text-align: center;
+      color: #333;
+      font-size: 0.8rem;
+      font-weight: 500;
+      line-height: 1.4;
+      padding: 8px 14px;
+      border-radius: 10px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      z-index: 20;
+    }
+
+    /* 데스크톱: hover 시 표시 */
+    .hoyuu-dropdown-links a[data-desc]:hover::after {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    /* 모바일(터치): 첫 탭 시 nav.js가 붙여주는 클래스로 표시 */
+    .hoyuu-dropdown-links a[data-desc].show-desc::after {
+      opacity: 1;
+      transform: translate(-50%, 0);
     }
 
     /* 모바일 대응 */
@@ -705,6 +831,19 @@
         font-size: 0.9em;
         /* 모바일에서는 조금 작게 */
         padding: 8px 12px;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .hoyuu-dropdown-links {
+        gap: 12px;
+        padding: 0 16px;
+      }
+
+      .hoyuu-dropdown-links a[data-desc]::after {
+        max-width: 200px;
+        font-size: 0.75rem;
       }
     }
 
@@ -2085,7 +2224,7 @@
         font-size: 0.9em;
       }
 
-      #hoyuu-icon {
+      .hoyuu-icon {
         width: 32px;
         height: 32px;
       }
@@ -2449,159 +2588,21 @@
     }
 
     /* -------------------------------------------------------------------------- */
-    /* [Intro Popup Overlay CSS] */
+    /* [Intro Link Buttons CSS] (호유 아이콘 드롭다운 메뉴에서도 재사용) */
     /* -------------------------------------------------------------------------- */
-    .intro-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 9999;
-      pointer-events: none;
-      /* 초기에는 클릭 통과 */
-      overflow: hidden;
-    }
-
-    .intro-overlay.active {
-      pointer-events: auto;
-      /* 활성 시 클릭 차단 */
-    }
-
-    /* 배경 원 */
-    .intro-circle-bg {
-      position: absolute;
-      width: 100px;
-      height: 100px;
-      background-color: #333;
-      /* 요청하신 색상 */
-      border-radius: 50%;
-      transform: translate(-50%, -50%) scale(0);
-      transition: transform 0.6s cubic-bezier(0.7, 0, 0.3, 1);
-      z-index: 1;
-    }
-
-    /* 확대 애니메이션 클래스 */
-    .intro-circle-bg.expand {
-      transform: translate(-50%, -50%) scale(35);
-      /* 화면 전체를 덮을 만큼 충분히 크게 */
-    }
-
-    /* 배경 스크롤 방지 */
-    html.no-scroll,
-    body.no-scroll {
-      overflow: hidden !important;
-    }
-
-    /* 컨텐츠 컨테이너 */
-    .intro-content {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      /* justify-content: center; 제거 - 내용이 많을 때 스크롤을 위해 */
-      align-items: center;
-      z-index: 2;
-      opacity: 0;
-      transition: opacity 0.1s ease-out;
-      /* 닫을 때는 매우 빠르게 사라짐 */
-      pointer-events: none;
-
-      /* 스크롤 설정 */
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    /* .intro-overlay.active 대신 별도 클래스 사용 */
-    .intro-content.visible {
-      opacity: 1;
-      pointer-events: auto;
-      transition: opacity 0.4s ease 0.3s;
-      /* 열 때는 배경 커진 후 나타남 */
-    }
-
-    /* 스크롤바 커스텀 (Overlay) */
-    .intro-content::-webkit-scrollbar {
-      width: 8px;
-    }
-
-    .intro-content::-webkit-scrollbar-track {
-      background: rgba(255, 255, 255, 0.1);
-    }
-
-    .intro-content::-webkit-scrollbar-thumb {
-      background: rgba(255, 255, 255, 0.3);
-      border-radius: 4px;
-    }
-
-    .intro-content::-webkit-scrollbar-thumb:hover {
-      background: rgba(255, 255, 255, 0.5);
-    }
-
-    /* 닫기 버튼 */
-    .intro-close-btn {
-      position: fixed;
-      /* fix to screen corner, not scrolling with content */
-      top: 30px;
-      right: 30px;
-      background: none;
-      border: none;
-      color: #fff;
-      font-size: 40px;
-      cursor: pointer;
-      z-index: 3;
-      transition: transform 0.2s;
-    }
-
-    .intro-close-btn:hover {
-      transform: scale(1.1) rotate(90deg);
-    }
-
-    /* 텍스트 컨테이너 */
-    .intro-text-container {
-      text-align: center;
-      color: #fff;
-      max-width: 800px;
-      padding: 80px 20px 50px 20px;
-      /* 상단 패딩은 닫기 버튼 고려, 하단 패딩 확보 */
-      margin: auto;
-      /* flexbox 내에서 vertical centering + scroll safety */
-    }
-
-    .intro-text-container h1 {
-      font-size: 3rem;
-      letter-spacing: -1px;
-    }
-
-    .intro-text-container p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      margin-bottom: 15px;
-      color: #ddd;
-    }
-
-    .intro-links {
-      display: contents;
-      margin-top: 40px;
-    }
-
     .intro-link-btn {
       display: inline-block;
       padding: 12px 30px;
-      margin-right: 10px;
-      background-color: #fff;
       color: #333;
+      font-size: 3.2em;
       text-decoration: none;
       font-weight: bold;
-      border-radius: 30px;
+      /* 글래스모피즘 배경 위에서도 눈에 띄도록 기본 그림자 부여 (.nav-links와 동일한 톤) */
       transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s, color 0.2s;
     }
 
     /* [FIX] 아이콘 크기 제어를 위해 background-image로 변경 */
-    a.intro-link-btn.chzzk::before {
+    /*a.intro-link-btn.chzzk::before {
       content: "";
       display: inline-block;
       width: 24px;
@@ -2634,28 +2635,26 @@
       vertical-align: middle;
       margin-right: 8px;
       border-radius: 5px;
-    }
+    }*/
 
     a.intro-link-btn.chzzk:hover {
-      box-shadow: 0 5px 15px rgb(0 244 76 / 30%) !important;
-      background-color: #00ffa2;
+      color: #00ffa2;
     }
 
     a.intro-link-btn.twitter:hover {
-      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
-      color: #fff;
-      background-color: #000;
+      color: #000;
     }
 
     a.intro-link-btn.pixiv:hover {
-      box-shadow: 0 5px 15px rgba(0, 98, 244, 0.3) !important;
-      color: #fff;
-      background-color: #0d95f5;
+      color: #0d95f5;
+    }
+
+    a.intro-link-btn.mypage:hover {
+      color: #b5b5b5;
     }
 
     .intro-link-btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
     }
 
     /* -------------------------------------------------------------------------- */

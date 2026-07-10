@@ -14,11 +14,29 @@
 </head>
 
 <body>
+    <!-- 호유 아이콘 원형 확장(Circular Reveal) 메뉴 -->
+    <div id="hoyuuCircleOverlay" class="hoyuu-circle-overlay">
+        <button id="hoyuuDropdownCloseBtn" type="button" class="hoyuu-icon-btn hoyuu-circle-close-icon"
+            aria-label="메뉴 닫기">
+            <div class="hoyuu-icon"></div>
+        </button>
+        <div class="hoyuu-dropdown-links">
+            <a href="https://chzzk.naver.com/3cf58789ab09865bdc1e2f3a76d66b27" target="_blank"
+                class="intro-link-btn chzzk" data-desc="방송 보러오세여!!">치지직 채널</a>
+            <a href="https://x.com/hoyuu__" target="_blank"
+                class="intro-link-btn twitter" data-desc="무슨 글을 써야할지 모르겠어서 리트윗만함,,">트위터</a>
+            <a href="https://www.pixiv.net/users/110536041" target="_blank"
+                class="intro-link-btn pixiv" data-desc="지금까지 만든 모델링을 볼 수 있습니다!">픽시브</a>
+            <a href="https://hoyuu-streamchat.web.app/" target="_blank"
+                class="intro-link-btn mypage" data-desc="방송 관련 개인 설정 페이지에요!">개인 페이지</a>
+        </div>
+    </div>
+
     <nav class="nav-menu">
         <div class="nav-container">
-            <a href="https://chzzk.naver.com/3cf58789ab09865bdc1e2f3a76d66b27" target="_blank" class="nav-item">
-                <div id="hoyuu-icon"></div>
-            </a>
+            <button id="hoyuuIconBtn" type="button" class="hoyuu-icon-btn" aria-label="메뉴 열기">
+                <div class="hoyuu-icon"></div>
+            </button>
             <div class="nav-links">
                 <a href="index.html" class="nav-item">채팅콘</a>
                 <a href="guide.html" class="nav-item active">설명서</a>
@@ -399,28 +417,6 @@
         <script src="./data.js"></script>
         <script src="./nav.js"></script>
         <script src="./guide.js"></script>
-        <!-- 소개 팝업 오버레이 -->
-        <div id="intro-overlay" class="intro-overlay">
-            <div class="intro-circle-bg"></div>
-            <div class="intro-content">
-                <button id="intro-close-btn" class="intro-close-btn">×</button>
-                <div class="intro-text-container">
-                    <h1>안녕하세요!</h1>
-                    <div class="intro-links">
-                        <a href="https://chzzk.naver.com/3cf58789ab09865bdc1e2f3a76d66b27" target="_blank"
-                            class="intro-link-btn chzzk">가나다</a>
-                    </div>
-                    <div class="intro-links">
-                        <a href="https://chzzk.naver.com/3cf58789ab09865bdc1e2f3a76d66b27" target="_blank"
-                            class="intro-link-btn twitter">가나다</a>
-                    </div>
-                    <div class="intro-links">
-                        <a href="https://chzzk.naver.com/3cf58789ab09865bdc1e2f3a76d66b27" target="_blank"
-                            class="intro-link-btn pixiv">가나다</a>
-                    </div>
-                </div>
-            </div>
-        </div>
 
 
         <!-- Google Tag Manager (noscript) -->

@@ -19,11 +19,29 @@
 </head>
 
 <body>
+  <!-- 호유 아이콘 원형 확장(Circular Reveal) 메뉴 -->
+  <div id="hoyuuCircleOverlay" class="hoyuu-circle-overlay">
+    <button id="hoyuuDropdownCloseBtn" type="button" class="hoyuu-icon-btn hoyuu-circle-close-icon"
+      aria-label="메뉴 닫기">
+      <div class="hoyuu-icon"></div>
+    </button>
+    <div class="hoyuu-dropdown-links">
+      <a href="https://chzzk.naver.com/3cf58789ab09865bdc1e2f3a76d66b27" target="_blank"
+        class="intro-link-btn chzzk" data-desc="방송 보러오세여!!">치지직 채널</a>
+      <a href="https://x.com/hoyuu__" target="_blank" class="intro-link-btn twitter"
+        data-desc="무슨 글을 써야할지 모르겠어서 리트윗만함,,">트위터</a>
+      <a href="https://www.pixiv.net/users/110536041" target="_blank" class="intro-link-btn pixiv"
+        data-desc="지금까지 만든 모델링을 볼 수 있습니다!">픽시브</a>
+      <a href="https://hoyuu-streamchat.web.app/" target="_blank" class="intro-link-btn mypage"
+        data-desc="방송 관련 개인 설정 페이지에요!">개인 페이지</a>
+    </div>
+  </div>
+
   <nav class="nav-menu">
     <div class="nav-container">
-      <a href="https://chzzk.naver.com/3cf58789ab09865bdc1e2f3a76d66b27" target="_blank" class="nav-item">
-        <div id="hoyuu-icon"></div>
-      </a>
+      <button id="hoyuuIconBtn" type="button" class="hoyuu-icon-btn" aria-label="메뉴 열기">
+        <div class="hoyuu-icon"></div>
+      </button>
       <div class="nav-links">
         <a href="index.html" class="nav-item active">채팅콘 선택기</a>
         <a href="guide.html" class="nav-item">설명서</a>
