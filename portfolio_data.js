@@ -1,5 +1,27 @@
 const portfolioData = [
   {
+    "id": "ringgi_1783926366569",
+    "year": "2026",
+    "title": "솔린",
+    "date": "2026.07.12",
+    "mainImage": "./image/guide/ringgi/솔린.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1783926366563_6e9hq",
+    "year": "2026",
+    "title": "거북왕으로 변한 메타몽",
+    "date": "2026.07.05",
+    "mainImage": "./image/guide/ringgi/메타거북왕.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
     "id": "ringgi_1782826603671",
     "year": "2026",
     "title": "레드후드",
