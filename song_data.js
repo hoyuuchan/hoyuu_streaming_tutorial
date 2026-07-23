@@ -1,5 +1,49 @@
 const songData = [
   {
+    "id": "song_1784660149727",
+    "title": "가슴 시린 이야기",
+    "artist": "",
+    "image": "",
+    "difficulty": "0",
+    "tags": [],
+    "description": "",
+    "youtubeLink": "https://www.youtube.com/watch?v=PrPnroGz1sk&pp=ygUT7Jq47KeA66eIIOuwlOuztOyVvA%3D%3D",
+    "hidden": false
+  },
+  {
+    "id": "song_1784658984519",
+    "title": "밤양갱",
+    "artist": "",
+    "image": "",
+    "difficulty": "0",
+    "tags": [],
+    "description": "",
+    "youtubeLink": "https://www.youtube.com/watch?v=yckntxi09C8&pp=ygUT67Ck7JaR6rCxIOuFuOuemOuwqQ%3D%3D",
+    "hidden": false
+  },
+  {
+    "id": "song_1784658641750",
+    "title": "비둘기",
+    "artist": "",
+    "image": "",
+    "difficulty": "0",
+    "tags": [],
+    "description": "",
+    "youtubeLink": "https://youtu.be/xIEvYlJRRo0?si=lLVVjVGjBd_W2Jq7",
+    "hidden": false
+  },
+  {
+    "id": "song_1784658026935",
+    "title": "Dragostea Din Tei",
+    "artist": "",
+    "image": "",
+    "difficulty": "0",
+    "tags": [],
+    "description": "",
+    "youtubeLink": "https://www.youtube.com/watch?v=knPM6Bd9whw&pp=ygUbZHJhZ29zdGVhIGRpbiB0ZWkg64W4656Y67Cp",
+    "hidden": false
+  },
+  {
     "id": "song_1783238428192",
     "title": "Manic",
     "artist": "오토마치 우나 & 라나",
@@ -402,16 +446,6 @@ const songData = [
     ],
     "description": "부르면 재밌을거 같아서 넣었는데 욕이 너무 많음 ㄱ-",
     "hidden": true
-  },
-  {
-    "id": "song_1778613159835",
-    "title": "Fabulous Secret Powers (우주게이 히맨)",
-    "artist": "SLACKCiRCUS",
-    "image": "./image/guide/song/heeman.jpg",
-    "difficulty": "1",
-    "tags": [],
-    "description": "이게 왜 노래방 버전이 있는거임;",
-    "hidden": false
   },
   {
     "id": "song_1778661003958",
