@@ -1,5 +1,16 @@
 const portfolioData = [
   {
+    "id": "ringgi_1785098080653",
+    "year": "2026",
+    "title": "기모노 메이드 호유",
+    "date": "2026.07.26",
+    "mainImage": "./image/guide/ringgi/기모노호유.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
     "id": "ringgi_1784886699153",
     "year": "2026",
     "title": "나세",
