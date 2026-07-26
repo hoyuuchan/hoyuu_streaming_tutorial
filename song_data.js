@@ -1,49 +1,5 @@
 const songData = [
   {
-    "id": "song_1784660149727",
-    "title": "가슴 시린 이야기",
-    "artist": "",
-    "image": "",
-    "difficulty": "0",
-    "tags": [],
-    "description": "",
-    "youtubeLink": "https://www.youtube.com/watch?v=PrPnroGz1sk&pp=ygUT7Jq47KeA66eIIOuwlOuztOyVvA%3D%3D",
-    "hidden": false
-  },
-  {
-    "id": "song_1784658984519",
-    "title": "밤양갱",
-    "artist": "",
-    "image": "",
-    "difficulty": "0",
-    "tags": [],
-    "description": "",
-    "youtubeLink": "https://www.youtube.com/watch?v=yckntxi09C8&pp=ygUT67Ck7JaR6rCxIOuFuOuemOuwqQ%3D%3D",
-    "hidden": false
-  },
-  {
-    "id": "song_1784658641750",
-    "title": "비둘기",
-    "artist": "",
-    "image": "",
-    "difficulty": "0",
-    "tags": [],
-    "description": "",
-    "youtubeLink": "https://youtu.be/xIEvYlJRRo0?si=lLVVjVGjBd_W2Jq7",
-    "hidden": false
-  },
-  {
-    "id": "song_1784658026935",
-    "title": "Dragostea Din Tei",
-    "artist": "",
-    "image": "",
-    "difficulty": "0",
-    "tags": [],
-    "description": "",
-    "youtubeLink": "https://www.youtube.com/watch?v=knPM6Bd9whw&pp=ygUbZHJhZ29zdGVhIGRpbiB0ZWkg64W4656Y67Cp",
-    "hidden": false
-  },
-  {
     "id": "song_1783238428192",
     "title": "Manic",
     "artist": "오토마치 우나 & 라나",
@@ -150,34 +106,6 @@ const songData = [
     "artist": "요네즈 켄시",
     "image": "",
     "difficulty": "0",
-    "tags": [],
-    "description": "",
-    "youtubeLink": "",
-    "hidden": true
-  },
-  {
-    "id": "new_1778749146957",
-    "title": "Ms. VICTORIA (Game Size)",
-    "artist": "-",
-    "image": "./image/guide/song/msvictoria.webp",
-    "difficulty": "4",
-    "tags": [
-      {
-        "text": "고음주의",
-        "textColor": "#ffffff",
-        "borderColor": "#ff4242"
-      }
-    ],
-    "description": "",
-    "youtubeLink": "https://www.youtube.com/watch?v=rz95Ubar1bQ",
-    "hidden": true
-  },
-  {
-    "id": "new_1778749007278",
-    "title": "バクシンバクシンバクシンシン(박신박신박신신)",
-    "artist": "사쿠라 바쿠신오 (CV. 미사와 사치카)",
-    "image": "./image/guide/song/baksin.jpg",
-    "difficulty": "3",
     "tags": [],
     "description": "",
     "youtubeLink": "",
@@ -305,32 +233,6 @@ const songData = [
     "youtubeLink": "https://www.youtube.com/watch?v=5zBBVNjXYLg"
   },
   {
-    "id": "song_1780865340974",
-    "title": "미워요",
-    "artist": "정인",
-    "image": "./image/guide/song/miwo.jpg",
-    "difficulty": "4",
-    "tags": [
-      {
-        "text": "고음주의",
-        "textColor": "#ffffff",
-        "borderColor": "#ff4242"
-      }
-    ],
-    "description": "",
-    "youtubeLink": "https://www.youtube.com/watch?v=E7ym9ODPWqg"
-  },
-  {
-    "id": "new_1780519732953",
-    "title": "Wash Away (feat. 에일리)",
-    "artist": "긱스",
-    "image": "./image/guide/song/washaway.jpg",
-    "difficulty": "2",
-    "tags": [],
-    "description": "",
-    "youtubeLink": "https://www.youtube.com/watch?v=471Oyf2M7Rg"
-  },
-  {
     "id": "song_1779479833442",
     "title": "질풍가도",
     "artist": "",
@@ -357,26 +259,6 @@ const songData = [
     "description": "",
     "youtubeLink": "https://www.youtube.com/watch?v=smP0zdhaYXM",
     "hidden": true
-  },
-  {
-    "id": "song_1778661351548",
-    "title": "가자 에버그레이스!",
-    "artist": "롹슨족",
-    "image": "./image/guide/song/evergrace.png",
-    "difficulty": "3",
-    "tags": [
-      {
-        "text": "고음주의",
-        "textColor": "#ffffff",
-        "borderColor": "#ff4242"
-      },
-      {
-        "text": "살짝 개사함",
-        "textColor": "#ffffff",
-        "borderColor": "#428bff"
-      }
-    ],
-    "description": ""
   },
   {
     "id": "new_1778720509759",
@@ -445,23 +327,8 @@ const songData = [
       }
     ],
     "description": "부르면 재밌을거 같아서 넣었는데 욕이 너무 많음 ㄱ-",
-    "hidden": true
-  },
-  {
-    "id": "song_1778661003958",
-    "title": "Lazenca, Save us",
-    "artist": "N.EX.T",
-    "image": "./image/guide/song/lazenca.webp",
-    "difficulty": "2",
-    "tags": [
-      {
-        "text": "고음주의",
-        "textColor": "#ffffff",
-        "borderColor": "#ff4242"
-      }
-    ],
-    "description": "",
-    "hidden": false
+    "hidden": true,
+    "youtubeLink": ""
   },
   {
     "id": "song_1778613133429",
@@ -476,7 +343,8 @@ const songData = [
         "borderColor": "#333333"
       }
     ],
-    "description": ""
+    "description": "",
+    "youtubeLink": ""
   },
   {
     "id": "song_1778613215432",
@@ -485,7 +353,8 @@ const songData = [
     "image": "./image/guide/song/moon.jpg",
     "difficulty": "2",
     "tags": [],
-    "description": ""
+    "description": "",
+    "youtubeLink": ""
   },
   {
     "id": "song_1778661037920",
@@ -500,7 +369,8 @@ const songData = [
         "borderColor": "#42d4f5"
       }
     ],
-    "description": ""
+    "description": "",
+    "youtubeLink": ""
   },
   {
     "id": "song_1778613582093",
@@ -515,7 +385,8 @@ const songData = [
         "borderColor": "#ff4242"
       }
     ],
-    "description": ""
+    "description": "",
+    "youtubeLink": ""
   },
   {
     "id": "song_1778663901335",
@@ -535,7 +406,8 @@ const songData = [
         "borderColor": "#7b42ff"
       }
     ],
-    "description": "아웃사이더 아조시도 이 노래는 거르지 않을가.."
+    "description": "아웃사이더 아조시도 이 노래는 거르지 않을가..",
+    "youtubeLink": ""
   },
   {
     "id": "song_1778613828073",
@@ -544,7 +416,8 @@ const songData = [
     "image": "./image/guide/song/iaru.jpg",
     "difficulty": "3",
     "tags": [],
-    "description": ""
+    "description": "",
+    "youtubeLink": ""
   },
   {
     "id": "song_1778614649411",
@@ -559,7 +432,8 @@ const songData = [
         "borderColor": "#000333"
       }
     ],
-    "description": "홍콩판 강철의 연금술사 오프닝이에여!"
+    "description": "홍콩판 강철의 연금술사 오프닝이에여!",
+    "youtubeLink": ""
   },
   {
     "id": "song_1778613985490",
@@ -574,7 +448,8 @@ const songData = [
         "borderColor": "#ff4242"
       }
     ],
-    "description": ""
+    "description": "",
+    "youtubeLink": ""
   },
   {
     "id": "song_1778614074226",
@@ -589,7 +464,8 @@ const songData = [
         "borderColor": "#ff4242"
       }
     ],
-    "description": ""
+    "description": "",
+    "youtubeLink": ""
   },
   {
     "id": "song_1778661258929",
@@ -598,31 +474,8 @@ const songData = [
     "image": "./image/guide/song/liberty3.jpg",
     "difficulty": "2",
     "tags": [],
-    "description": ""
-  },
-  {
-    "id": "song_1778661093986",
-    "title": "잘하는 집을 안가봐서 그래",
-    "artist": "과나",
-    "image": "./image/guide/song/goodhome.jpg",
-    "difficulty": "4",
-    "tags": [
-      {
-        "text": "고음주의",
-        "textColor": "#ffffff",
-        "borderColor": "#ff4242"
-      }
-    ],
-    "description": ""
-  },
-  {
-    "id": "song_1778661204422",
-    "title": "사라지네(Vocal.돈키호테)",
-    "artist": "ProjectMoon",
-    "image": "./image/guide/song/disapear.jpg",
-    "difficulty": "3",
-    "tags": [],
-    "description": ""
+    "description": "",
+    "youtubeLink": ""
   },
   {
     "id": "song_1778661124223",
@@ -637,7 +490,8 @@ const songData = [
         "borderColor": "#ff4242"
       }
     ],
-    "description": ""
+    "description": "",
+    "youtubeLink": ""
   },
   {
     "id": "song_1778614160859",
@@ -646,7 +500,8 @@ const songData = [
     "image": "./image/guide/song/tuna.jpg",
     "difficulty": "1",
     "tags": [],
-    "description": ""
+    "description": "",
+    "youtubeLink": ""
   },
   {
     "id": "song_1778661138084",
@@ -655,7 +510,8 @@ const songData = [
     "image": "./image/guide/song/lemon.jpg",
     "difficulty": "3",
     "tags": [],
-    "description": ""
+    "description": "",
+    "youtubeLink": ""
   },
   {
     "id": "song_1778661311203",
@@ -675,7 +531,8 @@ const songData = [
         "borderColor": "#7b42ff"
       }
     ],
-    "description": ""
+    "description": "",
+    "youtubeLink": ""
   },
   {
     "id": "song_1778614665599",
@@ -690,7 +547,8 @@ const songData = [
         "borderColor": "#ff4242"
       }
     ],
-    "description": ""
+    "description": "",
+    "youtubeLink": ""
   },
   {
     "id": "song_1778614673652",
@@ -705,7 +563,8 @@ const songData = [
         "borderColor": "#ff4242"
       }
     ],
-    "description": ""
+    "description": "",
+    "youtubeLink": ""
   },
   {
     "id": "song_1778661360487",
@@ -714,7 +573,8 @@ const songData = [
     "image": "./image/guide/song/sil.webp",
     "difficulty": "2",
     "tags": [],
-    "description": ""
+    "description": "",
+    "youtubeLink": ""
   },
   {
     "id": "song_1778661413066",
@@ -729,7 +589,8 @@ const songData = [
         "borderColor": "#ff4242"
       }
     ],
-    "description": ""
+    "description": "",
+    "youtubeLink": ""
   },
   {
     "id": "song_1778663908745",
@@ -744,7 +605,8 @@ const songData = [
         "borderColor": "#ff4242"
       }
     ],
-    "description": ""
+    "description": "",
+    "youtubeLink": ""
   },
   {
     "id": "song_1778661429989",
@@ -753,16 +615,8 @@ const songData = [
     "image": "./image/guide/song/magicforce.webp",
     "difficulty": "2",
     "tags": [],
-    "description": ""
-  },
-  {
-    "id": "song_1778661442360",
-    "title": "왜 날 이렇게 낳나",
-    "artist": "타카피",
-    "image": "./image/guide/song/whyme.jpg",
-    "difficulty": "2",
-    "tags": [],
-    "description": "이거 가사 짱 웃김 ㅋㅋ"
+    "description": "",
+    "youtubeLink": ""
   },
   {
     "id": "song_1778614634874",
@@ -782,22 +636,8 @@ const songData = [
         "borderColor": "#333333"
       }
     ],
-    "description": ""
-  },
-  {
-    "id": "song_1778614867921",
-    "title": "愛を伝えたいだとか (사랑을 전하고 싶다던가)",
-    "artist": "아이묭",
-    "image": "./image/guide/song/aiwo.webp",
-    "difficulty": "4",
-    "tags": [
-      {
-        "text": "고음주의",
-        "textColor": "#ffffff",
-        "borderColor": "#ff4242"
-      }
-    ],
-    "description": ""
+    "description": "",
+    "youtubeLink": ""
   },
   {
     "id": "song_1778614876426",
@@ -812,7 +652,8 @@ const songData = [
         "borderColor": "#ff4242"
       }
     ],
-    "description": ""
+    "description": "",
+    "youtubeLink": ""
   },
   {
     "id": "song_1778614888697",
@@ -827,7 +668,8 @@ const songData = [
         "borderColor": "#ff4242"
       }
     ],
-    "description": ""
+    "description": "",
+    "youtubeLink": ""
   },
   {
     "id": "song_1778661514110",
@@ -842,7 +684,8 @@ const songData = [
         "borderColor": "#ff4242"
       }
     ],
-    "description": ""
+    "description": "",
+    "youtubeLink": ""
   },
   {
     "id": "song_1778661503500",
@@ -857,7 +700,8 @@ const songData = [
         "borderColor": "#ff4242"
       }
     ],
-    "description": ""
+    "description": "",
+    "youtubeLink": ""
   },
   {
     "id": "song_1778614919308",
@@ -872,7 +716,8 @@ const songData = [
         "borderColor": "#ff4242"
       }
     ],
-    "description": ""
+    "description": "",
+    "youtubeLink": ""
   },
   {
     "id": "song_1778661591059",
@@ -887,7 +732,8 @@ const songData = [
         "borderColor": "#ff4242"
       }
     ],
-    "description": ""
+    "description": "",
+    "youtubeLink": ""
   },
   {
     "id": "song_1778661581168",
@@ -896,7 +742,8 @@ const songData = [
     "image": "./image/guide/song/itte.png",
     "difficulty": "3",
     "tags": [],
-    "description": ""
+    "description": "",
+    "youtubeLink": ""
   },
   {
     "id": "song_1778661563856",
@@ -905,7 +752,206 @@ const songData = [
     "image": "./image/guide/song/yoroshiku.webp",
     "difficulty": "2",
     "tags": [],
-    "description": ""
+    "description": "",
+    "youtubeLink": ""
+  },
+  {
+    "id": "new_1778720422918",
+    "title": "夜の踊り子 (밤의 무희)",
+    "artist": "사카낙션",
+    "image": "./image/guide/song/yoruno.jpg",
+    "difficulty": "2",
+    "tags": [],
+    "description": "",
+    "youtubeLink": "https://www.youtube.com/watch?v=W1-0gX5nM-g"
+  },
+  {
+    "id": "song_1784658026935",
+    "title": "Dragostea Din Tei",
+    "artist": "",
+    "image": "",
+    "difficulty": "0",
+    "tags": [],
+    "description": "",
+    "youtubeLink": "https://www.youtube.com/watch?v=knPM6Bd9whw&pp=ygUbZHJhZ29zdGVhIGRpbiB0ZWkg64W4656Y67Cp",
+    "hidden": true
+  },
+  {
+    "id": "song_1778661442360",
+    "title": "왜 날 이렇게 낳나",
+    "artist": "타카피",
+    "image": "./image/guide/song/whyme.jpg",
+    "difficulty": "2",
+    "tags": [],
+    "description": "이거 가사 짱 웃김 ㅋㅋ",
+    "youtubeLink": ""
+  },
+  {
+    "id": "song_1784658984519",
+    "title": "밤양갱",
+    "artist": "",
+    "image": "",
+    "difficulty": "0",
+    "tags": [],
+    "description": "",
+    "youtubeLink": "https://www.youtube.com/watch?v=yckntxi09C8&pp=ygUT67Ck7JaR6rCxIOuFuOuemOuwqQ%3D%3D",
+    "hidden": false
+  },
+  {
+    "id": "new_1778749007278",
+    "title": "バクシンバクシンバクシンシン(박신박신박신신)",
+    "artist": "사쿠라 바쿠신오 (CV. 미사와 사치카)",
+    "image": "./image/guide/song/baksin.jpg",
+    "difficulty": "3",
+    "tags": [],
+    "description": "",
+    "youtubeLink": "",
+    "hidden": true
+  },
+  {
+    "id": "song_1784660149727",
+    "title": "가슴 시린 이야기",
+    "artist": "",
+    "image": "",
+    "difficulty": "0",
+    "tags": [],
+    "description": "",
+    "youtubeLink": "https://www.youtube.com/watch?v=PrPnroGz1sk&pp=ygUT7Jq47KeA66eIIOuwlOuztOyVvA%3D%3D",
+    "hidden": true
+  },
+  {
+    "id": "song_1778661204422",
+    "title": "사라지네(Vocal.돈키호테)",
+    "artist": "ProjectMoon",
+    "image": "./image/guide/song/disapear.jpg",
+    "difficulty": "3",
+    "tags": [],
+    "description": "",
+    "youtubeLink": ""
+  },
+  {
+    "id": "song_1785094074436",
+    "title": "각개전투",
+    "artist": "",
+    "image": "",
+    "difficulty": "0",
+    "tags": [],
+    "description": "",
+    "youtubeLink": "https://youtu.be/dopuq1RnsJs?si=5hXgP43C_jqfLblG",
+    "hidden": true
+  },
+  {
+    "id": "new_1778749146957",
+    "title": "Ms. VICTORIA (Game Size)",
+    "artist": "-",
+    "image": "./image/guide/song/msvictoria.webp",
+    "difficulty": "4",
+    "tags": [
+      {
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
+      }
+    ],
+    "description": "",
+    "youtubeLink": "https://www.youtube.com/watch?v=rz95Ubar1bQ",
+    "hidden": true
+  },
+  {
+    "id": "new_1780519732953",
+    "title": "Wash Away (feat. 에일리)",
+    "artist": "긱스",
+    "image": "./image/guide/song/washaway.jpg",
+    "difficulty": "2",
+    "tags": [],
+    "description": "",
+    "youtubeLink": "https://www.youtube.com/watch?v=471Oyf2M7Rg"
+  },
+  {
+    "id": "song_1778661093986",
+    "title": "잘하는 집을 안가봐서 그래",
+    "artist": "과나",
+    "image": "./image/guide/song/goodhome.jpg",
+    "difficulty": "4",
+    "tags": [
+      {
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
+      }
+    ],
+    "description": "",
+    "youtubeLink": ""
+  },
+  {
+    "id": "song_1778661003958",
+    "title": "Lazenca, Save us",
+    "artist": "N.EX.T",
+    "image": "./image/guide/song/lazenca.webp",
+    "difficulty": "2",
+    "tags": [
+      {
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
+      }
+    ],
+    "description": "",
+    "hidden": false,
+    "youtubeLink": ""
+  },
+  {
+    "id": "song_1778614867921",
+    "title": "愛を伝えたいだとか (사랑을 전하고 싶다던가)",
+    "artist": "아이묭",
+    "image": "./image/guide/song/aiwo.webp",
+    "difficulty": "4",
+    "tags": [
+      {
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
+      }
+    ],
+    "description": "",
+    "youtubeLink": ""
+  },
+  {
+    "id": "song_1780865340974",
+    "title": "미워요",
+    "artist": "정인",
+    "image": "./image/guide/song/miwo.jpg",
+    "difficulty": "4",
+    "tags": [
+      {
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
+      }
+    ],
+    "description": "",
+    "youtubeLink": "https://www.youtube.com/watch?v=E7ym9ODPWqg"
+  },
+  {
+    "id": "song_1778661351548",
+    "title": "가자 에버그레이스!",
+    "artist": "롹슨족",
+    "image": "./image/guide/song/evergrace.png",
+    "difficulty": "3",
+    "tags": [
+      {
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
+      },
+      {
+        "text": "살짝 개사함",
+        "textColor": "#ffffff",
+        "borderColor": "#428bff"
+      }
+    ],
+    "description": "",
+    "youtubeLink": ""
   }
 ];
 
