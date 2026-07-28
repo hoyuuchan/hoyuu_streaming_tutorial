@@ -854,7 +854,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         return `
                         <div class="chat-msg bot" style="align-items: flex-start; gap: 8px;">
                             <div class="chat-profile-icon" style="flex-shrink: 0;"></div>
-                            <div style="font-weight: bold; font-size: 0.9em; white-space: nowrap; color: #314edc;">뚜팔봇</div>
+                            <div style="font-weight: bold; font-size: 0.9em; white-space: nowrap; color: #314edc;">첸냥이</div>
                             <div style="color: #314edc; word-break: break-all;">
                                 ${trimmedLine}
                             </div>
