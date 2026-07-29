@@ -180,8 +180,6 @@
   { src: './image/감정표현/햇반.jpg', tag: '~햇반', category: '감정표현' },
   { src: './image/감정표현/구가댄스.webp', tag: '~구가댄스', category: '감정표현' },
   { src: './image/감정표현/그건니가.png', tag: '~그건니가', category: '감정표현' },
-  { src: './image/감정표현/침대축구.png', tag: '~침대축구', category: '감정표현', update: true },
-  { src: './image/감정표현/태극따봉.png', tag: '~태극따봉', category: '감정표현', update: true },
 
   // 동방프로젝트
   { src: './image/동방/안된다구.png', tag: '~안된다구', category: '동방' },
@@ -629,6 +627,8 @@
   { src: './image/기타/레니지금바로.png', tag: '~지금바로시작해', category: '기타' },
   { src: './image/기타/레니휴지.png', tag: '~레니휴지', category: '기타' },
   { src: './image/기타/선도워킹.gif', tag: '~선도워킹', category: '기타' },
+  { src: './image/기타/치지직_침대축구.png', tag: '~침대축구', category: '기타', update: true },
+  { src: './image/기타/치지직_태극따봉.png', tag: '~태극따봉', category: '기타', update: true },
 
   // 오리지널
   { src: './image/오리지널/란호유.png', tag: '~란호유', category: '란호유' },
