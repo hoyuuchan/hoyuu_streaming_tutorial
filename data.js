@@ -638,6 +638,7 @@
   { src: './image/기타/치지직_아이고.png', tag: '~아이고', category: '기타', update: true },
   { src: './image/기타/치지직_폰보기.png', tag: '~폰보기', category: '기타', update: true },
   { src: './image/기타/치지직_흥민의문.png', tag: '~쏜의문', category: '기타', update: true },
+  { src: './image/기타/치지직_VAR.png', tag: '~VAR', category: '기타', update: true },
 
   // 오리지널
   { src: './image/오리지널/란호유.png', tag: '~란호유', category: '란호유' },
