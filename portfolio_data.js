@@ -1,5 +1,38 @@
 const portfolioData = [
   {
+    "id": "ringgi_1786355799737",
+    "year": "2026",
+    "title": "이네파",
+    "date": "2026.08.09",
+    "mainImage": "./image/guide/ringgi/이네파.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1786355799736_fnrbu",
+    "year": "2026",
+    "title": "수영복 이부키",
+    "date": "2026.08.03",
+    "mainImage": "./image/guide/ringgi/이부키수영복.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1786355785869_idw9e",
+    "year": "2026",
+    "title": "이블린",
+    "date": "2026.08.02",
+    "mainImage": "./image/guide/ringgi/이블린.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
     "id": "ringgi_1785098080653",
     "year": "2026",
     "title": "기모노 메이드 호유",
