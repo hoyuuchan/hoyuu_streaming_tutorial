@@ -1,5 +1,16 @@
 const portfolioData = [
   {
+    "id": "ringgi_1787207552491",
+    "year": "2026",
+    "title": "죠가사키 노아",
+    "date": "2026.08.16",
+    "mainImage": "./image/guide/ringgi/노아.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
     "id": "ringgi_1786355799737",
     "year": "2026",
     "title": "이네파",
