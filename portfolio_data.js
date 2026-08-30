@@ -1,5 +1,27 @@
 const portfolioData = [
   {
+    "id": "ringgi_1788115303295",
+    "year": "2026",
+    "title": "수영복 호유",
+    "date": "2026.08.23",
+    "mainImage": "./image/guide/ringgi/수영복호유.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1788115303293_svt3q",
+    "year": "2026",
+    "title": "비버 호유",
+    "date": "2026.08.30",
+    "mainImage": "./image/guide/ringgi/비버호유.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
     "id": "ringgi_1787207552491",
     "year": "2026",
     "title": "죠가사키 노아",
