@@ -1,5 +1,38 @@
 const portfolioData = [
   {
+    "id": "ringgi_1790611180791",
+    "year": "2026",
+    "title": "랜달 보그스",
+    "date": "2026.09.06",
+    "mainImage": "./image/guide/ringgi/랜달보그스.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1790611180790_0plx9",
+    "year": "2026",
+    "title": "달서구 달희",
+    "date": "2026.09.20",
+    "mainImage": "./image/guide/ringgi/달희.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1790611152845_vfput",
+    "year": "2026",
+    "title": "아르카나 섀도우",
+    "date": "2026.09.28",
+    "mainImage": "./image/guide/ringgi/아르카나.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
     "id": "ringgi_1788115303295",
     "year": "2026",
     "title": "수영복 호유",
