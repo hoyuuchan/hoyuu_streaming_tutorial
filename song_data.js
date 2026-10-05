@@ -1,5 +1,41 @@
 const songData = [
   {
+    "id": "new_1791227600796",
+    "title": "응급실",
+    "artist": "izi",
+    "image": "./image/guide/song/emergency.jpg",
+    "difficulty": "2",
+    "tags": [],
+    "description": "",
+    "youtubeLink": ""
+  },
+  {
+    "id": "new_1791227553979",
+    "title": "가시",
+    "artist": "버즈",
+    "image": "./image/guide/song/gasi.jpg",
+    "difficulty": "2",
+    "tags": [],
+    "description": "",
+    "youtubeLink": ""
+  },
+  {
+    "id": "new_1791227509909",
+    "title": "Butterfly",
+    "artist": "러브홀릭스",
+    "image": "./image/guide/song/butterfly.jpg",
+    "difficulty": "2",
+    "tags": [
+      {
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
+      }
+    ],
+    "description": "",
+    "youtubeLink": ""
+  },
+  {
     "id": "song_1783238428192",
     "title": "Manic",
     "artist": "오토마치 우나 & 라나",
@@ -206,17 +242,6 @@ const songData = [
     "hidden": true
   },
   {
-    "id": "song_1780599763448",
-    "title": "그대에게",
-    "artist": "",
-    "image": "",
-    "difficulty": "0",
-    "tags": [],
-    "description": "",
-    "youtubeLink": "https://www.youtube.com/watch?v=gJqCO8E63-s",
-    "hidden": true
-  },
-  {
     "id": "new_1780865486122",
     "title": "숲속의 작은 질럿",
     "artist": "-",
@@ -231,17 +256,6 @@ const songData = [
     ],
     "description": "숲속의 작은 레스토랑을 질럿이 부른 버전으로 부릅니당",
     "youtubeLink": "https://www.youtube.com/watch?v=5zBBVNjXYLg"
-  },
-  {
-    "id": "song_1779479833442",
-    "title": "질풍가도",
-    "artist": "",
-    "image": "",
-    "difficulty": "0",
-    "tags": [],
-    "description": "",
-    "youtubeLink": "",
-    "hidden": true
   },
   {
     "id": "song_1780866723850",
@@ -766,17 +780,6 @@ const songData = [
     "youtubeLink": "https://www.youtube.com/watch?v=W1-0gX5nM-g"
   },
   {
-    "id": "song_1784658026935",
-    "title": "Dragostea Din Tei",
-    "artist": "",
-    "image": "",
-    "difficulty": "0",
-    "tags": [],
-    "description": "",
-    "youtubeLink": "https://www.youtube.com/watch?v=knPM6Bd9whw&pp=ygUbZHJhZ29zdGVhIGRpbiB0ZWkg64W4656Y67Cp",
-    "hidden": true
-  },
-  {
     "id": "song_1778661442360",
     "title": "왜 날 이렇게 낳나",
     "artist": "타카피",
@@ -787,26 +790,14 @@ const songData = [
     "youtubeLink": ""
   },
   {
-    "id": "song_1784658984519",
-    "title": "밤양갱",
-    "artist": "",
-    "image": "",
-    "difficulty": "0",
-    "tags": [],
-    "description": "",
-    "youtubeLink": "https://www.youtube.com/watch?v=yckntxi09C8&pp=ygUT67Ck7JaR6rCxIOuFuOuemOuwqQ%3D%3D",
-    "hidden": false
-  },
-  {
-    "id": "new_1778749007278",
+    "id": "song_1791227240714",
     "title": "バクシンバクシンバクシンシン(박신박신박신신)",
     "artist": "사쿠라 바쿠신오 (CV. 미사와 사치카)",
     "image": "./image/guide/song/baksin.jpg",
     "difficulty": "3",
     "tags": [],
     "description": "",
-    "youtubeLink": "",
-    "hidden": true
+    "youtubeLink": "https://www.youtube.com/watch?v=Tk_KYT1nyrc"
   },
   {
     "id": "song_1784660149727",
@@ -830,15 +821,20 @@ const songData = [
     "youtubeLink": ""
   },
   {
-    "id": "song_1785094074436",
+    "id": "new_1791227427499",
     "title": "각개전투",
-    "artist": "",
-    "image": "",
-    "difficulty": "0",
-    "tags": [],
+    "artist": "시유",
+    "image": "./image/guide/song/cu.webp",
+    "difficulty": "4",
+    "tags": [
+      {
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
+      }
+    ],
     "description": "",
-    "youtubeLink": "https://youtu.be/dopuq1RnsJs?si=5hXgP43C_jqfLblG",
-    "hidden": true
+    "youtubeLink": "https://youtu.be/dopuq1RnsJs?si=5hXgP43C_jqfLblG"
   },
   {
     "id": "new_1778749146957",
