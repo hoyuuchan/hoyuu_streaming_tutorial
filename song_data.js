@@ -87,65 +87,36 @@ const songData = [
     "hidden": true
   },
   {
-    "id": "song_1783238232656",
+    "id": "new_1791228035921",
     "title": "Love Is Thrill, Shock, Suspense (Korean ver.)",
     "artist": "진선주",
-    "image": "",
-    "difficulty": "0",
-    "tags": [],
-    "description": "",
-    "youtubeLink": "",
-    "hidden": true
-  },
-  {
-    "id": "song_1783238159042",
-    "title": "1991",
-    "artist": "요네즈 켄시",
-    "image": "",
-    "difficulty": "0",
+    "image": "./image/guide/song/thirll.jpg",
+    "difficulty": "4",
     "tags": [
       {
-        "text": "연습중",
-        "textColor": "#212121",
-        "borderColor": "#8eff42"
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
       }
     ],
-    "description": "https://youtu.be/g5WqWEVdpgg?si=em9Df7_ofjDqnxis",
-    "youtubeLink": "",
-    "hidden": true
+    "description": "",
+    "youtubeLink": ""
   },
   {
-    "id": "song_1783238075259",
+    "id": "new_1791227979491",
     "title": "비둘기",
     "artist": "크라잉넛",
-    "image": "",
-    "difficulty": "0",
-    "tags": [],
+    "image": "./image/guide/song/bidoolgi.jpg",
+    "difficulty": "3",
+    "tags": [
+      {
+        "text": "발음뭉개기",
+        "textColor": "#ffffff",
+        "borderColor": "#7b42ff"
+      }
+    ],
     "description": "",
-    "youtubeLink": "",
-    "hidden": true
-  },
-  {
-    "id": "song_1783238041115",
-    "title": "Bling-Bang-Bang-Born",
-    "artist": "Creepy Nuts",
-    "image": "",
-    "difficulty": "0",
-    "tags": [],
-    "description": "",
-    "youtubeLink": "",
-    "hidden": true
-  },
-  {
-    "id": "song_1783237961515",
-    "title": "JANE DOE",
-    "artist": "요네즈 켄시",
-    "image": "",
-    "difficulty": "0",
-    "tags": [],
-    "description": "",
-    "youtubeLink": "",
-    "hidden": true
+    "youtubeLink": ""
   },
   {
     "id": "song_1780865898247",
@@ -162,40 +133,6 @@ const songData = [
     ],
     "description": "",
     "youtubeLink": "",
-    "hidden": true
-  },
-  {
-    "id": "new_1780865890896",
-    "title": "광대",
-    "artist": "리쌍",
-    "image": "./image/guide/song/gwangdae.jpg",
-    "difficulty": "2",
-    "tags": [
-      {
-        "text": "연습중",
-        "textColor": "#212121",
-        "borderColor": "#8eff42"
-      }
-    ],
-    "description": "",
-    "youtubeLink": "https://youtu.be/jaf0KLWM9lI?si=kpbGuPQNWNw-kr-e",
-    "hidden": true
-  },
-  {
-    "id": "new_1780865864181",
-    "title": "きゅうくらりん",
-    "artist": "카후",
-    "image": "./image/guide/song/kyuru.jpg",
-    "difficulty": "3",
-    "tags": [
-      {
-        "text": "연습중",
-        "textColor": "#212121",
-        "borderColor": "#8eff42"
-      }
-    ],
-    "description": "",
-    "youtubeLink": "https://www.youtube.com/watch?v=cGlPhm0vyc4",
     "hidden": true
   },
   {
@@ -225,23 +162,6 @@ const songData = [
     "youtubeLink": "https://youtu.be/yhfAW9ecjDY?si=hpPpX0a1_cvBJSiY"
   },
   {
-    "id": "new_1780865699749",
-    "title": "Again & Again",
-    "artist": "2PM",
-    "image": "./image/guide/song/againagain.png",
-    "difficulty": "2",
-    "tags": [
-      {
-        "text": "연습중",
-        "textColor": "#212121",
-        "borderColor": "#8eff42"
-      }
-    ],
-    "description": "",
-    "youtubeLink": "https://www.youtube.com/watch?v=LCk3fyCy40g",
-    "hidden": true
-  },
-  {
     "id": "new_1780865486122",
     "title": "숲속의 작은 질럿",
     "artist": "-",
@@ -258,39 +178,6 @@ const songData = [
     "youtubeLink": "https://www.youtube.com/watch?v=5zBBVNjXYLg"
   },
   {
-    "id": "song_1780866723850",
-    "title": "MAMA",
-    "artist": "EXO-K",
-    "image": "./image/guide/song/mama.jpg",
-    "difficulty": "2",
-    "tags": [
-      {
-        "text": "연습중",
-        "textColor": "#212121",
-        "borderColor": "#8eff42"
-      }
-    ],
-    "description": "",
-    "youtubeLink": "https://www.youtube.com/watch?v=smP0zdhaYXM",
-    "hidden": true
-  },
-  {
-    "id": "new_1778720509759",
-    "title": "건강박수",
-    "artist": "테켄뮤직",
-    "image": "./image/guide/song/baksu.jpg",
-    "difficulty": "2",
-    "tags": [
-      {
-        "text": "살짝 개사함",
-        "textColor": "#ffffff",
-        "borderColor": "#428bff"
-      }
-    ],
-    "description": "",
-    "youtubeLink": "https://www.youtube.com/watch?v=VNszoqKHPAI"
-  },
-  {
     "id": "new_1778720422918",
     "title": "夜の踊り子 (밤의 무희)",
     "artist": "사카낙션",
@@ -301,7 +188,7 @@ const songData = [
     "youtubeLink": "https://www.youtube.com/watch?v=W1-0gX5nM-g"
   },
   {
-    "id": "new_1778720331927",
+    "id": "song_1791227686200",
     "title": "おちゃめ機能 (장난기 기능)",
     "artist": "카사네 테토",
     "image": "./image/guide/song/omocha.webp",
@@ -311,6 +198,11 @@ const songData = [
         "text": "고음주의",
         "textColor": "#ffffff",
         "borderColor": "#ff4242"
+      },
+      {
+        "text": "발음뭉개기",
+        "textColor": "#ffffff",
+        "borderColor": "#7b42ff"
       }
     ],
     "description": "",
@@ -482,12 +374,18 @@ const songData = [
     "youtubeLink": ""
   },
   {
-    "id": "song_1778661258929",
+    "id": "song_1791228058108",
     "title": "DJ 조선",
     "artist": "이오몽",
     "image": "./image/guide/song/liberty3.jpg",
-    "difficulty": "2",
-    "tags": [],
+    "difficulty": "3",
+    "tags": [
+      {
+        "text": "고음주의",
+        "textColor": "#ffffff",
+        "borderColor": "#ff4242"
+      }
+    ],
     "description": "",
     "youtubeLink": ""
   },
@@ -798,17 +696,6 @@ const songData = [
     "tags": [],
     "description": "",
     "youtubeLink": "https://www.youtube.com/watch?v=Tk_KYT1nyrc"
-  },
-  {
-    "id": "song_1784660149727",
-    "title": "가슴 시린 이야기",
-    "artist": "",
-    "image": "",
-    "difficulty": "0",
-    "tags": [],
-    "description": "",
-    "youtubeLink": "https://www.youtube.com/watch?v=PrPnroGz1sk&pp=ygUT7Jq47KeA66eIIOuwlOuztOyVvA%3D%3D",
-    "hidden": true
   },
   {
     "id": "song_1778661204422",
