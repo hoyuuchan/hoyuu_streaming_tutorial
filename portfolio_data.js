@@ -1,5 +1,27 @@
 const portfolioData = [
   {
+    "id": "ringgi_1792746593173",
+    "year": "2026",
+    "title": "아이네스 후진",
+    "date": "2026.10.11",
+    "mainImage": "./image/guide/ringgi/아이네스후진.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1792746593169_p0jh1",
+    "year": "2026",
+    "title": "원시인 호유",
+    "date": "2026.10.18",
+    "mainImage": "./image/guide/ringgi/란시인.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
     "id": "ringgi_1790611180791",
     "year": "2026",
     "title": "랜달 보그스",
