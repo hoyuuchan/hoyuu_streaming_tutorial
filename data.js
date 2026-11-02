@@ -643,6 +643,7 @@
 
   // 오리지널
   { src: './image/오리지널/란호유.png', tag: '~란호유', category: '란호유' },
+  { src: './image/오리지널/란호유2.png', tag: '~란호유2', category: '란호유', update: true },
   { src: './image/오리지널/호유핑크.png', tag: '~핑크호유', category: '란호유' },
   { src: './image/오리지널/음란호유.png', tag: '~음란호유', category: '란호유' },
   { src: './image/오리지널/음란호유2.png', tag: '~음란호유2', category: '란호유' },
@@ -714,7 +715,7 @@
   { src: './image/오리지널/호유갸루.png', tag: '~호유갸루', category: ['란호유', '호유링기링'] },
   { src: './image/오리지널/호유수영복.png', tag: '~호유수영복', category: ['란호유', '호유링기링'] },
   { src: './image/오리지널/호유비버.png', tag: '~란비버', category: ['란호유', '호유링기링'] },
-  { src: './image/오리지널/호유원시인.png', tag: '~란시인', category: ['란호유', '호유링기링'], update: true },
+  { src: './image/오리지널/호유원시인.png', tag: '~란시인', category: ['란호유', '호유링기링'] },
   { src: './image/오리지널/호피키.png', tag: '~호피키', category: '란호유' },
   { src: './image/오리지널/호피키.gif', tag: '~호피키으앙', category: '란호유' },
   { src: './image/오리지널/호유미쿠.png', tag: '~호유미쿠', category: ['호유링기링'] },
@@ -754,6 +755,7 @@
   { src: './image/오리지널/호유깡깡.png', tag: '~호유깡깡', category: ['호유링기링', '게임기타'] },
   { src: './image/오리지널/호유이블린.png', tag: '~호유이블린', category: ['호유링기링', '게임기타'] },
   { src: './image/오리지널/호유수부키.png', tag: '~호유수부키', category: ['호유링기링', '게임기타'] },
+  { src: './image/오리지널/호유수리노.png', tag: '~호유수리노', category: ['호유링기링', '게임기타'], update: true },
   { src: './image/오리지널/호유나세.png', tag: '~호유나세', category: ['호유링기링', '게임기타'] },
   { src: './image/오리지널/d1.png', tag: '~아운조용히', category: ['호유링기링', '동방'] },
   { src: './image/오리지널/d2.png', tag: '~오린따봉', category: ['호유링기링', '동방'] },
