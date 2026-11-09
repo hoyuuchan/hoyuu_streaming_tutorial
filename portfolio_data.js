@@ -1,5 +1,38 @@
 const portfolioData = [
   {
+    "id": "ringgi_1794233828236",
+    "year": "2026",
+    "title": "물에 젖은 한복입은 호유",
+    "date": "2026.11.08",
+    "mainImage": "./image/guide/ringgi/한복호유2.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1794233828233_gs21q",
+    "year": "2026",
+    "title": "수영복 체리노",
+    "date": "2026.11.01",
+    "mainImage": "./image/guide/ringgi/체리노수영복.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
+    "id": "ringgi_1794233793964_2xyut",
+    "year": "2026",
+    "title": "메리",
+    "date": "2026.10.25",
+    "mainImage": "./image/guide/ringgi/메리.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
     "id": "ringgi_1792746593173",
     "year": "2026",
     "title": "아이네스 후진",
