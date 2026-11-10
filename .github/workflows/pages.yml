@@ -1,0 +1,43 @@
+# GitHub Pages 배포
+# 기본 "Deploy from a branch" 방식은 배포 제한시간이 10분으로 고정되어 있어서,
+# 사이트 용량(약 580MB)이 커진 뒤 syncing_files 단계에서 시간 초과로 실패하는 일이 생김.
+# 이 workflow는 제한시간을 30분으로 늘려서 배포함.
+# (Settings → Pages → Source 를 "GitHub Actions" 로 설정해야 동작함)
+
+name: Deploy Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # Actions 탭에서 "Run workflow" 버튼으로 수동 재배포 가능
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 연속으로 push해도 배포가 겹치지 않게 하나씩 처리
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: .
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          timeout: 1800000 # 30분 (기본값 10분)
