@@ -1,5 +1,16 @@
 const portfolioData = [
   {
+    "id": "ringgi_1795530688710",
+    "year": "2026",
+    "title": "루나미 야치요",
+    "date": "2026.11.22",
+    "mainImage": "./image/guide/ringgi/루나미.png",
+    "mainImageStyle": "object-position: center;",
+    "description": "",
+    "detailImages": [],
+    "type": "ringgiring"
+  },
+  {
     "id": "ringgi_1794233828236",
     "year": "2026",
     "title": "물에 젖은 한복입은 호유",
