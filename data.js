@@ -180,6 +180,7 @@
   { src: './image/감정표현/햇반.jpg', tag: '~햇반', category: '감정표현' },
   { src: './image/감정표현/구가댄스.webp', tag: '~구가댄스', category: '감정표현' },
   { src: './image/감정표현/그건니가.png', tag: '~그건니가', category: '감정표현' },
+  { src: './image/감정표현/고양이박사.png', tag: '~고양이박사', category: '감정표현',update: true },
 
   // 동방프로젝트
   { src: './image/동방/안된다구.png', tag: '~안된다구', category: '동방' },
@@ -326,7 +327,7 @@
   { src: './image/동방/미코.png', tag: '~미코', category: '동방' },
   { src: './image/동방/아운.png', tag: '~아운', category: '동방' },
   { src: './image/동방/나즈린.png', tag: '~나즈린', category: '동방' },
-  { src: './image/동방/린.png', tag: '~린', category: '동방' },
+  { src: './image/동방/오린.png', tag: '~오린', category: '동방' },
   { src: './image/동방/츠카사.png', tag: '~츠카사', category: '동방' },
   { src: './image/동방/사키.png', tag: '~사키', category: '동방' },
   { src: './image/동방/유마.png', tag: '~유마', category: '동방' },
@@ -716,7 +717,7 @@
   { src: './image/오리지널/호유수영복.png', tag: '~호유수영복', category: ['란호유', '호유링기링'] },
   { src: './image/오리지널/호유비버.png', tag: '~란비버', category: ['란호유', '호유링기링'] },
   { src: './image/오리지널/호유원시인.png', tag: '~란시인', category: ['란호유', '호유링기링'] },
-  { src: './image/오리지널/호유잠옷.png', tag: '~호유잠옷', category: ['란호유', '호유링기링'], update: true },
+  { src: './image/오리지널/호유잠옷.png', tag: '~호유잠옷', category: ['란호유', '호유링기링'] },
   { src: './image/오리지널/호피키.png', tag: '~호피키', category: '란호유' },
   { src: './image/오리지널/호피키.gif', tag: '~호피키으앙', category: '란호유' },
   { src: './image/오리지널/호유미쿠.png', tag: '~호유미쿠', category: ['호유링기링'] },
